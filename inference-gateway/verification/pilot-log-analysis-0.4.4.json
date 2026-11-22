@@ -1,0 +1,69 @@
+{
+  "source": {
+    "file": "gateway-service.log (copy of E:\\gateway-service.log)",
+    "sha256": "ddc098b38acc01b2d05921e7db1dcbd4d44a36b4cc6b3844a04721bd0387fdc2",
+    "pilot_window_epoch": [
+      1794880049.453284,
+      1794893426.708851
+    ],
+    "rows_in_window": 15096
+  },
+  "health_cycle_seconds": {
+    "configured_interval": 15,
+    "p50": 28.6,
+    "p90": 79.2,
+    "max": 171.9,
+    "note": "time between batches of capacity.* log lines; the monitor thread logs them once per health cycle, after refresh_health (head calls and ledger writes)"
+  },
+  "correlation": [
+    {
+      "cycle_longer_than_s": 40,
+      "share_of_pilot_time": 0.61,
+      "share_of_ssleof_events": 0.94,
+      "share_of_lock_events": 0.979
+    },
+    {
+      "cycle_longer_than_s": 60,
+      "share_of_pilot_time": 0.445,
+      "share_of_ssleof_events": 0.802,
+      "share_of_lock_events": 0.917
+    },
+    {
+      "cycle_longer_than_s": 90,
+      "share_of_pilot_time": 0.182,
+      "share_of_ssleof_events": 0.377,
+      "share_of_lock_events": 0.646
+    }
+  ],
+  "ssleof": {
+    "count": 167,
+    "routes": {
+      "/v1/submit": 159,
+      "/v1/requests/*": 8
+    }
+  },
+  "lock": {
+    "count": 48,
+    "by_event": {
+      "http.unavailable": 27,
+      "lease.renewal_failed": 20,
+      "recovery.cycle_failed": 1
+    }
+  },
+  "lease_renewal_failures": {
+    "events": 20,
+    "requests": 19,
+    "requests_later_completed": 19,
+    "requests_failed_or_cancelled": 0,
+    "lease_expired_events_in_window": 0
+  },
+  "request_ends_in_window": {
+    "capacity.completed": 4878,
+    "capacity.invocation.failed": 40,
+    "capacity.cancelled": 41,
+    "capacity.invocation.deadline_exceeded": 8
+  },
+  "admitted_without_logged_end": 0,
+  "client_attempt_seconds_0_4_1": 10,
+  "ledger_busy_timeout_seconds_0_4_3": 30
+}

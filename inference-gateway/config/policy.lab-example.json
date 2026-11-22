@@ -1,0 +1,186 @@
+{
+  "configuration_version": 1,
+  "contract": "shared.inference/1",
+  "clients": [],
+  "resources": [
+    {
+      "resource_id": "head-192-0-2-2",
+      "endpoint": "http://192.0.2.2:11434",
+      "resource_type": "shared_inference",
+      "owner": "infrastructure",
+      "applications": [
+        "capstone",
+        "capstone-research",
+        "lab-traffic"
+      ],
+      "permitted_uses": [
+        "inference"
+      ],
+      "slots": 1,
+      "memory_gb": 63.9
+    },
+    {
+      "resource_id": "head-192-0-2-3",
+      "endpoint": "http://192.0.2.3:11434",
+      "resource_type": "shared_inference",
+      "owner": "infrastructure",
+      "applications": [
+        "capstone",
+        "capstone-research",
+        "lab-traffic"
+      ],
+      "permitted_uses": [
+        "inference"
+      ],
+      "slots": 1,
+      "memory_gb": 15.4
+    },
+    {
+      "resource_id": "head-192-0-2-4",
+      "endpoint": "http://192.0.2.4:11434",
+      "resource_type": "shared_inference",
+      "owner": "infrastructure",
+      "applications": [
+        "capstone",
+        "capstone-research",
+        "lab-traffic"
+      ],
+      "permitted_uses": [
+        "inference"
+      ],
+      "slots": 1,
+      "memory_gb": 15.4
+    },
+    {
+      "resource_id": "head-192-0-2-5",
+      "endpoint": "http://192.0.2.5:11434",
+      "resource_type": "shared_inference",
+      "owner": "infrastructure",
+      "applications": [
+        "capstone",
+        "capstone-research",
+        "lab-traffic"
+      ],
+      "permitted_uses": [
+        "inference"
+      ],
+      "slots": 1,
+      "memory_gb": 15.4
+    },
+    {
+      "resource_id": "head-192-0-2-6",
+      "endpoint": "http://192.0.2.6:11434",
+      "resource_type": "shared_inference",
+      "owner": "infrastructure",
+      "applications": [
+        "capstone",
+        "capstone-research",
+        "lab-traffic"
+      ],
+      "permitted_uses": [
+        "inference"
+      ],
+      "slots": 1,
+      "memory_gb": 7.4
+    },
+    {
+      "resource_id": "head-192-0-2-7",
+      "endpoint": "http://192.0.2.7:11434",
+      "resource_type": "shared_inference",
+      "owner": "infrastructure",
+      "applications": [
+        "capstone",
+        "capstone-research",
+        "lab-traffic"
+      ],
+      "permitted_uses": [
+        "inference"
+      ],
+      "slots": 1,
+      "memory_gb": 31.4,
+      "model_capacity": {
+        "qwen3.5:4b": {
+          "parallel": 1,
+          "digest": "<the head's /api/tags digest of qwen3.5:4b>",
+          "runtime_version": "0.40.15",
+          "num_ctx": 8192,
+          "evidence": "agent-arena.model-capacity/1 matrix row; replace with Arena's measured value"
+        }
+      }
+    },
+    {
+      "resource_id": "head-192-0-2-8",
+      "endpoint": "http://192.0.2.8:11434",
+      "resource_type": "shared_inference",
+      "owner": "infrastructure",
+      "applications": [
+        "capstone",
+        "capstone-research",
+        "lab-traffic"
+      ],
+      "permitted_uses": [
+        "inference"
+      ],
+      "slots": 1,
+      "memory_gb": 31.4
+    },
+    {
+      "resource_id": "head-192-0-2-9",
+      "endpoint": "http://192.0.2.9:11434",
+      "resource_type": "shared_inference",
+      "owner": "infrastructure",
+      "applications": [
+        "capstone",
+        "capstone-research",
+        "lab-traffic"
+      ],
+      "permitted_uses": [
+        "inference"
+      ],
+      "slots": 1,
+      "memory_gb": 31.4
+    },
+    {
+      "resource_id": "head-192-0-2-10",
+      "endpoint": "http://192.0.2.10:11434",
+      "resource_type": "shared_inference",
+      "owner": "infrastructure",
+      "applications": [
+        "capstone",
+        "capstone-research",
+        "lab-traffic"
+      ],
+      "permitted_uses": [
+        "inference"
+      ],
+      "slots": 1,
+      "memory_gb": 31.4
+    }
+  ],
+  "failure_policy": {
+    "probe_backoff_seconds": [
+      60,
+      300,
+      900
+    ],
+    "cascade_window_seconds": 600,
+    "cascade_heads": 2,
+    "ps_settle_seconds": 2,
+    "safe_recheck_seconds": 15,
+    "hold_max_wait_seconds": 1800,
+    "probe_timeout_seconds": 90,
+    "deadline_liveness_seconds": 3
+  },
+  "placement_policy": {
+    "loaded_fresh_seconds": 30,
+    "model_size_factor": 1.2,
+    "strategy": "least_busy",
+    "serial_families": [
+      "qwen35",
+      "qwen35moe"
+    ],
+    "model_parallel": {},
+    "parallel_runtime_min": "0.40.15",
+    "serial_families_need_evidence": true
+  }
+}

@@ -1,0 +1,628 @@
+{
+  "contract": "shared.inference.observation/1",
+  "observed_at": 1794497356.8341782,
+  "service_id": "shared-inference",
+  "ledger_id": "LEDGER-1a6fffa3a0b10ef2bd59c52af1d3223f",
+  "admission_open": true,
+  "applications": [
+    {
+      "app_id": "capstone-research",
+      "enabled": 1,
+      "max_concurrency": 1,
+      "queue_limit": 32,
+      "priority": 2
+    }
+  ],
+  "resources": [
+    {
+      "resource_id": "head-192-0-2-3",
+      "resource_type": "shared_inference",
+      "qualified_models": [
+        "gemma3:270m",
+        "all-minilm:latest"
+      ],
+      "health": "healthy",
+      "last_seen": 1794497356.7352445,
+      "fresh": true,
+      "capacity": {
+        "slots": 1,
+        "slots_in_use": 0,
+        "memory_gb": 15.4,
+        "loaded_models": [],
+        "loaded_observed_at": 1794497352.0505495,
+        "loaded_fresh": true
+      }
+    },
+    {
+      "resource_id": "head-192-0-2-4",
+      "resource_type": "shared_inference",
+      "qualified_models": [
+        "gemma3:270m",
+        "all-minilm:latest"
+      ],
+      "health": "healthy",
+      "last_seen": 1794497356.8292565,
+      "fresh": true,
+      "capacity": {
+        "slots": 1,
+        "slots_in_use": 0,
+        "memory_gb": 15.4,
+        "loaded_models": [],
+        "loaded_observed_at": 1794497352.0649967,
+        "loaded_fresh": true
+      }
+    },
+    {
+      "resource_id": "head-192-0-2-5",
+      "resource_type": "shared_inference",
+      "qualified_models": [
+        "gemma3:270m",
+        "all-minilm:latest"
+      ],
+      "health": "healthy",
+      "last_seen": 1794497356.796913,
+      "fresh": true,
+      "capacity": {
+        "slots": 1,
+        "slots_in_use": 0,
+        "memory_gb": 15.4,
+        "loaded_models": [],
+        "loaded_observed_at": 1794497352.0779955,
+        "loaded_fresh": true
+      }
+    },
+    {
+      "resource_id": "head-192-0-2-6",
+      "resource_type": "shared_inference",
+      "qualified_models": [
+        "gemma3:270m",
+        "all-minilm:latest"
+      ],
+      "health": "healthy",
+      "last_seen": 1794497356.7671916,
+      "fresh": true,
+      "capacity": {
+        "slots": 1,
+        "slots_in_use": 0,
+        "memory_gb": 7.4,
+        "loaded_models": [],
+        "loaded_observed_at": 1794497352.0894516,
+        "loaded_fresh": true
+      }
+    },
+    {
+      "resource_id": "head-192-0-2-7",
+      "resource_type": "shared_inference",
+      "qualified_models": [
+        "gemma3:270m",
+        "all-minilm:latest"
+      ],
+      "health": "quarantined",
+      "last_seen": 1794497352.1057863,
+      "fresh": true,
+      "capacity": {
+        "slots": 2,
+        "slots_in_use": 0,
+        "memory_gb": 31.4,
+        "loaded_models": [
+          {
+            "name": "all-minilm:latest",
+            "digest": "DIGEST-all-minilm:latest",
+            "size_bytes": 53057945
+          }
+        ],
+        "loaded_observed_at": 1794497352.0997903,
+        "loaded_fresh": true
+      }
+    }
+  ],
+  "requests": {
+    "cancelled": 5,
+    "completed": 16,
+    "expired": 5
+  },
+  "invocations": {
+    "failed": 1
+  },
+  "leases": [],
+  "qualification_observations": [
+    {
+      "evidence_id": "EVIDENCE-4211f8d511084cc2a81e7428187f9451",
+      "resource_id": "head-192-0-2-7",
+      "model": "all-minilm:latest",
+      "digest": "DIGEST-all-minilm:latest",
+      "passed": 1,
+      "at": 1794497351.8096876
+    },
+    {
+      "evidence_id": "EVIDENCE-e3cb740f200e4cc38818e33d9da8ea00",
+      "resource_id": "head-192-0-2-7",
+      "model": "gemma3:270m",
+      "digest": "DIGEST-gemma3:270m",
+      "passed": 1,
+      "at": 1794497351.791679
+    },
+    {
+      "evidence_id": "EVIDENCE-01329210736245de8f77f4ed7afa4c05",
+      "resource_id": "head-192-0-2-6",
+      "model": "all-minilm:latest",
+      "digest": "DIGEST-all-minilm:latest",
+      "passed": 1,
+      "at": 1794497351.7676814
+    },
+    {
+      "evidence_id": "EVIDENCE-5e7751a6786a43b1ac99c70fedc9b4d7",
+      "resource_id": "head-192-0-2-6",
+      "model": "gemma3:270m",
+      "digest": "DIGEST-gemma3:270m",
+      "passed": 1,
+      "at": 1794497351.7505734
+    },
+    {
+      "evidence_id": "EVIDENCE-01551344312345bd89d90e6db48fde87",
+      "resource_id": "head-192-0-2-5",
+      "model": "all-minilm:latest",
+      "digest": "DIGEST-all-minilm:latest",
+      "passed": 1,
+      "at": 1794497351.729095
+    },
+    {
+      "evidence_id": "EVIDENCE-aa916ffdf4424756b519812ec92fe2ab",
+      "resource_id": "head-192-0-2-5",
+      "model": "gemma3:270m",
+      "digest": "DIGEST-gemma3:270m",
+      "passed": 1,
+      "at": 1794497351.714523
+    },
+    {
+      "evidence_id": "EVIDENCE-b7977e6f355b43b889d113efb5bd9c5e",
+      "resource_id": "head-192-0-2-4",
+      "model": "all-minilm:latest",
+      "digest": "DIGEST-all-minilm:latest",
+      "passed": 1,
+      "at": 1794497351.6935678
+    },
+    {
+      "evidence_id": "EVIDENCE-dd024ad472144b25aa8752c589ec14e6",
+      "resource_id": "head-192-0-2-4",
+      "model": "gemma3:270m",
+      "digest": "DIGEST-gemma3:270m",
+      "passed": 1,
+      "at": 1794497351.678501
+    },
+    {
+      "evidence_id": "EVIDENCE-1fff7e6043694236bd1225472cf5098a",
+      "resource_id": "head-192-0-2-3",
+      "model": "all-minilm:latest",
+      "digest": "DIGEST-all-minilm:latest",
+      "passed": 1,
+      "at": 1794497351.6580813
+    },
+    {
+      "evidence_id": "EVIDENCE-5e370a1a46534ce5a7e0c761efb42e94",
+      "resource_id": "head-192-0-2-3",
+      "model": "gemma3:270m",
+      "digest": "DIGEST-gemma3:270m",
+      "passed": 1,
+      "at": 1794497351.6390455
+    }
+  ],
+  "events": [
+    {
+      "event_id": 51,
+      "app_id": "capstone-research",
+      "request_id": "REQ-79ff7b8a257d4f13a2980619da54dc91",
+      "event_type": "queued",
+      "at": 1794497352.1132286
+    },
+    {
+      "event_id": 52,
+      "app_id": "capstone-research",
+      "request_id": "REQ-79ff7b8a257d4f13a2980619da54dc91",
+      "event_type": "admitted",
+      "at": 1794497352.131739
+    },
+    {
+      "event_id": 53,
+      "app_id": "infrastructure",
+      "request_id": "REQ-79ff7b8a257d4f13a2980619da54dc91",
+      "event_type": "resource.quarantined",
+      "at": 1794497352.153748
+    },
+    {
+      "event_id": 54,
+      "app_id": "infrastructure",
+      "request_id": "REQ-79ff7b8a257d4f13a2980619da54dc91",
+      "event_type": "resource.held",
+      "at": 1794497352.153748
+    },
+    {
+      "event_id": 55,
+      "app_id": "capstone-research",
+      "request_id": "REQ-79ff7b8a257d4f13a2980619da54dc91",
+      "event_type": "invocation.failed",
+      "at": 1794497352.1618228
+    },
+    {
+      "event_id": 56,
+      "app_id": "capstone-research",
+      "request_id": "REQ-79ff7b8a257d4f13a2980619da54dc91",
+      "event_type": "cancel_requested",
+      "at": 1794497352.1678247
+    },
+    {
+      "event_id": 57,
+      "app_id": "infrastructure",
+      "request_id": null,
+      "event_type": "probe.requested",
+      "at": 1794497356.6223092
+    },
+    {
+      "event_id": 58,
+      "app_id": "capstone-research",
+      "request_id": "REQ-79ff7b8a257d4f13a2980619da54dc91",
+      "event_type": "lease.expired",
+      "at": 1794497356.6269202
+    },
+    {
+      "event_id": 59,
+      "app_id": "infrastructure",
+      "request_id": "PROBE-faba80381a814d03bfb834edd6f5f491",
+      "event_type": "probe.failed",
+      "at": 1794497356.6424358
+    },
+    {
+      "event_id": 60,
+      "app_id": "infrastructure",
+      "request_id": null,
+      "event_type": "probe.requested",
+      "at": 1794497356.6524875
+    },
+    {
+      "event_id": 61,
+      "app_id": "infrastructure",
+      "request_id": "PROBE-87e47d24f0a24d4ea74054ff21e25c5f",
+      "event_type": "probe.failed",
+      "at": 1794497356.6698782
+    },
+    {
+      "event_id": 62,
+      "app_id": "infrastructure",
+      "request_id": null,
+      "event_type": "probe.requested",
+      "at": 1794497356.6805508
+    },
+    {
+      "event_id": 63,
+      "app_id": "infrastructure",
+      "request_id": "PROBE-219495a20aaf43598c38e79fd462a4da",
+      "event_type": "probe.failed",
+      "at": 1794497356.6975522
+    },
+    {
+      "event_id": 64,
+      "app_id": "infrastructure",
+      "request_id": null,
+      "event_type": "resource.needs_attention",
+      "at": 1794497356.7035522
+    },
+    {
+      "event_id": 65,
+      "app_id": "infrastructure",
+      "request_id": "PROBE-00865a81a3ef42e8bf5173fdd1c7e3d8",
+      "event_type": "probe.passed",
+      "at": 1794497356.7184913
+    },
+    {
+      "event_id": 66,
+      "app_id": "infrastructure",
+      "request_id": "PROBE-4d63264976c74c45aaa11fef4f0a3366",
+      "event_type": "probe.failed",
+      "at": 1794497356.7302387
+    },
+    {
+      "event_id": 67,
+      "app_id": "infrastructure",
+      "request_id": null,
+      "event_type": "resource.recovered",
+      "at": 1794497356.736246
+    },
+    {
+      "event_id": 68,
+      "app_id": "infrastructure",
+      "request_id": "REQ-bad97f0919cd449b9ef3e49eed8dacb2",
+      "event_type": "model.suspended",
+      "at": 1794497356.7372446
+    },
+    {
+      "event_id": 69,
+      "app_id": "infrastructure",
+      "request_id": "PROBE-abb3fb42e8b645e9a26102088b8019c1",
+      "event_type": "probe.passed",
+      "at": 1794497356.751645
+    },
+    {
+      "event_id": 70,
+      "app_id": "infrastructure",
+      "request_id": "PROBE-770a658bfd054bc6971092f53e6b45b7",
+      "event_type": "probe.passed",
+      "at": 1794497356.7631912
+    },
+    {
+      "event_id": 71,
+      "app_id": "infrastructure",
+      "request_id": null,
+      "event_type": "resource.recovered",
+      "at": 1794497356.768192
+    },
+    {
+      "event_id": 72,
+      "app_id": "infrastructure",
+      "request_id": "PROBE-7a28afec35e34c0195a7eb2cafa84d29",
+      "event_type": "probe.passed",
+      "at": 1794497356.7813098
+    },
+    {
+      "event_id": 73,
+      "app_id": "infrastructure",
+      "request_id": "PROBE-b83f83942a314d50b084f453c48bc1e2",
+      "event_type": "probe.failed",
+      "at": 1794497356.7929142
+    },
+    {
+      "event_id": 74,
+      "app_id": "infrastructure",
+      "request_id": null,
+      "event_type": "resource.recovered",
+      "at": 1794497356.7984478
+    },
+    {
+      "event_id": 75,
+      "app_id": "infrastructure",
+      "request_id": "REQ-d8db6caec1f948309a5a335a16a47baa",
+      "event_type": "model.suspended",
+      "at": 1794497356.7984478
+    },
+    {
+      "event_id": 76,
+      "app_id": "infrastructure",
+      "request_id": "REQ-d8db6caec1f948309a5a335a16a47baa",
+      "event_type": "model.suspended",
+      "at": 1794497356.7984478
+    },
+    {
+      "event_id": 77,
+      "app_id": "infrastructure",
+      "request_id": "PROBE-d35170f057a74530a35a0fe524d870ed",
+      "event_type": "probe.passed",
+      "at": 1794497356.8131466
+    },
+    {
+      "event_id": 78,
+      "app_id": "infrastructure",
+      "request_id": "PROBE-42f3619345b64866b98d42ccfbdd7033",
+      "event_type": "probe.passed",
+      "at": 1794497356.8254967
+    },
+    {
+      "event_id": 79,
+      "app_id": "infrastructure",
+      "request_id": null,
+      "event_type": "resource.recovered",
+      "at": 1794497356.8302634
+    }
+  ],
+  "next_event_id": 79,
+  "last_hour": {
+    "window_seconds": 3600,
+    "requests_created": {
+      "cancelled": 5,
+      "completed": 16,
+      "expired": 5
+    },
+    "invocations_updated": {
+      "failed": 1
+    },
+    "events": {
+      "admitted": 5,
+      "cancel_requested": 1,
+      "inventory.observed": 5,
+      "invocation.failed": 1,
+      "lease.expired": 5,
+      "model.suspended": 3,
+      "probe.failed": 5,
+      "probe.passed": 6,
+      "probe.requested": 3,
+      "qualification.completed": 10,
+      "queued": 5,
+      "resource.authorized": 10,
+      "resource.held": 5,
+      "resource.needs_attention": 1,
+      "resource.quarantined": 9,
+      "resource.recovered": 4,
+      "service.schema_upgraded": 1
+    }
+  },
+  "inventory": [
+    {
+      "resource_id": "head-192-0-2-3",
+      "observed_at": 1794497352.0455484,
+      "fresh": true,
+      "runtime_version": "0.40.13",
+      "models": [
+        {
+          "name": "all-minilm:latest",
+          "digest": "DIGEST-all-minilm:latest"
+        },
+        {
+          "name": "gemma3:270m",
+          "digest": "DIGEST-gemma3:270m"
+        }
+      ]
+    },
+    {
+      "resource_id": "head-192-0-2-4",
+      "observed_at": 1794497352.0589974,
+      "fresh": true,
+      "runtime_version": "0.40.13",
+      "models": [
+        {
+          "name": "all-minilm:latest",
+          "digest": "DIGEST-all-minilm:latest"
+        },
+        {
+          "name": "gemma3:270m",
+          "digest": "DIGEST-gemma3:270m"
+        }
+      ]
+    },
+    {
+      "resource_id": "head-192-0-2-5",
+      "observed_at": 1794497352.072999,
+      "fresh": true,
+      "runtime_version": "0.40.13",
+      "models": [
+        {
+          "name": "all-minilm:latest",
+          "digest": "DIGEST-all-minilm:latest"
+        },
+        {
+          "name": "gemma3:270m",
+          "digest": "DIGEST-gemma3:270m"
+        }
+      ]
+    },
+    {
+      "resource_id": "head-192-0-2-6",
+      "observed_at": 1794497352.0832005,
+      "fresh": true,
+      "runtime_version": "0.40.13",
+      "models": [
+        {
+          "name": "all-minilm:latest",
+          "digest": "DIGEST-all-minilm:latest"
+        },
+        {
+          "name": "gemma3:270m",
+          "digest": "DIGEST-gemma3:270m"
+        }
+      ]
+    },
+    {
+      "resource_id": "head-192-0-2-7",
+      "observed_at": 1794497352.0954528,
+      "fresh": true,
+      "runtime_version": "0.40.13",
+      "models": [
+        {
+          "name": "all-minilm:latest",
+          "digest": "DIGEST-all-minilm:latest"
+        },
+        {
+          "name": "gemma3:270m",
+          "digest": "DIGEST-gemma3:270m"
+        }
+      ]
+    }
+  ],
+  "suspensions": [
+    {
+      "suspension_id": "SUSP-50397c8b414e4ce39d3c23a36f6142a9",
+      "scope": "resource",
+      "resource_id": "head-192-0-2-7",
+      "model": "all-minilm:latest",
+      "digest": "DIGEST-all-minilm:latest",
+      "operation": "embedding",
+      "class": "uncertain_execution",
+      "source": "dispatch",
+      "since": 1794497352.1527488,
+      "hold_until": 1794497356.1102273,
+      "next_probe": null,
+      "probes_failed": 3,
+      "state": "needs_attention",
+      "waiting": null,
+      "heads": null
+    },
+    {
+      "suspension_id": "SUSP-1db6f994711849dba1ea708e5031bde9",
+      "scope": "resource_model",
+      "resource_id": "head-192-0-2-3",
+      "model": "gemma3:270m",
+      "digest": "DIGEST-gemma3:270m",
+      "operation": "completion",
+      "class": "model_on_head",
+      "source": "held_probe",
+      "since": 1794497356.736246,
+      "hold_until": null,
+      "next_probe": 1794497416.736246,
+      "probes_failed": 0,
+      "state": "suspended",
+      "waiting": null,
+      "heads": null
+    },
+    {
+      "suspension_id": "SUSP-373d3296049c47838ef07acff82501ee",
+      "scope": "resource_model",
+      "resource_id": "head-192-0-2-5",
+      "model": "gemma3:270m",
+      "digest": "DIGEST-gemma3:270m",
+      "operation": "completion",
+      "class": "model_on_head",
+      "source": "held_probe",
+      "since": 1794497356.7984478,
+      "hold_until": null,
+      "next_probe": 1794497416.7984478,
+      "probes_failed": 0,
+      "state": "suspended",
+      "waiting": null,
+      "heads": null
+    },
+    {
+      "suspension_id": "SUSP-f00725b5220e4316b81dc3c04b080bbb",
+      "scope": "model",
+      "resource_id": null,
+      "model": "gemma3:270m",
+      "digest": "DIGEST-gemma3:270m",
+      "operation": "completion",
+      "class": "model_on_head",
+      "source": "cascade",
+      "since": 1794497356.7984478,
+      "hold_until": null,
+      "next_probe": 1794497416.7984478,
+      "probes_failed": 0,
+      "state": "suspended",
+      "waiting": null,
+      "heads": [
+        "head-192-0-2-3",
+        "head-192-0-2-5"
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "alert_id": "ALERT-50397c8b414e4ce39d3c23a36f6142a9",
+      "suspension_id": "SUSP-50397c8b414e4ce39d3c23a36f6142a9",
+      "kind": "needs_attention",
+      "scope": "resource",
+      "resource_id": "head-192-0-2-7",
+      "model": "all-minilm:latest",
+      "operation": "embedding",
+      "since": 1794497352.1527488,
+      "reason_code": "probes_exhausted",
+      "reason": "automatic probes failed 3 times; inspect, then release or reconcile"
+    },
+    {
+      "alert_id": "ALERT-f00725b5220e4316b81dc3c04b080bbb",
+      "suspension_id": "SUSP-f00725b5220e4316b81dc3c04b080bbb",
+      "kind": "model.suspended",
+      "scope": "model",
+      "resource_id": null,
+      "model": "gemma3:270m",
+      "operation": "completion",
+      "since": 1794497356.7984478,
+      "reason_code": "model_suspended_everywhere",
+      "reason": "model failed on 2 heads within the cascade window; suspended on every head for completion"
+    }
+  ],
+  "scope": "snapshot only; enabled is authorization, not application liveness; stale leases are not reconciled by observer"
+}

@@ -1,0 +1,2 @@
+param([string]$DataRoot='C:\ProgramData\{{SERVICE}}',[int]$TimeoutSeconds=10)
+$ErrorActionPreference='Stop';$config=Get-Content -Raw "$DataRoot\config\service.json"|ConvertFrom-Json;$result=Invoke-RestMethod "http://$($config.listen_host):$($config.listen_port)/api/health" -TimeoutSec $TimeoutSeconds;if(!$result.ok -or $result.service -ne '{{KIND}}'){throw '{{SERVICE}} health check failed'};$result|ConvertTo-Json

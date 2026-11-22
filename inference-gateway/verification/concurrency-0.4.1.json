@@ -1,0 +1,385 @@
+{
+  "schema": "inference-gateway.concurrency-evidence/1",
+  "release": "0.4.1",
+  "date": "2026-11-13",
+  "harness": "scripts/concurrency_load.py: 9 fake Ollama heads (loopback HTTP, each runs at most `slots` generations at once), the Gateway service runtime and listener over a fresh ledger, client flows started together; no lab head or hub contacted",
+  "columns": "calls completed / total; failures before a request_id; lease.expired events; resource.held events; active suspensions; 503 answers; max concurrent generations on one head; slowest call (s)",
+  "runs": [
+    {
+      "gateway_release": "0.4.0",
+      "client_version": "0.4.0 or earlier",
+      "flows": 32,
+      "calls_per_flow": 4,
+      "slots": "1",
+      "latency_seconds": "2,6",
+      "max_connections": 64,
+      "max_pending": 128,
+      "flow_start_spread_ms": 4.3,
+      "elapsed_seconds": 111.7,
+      "calls_total": 128,
+      "calls_completed": 10,
+      "failures": {
+        "exception:TimeoutError": 118
+      },
+      "failures_before_request_id": 7,
+      "max_call_seconds": 46.758,
+      "heads_max_concurrent_generations": {
+        "head-192-0-2-2": 1,
+        "head-192-0-2-3": 1,
+        "head-192-0-2-4": 1,
+        "head-192-0-2-5": 1,
+        "head-192-0-2-6": 1,
+        "head-192-0-2-7": 1,
+        "head-192-0-2-8": 1,
+        "head-192-0-2-9": 1,
+        "head-192-0-2-10": 1
+      },
+      "head_calls": {
+        "head-192-0-2-2": 13,
+        "head-192-0-2-3": 12,
+        "head-192-0-2-4": 12,
+        "head-192-0-2-5": 10,
+        "head-192-0-2-6": 12,
+        "head-192-0-2-7": 15,
+        "head-192-0-2-8": 11,
+        "head-192-0-2-9": 12,
+        "head-192-0-2-10": 13
+      },
+      "ledger_events": {
+        "admitted": 102,
+        "completed": 95
+      },
+      "suspensions": [],
+      "invocations": {
+        "active": 33,
+        "completed": 95
+      },
+      "listener": null,
+      "failed_request_ids": [
+        "REQ-4df20870269842468aa85127472fad8a",
+        "REQ-cfab58df8a274e6e9731a9345fed34b5",
+        "REQ-a1b12ac0f6ce40eda9610609b6fd114e",
+        "REQ-5c01c550d6b74b1584ee28b2f06dabf3",
+        "REQ-9fe28104a9294d089ef0f8c225d66017",
+        "REQ-32ff3d08e5c1419d8340a3c9dd53aec4",
+        "REQ-0b4010b0a70a4d1d93bc38eedca4cdba",
+        "REQ-416e526020604727956ae485dfea7575",
+        "REQ-6d0ed606d8094b5da5b82183e16fbf06",
+        "REQ-04826425f9b449149fa600ce21805b0d",
+        "REQ-eddacc293ef648ed8b4e8d9be18c7aa7",
+        "REQ-4184e5b6e92844149a92df2e76464dcd",
+        "REQ-15ab0e5c818c4502b13b0e04cf64a938",
+        "REQ-994e0f4804ff4194a44200f9e84cd831",
+        "REQ-a914f27c991444fab8b7a65b67359b30",
+        "REQ-3ae7eea20c1e4e1f9d64d4bc6c764c72",
+        "REQ-67baa5125f274261884118ed3535b606",
+        "REQ-6d5a6e8d00ba4e6597e458664f68c462",
+        "REQ-d4ac05cdff73456fa122002e7793f710",
+        "REQ-328bd0ab9cb941918843fef9930197f7"
+      ],
+      "scenario": "0.4.0 gateway + 0.4.0 client, slots 1 (field reproduction)"
+    },
+    {
+      "gateway_release": "0.4.1",
+      "client_version": "0.4.1",
+      "flows": 32,
+      "calls_per_flow": 4,
+      "slots": "1",
+      "latency_seconds": "2,6",
+      "max_connections": 64,
+      "max_pending": 128,
+      "flow_start_spread_ms": 3.0,
+      "elapsed_seconds": 62.3,
+      "calls_total": 128,
+      "calls_completed": 128,
+      "failures": {},
+      "failures_before_request_id": 0,
+      "max_call_seconds": 18.15,
+      "heads_max_concurrent_generations": {
+        "head-192-0-2-2": 1,
+        "head-192-0-2-3": 1,
+        "head-192-0-2-4": 1,
+        "head-192-0-2-5": 1,
+        "head-192-0-2-6": 1,
+        "head-192-0-2-7": 1,
+        "head-192-0-2-8": 1,
+        "head-192-0-2-9": 1,
+        "head-192-0-2-10": 1
+      },
+      "head_calls": {
+        "head-192-0-2-2": 16,
+        "head-192-0-2-3": 15,
+        "head-192-0-2-4": 15,
+        "head-192-0-2-5": 15,
+        "head-192-0-2-6": 15,
+        "head-192-0-2-7": 15,
+        "head-192-0-2-8": 15,
+        "head-192-0-2-9": 15,
+        "head-192-0-2-10": 16
+      },
+      "ledger_events": {
+        "admitted": 128,
+        "completed": 128
+      },
+      "suspensions": [],
+      "invocations": {
+        "completed": 128
+      },
+      "gateway_load": {
+        "counters": {},
+        "executing_now": 9,
+        "limits": {
+          "max_connections": 64,
+          "max_pending": 128
+        },
+        "scheduler_passes": 390,
+        "since": 1794577691.3203506,
+        "updated_at": 1794577739.325541
+      },
+      "failed_request_ids": [],
+      "scenario": "0.4.1, slots 1"
+    },
+    {
+      "gateway_release": "0.4.1",
+      "client_version": "0.4.1",
+      "flows": 32,
+      "calls_per_flow": 4,
+      "slots": "4,10",
+      "latency_seconds": "2,6",
+      "max_connections": 256,
+      "max_pending": 512,
+      "flow_start_spread_ms": 2.9,
+      "elapsed_seconds": 27.2,
+      "calls_total": 128,
+      "calls_completed": 128,
+      "failures": {},
+      "failures_before_request_id": 0,
+      "max_call_seconds": 9.104,
+      "heads_max_concurrent_generations": {
+        "head-192-0-2-2": 4,
+        "head-192-0-2-3": 4,
+        "head-192-0-2-4": 4,
+        "head-192-0-2-5": 4,
+        "head-192-0-2-6": 4,
+        "head-192-0-2-7": 4,
+        "head-192-0-2-8": 4,
+        "head-192-0-2-9": 4,
+        "head-192-0-2-10": 4
+      },
+      "head_calls": {
+        "head-192-0-2-2": 16,
+        "head-192-0-2-3": 17,
+        "head-192-0-2-4": 16,
+        "head-192-0-2-5": 15,
+        "head-192-0-2-6": 15,
+        "head-192-0-2-7": 15,
+        "head-192-0-2-8": 14,
+        "head-192-0-2-9": 14,
+        "head-192-0-2-10": 15
+      },
+      "ledger_events": {
+        "admitted": 128,
+        "completed": 128
+      },
+      "suspensions": [],
+      "invocations": {
+        "completed": 128
+      },
+      "gateway_load": {
+        "counters": {},
+        "executing_now": 24,
+        "limits": {
+          "max_connections": 256,
+          "max_pending": 512
+        },
+        "scheduler_passes": 289,
+        "since": 1794577756.9114742,
+        "updated_at": 1794577773.2505887
+      },
+      "failed_request_ids": [],
+      "scenario": "0.4.1, slots 4/10 (acceptance shape)"
+    },
+    {
+      "gateway_release": "0.4.1",
+      "client_version": "0.4.1",
+      "flows": 32,
+      "calls_per_flow": 4,
+      "slots": "10",
+      "latency_seconds": "1,3",
+      "max_connections": 4,
+      "max_pending": 512,
+      "flow_start_spread_ms": 3.0,
+      "elapsed_seconds": 28.7,
+      "calls_total": 128,
+      "calls_completed": 128,
+      "failures": {},
+      "failures_before_request_id": 0,
+      "max_call_seconds": 19.096,
+      "heads_max_concurrent_generations": {
+        "head-192-0-2-2": 3,
+        "head-192-0-2-3": 2,
+        "head-192-0-2-4": 3,
+        "head-192-0-2-5": 2,
+        "head-192-0-2-6": 3,
+        "head-192-0-2-7": 3,
+        "head-192-0-2-8": 3,
+        "head-192-0-2-9": 2,
+        "head-192-0-2-10": 3
+      },
+      "head_calls": {
+        "head-192-0-2-2": 16,
+        "head-192-0-2-3": 15,
+        "head-192-0-2-4": 14,
+        "head-192-0-2-5": 16,
+        "head-192-0-2-6": 15,
+        "head-192-0-2-7": 16,
+        "head-192-0-2-8": 15,
+        "head-192-0-2-9": 14,
+        "head-192-0-2-10": 16
+      },
+      "ledger_events": {
+        "admitted": 128,
+        "completed": 128
+      },
+      "suspensions": [],
+      "invocations": {
+        "completed": 128
+      },
+      "gateway_load": {
+        "counters": {
+          "connections_503": 174
+        },
+        "executing_now": 15,
+        "limits": {
+          "max_connections": 4,
+          "max_pending": 512
+        },
+        "scheduler_passes": 339,
+        "since": 1794577787.3326564,
+        "updated_at": 1794577803.9774015
+      },
+      "failed_request_ids": [],
+      "scenario": "0.4.1, max_connections 4 (503 path)"
+    },
+    {
+      "gateway_release": "0.4.1",
+      "client_version": "0.4.0 or earlier",
+      "flows": 32,
+      "calls_per_flow": 4,
+      "slots": "1",
+      "latency_seconds": "2,6",
+      "max_connections": 64,
+      "max_pending": 128,
+      "flow_start_spread_ms": 3.0,
+      "elapsed_seconds": 65.1,
+      "calls_total": 128,
+      "calls_completed": 128,
+      "failures": {},
+      "failures_before_request_id": 0,
+      "max_call_seconds": 18.75,
+      "heads_max_concurrent_generations": {
+        "head-192-0-2-2": 1,
+        "head-192-0-2-3": 1,
+        "head-192-0-2-4": 1,
+        "head-192-0-2-5": 1,
+        "head-192-0-2-6": 1,
+        "head-192-0-2-7": 1,
+        "head-192-0-2-8": 1,
+        "head-192-0-2-9": 1,
+        "head-192-0-2-10": 1
+      },
+      "head_calls": {
+        "head-192-0-2-2": 16,
+        "head-192-0-2-3": 13,
+        "head-192-0-2-4": 16,
+        "head-192-0-2-5": 15,
+        "head-192-0-2-6": 15,
+        "head-192-0-2-7": 15,
+        "head-192-0-2-8": 15,
+        "head-192-0-2-9": 15,
+        "head-192-0-2-10": 17
+      },
+      "ledger_events": {
+        "admitted": 128,
+        "completed": 128
+      },
+      "suspensions": [],
+      "invocations": {
+        "completed": 128
+      },
+      "gateway_load": {
+        "counters": {},
+        "executing_now": 2,
+        "limits": {
+          "max_connections": 64,
+          "max_pending": 128
+        },
+        "scheduler_passes": 408,
+        "since": 1794577819.3047,
+        "updated_at": 1794577883.1648412
+      },
+      "failed_request_ids": [],
+      "scenario": "0.4.1 gateway + 0.4.0 client, slots 1"
+    },
+    {
+      "gateway_release": "0.4.1",
+      "client_version": "0.4.1",
+      "flows": 90,
+      "calls_per_flow": 3,
+      "slots": "10",
+      "latency_seconds": "2,6",
+      "max_connections": 256,
+      "max_pending": 512,
+      "flow_start_spread_ms": 7.0,
+      "elapsed_seconds": 27.2,
+      "calls_total": 270,
+      "calls_completed": 270,
+      "failures": {},
+      "failures_before_request_id": 0,
+      "max_call_seconds": 11.805,
+      "heads_max_concurrent_generations": {
+        "head-192-0-2-2": 10,
+        "head-192-0-2-3": 10,
+        "head-192-0-2-4": 10,
+        "head-192-0-2-5": 10,
+        "head-192-0-2-6": 10,
+        "head-192-0-2-7": 9,
+        "head-192-0-2-8": 10,
+        "head-192-0-2-9": 9,
+        "head-192-0-2-10": 10
+      },
+      "head_calls": {
+        "head-192-0-2-2": 30,
+        "head-192-0-2-3": 32,
+        "head-192-0-2-4": 32,
+        "head-192-0-2-5": 32,
+        "head-192-0-2-6": 30,
+        "head-192-0-2-7": 32,
+        "head-192-0-2-8": 29,
+        "head-192-0-2-9": 30,
+        "head-192-0-2-10": 32
+      },
+      "ledger_events": {
+        "admitted": 270,
+        "completed": 270
+      },
+      "suspensions": [],
+      "invocations": {
+        "completed": 270
+      },
+      "gateway_load": {
+        "counters": {},
+        "executing_now": 62,
+        "limits": {
+          "max_connections": 256,
+          "max_pending": 512
+        },
+        "scheduler_passes": 435,
+        "since": 1794577887.7597098,
+        "updated_at": 1794577904.8194187
+      },
+      "failed_request_ids": [],
+      "scenario": "0.4.1 stress: 90 flows x 3, slots 10"
+    }
+  ]
+}

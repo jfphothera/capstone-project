@@ -1,0 +1,1936 @@
+{
+  "schema": "arena.support-crew.direction-art.v1",
+  "actors": {
+    "broom-cleaner": {
+      "name": "Broom Cleaner",
+      "views": {
+        "angle": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "clean": {
+              "frames": [
+                "crew/broom-cleaner/angle/frame-01.png",
+                "crew/broom-cleaner/angle/frame-02.png",
+                "crew/broom-cleaner/angle/frame-03.png",
+                "crew/broom-cleaner/angle/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/broom-cleaner/angle/frame-01.svg",
+                "crew/broom-cleaner/angle/frame-02.svg",
+                "crew/broom-cleaner/angle/frame-03.svg",
+                "crew/broom-cleaner/angle/frame-04.svg"
+              ],
+              "png_sheet": "crew/broom-cleaner/angle/clean-sheet.png",
+              "svg_sheet": "crew/broom-cleaner/angle/clean-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "walk": {
+              "frames": [
+                "crew/broom-cleaner/angle/frame-05.png",
+                "crew/broom-cleaner/angle/frame-06.png",
+                "crew/broom-cleaner/angle/frame-07.png",
+                "crew/broom-cleaner/angle/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/broom-cleaner/angle/frame-05.svg",
+                "crew/broom-cleaner/angle/frame-06.svg",
+                "crew/broom-cleaner/angle/frame-07.svg",
+                "crew/broom-cleaner/angle/frame-08.svg"
+              ],
+              "png_sheet": "crew/broom-cleaner/angle/walk-sheet.png",
+              "svg_sheet": "crew/broom-cleaner/angle/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            }
+          },
+          "source_export_scale": 0.2441860465116279,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        },
+        "front": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "clean": {
+              "frames": [
+                "crew/broom-cleaner/front/frame-01.png",
+                "crew/broom-cleaner/front/frame-02.png",
+                "crew/broom-cleaner/front/frame-03.png",
+                "crew/broom-cleaner/front/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/broom-cleaner/front/frame-01.svg",
+                "crew/broom-cleaner/front/frame-02.svg",
+                "crew/broom-cleaner/front/frame-03.svg",
+                "crew/broom-cleaner/front/frame-04.svg"
+              ],
+              "png_sheet": "crew/broom-cleaner/front/clean-sheet.png",
+              "svg_sheet": "crew/broom-cleaner/front/clean-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "walk": {
+              "frames": [
+                "crew/broom-cleaner/front/frame-05.png",
+                "crew/broom-cleaner/front/frame-06.png",
+                "crew/broom-cleaner/front/frame-07.png",
+                "crew/broom-cleaner/front/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/broom-cleaner/front/frame-05.svg",
+                "crew/broom-cleaner/front/frame-06.svg",
+                "crew/broom-cleaner/front/frame-07.svg",
+                "crew/broom-cleaner/front/frame-08.svg"
+              ],
+              "png_sheet": "crew/broom-cleaner/front/walk-sheet.png",
+              "svg_sheet": "crew/broom-cleaner/front/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            }
+          },
+          "source_export_scale": 0.19004524886877827,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        },
+        "rear": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "clean": {
+              "frames": [
+                "crew/broom-cleaner/rear/frame-01.png",
+                "crew/broom-cleaner/rear/frame-02.png",
+                "crew/broom-cleaner/rear/frame-03.png",
+                "crew/broom-cleaner/rear/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/broom-cleaner/rear/frame-01.svg",
+                "crew/broom-cleaner/rear/frame-02.svg",
+                "crew/broom-cleaner/rear/frame-03.svg",
+                "crew/broom-cleaner/rear/frame-04.svg"
+              ],
+              "png_sheet": "crew/broom-cleaner/rear/clean-sheet.png",
+              "svg_sheet": "crew/broom-cleaner/rear/clean-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "walk": {
+              "frames": [
+                "crew/broom-cleaner/rear/frame-05.png",
+                "crew/broom-cleaner/rear/frame-06.png",
+                "crew/broom-cleaner/rear/frame-07.png",
+                "crew/broom-cleaner/rear/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/broom-cleaner/rear/frame-05.svg",
+                "crew/broom-cleaner/rear/frame-06.svg",
+                "crew/broom-cleaner/rear/frame-07.svg",
+                "crew/broom-cleaner/rear/frame-08.svg"
+              ],
+              "png_sheet": "crew/broom-cleaner/rear/walk-sheet.png",
+              "svg_sheet": "crew/broom-cleaner/rear/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            }
+          },
+          "source_export_scale": 0.20638820638820637,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        }
+      }
+    },
+    "mop-cleaner": {
+      "name": "Mop Cleaner",
+      "views": {
+        "angle": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "clean": {
+              "frames": [
+                "crew/mop-cleaner/angle/frame-01.png",
+                "crew/mop-cleaner/angle/frame-02.png",
+                "crew/mop-cleaner/angle/frame-03.png",
+                "crew/mop-cleaner/angle/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/mop-cleaner/angle/frame-01.svg",
+                "crew/mop-cleaner/angle/frame-02.svg",
+                "crew/mop-cleaner/angle/frame-03.svg",
+                "crew/mop-cleaner/angle/frame-04.svg"
+              ],
+              "png_sheet": "crew/mop-cleaner/angle/clean-sheet.png",
+              "svg_sheet": "crew/mop-cleaner/angle/clean-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "walk": {
+              "frames": [
+                "crew/mop-cleaner/angle/frame-05.png",
+                "crew/mop-cleaner/angle/frame-06.png",
+                "crew/mop-cleaner/angle/frame-07.png",
+                "crew/mop-cleaner/angle/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/mop-cleaner/angle/frame-05.svg",
+                "crew/mop-cleaner/angle/frame-06.svg",
+                "crew/mop-cleaner/angle/frame-07.svg",
+                "crew/mop-cleaner/angle/frame-08.svg"
+              ],
+              "png_sheet": "crew/mop-cleaner/angle/walk-sheet.png",
+              "svg_sheet": "crew/mop-cleaner/angle/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            }
+          },
+          "source_export_scale": 0.23140495867768596,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        },
+        "front": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "clean": {
+              "frames": [
+                "crew/mop-cleaner/front/frame-01.png",
+                "crew/mop-cleaner/front/frame-02.png",
+                "crew/mop-cleaner/front/frame-03.png",
+                "crew/mop-cleaner/front/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/mop-cleaner/front/frame-01.svg",
+                "crew/mop-cleaner/front/frame-02.svg",
+                "crew/mop-cleaner/front/frame-03.svg",
+                "crew/mop-cleaner/front/frame-04.svg"
+              ],
+              "png_sheet": "crew/mop-cleaner/front/clean-sheet.png",
+              "svg_sheet": "crew/mop-cleaner/front/clean-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "walk": {
+              "frames": [
+                "crew/mop-cleaner/front/frame-05.png",
+                "crew/mop-cleaner/front/frame-06.png",
+                "crew/mop-cleaner/front/frame-07.png",
+                "crew/mop-cleaner/front/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/mop-cleaner/front/frame-05.svg",
+                "crew/mop-cleaner/front/frame-06.svg",
+                "crew/mop-cleaner/front/frame-07.svg",
+                "crew/mop-cleaner/front/frame-08.svg"
+              ],
+              "png_sheet": "crew/mop-cleaner/front/walk-sheet.png",
+              "svg_sheet": "crew/mop-cleaner/front/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            }
+          },
+          "source_export_scale": 0.19858156028368795,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        },
+        "rear": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "clean": {
+              "frames": [
+                "crew/mop-cleaner/rear/frame-01.png",
+                "crew/mop-cleaner/rear/frame-02.png",
+                "crew/mop-cleaner/rear/frame-03.png",
+                "crew/mop-cleaner/rear/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/mop-cleaner/rear/frame-01.svg",
+                "crew/mop-cleaner/rear/frame-02.svg",
+                "crew/mop-cleaner/rear/frame-03.svg",
+                "crew/mop-cleaner/rear/frame-04.svg"
+              ],
+              "png_sheet": "crew/mop-cleaner/rear/clean-sheet.png",
+              "svg_sheet": "crew/mop-cleaner/rear/clean-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "walk": {
+              "frames": [
+                "crew/mop-cleaner/rear/frame-05.png",
+                "crew/mop-cleaner/rear/frame-06.png",
+                "crew/mop-cleaner/rear/frame-07.png",
+                "crew/mop-cleaner/rear/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/mop-cleaner/rear/frame-05.svg",
+                "crew/mop-cleaner/rear/frame-06.svg",
+                "crew/mop-cleaner/rear/frame-07.svg",
+                "crew/mop-cleaner/rear/frame-08.svg"
+              ],
+              "png_sheet": "crew/mop-cleaner/rear/walk-sheet.png",
+              "svg_sheet": "crew/mop-cleaner/rear/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            }
+          },
+          "source_export_scale": 0.2074074074074074,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        }
+      }
+    },
+    "floor-scrubber": {
+      "name": "Floor-Cleaning Bot",
+      "views": {
+        "angle": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "clean": {
+              "frames": [
+                "crew/floor-scrubber/angle/frame-01.png",
+                "crew/floor-scrubber/angle/frame-02.png",
+                "crew/floor-scrubber/angle/frame-03.png",
+                "crew/floor-scrubber/angle/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/floor-scrubber/angle/frame-01.svg",
+                "crew/floor-scrubber/angle/frame-02.svg",
+                "crew/floor-scrubber/angle/frame-03.svg",
+                "crew/floor-scrubber/angle/frame-04.svg"
+              ],
+              "png_sheet": "crew/floor-scrubber/angle/clean-sheet.png",
+              "svg_sheet": "crew/floor-scrubber/angle/clean-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "drive": {
+              "frames": [
+                "crew/floor-scrubber/angle/frame-05.png",
+                "crew/floor-scrubber/angle/frame-06.png",
+                "crew/floor-scrubber/angle/frame-07.png",
+                "crew/floor-scrubber/angle/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/floor-scrubber/angle/frame-05.svg",
+                "crew/floor-scrubber/angle/frame-06.svg",
+                "crew/floor-scrubber/angle/frame-07.svg",
+                "crew/floor-scrubber/angle/frame-08.svg"
+              ],
+              "png_sheet": "crew/floor-scrubber/angle/drive-sheet.png",
+              "svg_sheet": "crew/floor-scrubber/angle/drive-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            }
+          },
+          "source_export_scale": 0.15342465753424658,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        },
+        "front": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "clean": {
+              "frames": [
+                "crew/floor-scrubber/front/frame-01.png",
+                "crew/floor-scrubber/front/frame-02.png",
+                "crew/floor-scrubber/front/frame-03.png",
+                "crew/floor-scrubber/front/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/floor-scrubber/front/frame-01.svg",
+                "crew/floor-scrubber/front/frame-02.svg",
+                "crew/floor-scrubber/front/frame-03.svg",
+                "crew/floor-scrubber/front/frame-04.svg"
+              ],
+              "png_sheet": "crew/floor-scrubber/front/clean-sheet.png",
+              "svg_sheet": "crew/floor-scrubber/front/clean-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "drive": {
+              "frames": [
+                "crew/floor-scrubber/front/frame-05.png",
+                "crew/floor-scrubber/front/frame-06.png",
+                "crew/floor-scrubber/front/frame-07.png",
+                "crew/floor-scrubber/front/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/floor-scrubber/front/frame-05.svg",
+                "crew/floor-scrubber/front/frame-06.svg",
+                "crew/floor-scrubber/front/frame-07.svg",
+                "crew/floor-scrubber/front/frame-08.svg"
+              ],
+              "png_sheet": "crew/floor-scrubber/front/drive-sheet.png",
+              "svg_sheet": "crew/floor-scrubber/front/drive-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            }
+          },
+          "source_export_scale": 0.15217391304347827,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        },
+        "rear": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "clean": {
+              "frames": [
+                "crew/floor-scrubber/rear/frame-01.png",
+                "crew/floor-scrubber/rear/frame-02.png",
+                "crew/floor-scrubber/rear/frame-03.png",
+                "crew/floor-scrubber/rear/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/floor-scrubber/rear/frame-01.svg",
+                "crew/floor-scrubber/rear/frame-02.svg",
+                "crew/floor-scrubber/rear/frame-03.svg",
+                "crew/floor-scrubber/rear/frame-04.svg"
+              ],
+              "png_sheet": "crew/floor-scrubber/rear/clean-sheet.png",
+              "svg_sheet": "crew/floor-scrubber/rear/clean-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "drive": {
+              "frames": [
+                "crew/floor-scrubber/rear/frame-05.png",
+                "crew/floor-scrubber/rear/frame-06.png",
+                "crew/floor-scrubber/rear/frame-07.png",
+                "crew/floor-scrubber/rear/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/floor-scrubber/rear/frame-05.svg",
+                "crew/floor-scrubber/rear/frame-06.svg",
+                "crew/floor-scrubber/rear/frame-07.svg",
+                "crew/floor-scrubber/rear/frame-08.svg"
+              ],
+              "png_sheet": "crew/floor-scrubber/rear/drive-sheet.png",
+              "svg_sheet": "crew/floor-scrubber/rear/drive-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            }
+          },
+          "source_export_scale": 0.15730337078651685,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        }
+      }
+    },
+    "security-guard": {
+      "name": "Security Guard",
+      "views": {
+        "angle": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "watch": {
+              "frames": [
+                "crew/security-guard/angle/frame-01.png",
+                "crew/security-guard/angle/frame-02.png",
+                "crew/security-guard/angle/frame-03.png",
+                "crew/security-guard/angle/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/security-guard/angle/frame-01.svg",
+                "crew/security-guard/angle/frame-02.svg",
+                "crew/security-guard/angle/frame-03.svg",
+                "crew/security-guard/angle/frame-04.svg"
+              ],
+              "png_sheet": "crew/security-guard/angle/watch-sheet.png",
+              "svg_sheet": "crew/security-guard/angle/watch-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "walk": {
+              "frames": [
+                "crew/security-guard/angle/frame-05.png",
+                "crew/security-guard/angle/frame-06.png",
+                "crew/security-guard/angle/frame-07.png",
+                "crew/security-guard/angle/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/security-guard/angle/frame-05.svg",
+                "crew/security-guard/angle/frame-06.svg",
+                "crew/security-guard/angle/frame-07.svg",
+                "crew/security-guard/angle/frame-08.svg"
+              ],
+              "png_sheet": "crew/security-guard/angle/walk-sheet.png",
+              "svg_sheet": "crew/security-guard/angle/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            }
+          },
+          "source_export_scale": 0.18461538461538463,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        },
+        "front": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "watch": {
+              "frames": [
+                "crew/security-guard/front/frame-01.png",
+                "crew/security-guard/front/frame-02.png",
+                "crew/security-guard/front/frame-03.png",
+                "crew/security-guard/front/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/security-guard/front/frame-01.svg",
+                "crew/security-guard/front/frame-02.svg",
+                "crew/security-guard/front/frame-03.svg",
+                "crew/security-guard/front/frame-04.svg"
+              ],
+              "png_sheet": "crew/security-guard/front/watch-sheet.png",
+              "svg_sheet": "crew/security-guard/front/watch-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "walk": {
+              "frames": [
+                "crew/security-guard/front/frame-05.png",
+                "crew/security-guard/front/frame-06.png",
+                "crew/security-guard/front/frame-07.png",
+                "crew/security-guard/front/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/security-guard/front/frame-05.svg",
+                "crew/security-guard/front/frame-06.svg",
+                "crew/security-guard/front/frame-07.svg",
+                "crew/security-guard/front/frame-08.svg"
+              ],
+              "png_sheet": "crew/security-guard/front/walk-sheet.png",
+              "svg_sheet": "crew/security-guard/front/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            }
+          },
+          "source_export_scale": 0.17758985200845667,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        },
+        "rear": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "watch": {
+              "frames": [
+                "crew/security-guard/rear/frame-01.png",
+                "crew/security-guard/rear/frame-02.png",
+                "crew/security-guard/rear/frame-03.png",
+                "crew/security-guard/rear/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/security-guard/rear/frame-01.svg",
+                "crew/security-guard/rear/frame-02.svg",
+                "crew/security-guard/rear/frame-03.svg",
+                "crew/security-guard/rear/frame-04.svg"
+              ],
+              "png_sheet": "crew/security-guard/rear/watch-sheet.png",
+              "svg_sheet": "crew/security-guard/rear/watch-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "walk": {
+              "frames": [
+                "crew/security-guard/rear/frame-05.png",
+                "crew/security-guard/rear/frame-06.png",
+                "crew/security-guard/rear/frame-07.png",
+                "crew/security-guard/rear/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/security-guard/rear/frame-05.svg",
+                "crew/security-guard/rear/frame-06.svg",
+                "crew/security-guard/rear/frame-07.svg",
+                "crew/security-guard/rear/frame-08.svg"
+              ],
+              "png_sheet": "crew/security-guard/rear/walk-sheet.png",
+              "svg_sheet": "crew/security-guard/rear/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            }
+          },
+          "source_export_scale": 0.18064516129032257,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        }
+      }
+    },
+    "mechanic": {
+      "name": "Mechanic",
+      "views": {
+        "rear": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "walk": {
+              "frames": [
+                "crew/mechanic/rear/frame-01.png",
+                "crew/mechanic/rear/frame-02.png",
+                "crew/mechanic/rear/frame-03.png",
+                "crew/mechanic/rear/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/mechanic/rear/frame-01.svg",
+                "crew/mechanic/rear/frame-02.svg",
+                "crew/mechanic/rear/frame-03.svg",
+                "crew/mechanic/rear/frame-04.svg"
+              ],
+              "png_sheet": "crew/mechanic/rear/walk-sheet.png",
+              "svg_sheet": "crew/mechanic/rear/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            },
+            "carry": {
+              "frames": [
+                "crew/mechanic/rear/frame-05.png",
+                "crew/mechanic/rear/frame-06.png",
+                "crew/mechanic/rear/frame-07.png",
+                "crew/mechanic/rear/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/mechanic/rear/frame-05.svg",
+                "crew/mechanic/rear/frame-06.svg",
+                "crew/mechanic/rear/frame-07.svg",
+                "crew/mechanic/rear/frame-08.svg"
+              ],
+              "png_sheet": "crew/mechanic/rear/carry-sheet.png",
+              "svg_sheet": "crew/mechanic/rear/carry-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "set-down": {
+              "frames": [
+                "crew/mechanic/rear/frame-09.png",
+                "crew/mechanic/rear/frame-10.png",
+                "crew/mechanic/rear/frame-11.png"
+              ],
+              "svg_frames": [
+                "crew/mechanic/rear/frame-09.svg",
+                "crew/mechanic/rear/frame-10.svg",
+                "crew/mechanic/rear/frame-11.svg"
+              ],
+              "png_sheet": "crew/mechanic/rear/set-down-sheet.png",
+              "svg_sheet": "crew/mechanic/rear/set-down-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": false,
+              "frame_count": 3
+            },
+            "idle": {
+              "frames": [
+                "crew/mechanic/rear/frame-12.png"
+              ],
+              "svg_frames": [
+                "crew/mechanic/rear/frame-12.svg"
+              ],
+              "png_sheet": "crew/mechanic/rear/idle-sheet.png",
+              "svg_sheet": "crew/mechanic/rear/idle-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 1
+            }
+          },
+          "source_export_scale": 0.27009646302250806,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        },
+        "front": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "walk": {
+              "frames": [
+                "crew/mechanic/front/frame-01.png",
+                "crew/mechanic/front/frame-02.png",
+                "crew/mechanic/front/frame-03.png",
+                "crew/mechanic/front/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/mechanic/front/frame-01.svg",
+                "crew/mechanic/front/frame-02.svg",
+                "crew/mechanic/front/frame-03.svg",
+                "crew/mechanic/front/frame-04.svg"
+              ],
+              "png_sheet": "crew/mechanic/front/walk-sheet.png",
+              "svg_sheet": "crew/mechanic/front/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            },
+            "carry": {
+              "frames": [
+                "crew/mechanic/front/frame-05.png",
+                "crew/mechanic/front/frame-06.png",
+                "crew/mechanic/front/frame-07.png",
+                "crew/mechanic/front/frame-08.png"
+              ],
+              "svg_frames": [
+                "crew/mechanic/front/frame-05.svg",
+                "crew/mechanic/front/frame-06.svg",
+                "crew/mechanic/front/frame-07.svg",
+                "crew/mechanic/front/frame-08.svg"
+              ],
+              "png_sheet": "crew/mechanic/front/carry-sheet.png",
+              "svg_sheet": "crew/mechanic/front/carry-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 4
+            },
+            "set-down": {
+              "frames": [
+                "crew/mechanic/front/frame-09.png",
+                "crew/mechanic/front/frame-10.png",
+                "crew/mechanic/front/frame-11.png"
+              ],
+              "svg_frames": [
+                "crew/mechanic/front/frame-09.svg",
+                "crew/mechanic/front/frame-10.svg",
+                "crew/mechanic/front/frame-11.svg"
+              ],
+              "png_sheet": "crew/mechanic/front/set-down-sheet.png",
+              "svg_sheet": "crew/mechanic/front/set-down-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": false,
+              "frame_count": 3
+            },
+            "idle": {
+              "frames": [
+                "crew/mechanic/front/frame-12.png"
+              ],
+              "svg_frames": [
+                "crew/mechanic/front/frame-12.svg"
+              ],
+              "png_sheet": "crew/mechanic/front/idle-sheet.png",
+              "svg_sheet": "crew/mechanic/front/idle-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 1
+            }
+          },
+          "source_export_scale": null,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        }
+      }
+    },
+    "inspector": {
+      "name": "Lab Coat Inspector",
+      "views": {
+        "rear": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "walk": {
+              "frames": [
+                "crew/inspector/rear/frame-01.png",
+                "crew/inspector/rear/frame-02.png",
+                "crew/inspector/rear/frame-03.png",
+                "crew/inspector/rear/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/inspector/rear/frame-01.svg",
+                "crew/inspector/rear/frame-02.svg",
+                "crew/inspector/rear/frame-03.svg",
+                "crew/inspector/rear/frame-04.svg"
+              ],
+              "png_sheet": "crew/inspector/rear/walk-sheet.png",
+              "svg_sheet": "crew/inspector/rear/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            },
+            "press": {
+              "frames": [
+                "crew/inspector/rear/frame-05.png",
+                "crew/inspector/rear/frame-06.png",
+                "crew/inspector/rear/frame-07.png"
+              ],
+              "svg_frames": [
+                "crew/inspector/rear/frame-05.svg",
+                "crew/inspector/rear/frame-06.svg",
+                "crew/inspector/rear/frame-07.svg"
+              ],
+              "png_sheet": "crew/inspector/rear/press-sheet.png",
+              "svg_sheet": "crew/inspector/rear/press-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": false,
+              "frame_count": 3
+            },
+            "tap": {
+              "frames": [
+                "crew/inspector/rear/frame-09.png",
+                "crew/inspector/rear/frame-10.png",
+                "crew/inspector/rear/frame-11.png"
+              ],
+              "svg_frames": [
+                "crew/inspector/rear/frame-09.svg",
+                "crew/inspector/rear/frame-10.svg",
+                "crew/inspector/rear/frame-11.svg"
+              ],
+              "png_sheet": "crew/inspector/rear/tap-sheet.png",
+              "svg_sheet": "crew/inspector/rear/tap-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": false,
+              "frame_count": 3
+            },
+            "idle": {
+              "frames": [
+                "crew/inspector/rear/frame-12.png"
+              ],
+              "svg_frames": [
+                "crew/inspector/rear/frame-12.svg"
+              ],
+              "png_sheet": "crew/inspector/rear/idle-sheet.png",
+              "svg_sheet": "crew/inspector/rear/idle-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 1
+            }
+          },
+          "source_export_scale": 0.2906574394463668,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        },
+        "front": {
+          "size": [
+            160,
+            144
+          ],
+          "ground_anchor_px": [
+            80,
+            124
+          ],
+          "animations": {
+            "walk": {
+              "frames": [
+                "crew/inspector/front/frame-01.png",
+                "crew/inspector/front/frame-02.png",
+                "crew/inspector/front/frame-03.png",
+                "crew/inspector/front/frame-04.png"
+              ],
+              "svg_frames": [
+                "crew/inspector/front/frame-01.svg",
+                "crew/inspector/front/frame-02.svg",
+                "crew/inspector/front/frame-03.svg",
+                "crew/inspector/front/frame-04.svg"
+              ],
+              "png_sheet": "crew/inspector/front/walk-sheet.png",
+              "svg_sheet": "crew/inspector/front/walk-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  480,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 180,
+              "loop": true,
+              "frame_count": 4
+            },
+            "press": {
+              "frames": [
+                "crew/inspector/front/frame-05.png",
+                "crew/inspector/front/frame-06.png",
+                "crew/inspector/front/frame-07.png"
+              ],
+              "svg_frames": [
+                "crew/inspector/front/frame-05.svg",
+                "crew/inspector/front/frame-06.svg",
+                "crew/inspector/front/frame-07.svg"
+              ],
+              "png_sheet": "crew/inspector/front/press-sheet.png",
+              "svg_sheet": "crew/inspector/front/press-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": false,
+              "frame_count": 3
+            },
+            "tap": {
+              "frames": [
+                "crew/inspector/front/frame-08.png",
+                "crew/inspector/front/frame-09.png",
+                "crew/inspector/front/frame-10.png"
+              ],
+              "svg_frames": [
+                "crew/inspector/front/frame-08.svg",
+                "crew/inspector/front/frame-09.svg",
+                "crew/inspector/front/frame-10.svg"
+              ],
+              "png_sheet": "crew/inspector/front/tap-sheet.png",
+              "svg_sheet": "crew/inspector/front/tap-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  160,
+                  0,
+                  160,
+                  144
+                ],
+                [
+                  320,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": false,
+              "frame_count": 3
+            },
+            "idle": {
+              "frames": [
+                "crew/inspector/front/frame-11.png"
+              ],
+              "svg_frames": [
+                "crew/inspector/front/frame-11.svg"
+              ],
+              "png_sheet": "crew/inspector/front/idle-sheet.png",
+              "svg_sheet": "crew/inspector/front/idle-sheet.svg",
+              "frame_rects_px": [
+                [
+                  0,
+                  0,
+                  160,
+                  144
+                ]
+              ],
+              "frame_ms": 200,
+              "loop": true,
+              "frame_count": 1
+            }
+          },
+          "source_export_scale": null,
+          "vector_format": "native pixel-run path geometry; no embedded PNG; frame-based artwork, not a semantic limb rig"
+        }
+      }
+    }
+  },
+  "props": {
+    "mop-bucket": {
+      "png": "props/mop-bucket.png",
+      "svg": "props/mop-bucket.svg",
+      "size": [
+        160,
+        144
+      ],
+      "ground_anchor_px": [
+        80,
+        124
+      ]
+    }
+  },
+  "view_keys": {
+    "front": "toward viewer",
+    "rear": "away from viewer",
+    "angle": "three-quarter toward screen right"
+  },
+  "scope": "art/export assets only; no app wiring",
+  "staff_side_views": "Angled view supplied for new crew. Dedicated side profiles for legacy mechanic/inspector are not supplied; their existing front art is preserved."
+}

@@ -1,0 +1,266 @@
+{
+ "contract": "shared.inference.observation/1",
+ "observed_at": 1793717053.2458243,
+ "admission_open": true,
+ "applications": [
+  {
+   "app_id": "capstone",
+   "enabled": 1,
+   "max_concurrency": 2,
+   "queue_limit": 16,
+   "priority": 6
+  },
+  {
+   "app_id": "coder",
+   "enabled": 1,
+   "max_concurrency": 1,
+   "queue_limit": 8,
+   "priority": 5
+  }
+ ],
+ "resources": [
+  {
+   "resource_id": "gateway-host",
+   "resource_type": "infrastructure_service",
+   "qualified_models": [],
+   "health": "unqualified",
+   "last_seen": 0.0,
+   "fresh": false
+  },
+  {
+   "resource_id": "head-192-0-2-3",
+   "resource_type": "shared_inference",
+   "qualified_models": [
+    "qwen2.5:7b",
+    "llama3.1:8b"
+   ],
+   "health": "healthy",
+   "last_seen": 1793717053.1215296,
+   "fresh": true
+  },
+  {
+   "resource_id": "head-192-0-2-6",
+   "resource_type": "shared_inference",
+   "qualified_models": [
+    "qwen2.5-coder:7b",
+    "qwen2.5:7b"
+   ],
+   "health": "healthy",
+   "last_seen": 1793717053.1268156,
+   "fresh": true
+  },
+  {
+   "resource_id": "head-192-0-2-7",
+   "resource_type": "shared_inference",
+   "qualified_models": [
+    "llama3.1:8b"
+   ],
+   "health": "degraded",
+   "last_seen": 1793717053.1313896,
+   "fresh": true
+  }
+ ],
+ "requests": {
+  "cancelled": 1,
+  "completed": 2,
+  "leased": 2,
+  "queued": 2
+ },
+ "invocations": {
+  "active": 1,
+  "completed": 1,
+  "failed": 1
+ },
+ "leases": [
+  {
+   "request_id": "REQ-d4e68065abfb4cc28464c00674565631",
+   "app_id": "capstone",
+   "resource_id": "head-192-0-2-3",
+   "lease_id": "LEASE-70d8201ee3e744b49699210358f145cd",
+   "status": "leased",
+   "expires": 1793717113.20239,
+   "deadline": 1793717653.1407537,
+   "executing": 1
+  },
+  {
+   "request_id": "REQ-e7bdfd2a57c34cd4aac29d8f3c6c165c",
+   "app_id": "coder",
+   "resource_id": "head-192-0-2-6",
+   "lease_id": "LEASE-5249b85540bd4aeda2ddbdeefe688b4f",
+   "status": "leased",
+   "expires": 1793717113.2213905,
+   "deadline": 1793717653.1407537,
+   "executing": 0
+  }
+ ],
+ "qualification_observations": [
+  {
+   "evidence_id": "QUAL-aa1683f7a1ec",
+   "resource_id": "head-192-0-2-7",
+   "model": "llama3.1:8b",
+   "digest": "sha256:abababababababab",
+   "passed": 0,
+   "at": 1793717053.137389
+  },
+  {
+   "evidence_id": "QUAL-d91d717d3e5f",
+   "resource_id": "head-192-0-2-6",
+   "model": "qwen2.5-coder:7b",
+   "digest": "sha256:abababababababab",
+   "passed": 1,
+   "at": 1793717053.13639
+  },
+  {
+   "evidence_id": "QUAL-6e9f840a9683",
+   "resource_id": "head-192-0-2-3",
+   "model": "qwen2.5:7b",
+   "digest": "sha256:abababababababab",
+   "passed": 1,
+   "at": 1793717053.1353884
+  }
+ ],
+ "events": [
+  {
+   "event_id": 1,
+   "app_id": "infrastructure",
+   "request_id": null,
+   "event_type": "resource.authorized",
+   "at": 1793717053.1013656
+  },
+  {
+   "event_id": 2,
+   "app_id": "infrastructure",
+   "request_id": null,
+   "event_type": "resource.authorized",
+   "at": 1793717053.1081693
+  },
+  {
+   "event_id": 3,
+   "app_id": "infrastructure",
+   "request_id": null,
+   "event_type": "resource.authorized",
+   "at": 1793717053.1126804
+  },
+  {
+   "event_id": 4,
+   "app_id": "infrastructure",
+   "request_id": null,
+   "event_type": "resource.authorized",
+   "at": 1793717053.1180165
+  },
+  {
+   "event_id": 5,
+   "app_id": "infrastructure",
+   "request_id": null,
+   "event_type": "qualification.completed",
+   "at": 1793717053.137389
+  },
+  {
+   "event_id": 6,
+   "app_id": "capstone",
+   "request_id": "REQ-8d3995f7837c4a11bfc475979a3163af",
+   "event_type": "queued",
+   "at": 1793717053.1432176
+  },
+  {
+   "event_id": 7,
+   "app_id": "capstone",
+   "request_id": "REQ-8d3995f7837c4a11bfc475979a3163af",
+   "event_type": "admitted",
+   "at": 1793717053.1507525
+  },
+  {
+   "event_id": 8,
+   "app_id": "capstone",
+   "request_id": "REQ-8d3995f7837c4a11bfc475979a3163af",
+   "event_type": "completed",
+   "at": 1793717053.1567485
+  },
+  {
+   "event_id": 9,
+   "app_id": "coder",
+   "request_id": "REQ-c874b92bd33145308957f83c0fcde570",
+   "event_type": "queued",
+   "at": 1793717053.1639867
+  },
+  {
+   "event_id": 10,
+   "app_id": "coder",
+   "request_id": "REQ-c874b92bd33145308957f83c0fcde570",
+   "event_type": "admitted",
+   "at": 1793717053.1713014
+  },
+  {
+   "event_id": 11,
+   "app_id": "coder",
+   "request_id": "REQ-c874b92bd33145308957f83c0fcde570",
+   "event_type": "completed",
+   "at": 1793717053.178898
+  },
+  {
+   "event_id": 12,
+   "app_id": "capstone",
+   "request_id": "REQ-08c6aae336c44dbf83691203cfecc56a",
+   "event_type": "queued",
+   "at": 1793717053.1848986
+  },
+  {
+   "event_id": 13,
+   "app_id": "capstone",
+   "request_id": "REQ-08c6aae336c44dbf83691203cfecc56a",
+   "event_type": "cancelled",
+   "at": 1793717053.1921356
+  },
+  {
+   "event_id": 14,
+   "app_id": "capstone",
+   "request_id": "REQ-d4e68065abfb4cc28464c00674565631",
+   "event_type": "queued",
+   "at": 1793717053.198391
+  },
+  {
+   "event_id": 15,
+   "app_id": "capstone",
+   "request_id": "REQ-d4e68065abfb4cc28464c00674565631",
+   "event_type": "admitted",
+   "at": 1793717053.2049036
+  },
+  {
+   "event_id": 16,
+   "app_id": "coder",
+   "request_id": "REQ-e7bdfd2a57c34cd4aac29d8f3c6c165c",
+   "event_type": "queued",
+   "at": 1793717053.2163892
+  },
+  {
+   "event_id": 17,
+   "app_id": "coder",
+   "request_id": "REQ-e7bdfd2a57c34cd4aac29d8f3c6c165c",
+   "event_type": "admitted",
+   "at": 1793717053.2223904
+  },
+  {
+   "event_id": 18,
+   "app_id": "capstone",
+   "request_id": "REQ-10853b72401c492da43b4895a25ec9b3",
+   "event_type": "queued",
+   "at": 1793717053.2283905
+  },
+  {
+   "event_id": 19,
+   "app_id": "coder",
+   "request_id": "REQ-4d94edae54db44e383950b92e0257d3b",
+   "event_type": "queued",
+   "at": 1793717053.2353082
+  },
+  {
+   "event_id": 20,
+   "app_id": "coder",
+   "request_id": null,
+   "event_type": "overload.rejected",
+   "at": 1793717053.2413242
+  }
+ ],
+ "next_event_id": 20,
+ "scope": "snapshot only; enabled is authorization, not application liveness; stale leases are not reconciled by observer"
+}

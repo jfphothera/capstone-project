@@ -1,0 +1,82 @@
+AGENT ARENA - BRINGING UP THE ADMIN COMPUTER AND MOVING THE HEADS TO IT
+=========================================================================
+
+Machines:  dev laptop 192.0.2.1 (today it also runs the old event service)
+           admin computer 192.0.2.254 (the new one)
+           heads 192.0.2.2-.10
+
+Folders on this USB:
+  AGENT-ARENA-HUB        the admin computer: setup script and Arena installer
+  AGENT-ARENA-2.1.2      heads: the viewer upgrade
+  FIX-EXISTING-HEADS     heads: firewall, time and power fix (no install)
+  AGENT-ARENA-TICKETING  the Capstone laptop, later (after Capstone is installed)
+
+Every script writes what it did to a results\ folder next to it.
+If a step fails, stop there and send what it printed.
+
+
+STEP 1 - ADMIN COMPUTER: prepare it
+  Plug it into the cluster switch (and Wi-Fi if you want internet for Python).
+  Run  AGENT-ARENA-HUB\SET-UP-THIS-COMPUTER.cmd  and approve the administrator prompt.
+  It asks which wired adapter is on the cluster, and asks YES before setting 192.0.2.254.
+  It also installs Python 3.12 (needs internet), keeps the computer awake, makes it the
+  cluster's time server, answers ping, and allows Remote Desktop from 192.0.2.1 only.
+  To look first without changing anything:  SET-UP-THIS-COMPUTER.cmd -CheckOnly
+  When it says "Next: ...", close that window.
+
+
+STEP 2 - DEV LAPTOP (192.0.2.1): copy the service's data onto this USB
+  This is what lets the heads keep their enrollment. The old service keeps running.
+  Plug this USB into the dev laptop, then in the AgentArena folder run:
+      coordinator\PREPARE-HUB-USB.cmd D:\ --move-data
+  (D:\ is this USB's letter on the dev laptop.) It refreshes AGENT-ARENA-HUB with the data.
+  The copy holds the service's keys: keep the USB with you until step 3 is done.
+  After this, the old service on the dev laptop will not start again by itself; that is
+  on purpose (two services with one identity would confuse the heads).
+
+
+STEP 3 - ADMIN COMPUTER: install the Arena
+  Back on the admin computer, signed in as the normal user (NOT "run as administrator"):
+      AGENT-ARENA-HUB\INSTALL-ADMIN-HUB.cmd
+  Approve the one administrator prompt (the firewall rule for port 8790).
+  Wait for: RESULT success. It deletes the data copy from the USB when done.
+  The admin hub window opens by itself (Arena icon, tray icon); "Agent Arena Admin Hub" is
+  on the desktop. F11 or View > Full screen; Esc to leave full screen.
+  Already installed it from an earlier USB? Just run INSTALL-ADMIN-HUB.cmd again: it stops
+  the old windows itself, keeps the data, and removes the old console shortcut.
+
+
+STEP 4 - DEV LAPTOP: check you can reach the admin computer
+  The dev laptop must be on the cluster Ethernet. In PowerShell:
+      ping 192.0.2.254
+      Test-NetConnection 192.0.2.254 -Port 8790
+      Invoke-RestMethod http://192.0.2.254:8790/v2/health
+          (service_id must be aes-a1e79a8b3902)
+      w32tm /stripchart /computer:192.0.2.254 /samples:3 /dataonly
+      mstsc /v:192.0.2.254
+
+
+STEP 5 - DEV LAPTOP: send the heads to the admin computer
+  The heads learn the new address from the OLD service, so it must run one last time.
+  The dev laptop must have 192.0.2.1 on the cluster Ethernet. If the old "Arena Event
+  Service" window is not open, start it with the override (the normal launcher refuses
+  now that its data has moved), in the AgentArena folder:
+      .venv\Scripts\python.exe -E -s -m arena_service --config %LOCALAPPDATA%\AgentArenaService\aes.config.json --after-move
+  Leave that window open. In a second window, in the AgentArena folder:
+      .venv\Scripts\python.exe -m arena_service.admin --config %LOCALAPPDATA%\AgentArenaService\aes.config.json endpoints-set http://192.0.2.254:8790
+  (or open coordinator\OPEN-ADMIN-CONSOLE.cmd and use Service > Display addresses).
+  Each running head checks the admin computer answers as the same service, then switches.
+  On the admin computer's console, Machines shows them come up.
+  When all heads show there, close the old "Arena Event Service" window on the dev laptop.
+
+
+STEP 6 - EACH HEAD (2 to 10), one visit
+  a) FIX-EXISTING-HEADS\FIX-EXISTING-HEAD.cmd      approve the prompt; read the report
+  b) AGENT-ARENA-2.1.2\2-INSTALL-AND-VERIFY.cmd    upgrades the viewer; keeps its enrollment
+  The order of a) and b) does not matter. b) needs the admin computer up (steps 1-3).
+
+
+LATER - CAPSTONE LAPTOP
+  On the admin console: Machines > Addresses: reserve its address (Application laptop,
+  Ticketing). After Capstone is installed: Machines > Applications > Ticketing > App code,
+  then run AGENT-ARENA-TICKETING\INSTALL-TICKETING-ADAPTER.cmd on the laptop.

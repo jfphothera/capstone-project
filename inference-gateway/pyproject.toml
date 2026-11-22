@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools==84.2.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inference-gateway"
+version = "0.4.6"
+description = "Independent extraction of the shared.inference/1 capacity authority"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+inference-gateway = "inference_gateway.capacity_gateway_server:main"
+inference-bootstrap = "inference_gateway.capacity_bootstrap:main"
+inference-qualify = "inference_gateway.capacity_admin:main"
+inference-lifecycle = "inference_gateway.capacity_lifecycle:main"
+inference-observe = "inference_gateway.capacity_observe:main"
+inference-observation-publisher = "inference_gateway.observation_publisher:main"
+inference-service = "inference_gateway.windows_service:main"
+inference-credentials = "inference_gateway.credentials:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["shared_inference_client"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--import-mode=importlib"

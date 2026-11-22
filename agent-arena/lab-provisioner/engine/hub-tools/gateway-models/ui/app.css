@@ -1,0 +1,71 @@
+/* Gateway Models: the Arena admin hub's palette (frontend/css/admin_console.css). */
+html,body{margin:0;height:100%;background:#07131f;color:#d7e6ea;font:13px 'Segoe UI',Arial,sans-serif}
+body{display:flex;flex-direction:column}
+.bar{min-height:44px;display:flex;align-items:center;gap:14px;padding:0 14px;background:#0c1c2b;border-bottom:1px solid #2f4d63;flex-wrap:wrap}
+.bar strong{letter-spacing:2px;color:#ffd38a}#hub{color:#9fd3e0}
+#updated{margin-left:auto;color:#8fb0bf;font:12px Consolas,monospace}
+.actions{display:flex;gap:6px}
+button{background:#142e40;color:#d7e6ea;border:1px solid #315b74;border-radius:3px;padding:6px 12px;font:13px 'Segoe UI';cursor:pointer}
+button:hover:not(:disabled){background:#1d4058}button:disabled{opacity:.45;cursor:default}
+button.primary{background:#2a5a3a;border-color:#3c7a4c;color:#e6ffe9;font-weight:600}button.primary:hover:not(:disabled){background:#33704a}
+button.quiet{background:none}button.small{padding:2px 8px;font-size:11px}
+.pill{font:12px Consolas,monospace;padding:2px 8px;border-radius:3px;border:1px solid #315b74;color:#9fd3e0;white-space:nowrap}
+.pill.up{color:#96e6aa;border-color:#3c7a4c}.pill.warn{color:#ffbe5a;border-color:#8a6524}.pill.down{color:#ff7864;border-color:#8a3a2c}
+main{flex:1;overflow:auto;padding:10px 16px 80px}
+.toolbar{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:4px 0 6px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;color:#a9c3cf;font-size:12px}.legend i{font-style:normal;margin-right:4px}
+.opt{color:#a9c3cf;font-size:12px;display:flex;align-items:center;gap:5px}
+.hint{color:#7f9aa8;font-size:12px;margin:6px 0 10px}.hint b{color:#cfe3ea}
+.notice{background:#142e40;border:1px solid #315b74;border-radius:3px;padding:10px;margin:8px 0}.notice.error{border-color:#8a3a2c;color:#ffb3a6}
+.table-wrap{overflow:auto;border:1px solid #1d3547;border-radius:4px}
+.grid{border-collapse:collapse;font-size:13px;min-width:100%}
+.grid th{font:11px Consolas,monospace;color:#8fb0bf;padding:5px 8px;border-bottom:1px solid #2f4d63;background:#0b1926;position:sticky;top:0;z-index:1;white-space:nowrap}
+.grid thead tr:first-child th{top:0}.grid thead tr:nth-child(2) th{top:25px}
+.grid th.group{text-align:center;color:#ffd38a;letter-spacing:1px;border-bottom:1px solid #315b74}
+.grid th.app,.grid th.head{text-align:center}.grid th.head small{display:block;color:#6d8796;font-size:10px}
+.grid th.head.out{color:#ffbe5a}.grid th.head.off{color:#ff7864}
+.grid td{padding:4px 8px;border-bottom:1px solid #132636;text-align:center;white-space:nowrap}
+.grid td.name{text-align:left;font:13px Consolas,monospace;color:#e2eef2}.grid td.name small{display:block;font:11px 'Segoe UI';color:#ffbe5a;white-space:normal;max-width:330px}
+.grid tr:hover td{background:#0d2131}
+.grid td.sep,.grid th.sep{border-left:1px solid #2f4d63}
+.grid input[type=checkbox]{width:16px;height:16px;cursor:pointer;accent-color:#4caf6a}
+.grid td.allc input{accent-color:#ffd38a}
+.grid td.changed{box-shadow:inset 0 0 0 2px #ffd38a55;background:#1b2a1a}
+.c{display:inline-block;min-width:30px;padding:3px 0;border-radius:3px;font:700 13px Consolas,monospace;text-align:center}
+button.c{border:1px solid transparent;cursor:pointer}button.c:disabled{cursor:default;opacity:1}
+.c.usable{background:#1f4d2c;color:#a6f0b6;border-color:#3c7a4c}
+.c.offline{background:#1d3240;color:#86b49a}
+.c.untested{background:#3a3218;color:#ffd38a;border-color:#8a6524}
+.c.failed{background:#4a2018;color:#ff9c8a;border-color:#8a3a2c}
+.c.lapsed{background:#2d2a3e;color:#c5b8ff}
+.c.blocked{background:#3a0f0f;color:#ff6b5a;border-color:#a03a2c}
+.c.absent{background:none;color:#3f5868}
+.c.not-enrolled{background:#16283a;color:#7f9aa8;border:1px dashed #315b74}
+.c.unused{background:#17301f;color:#6f9c7b;border-color:#24452f}
+.c.pending{outline:2px dashed #ffd38a;outline-offset:1px}
+.applybar{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;gap:12px;justify-content:flex-end;padding:10px 16px;background:#0c1c2b;border-top:1px solid #2f4d63}
+#changes{margin-right:auto;color:#a9c3cf}#changes.some{color:#ffd38a;font-weight:600}
+dialog.window{background:#0b1926;color:#d7e6ea;border:1px solid #315b74;border-radius:5px;padding:0 18px 16px;width:min(720px,92vw);max-height:86vh;overflow:auto;box-shadow:0 18px 60px #000c}
+dialog.window.wide{width:min(980px,94vw)}dialog.window::backdrop{background:#02070c99}
+dialog.window>header{display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:#0b1926;margin:0 -18px;padding:6px 10px 6px 18px;border-bottom:1px solid #2f4d63;z-index:2}
+dialog .close{background:none;border:0;color:#9fd3e0;font:20px 'Segoe UI';padding:2px 8px}
+.window h2{font:700 11px Consolas,monospace;letter-spacing:1.5px;color:#9fd3e0;margin:16px 0 8px;text-transform:uppercase}
+.window ul{margin:4px 0 8px;padding-left:20px}.window li{margin:3px 0}
+.window input{background:#142e40;color:#d7e6ea;border:1px solid #315b74;border-radius:3px;padding:5px 8px;font:13px Consolas,monospace}
+.window input.wide{width:min(360px,60vw)}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0}.row.end{justify-content:flex-end;margin-top:14px}
+.row label.head{display:flex;gap:5px;align-items:center;background:#10283a;border:1px solid #1d3547;border-radius:3px;padding:4px 8px;font:12px Consolas,monospace}
+.log{background:#06101a;border:1px solid #15293a;border-radius:3px;padding:8px;margin:6px 0;max-height:300px;overflow:auto;font:12px Consolas,monospace;color:#c9d8b0;white-space:pre-wrap}
+.cmd{display:flex;align-items:center;gap:10px;background:#10283a;border:1px solid #ffd38a;border-radius:4px;padding:10px 14px}
+.cmd code{font:700 18px Consolas,monospace;color:#ffe9bd;user-select:all;flex:1}
+.facts{width:100%;border-collapse:collapse;font-size:12px}.facts th{text-align:left;font:11px Consolas,monospace;color:#6d8796;padding:4px 6px;border-bottom:1px solid #2f4d63}
+.facts td{padding:5px 6px;border-bottom:1px solid #15293a;vertical-align:top}.facts td.addr{font:12px Consolas,monospace;color:#a9d6e2}
+.facts td.models{color:#9fb6c2;font-size:11px;white-space:normal}
+.ok{color:#96e6aa}.warn{color:#ffbe5a}.bad{color:#ff7864}.dim{color:#6d8796}
+
+/* System health (the screen's main view since the admin hub's Fleet menu makes the changes) */
+.health{margin:0 0 10px}.health h2{font:700 11px Consolas,monospace;letter-spacing:1.5px;color:#9fd3e0;margin:10px 0 8px;text-transform:uppercase}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}
+.tile{border:1px solid #315b74;border-radius:4px;padding:8px 10px;background:#0d1f2e;display:flex;flex-direction:column;gap:2px}
+.tile b{font:700 20px Consolas,monospace;color:#d7e6ea}.tile span{color:#9fd3e0;font-size:12px}.tile small{color:#7f9aa8;font-size:11px;overflow-wrap:anywhere}
+.tile.up{border-color:#3c7a4c}.tile.up b{color:#96e6aa}.tile.warn{border-color:#8a6524}.tile.warn b{color:#ffbe5a}.tile.down{border-color:#8a3a2c}.tile.down b{color:#ff7864}

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" class="avatar" data-rig="classic-refined-v1" viewBox="0 0 64 80" shape-rendering="crispEdges" aria-hidden="true" data-view="front">
+  <style>.seated-feet{display:none}</style><ellipse class="ground" cx="32" cy="76" rx="24" ry="3" fill="#06131f" opacity=".5" />
+  <g class="feet">
+    <g class="leg left-leg"><path class="ink" fill="#071421" d="M18 54h13v20h-4v4H13v-8h5z" /><path class="shell shade" fill="#147f8c" d="M21 57h7v14h-5v3h-7v-3h5z" /><path class="boot" fill="#a5d4da" d="M16 71h10v4H16z" /></g>
+    <g class="leg right-leg"><path class="ink" fill="#071421" d="M33 54h13v16h5v8H37v-4h-4z" /><path class="shell shade" fill="#147f8c" d="M36 57h7v14h5v3h-8v-3h-4z" /><path class="boot" fill="#a5d4da" d="M39 71h9v4h-9z" /></g>
+  </g>
+  <g class="seated-feet">
+    <path class="ink" fill="#071421" d="M18 54h13v11H21v9H11V62h7zM33 54h13v8h7v12H43v-9H33z" />
+    <path class="shell shade" fill="#147f8c" d="M21 57h7v5H18v9h-4v-6h7zM36 57h7v8h7v6h-4v-9H36z" />
+    <path class="boot" fill="#a5d4da" d="M13 68h8v4h-8zM43 68h8v4h-8z" />
+  </g>
+  <g class="torso">
+    <path class="ink" fill="#071421" d="M17 34h30v5h4v20h-5v4H18v-4h-5V39h4z" />
+    <path class="shell" fill="#20c9cd" d="M20 37h24v5h4v13h-5v5H21v-5h-5V42h4z" />
+    <path class="shine" fill="#90eee0" d="M20 37h24v3H23v11h-3z" />
+    <path class="shell shade" fill="#147f8c" d="M43 41h5v14h-5v5H21v-3h19v-6h3z" />
+    <path class="ink" fill="#071421" d="M25 42h15v11H25z" /><path class="screen" fill="#143744" d="M28 44h9v6h-9z" />
+    <path class="screen-light shine" fill="#90eee0" d="M28 45h7v2h-7z" />
+    <g class="arm left-arm"><path class="ink" fill="#071421" d="M12 37h9v9h-3v16H7V44h5z" /><path class="shell" fill="#20c9cd" d="M12 41h6v6h-3v10H10V47h2z" /><path class="shine" fill="#90eee0" d="M12 41h6v3h-6z" /><path class="glove" fill="#264d5c" d="M10 55h5v5h-5z" /></g>
+    <g class="arm right-arm"><path class="ink" fill="#071421" d="M43 37h9v7h5v18H46V46h-3z" /><path class="shell" fill="#20c9cd" d="M46 41h6v6h2v10h-5V47h-3z" /><path class="shine" fill="#90eee0" d="M46 41h6v3h-6z" /><path class="glove" fill="#264d5c" d="M49 55h5v5h-5z" /></g>
+  </g>
+  <g class="head">
+    <path class="ink" fill="#071421" d="M21 2h22v4h7v6h5v22h-5v5H14v-5H9V12h5V6h7z" />
+    <path class="shell" fill="#20c9cd" d="M22 5h20v4h6v6h4v17h-5v4H17v-4h-5V15h5V9h5z" />
+    <path class="shine" fill="#90eee0" d="M22 5h20v3H25v4h-7v16h-3V15h3V9h4z" />
+    <path class="shell shade" fill="#147f8c" d="M48 15h4v17h-5v4H17v-3h27v-4h4z" />
+    <path class="visor-edge" fill="#276677" d="M17 14h30v18H17z" />
+    <path class="face" fill="#071c2b" d="M19 16h26v15H19z" />
+    <path class="face-glint" fill="#153d4c" d="M20 17h24v2H20z" />
+    <g class="gaze"><path class="eye shine" fill="#90eee0" d="M23 21h5v7h-5zM36 21h5v7h-5z" /></g>
+  </g>
+</svg>

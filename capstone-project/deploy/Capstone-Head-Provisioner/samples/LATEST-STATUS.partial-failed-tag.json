@@ -1,0 +1,74 @@
+{
+    "schema_version":  1,
+    "generated_at":  "2026-10-30T07:12:01.5720905-04:00",
+    "result":  "PARTIAL_SUCCESS",
+    "ready_for_phase4":  false,
+    "run":  {
+                "Version":  "1.0.0",
+                "Mode":  "Provision",
+                "ComputerName":  "CAPSTONE-HEAD-04",
+                "LogFile":  "C:\\ProgramData\\CapstoneProvisioner\\logs\\run-20261030-091500.log",
+                "PreflightPath":  "C:\\ProgramData\\CapstoneProvisioner\\diagnostics\\preflight-20261030-091500.json",
+                "BackupPath":  "C:\\ProgramData\\CapstoneProvisioner\\backups\\network-backup-6-20261030-091500.json",
+                "RegistrationPath":  "C:\\ProgramData\\CapstoneProvisioner\\inventory\\head-4.json",
+                "OsCaption":  "Microsoft Windows 11 Pro",
+                "OsBuild":  "26200",
+                "Cpu":  "Intel(R) Core(TM) i5-14400 CPU @ 2.50GHz",
+                "RamGB":  15.7,
+                "Gpu":  "Intel(R) UHD Graphics 730",
+                "NvidiaVramMB":  0,
+                "ModelDirectory":  "C:\\Users\\REDACTED\\.ollama\\models",
+                "FreeDisk":  "412.60 GB",
+                "NodeNumber":  4,
+                "NodeIp":  "192.0.2.4",
+                "AdapterSummary":  "Ethernet (index 6, Intel(R) Ethernet Controller I226-V)",
+                "NetworkVerified":  true,
+                "NetworkSummary":  "Address=pass DhcpDisabled=pass NoDefaultGateway=pass NoIpv4Dns=pass OnLinkRoute=pass",
+                "CoordinatorNote":  "Layer-2/3 contact with 192.0.2.1 established (icmp=False tcp11434=True arp=02-00-00-00-00-01).",
+                "OllamaInstalled":  true,
+                "OllamaVersion":  "0.40.12",
+                "OllamaExecutable":  "C:\\Users\\REDACTED\\AppData\\Local\\Programs\\Ollama\\ollama.exe",
+                "LocalApiHealthy":  true,
+                "LocalApiEndpoint":  "http://127.0.0.1:11434",
+                "OllamaInstalledThisRun":  true,
+                "ProfileName":  "CPU16",
+                "ModelsRequested":  21,
+                "ModelsInstalled":  20,
+                "ModelsAlreadyPresent":  0,
+                "ModelsDownloaded":  20,
+                "ModelsFailed":  1,
+                "ModelsVerified":  20,
+                "FailedTags":  [
+                                   "granite4:3b"
+                               ],
+                "InferenceVerified":  true,
+                "RemoteConfigured":  true,
+                "RemoteBinding":  "0.0.0.0:11434",
+                "PrivateListenerHealthy":  true,
+                "FirewallSummary":  "Capstone Ollama Head 192.0.2.4 from Coordinator 192.0.2.1 (inbound TCP 11434 from 192.0.2.1 only)",
+                "CoordinatorVerified":  false,
+                "RemoteStatus":  "REMOTE_COORDINATOR_VERIFICATION_PENDING",
+                "RemoteEndpoint":  "http://192.0.2.4:11434",
+                "MachineState":  "PARTIAL",
+                "Outcome":  {
+                                "Outcome":  "PARTIAL_SUCCESS",
+                                "Blockers":  [
+                                                 "1 model tag(s) failed: granite4:3b",
+                                                 "Only 20 of 21 requested models are installed."
+                                             ],
+                                "Notes":  [
+                                              "Coordinator verification is still pending; run the coordinator utility to complete it."
+                                          ],
+                                "PendingActions":  [
+
+                                                   ],
+                                "ReadyForPhase4":  false,
+                                "ReadyNote":  "This head is NOT yet ready for Phase 4 integration. The items listed under WHAT STILL NEEDS ATTENTION explain why."
+                            }
+            },
+    "attention":  [
+                      "1 model tag(s) failed: granite4:3b",
+                      "Only 20 of 21 requested models are installed.",
+                      "Coordinator verification is still pending; run the coordinator utility to complete it."
+                  ]
+}

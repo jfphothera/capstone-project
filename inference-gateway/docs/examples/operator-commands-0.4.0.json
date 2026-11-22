@@ -1,0 +1,197 @@
+{
+  "list": {
+    "argv": "lifecycle suspensions --database <ledger>",
+    "exit": 0,
+    "stdout": {
+      "suspensions": [
+        {
+          "suspension_id": "SUSP-50397c8b414e4ce39d3c23a36f6142a9",
+          "scope": "resource",
+          "resource_id": "head-192-0-2-7",
+          "model": "all-minilm:latest",
+          "digest": "DIGEST-all-minilm:latest",
+          "operation": "embedding",
+          "class": "uncertain_execution",
+          "source": "dispatch",
+          "since": 1794497352.1527488,
+          "hold_until": 1794497356.1102273,
+          "next_probe": null,
+          "probes_failed": 3,
+          "state": "needs_attention",
+          "waiting": null,
+          "heads": null,
+          "last_probe": {
+            "probe_id": "PROBE-219495a20aaf43598c38e79fd462a4da",
+            "passed": false,
+            "detail": "not_ready",
+            "at": 1794497356.6965535
+          }
+        },
+        {
+          "suspension_id": "SUSP-1db6f994711849dba1ea708e5031bde9",
+          "scope": "resource_model",
+          "resource_id": "head-192-0-2-3",
+          "model": "gemma3:270m",
+          "digest": "DIGEST-gemma3:270m",
+          "operation": "completion",
+          "class": "model_on_head",
+          "source": "held_probe",
+          "since": 1794497356.736246,
+          "hold_until": null,
+          "next_probe": 1794497416.736246,
+          "probes_failed": 0,
+          "state": "suspended",
+          "waiting": null,
+          "heads": null,
+          "last_probe": null
+        },
+        {
+          "suspension_id": "SUSP-373d3296049c47838ef07acff82501ee",
+          "scope": "resource_model",
+          "resource_id": "head-192-0-2-5",
+          "model": "gemma3:270m",
+          "digest": "DIGEST-gemma3:270m",
+          "operation": "completion",
+          "class": "model_on_head",
+          "source": "held_probe",
+          "since": 1794497356.7984478,
+          "hold_until": null,
+          "next_probe": 1794497416.7984478,
+          "probes_failed": 0,
+          "state": "suspended",
+          "waiting": null,
+          "heads": null,
+          "last_probe": null
+        },
+        {
+          "suspension_id": "SUSP-f00725b5220e4316b81dc3c04b080bbb",
+          "scope": "model",
+          "resource_id": null,
+          "model": "gemma3:270m",
+          "digest": "DIGEST-gemma3:270m",
+          "operation": "completion",
+          "class": "model_on_head",
+          "source": "cascade",
+          "since": 1794497356.7984478,
+          "hold_until": null,
+          "next_probe": 1794497416.7984478,
+          "probes_failed": 0,
+          "state": "suspended",
+          "waiting": null,
+          "heads": [
+            "head-192-0-2-3",
+            "head-192-0-2-5"
+          ],
+          "last_probe": null
+        }
+      ],
+      "alerts": [
+        {
+          "alert_id": "ALERT-50397c8b414e4ce39d3c23a36f6142a9",
+          "suspension_id": "SUSP-50397c8b414e4ce39d3c23a36f6142a9",
+          "kind": "needs_attention",
+          "scope": "resource",
+          "resource_id": "head-192-0-2-7",
+          "model": "all-minilm:latest",
+          "operation": "embedding",
+          "since": 1794497352.1527488,
+          "reason_code": "probes_exhausted",
+          "reason": "automatic probes failed 3 times; inspect, then release or reconcile"
+        },
+        {
+          "alert_id": "ALERT-f00725b5220e4316b81dc3c04b080bbb",
+          "suspension_id": "SUSP-f00725b5220e4316b81dc3c04b080bbb",
+          "kind": "model.suspended",
+          "scope": "model",
+          "resource_id": null,
+          "model": "gemma3:270m",
+          "operation": "completion",
+          "since": 1794497356.7984478,
+          "reason_code": "model_suspended_everywhere",
+          "reason": "model failed on 2 heads within the cascade window; suspended on every head for completion"
+        }
+      ],
+      "at": 1794497357.0075712
+    }
+  },
+  "probe_now": {
+    "argv": "lifecycle probe --suspension SUSP-1db6f994711849dba1ea708e5031bde9 --operator ops-1 --wait-seconds 30 --database <ledger>",
+    "exit": 0,
+    "stdout": {
+      "requested_at": 1794497357.1919541,
+      "suspension": {
+        "suspension_id": "SUSP-1db6f994711849dba1ea708e5031bde9",
+        "scope": "resource_model",
+        "resource_id": "head-192-0-2-3",
+        "model": "gemma3:270m",
+        "digest": "DIGEST-gemma3:270m",
+        "operation": "completion",
+        "class": "model_on_head",
+        "source": "held_probe",
+        "since": 1794497356.736246,
+        "hold_until": null,
+        "next_probe": null,
+        "probes_failed": 0,
+        "state": "recovered",
+        "waiting": null,
+        "heads": null
+      },
+      "probe": {
+        "probe_id": "PROBE-f339df715fc74c30905c55ba71234e48",
+        "passed": true,
+        "detail": null,
+        "at": 1794497357.2360413
+      },
+      "pending": false,
+      "note": null
+    }
+  },
+  "release_without_confirmed": {
+    "argv": "lifecycle release --suspension SUSP-50397c8b414e4ce39d3c23a36f6142a9 --operator ops-1 --database <ledger>",
+    "exit": 2,
+    "stdout": null,
+    "stderr": "--confirmed required"
+  },
+  "release": {
+    "argv": "lifecycle release --suspension SUSP-50397c8b414e4ce39d3c23a36f6142a9 --operator ops-1 --confirmed --database <ledger>",
+    "exit": 0,
+    "stdout": {
+      "released": {
+        "suspension_id": "SUSP-50397c8b414e4ce39d3c23a36f6142a9",
+        "scope": "resource",
+        "resource_id": "head-192-0-2-7",
+        "model": "all-minilm:latest",
+        "digest": "DIGEST-all-minilm:latest",
+        "operation": "embedding",
+        "class": "uncertain_execution",
+        "source": "dispatch",
+        "since": 1794497352.1527488,
+        "hold_until": 1794497356.1102273,
+        "next_probe": null,
+        "probes_failed": 3,
+        "state": "released",
+        "waiting": null,
+        "heads": null
+      },
+      "resource_health": "degraded",
+      "next": "the next health refresh re-validates qualification and returns the head to healthy"
+    }
+  },
+  "status": {
+    "argv": "lifecycle status --database <ledger>",
+    "exit": 0,
+    "stdout": {
+      "admission_open": true,
+      "active_allocations": 0,
+      "queued_requests": 0,
+      "uncertain_resources": 0,
+      "safe_to_stop": false,
+      "resume_on_service_start": false,
+      "ledger_id": "LEDGER-1a6fffa3a0b10ef2bd59c52af1d3223f",
+      "authority": null,
+      "suspensions": {
+        "suspended": 2
+      }
+    }
+  }
+}

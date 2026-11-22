@@ -1,0 +1,9 @@
+{
+  "configuration_version": 1,
+  "contract": "shared.inference/1",
+  "service_id": "shared-inference",
+  "url": "https://192.0.2.254:8443",
+  "application_id": "REPLACE_WITH_REGISTERED_APPLICATION_ID",
+  "token_file": "REPLACE_WITH_ABSOLUTE_PATH_TO_PROTECTED_TOKEN_FILE",
+  "ca_file": "REPLACE_WITH_ABSOLUTE_PATH_TO_inference-gateway-ca.pem"
+}

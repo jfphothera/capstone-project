@@ -1,0 +1,184 @@
+{
+  "schema": "agent-arena.lab-network/1",
+  "_comment": "The fixed laboratory architecture. Deployment configuration, not identity and not a secret. Roles and addresses are intended values; every run verifies the machine before using them.",
+  "subnet": "192.0.2.0/24",
+  "prefix": "192.0.2",
+  "prefix_length": 24,
+  "hub": "192.0.2.254",
+  "dev_workstation": "192.0.2.1",
+  "time_zone": "Eastern Standard Time",
+  "ranges": {
+    "head": [2, 199],
+    "app": [200, 249],
+    "admin": [250, 254]
+  },
+  "arena": {
+    "endpoint": "http://192.0.2.254:8790",
+    "service_id": "aes-a1e79a8b3902",
+    "skew_seconds": 120
+  },
+  "roles": {
+    "hub": { "address": "192.0.2.254" },
+    "capstone": { "address": "192.0.2.201", "app_id": "capstone", "orchestrator_id": "main" },
+    "coder": { "address": "192.0.2.202", "app_id": "coder", "orchestrator_id": "main" }
+  },
+  "protected_addresses": [
+    { "address": "192.0.2.1", "reason": "development workstation (temporary migration access)" },
+    { "address": "192.0.2.2", "reason": "GPU workstation set up by hand (E:\\GPUPC); changes need a separate approved plan" },
+    { "address": "192.0.2.105", "reason": "DESKTOP-REDACT12 Phothera Head (192.0.2.100+N plan); its future is undecided" },
+    { "address": "192.0.2.201", "reason": "Capstone application laptop" },
+    { "address": "192.0.2.202", "reason": "Coder application laptop" },
+    { "address": "192.0.2.254", "reason": "administration hub (Agent Arena and Inference Gateway)" }
+  ],
+  "known_heads": ["192.0.2.2", "192.0.2.3", "192.0.2.4", "192.0.2.5", "192.0.2.6", "192.0.2.7", "192.0.2.8", "192.0.2.9", "192.0.2.10"],
+  "ollama": {
+    "port": 11434,
+    "bind": "0.0.0.0:11434",
+    "task_name": "Capstone Ollama Server",
+    "new_model_directory": "C:\\ProgramData\\Ollama\\models",
+    "client_modes": {
+      "cutover": ["192.0.2.254", "192.0.2.1"],
+      "gateway-only": ["192.0.2.254"]
+    },
+    "default_client_mode": "cutover",
+    "denied_probe_sources": ["192.0.2.201", "192.0.2.202", "192.0.2.50"],
+    "managed_rule_name": "AgentArenaLab-Ollama-11434",
+    "managed_rule_group": "Agent Arena Lab",
+    "legacy_rule_prefix": "Capstone Ollama Head",
+    "runtime": {
+      "_comment": "1.6.14: the one Ollama the heads serve, pinned. The official Windows archive (not OllamaSetup.exe): it unpacks beside the old per-user install into install_root\\<version>, so the old ollama.exe stays for rollback and the desktop app's updater cannot change the served version. Checked against this SHA-256 (GitHub's asset digest and the release's sha256sum.txt agree) and the Authenticode publisher of ollama.exe before use. Never 'latest'. Downloaded 2026-11-17.",
+      "version": "0.40.15",
+      "file": "ollama-windows-amd64.zip",
+      "size": 1614941966,
+      "sha256": "9ca74a7ab66ec86870b1eecac7df160df08dc4e3a291ab5d2d59bcf9310221c6",
+      "source": "https://github.com/ollama/ollama/releases/download/v0.40.15/ollama-windows-amd64.zip",
+      "release": "https://github.com/ollama/ollama/releases/tag/v0.40.15",
+      "fix": "https://github.com/ollama/ollama/pull/19545 (commit 84dc81db1, an ancestor of tag v0.40.15 = 02480ca2a): recurrent (qwen35) and vision GGUF models serve more than one request at a time",
+      "publisher": "Ollama Inc.",
+      "install_root": "C:\\ProgramData\\AgentArenaLab\\ollama\\runtime",
+      "stick_folder": "packages\\ollama",
+      "cache_folder": "dist\\_runtime-cache\\ollama-0.40.15"
+    },
+    "server_settings": {
+      "_comment": "1.6.14: what HEAD-OLLAMA writes into the boot wrapper (never OLLAMA_HOST or OLLAMA_MODELS, which stay as provisioned). context_length is the initial diagnostic default; a request's own num_ctx still wins and is recorded. parallel_ladder is per model (Ollama's OLLAMA_NUM_PARALLEL), not the campaign's worker count; the highest useful level that passed is kept per head. max_queue bounds Ollama's own waiting line (a full queue answers 503 at once, so the Gateway sees it instead of an unmeasured backlog); it adds no capacity. keep_alive keeps models loaded between qualification steps and workflow bursts. Flash attention and the KV-cache type stay at the runtime's defaults (not set) so a later memory optimisation can be attributed on its own.",
+      "context_length": 8192,
+      "parallel_ladder": [2, 3, 4],
+      "max_queue": 16,
+      "keep_alive": "30m",
+      "machine_classes": [
+        { "name": "GPU", "min_vram_gb": 12, "parallel_ladder": [2, 3, 4], "max_loaded_models": 3, "worker_model": "qwen3.5:4b", "qualify_models": ["qwen3.5:4b", "qwen3:4b"], "gateway_slots": 10, "gateway_memory_gb": 16,
+          "_comment": "head 2 (RTX 4060 Ti 16 GB): worker + reviewer + embeddings on the card at 4 each = ~11.3 GB; memory_gb = the card (16 GB; 1.6.24: 14 would refuse its 14b models, ~14.5 GB at 4 at once). 6 and 8 at once come later: at 6+ both models exceed the card." },
+        { "name": "32 GB", "min_ram_gb": 28, "parallel_ladder": [2, 3, 4], "max_loaded_models": 3, "worker_model": "qwen3.5:4b", "qualify_models": ["qwen3.5:4b", "qwen3:4b"], "gateway_slots": 10, "gateway_memory_gb": 23,
+          "_comment": "heads 7-10: ~25 GB free beside Windows and the viewer (head 8 measured 25.1); 3 models x 4 = ~11.3 GB; the Gateway's 10 slots are the brake below 12." },
+        { "name": "16 GB", "min_ram_gb": 14, "parallel_ladder": [2, 3, 4], "max_loaded_models": 2, "worker_model": "qwen3.5:4b", "qualify_models": ["qwen3.5:4b"], "gateway_slots": 8, "gateway_memory_gb": 8.5,
+          "operator_model_limits": { "qwen3:4b": { "parallel": 1, "why": "operator limit 2026-11-18: reviewer not measured on 16 GB heads; at the 8-slot fallback heads 3 and 5 ran 7-8 qwen3:4b calls at once, 11 timed out and kept qwen3.5:4b off them (evidence-20261118-102700)" } },
+          "_comment": "heads 3-5: ~9-10 GB free; worker + embeddings at 4 = ~4.1 GB; no reviewer (worker + reviewer at 4 = ~11.2 GB does not fit)." },
+        { "name": "8 GB", "min_ram_gb": 0, "parallel_ladder": [2], "max_loaded_models": 2, "worker_model": "qwen3.5:2b", "qualify_models": ["qwen3.5:2b"], "gateway_slots": 4, "gateway_memory_gb": 3.4,
+          "_comment": "head 6 (7.4 GB): embeddings and small models only; qwen3.5:4b does not fit beside Windows. 1.6.24: memory_gb 3.4, as measured (qwen3.5:2b 2.43 GB resident, 3.4 GB free with nothing loaded); 2 refused every model over ~1.7 GB (SmolLM3-3B: admission deadline exceeded, 2026-11-18)." }
+      ],
+      "flash_attention": "",
+      "kv_cache_type": "",
+      "log_file": "C:\\ProgramData\\AgentArenaLab\\ollama\\logs\\ollama-server.log",
+      "qualify_models": ["qwen3.5:4b", "qwen3:4b"],
+      "reviewer_model": "qwen3:4b",
+      "reviewer_num_predict": 4096,
+      "rounds": 2,
+      "min_free_gb": 1.0,
+      "useful_gain": 0.10,
+      "request_timeout_s": 900
+    }
+  },
+  "gateway": {
+    "_comment": "Expectations checked against the Gateway release's deployment-manifest.json (0.3.0). The manifest is authoritative for listener, rule, account, folders and commands; these values only let F: refuse a release that does not match the lab.",
+    "expected_release": "0.4.6",
+    "placement_policy": { "_comment": "1.6.23, sent by APPLY-MODEL-CAPACITY to Gateway 0.4.5+: a model without a current declared or measured limit on a head runs at most this many calls at once there (measured limits win). 2026-11-18: the unmeasured reviewer ran 7-8 at once on 16 GB heads and timed out.", "unmeasured_model_limit": 1 },
+    "head_capacity": { "_comment": "Gateway 0.4.0 per-head capacity (2026-11-12, the lab operator): slots 1 (no head sets OLLAMA_NUM_PARALLEL); memory_gb = RAM - memory_reserve_gb, or the VRAM on a GPU head", "slots": 1, "memory_reserve_gb": 4 },
+    "manifest_schema": "inference-gateway.windows-deployment/1",
+    "package_glob": "inference-gateway-*.zip",
+    "observation_file": "C:\\ProgramData\\InferenceGateway\\observation\\shared-inference-observation.json",
+    "observation_contract": "shared.inference.observation/1",
+    "gateway_id": "gateway-254",
+    "ledger_directory": "C:\\ProgramData\\InferenceGateway\\state",
+    "state_directory": "C:\\ProgramData\\InferenceGateway\\observation-state",
+    "log_directory": "C:\\ProgramData\\InferenceGateway\\logs",
+    "service_name": "InferenceGateway",
+    "service_account": "svc-inference-gw",
+    "publisher_task": "InferenceGateway-ObservationPublisher",
+    "publisher_task_note": "0.3.0 publishes inside the InferenceGateway service; this task is an alternative supervisor, absent by design",
+    "stale_seconds": 30,
+    "port": 8443,
+    "ca_sha256": "df314e06ffddccc413d3f064674278428fb1b919450434ce0aab25337c841e42",
+    "ca_sha256_source": "the hub's own Gateway install report, DESKTOP-REDACT10 run 20261106-082448, records the public CA it copied to the provisioner stick (sha256 df314e06ffdd...); the stick's gateway-ca\\inference-gateway-ca.pem.sha256 holds this full value (CN=Inference Gateway Lab CA, valid 2026-11-05 to 2031-11-04, thumbprint D3501FE6E008CC0E9589D6F3723B57B2F7392839)"
+  },
+  "coder": {
+    "_comment": "Coder application laptop (dedicated spare laptop, approved 2026-11-12): lab Ethernet at roles.coder.address, Wi-Fi for Remote Desktop from the control workstation only. Its clock, Smart App Control and other security settings are left as they are. Paths are Coder's own (Coder config/gateway-client.template.json).",
+    "gateway_dir": "C:\\ProgramData\\Coder\\gateway",
+    "client_config": "C:\\ProgramData\\Coder\\gateway\\gateway-client.json",
+    "token_file": "C:\\ProgramData\\Coder\\gateway\\coder.token",
+    "ca_file": "C:\\ProgramData\\Coder\\gateway\\inference-gateway-ca.pem",
+    "service_id": "shared-inference",
+    "contract": "shared.inference/1",
+    "token_transfer_folder": "coder",
+    "rdp_rule": "AgentArenaLab-Coder-RDP-3389",
+    "rdp_rule_display": "Agent Arena Lab - Coder Remote Desktop from the control workstation (Wi-Fi only)"
+  },
+  "runtime": {
+    "_comment": "Official installers carried on F: (packages\\runtime), checked against the publishers' own published hashes and Authenticode signatures before they run.",
+    "python": {
+      "file": "python-3.12.10-amd64.exe", "version": "3.12.10", "publisher": "Python Software Foundation",
+      "md5_published": "5eddb0b6f12c852725de071ae681dde4", "md5_source": "https://www.python.org/downloads/release/python-31210/",
+      "sha256": "67b5635e80ea51072b87941312d00ec8927c4db9ba18938f7ad2d27b328b95fb",
+      "path": "C:\\Program Files\\Python312\\python.exe",
+      "arguments": "/quiet InstallAllUsers=1 TargetDir=\"C:\\Program Files\\Python312\" PrependPath=0 Include_launcher=0 Include_test=0"
+    },
+    "pwsh": {
+      "file": "PowerShell-7.4.22-win-x64.msi", "version": "7.4.22", "minimum": "7.4", "publisher": "Microsoft Corporation",
+      "sha256_published": "78e819df51a672fba8362258a19db0e681452dcee6fee63c60bcb5aa45d1b859", "sha256_source": "https://github.com/PowerShell/PowerShell/releases/tag/v7.4.22",
+      "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+    },
+    "vcredist": {
+      "_comment": "Capstone's torch needs msvcp140, msvcp140_atomic_wait and vcruntime140(_1, _threads); a clean Windows lacks them (DESKTOP-REDACT11, 2026-11-07). Downloaded 2026-11-07 from Microsoft's permanent link; signature checked.",
+      "file": "vc_redist.x64.exe",
+      "version": "14.44.35211.0",
+      "minimum": "14.40",
+      "publisher": "Microsoft Corporation",
+      "sha256": "cc0ff0eb1dc3f5188ae6300faef32bf5beeba4bdd6e8e445a9184072096b713b",
+      "source": "https://aka.ms/vs/17/release/vc_redist.x64.exe"
+    }
+  },
+  "hub_setup": {
+    "_comment": "The values of the field-verified SET-UP-THIS-COMPUTER, now applied with backup and undo.",
+    "network_category": "Private",
+    "time_upstream": "time.windows.com",
+    "remote_desktop_from": "192.0.2.1"
+  },
+  "capstone": {
+    "install_root": "C:\\Program Files\\Capstone",
+    "data_root": "C:\\ProgramData\\Capstone",
+    "task_name": "Capstone Application",
+    "package_format": "capstone-windows-release-v1",
+    "approved_release": { "file": "Capstone-6.0.0-rc.29-windows-x64.zip", "version": "6.0.0-rc.29", "sha256": "1b2fe0b422e786a8fbc9b7d2582c12224cafe37814701a250f7cd461c05fb2c4" },
+    "developer_token_file": "C:\\ProgramData\\Capstone\\secrets\\developer.token",
+    "operations_database": "C:\\ProgramData\\Capstone\\data\\operations.db"
+  },
+  "head_inventory": [
+    { "address": "192.0.2.2", "computer": "DESKTOP-REDACT3", "cpu": "Intel Core i7-7700", "ram_gb": 63.9, "gpu": "RTX 4060 Ti 16 GB" },
+    { "address": "192.0.2.3", "computer": "DESKTOP-REDACT2", "cpu": "Intel Core Ultra 5 225 (10 cores)", "ram_gb": 15.4, "gpu": null },
+    { "address": "192.0.2.4", "computer": "DESKTOP-REDACT4", "cpu": "Intel Core Ultra 5 235 (14 cores)", "ram_gb": 15.4, "gpu": null },
+    { "address": "192.0.2.5", "computer": "DESKTOP-REDACT5", "cpu": "Intel Core Ultra 5 235", "ram_gb": 15.4, "gpu": null },
+    { "address": "192.0.2.6", "computer": "DESKTOP-REDACT6", "cpu": "Intel Core Ultra 5 235", "ram_gb": 7.4, "gpu": null },
+    { "address": "192.0.2.7", "computer": "DESKTOP-REDACT8", "cpu": "Intel Core Ultra 5 235", "ram_gb": 31.4, "gpu": null },
+    { "address": "192.0.2.8", "computer": "DESKTOP-REDACT7", "cpu": "Intel Core Ultra 5 235", "ram_gb": 31.4, "gpu": null },
+    { "address": "192.0.2.9", "computer": "DESKTOP-REDACT1", "cpu": "Intel Core Ultra 5 235", "ram_gb": 31.4, "gpu": null },
+    { "address": "192.0.2.10", "computer": "DESKTOP-REDACT9", "cpu": "Intel Core Ultra 5 235", "ram_gb": 31.4, "gpu": null }
+  ],
+  "business_services": {
+    "_comment": "Capstone's QMS and ERP services, each on its own head (packages\\services on the stick). Each listens on the head's lab address and is reachable from the Capstone laptop only. rc.4 stays: rc.5's services differ only in their scripts (no byte-order mark), which the lab already works around, so heads 3 and 4 need no visit.",
+    "qms": { "product": "CapstoneQMS", "label": "quality records", "head": "192.0.2.3", "port": 8611, "client": "192.0.2.201", "probe": "/api/qms/compatibility",
+             "install_root": "C:\\Program Files\\CapstoneQMS", "data_root": "C:\\ProgramData\\CapstoneQMS", "task_name": "CapstoneQMS Service",
+             "approved_release": { "file": "CapstoneQMS-1.0.0-rc.4-windows-x64.zip", "version": "1.0.0-rc.4", "sha256": "89543bd18daf6d3db15efe62b2aaa3cb655a5084dbf1422a6cad867ac0f6215f" } },
+    "erp": { "product": "CapstoneERP", "label": "orders, customers and shipments", "head": "192.0.2.4", "port": 8612, "client": "192.0.2.201", "probe": "/api/erp/customers",
+             "install_root": "C:\\Program Files\\CapstoneERP", "data_root": "C:\\ProgramData\\CapstoneERP", "task_name": "CapstoneERP Service",
+             "approved_release": { "file": "CapstoneERP-1.0.0-rc.4-windows-x64.zip", "version": "1.0.0-rc.4", "sha256": "a074c3a7db0c7847bbb9674411c1393a07a80c8a49a99c688afe84edd47bfc64" } }
+  }
+}

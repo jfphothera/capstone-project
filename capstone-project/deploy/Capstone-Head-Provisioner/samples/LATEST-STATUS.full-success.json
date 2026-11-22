@@ -1,0 +1,71 @@
+{
+    "schema_version":  1,
+    "generated_at":  "2026-10-30T07:12:01.4356925-04:00",
+    "result":  "FULL_SUCCESS",
+    "ready_for_phase4":  true,
+    "run":  {
+                "Version":  "1.0.0",
+                "Mode":  "Provision",
+                "ComputerName":  "CAPSTONE-HEAD-04",
+                "LogFile":  "C:\\ProgramData\\CapstoneProvisioner\\logs\\run-20261030-091500.log",
+                "PreflightPath":  "C:\\ProgramData\\CapstoneProvisioner\\diagnostics\\preflight-20261030-091500.json",
+                "BackupPath":  "C:\\ProgramData\\CapstoneProvisioner\\backups\\network-backup-6-20261030-091500.json",
+                "RegistrationPath":  "C:\\ProgramData\\CapstoneProvisioner\\inventory\\head-4.json",
+                "OsCaption":  "Microsoft Windows 11 Pro",
+                "OsBuild":  "26200",
+                "Cpu":  "Intel(R) Core(TM) i5-14400 CPU @ 2.50GHz",
+                "RamGB":  15.7,
+                "Gpu":  "Intel(R) UHD Graphics 730",
+                "NvidiaVramMB":  0,
+                "ModelDirectory":  "C:\\Users\\REDACTED\\.ollama\\models",
+                "FreeDisk":  "412.60 GB",
+                "NodeNumber":  4,
+                "NodeIp":  "192.0.2.4",
+                "AdapterSummary":  "Ethernet (index 6, Intel(R) Ethernet Controller I226-V)",
+                "NetworkVerified":  true,
+                "NetworkSummary":  "Address=pass DhcpDisabled=pass NoDefaultGateway=pass NoIpv4Dns=pass OnLinkRoute=pass",
+                "CoordinatorNote":  "Layer-2/3 contact with 192.0.2.1 established (icmp=False tcp11434=True arp=02-00-00-00-00-01).",
+                "OllamaInstalled":  true,
+                "OllamaVersion":  "0.40.12",
+                "OllamaExecutable":  "C:\\Users\\REDACTED\\AppData\\Local\\Programs\\Ollama\\ollama.exe",
+                "LocalApiHealthy":  true,
+                "LocalApiEndpoint":  "http://127.0.0.1:11434",
+                "OllamaInstalledThisRun":  true,
+                "ProfileName":  "CPU16",
+                "ModelsRequested":  21,
+                "ModelsInstalled":  21,
+                "ModelsAlreadyPresent":  0,
+                "ModelsDownloaded":  21,
+                "ModelsFailed":  0,
+                "ModelsVerified":  21,
+                "FailedTags":  [
+
+                               ],
+                "InferenceVerified":  true,
+                "RemoteConfigured":  true,
+                "RemoteBinding":  "0.0.0.0:11434",
+                "PrivateListenerHealthy":  true,
+                "FirewallSummary":  "Capstone Ollama Head 192.0.2.4 from Coordinator 192.0.2.1 (inbound TCP 11434 from 192.0.2.1 only)",
+                "CoordinatorVerified":  true,
+                "RemoteStatus":  "REMOTE_VERIFIED_END_TO_END",
+                "RemoteEndpoint":  "http://192.0.2.4:11434",
+                "MachineState":  "VERIFIED",
+                "Outcome":  {
+                                "Outcome":  "FULL_SUCCESS",
+                                "Blockers":  [
+
+                                             ],
+                                "Notes":  [
+
+                                          ],
+                                "PendingActions":  [
+
+                                                   ],
+                                "ReadyForPhase4":  true,
+                                "ReadyNote":  "This head is ready for Phase 4 integration."
+                            }
+            },
+    "attention":  [
+
+                  ]
+}

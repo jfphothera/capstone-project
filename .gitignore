@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.venv-*/
+venv/
+.pytest_cache/
+
+# Editors and local assistant context
+.idea/
+.vscode/
+.claude/
+
+# Secrets and machine-local configuration (never commit)
+.env
+.env.*
+*.token
+*.secret
+*.pem
+*.key
+*.pfx
+*.p12
+**/config/inference-gateway.client.json
+**/config/inference-gateway.research-client.json
+
+# Runtime data written while the applications run
+**/data/operations.db
+**/data/*.db-wal
+**/data/*.db-shm
+**/data/index/
+**/data/memory/
+**/data/labels/

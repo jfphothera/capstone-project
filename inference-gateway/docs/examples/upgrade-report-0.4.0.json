@@ -1,0 +1,117 @@
+{
+  "upgrade_report": {
+    "release": "0.4.0",
+    "at": 1794497351.9734964,
+    "ledger_id": "LEDGER-1a6fffa3a0b10ef2bd59c52af1d3223f",
+    "held": [
+      {
+        "resource_id": "head-192-0-2-3",
+        "suspension_id": "SUSP-0910263d29014cb0b26397a2f106d038",
+        "failed_model": "gemma3:270m",
+        "failed_operation": "completion",
+        "active_reservations": false,
+        "hold_until": 1794497351.9734964,
+        "first_probe_not_before": 1794497411.9734964
+      },
+      {
+        "resource_id": "head-192-0-2-4",
+        "suspension_id": "SUSP-ab9945b5069e4900a840d7440860c43c",
+        "failed_model": "gemma3:270m",
+        "failed_operation": "completion",
+        "active_reservations": false,
+        "hold_until": 1794497351.9734964,
+        "first_probe_not_before": 1794497411.9734964
+      },
+      {
+        "resource_id": "head-192-0-2-5",
+        "suspension_id": "SUSP-8d572dffdcbe44a1b93135b7266f3aa2",
+        "failed_model": "gemma3:270m",
+        "failed_operation": "completion",
+        "active_reservations": false,
+        "hold_until": 1794497351.9734964,
+        "first_probe_not_before": 1794497411.9734964
+      },
+      {
+        "resource_id": "head-192-0-2-6",
+        "suspension_id": "SUSP-658009e02d6c4ddd84b5da1266166159",
+        "failed_model": "gemma3:270m",
+        "failed_operation": "completion",
+        "active_reservations": false,
+        "hold_until": 1794497351.9734964,
+        "first_probe_not_before": 1794497411.9734964
+      }
+    ]
+  },
+  "first_recovery_cycle": [
+    {
+      "suspension_id": "SUSP-0910263d29014cb0b26397a2f106d038",
+      "outcome": "recovered",
+      "resource_id": "head-192-0-2-3",
+      "probes": [
+        [
+          "all-minilm:latest",
+          "embedding",
+          "passed"
+        ],
+        [
+          "gemma3:270m",
+          "completion",
+          "failed"
+        ]
+      ],
+      "model_suspension": "SUSP-1db6f994711849dba1ea708e5031bde9"
+    },
+    {
+      "suspension_id": "SUSP-658009e02d6c4ddd84b5da1266166159",
+      "outcome": "recovered",
+      "resource_id": "head-192-0-2-6",
+      "probes": [
+        [
+          "all-minilm:latest",
+          "embedding",
+          "passed"
+        ],
+        [
+          "gemma3:270m",
+          "completion",
+          "passed"
+        ]
+      ]
+    },
+    {
+      "suspension_id": "SUSP-8d572dffdcbe44a1b93135b7266f3aa2",
+      "outcome": "recovered",
+      "resource_id": "head-192-0-2-5",
+      "probes": [
+        [
+          "all-minilm:latest",
+          "embedding",
+          "passed"
+        ],
+        [
+          "gemma3:270m",
+          "completion",
+          "failed"
+        ]
+      ],
+      "model_suspension": "SUSP-373d3296049c47838ef07acff82501ee"
+    },
+    {
+      "suspension_id": "SUSP-ab9945b5069e4900a840d7440860c43c",
+      "outcome": "recovered",
+      "resource_id": "head-192-0-2-4",
+      "probes": [
+        [
+          "all-minilm:latest",
+          "embedding",
+          "passed"
+        ],
+        [
+          "gemma3:270m",
+          "completion",
+          "passed"
+        ]
+      ]
+    }
+  ]
+}

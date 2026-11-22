@@ -1,0 +1,16 @@
+{
+  "schema": "agent-arena.lab-heads/1",
+  "generated_at": "2026-11-08T12:00:00Z",
+  "gateway_url": "https://192.0.2.254:8443",
+  "heads": [
+    {"number":2,"address":"192.0.2.2","resource_id":"head-192-0-2-2","computer":"DESKTOP-REDACT3","cpu":"Intel Core i7-7700","ram_gb":63.9,"gpu":"RTX 4060 Ti 16 GB","services":[]},
+    {"number":3,"address":"192.0.2.3","resource_id":"head-192-0-2-3","computer":"DESKTOP-REDACT2","cpu":"Intel Core Ultra 5 225 (10 cores)","ram_gb":15.4,"gpu":null,"services":["qms"]},
+    {"number":4,"address":"192.0.2.4","resource_id":"head-192-0-2-4","computer":"DESKTOP-REDACT4","cpu":"Intel Core Ultra 5 235 (14 cores)","ram_gb":15.4,"gpu":null,"services":["erp"]},
+    {"number":5,"address":"192.0.2.5","resource_id":"head-192-0-2-5","computer":"DESKTOP-REDACT5","cpu":"Intel Core Ultra 5 235","ram_gb":15.4,"gpu":null,"services":[]},
+    {"number":6,"address":"192.0.2.6","resource_id":"head-192-0-2-6","computer":"DESKTOP-REDACT6","cpu":"Intel Core Ultra 5 235","ram_gb":7.4,"gpu":null,"services":[]},
+    {"number":7,"address":"192.0.2.7","resource_id":"head-192-0-2-7","computer":"DESKTOP-REDACT8","cpu":"Intel Core Ultra 5 235","ram_gb":31.4,"gpu":null,"services":[]},
+    {"number":8,"address":"192.0.2.8","resource_id":"head-192-0-2-8","computer":"DESKTOP-REDACT7","cpu":"Intel Core Ultra 5 235","ram_gb":31.4,"gpu":null,"services":[]},
+    {"number":9,"address":"192.0.2.9","resource_id":"head-192-0-2-9","computer":"DESKTOP-REDACT1","cpu":"Intel Core Ultra 5 235","ram_gb":31.4,"gpu":null,"services":[]},
+    {"number":10,"address":"192.0.2.10","resource_id":"head-192-0-2-10","computer":"DESKTOP-REDACT9","cpu":"Intel Core Ultra 5 235","ram_gb":31.4,"gpu":null,"services":[]}
+  ]
+}

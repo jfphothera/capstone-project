@@ -1,0 +1,8 @@
+param([Parameter(Mandatory=$true)][string]$TokenSourceFile,[string]$InstallRoot='C:\Program Files\{{SERVICE}}',[string]$DataRoot='C:\ProgramData\{{SERVICE}}',[string]$ListenHost='{{HOST}}',[int]$ListenPort={{PORT}},[string]$CapstoneTokenFile='C:\ProgramData\Capstone\services\{{KIND}}.token')
+$ErrorActionPreference='Stop';if(!(Test-Path $TokenSourceFile)){throw 'The operator-provisioned bearer token file is unavailable'};if((Get-Item $TokenSourceFile).Length -lt 16){throw 'The bearer token file is unexpectedly short'}
+New-Item -ItemType Directory -Force -Path "$DataRoot\secrets","$DataRoot\config"|Out-Null;$target="$DataRoot\secrets\{{KIND}}.token";Copy-Item $TokenSourceFile $target -Force
+& icacls.exe $target /inheritance:r /grant:r '*S-1-5-18:(F)' '*S-1-5-32-544:(F)' '*S-1-5-19:(R)' /Q|Out-Null;if($LASTEXITCODE){throw 'Unable to protect the service token for LOCAL SERVICE'}
+$utf8=New-Object System.Text.UTF8Encoding($false)
+$settings=[ordered]@{schema_version=1;service='{{KIND}}';listen_host=$ListenHost;listen_port=$ListenPort;token_file=$target;data_root="$DataRoot\data"};[IO.File]::WriteAllText("$DataRoot\config\service.json",($settings|ConvertTo-Json),$utf8)
+$client=[ordered]@{schema_version=1;service='{{KIND}}';url="http://$ListenHost`:$ListenPort";token_file=$CapstoneTokenFile;execution_node='head-192-0-2-{{HOST_LAST}}'};$clientPath="$DataRoot\config\{{KIND}}-capstone-client.json";[IO.File]::WriteAllText($clientPath,($client|ConvertTo-Json),$utf8)
+[ordered]@{configured=$true;service='{{KIND}}';listen_address="$ListenHost`:$ListenPort";service_token_file=$target;capstone_client_config=$clientPath;capstone_token_destination=$CapstoneTokenFile;token_copied_to_capstone=$false}|ConvertTo-Json

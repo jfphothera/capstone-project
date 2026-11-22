@@ -1,0 +1,80 @@
+[
+  {
+    "serial_number": "66383977",
+    "model": "Home-NB",
+    "revision": "C",
+    "revision_basis": "derived_from_install_date_cohort",
+    "product_family": "Phototherapy",
+    "status": "Returned",
+    "install_date": "2025-07-11",
+    "last_meter_recal": "2022-01-23",
+    "account_id": "ACC-00010",
+    "customer_name": "Ivan Nowak",
+    "prescription_id": "PRE-1182614"
+  },
+  {
+    "serial_number": "98148469",
+    "model": "P4800",
+    "revision": "A",
+    "revision_basis": "derived_from_install_date_cohort",
+    "product_family": "Phototherapy",
+    "status": "Purchased",
+    "install_date": "2021-11-21",
+    "last_meter_recal": "2026-08-23",
+    "account_id": "ACC-00010",
+    "customer_name": "Ivan Nowak",
+    "prescription_id": "PRE-1950192"
+  },
+  {
+    "serial_number": "52385502",
+    "model": "P4800",
+    "revision": "C",
+    "revision_basis": "derived_from_install_date_cohort",
+    "product_family": "Phototherapy",
+    "status": "Installed",
+    "install_date": "2026-04-07",
+    "last_meter_recal": "2026-08-28",
+    "account_id": "ACC-00022",
+    "customer_name": "Mary Cohen",
+    "prescription_id": "PRE-9160625"
+  },
+  {
+    "serial_number": "68177-DV5",
+    "model": "P4800",
+    "revision": "B",
+    "revision_basis": "derived_from_install_date_cohort",
+    "product_family": "Phototherapy",
+    "status": "Installed",
+    "install_date": "2023-10-10",
+    "last_meter_recal": "2023-01-21",
+    "account_id": "ACC-00022",
+    "customer_name": "Mary Cohen",
+    "prescription_id": "PRE-8131393"
+  },
+  {
+    "serial_number": "38180-BM2",
+    "model": "Series-M",
+    "revision": "C",
+    "revision_basis": "derived_from_install_date_cohort",
+    "product_family": "Phototherapy",
+    "status": "Registered",
+    "install_date": "2024-01-07",
+    "last_meter_recal": "2025-10-04",
+    "account_id": "ACC-00026",
+    "customer_name": "Peter Thomas",
+    "prescription_id": "PRE-3516029"
+  },
+  {
+    "serial_number": "21308910",
+    "model": "P3410",
+    "revision": "A",
+    "revision_basis": "derived_from_install_date_cohort",
+    "product_family": "Phototherapy",
+    "status": "Installed",
+    "install_date": "2018-11-07",
+    "last_meter_recal": "2024-04-22",
+    "account_id": "ACC-00026",
+    "customer_name": "Peter Thomas",
+    "prescription_id": "PRE-9685982"
+  }
+]

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'">
+  <title>Agent Arena · Admin hub room</title>
+  <!-- The admin hub's room: the IT admin at the hub workstation, and the night staff who come and
+       go. Standalone it is a preview with sample status (labelled on the monitor); embedded in the
+       admin viewer (?live=1) the viewer drives the monitor through window.adminRoom.live. -->
+  <link rel="stylesheet" href="css/scene_composer.css">
+</head>
+<body>
+  <header class="bar">
+    <strong>ADMIN HUB</strong><span id="room-name">Admin hub · 192.0.2.254</span>
+    <span class="synthetic">PREVIEW · SAMPLE STATUS · NOT LIVE</span>
+    <span id="status">Loading…</span>
+  </header>
+  <main class="composer">
+    <div id="viewport">
+      <div id="stage">
+        <canvas id="back" width="1536" height="1024"></canvas>
+        <canvas id="glow" width="1536" height="1024"></canvas>
+        <button id="wall-switch" title="Lights" aria-label="Light switch"></button>
+      </div>
+    </div>
+    <aside class="composer-controls">
+      <section>
+        <h2>Night staff</h2>
+        <div class="buttons">
+          <button id="visit-guard">Guard</button><button id="visit-mop">Mop crew</button>
+          <button id="visit-broom">Broom crew</button><button id="visit-drone">Drone</button>
+        </div>
+        <label><input type="checkbox" id="auto" checked> Visits on their own</label>
+        <label>Speed <select id="speed"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select></label>
+      </section>
+      <section>
+        <h2>Room</h2>
+        <div class="buttons">
+          <button id="lights">💡 Lights</button><button id="alert">Cycle alert</button>
+        </div>
+        <label><input type="checkbox" id="still"> Still (no motion)</label>
+      </section>
+      <section>
+        <h2>Now</h2>
+        <dl id="hud"></dl>
+      </section>
+      <p class="note">Sample status only. In the admin viewer the monitor shows the hub's real status.</p>
+    </aside>
+  </main>
+  <script type="module" src="js/admin_room.mjs"></script>
+</body>
+</html>

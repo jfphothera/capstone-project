@@ -1,0 +1,10 @@
+{
+  "configuration_version": 1,
+  "contract": "shared.inference/1",
+  "clients": [
+    {"app_id": "capstone", "credential": "provisioned", "models": ["REPLACE_WITH_APPROVED_MODEL"], "max_concurrency": 1, "queue_limit": 16, "priority": 6},
+    {"app_id": "capstone-research", "credential": "provisioned", "models": ["REPLACE_WITH_APPROVED_MODEL"], "max_concurrency": 1, "queue_limit": 32, "priority": 2},
+    {"app_id": "coder", "credential": "provisioned", "models": ["REPLACE_WITH_APPROVED_MODEL"], "max_concurrency": 1, "queue_limit": 16, "priority": 5, "operations": ["/api/generate", "/api/chat"]}
+  ],
+  "resources": []
+}

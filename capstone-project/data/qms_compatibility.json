@@ -1,0 +1,38 @@
+{
+  "_comment": [
+    "Fictional device/revision -> authorised procedure mapping for the capstone.",
+    "A semantically relevant and approved procedure is still rejected when it is not listed for the confirmed model|revision.",
+    "Empty lists are deliberate coverage gaps. Home-NB and P4800 Rev B power troubleshooting remain intentionally unsupported."
+  ],
+  "_schema": {
+    "key": "<MODEL>|<REVISION>",
+    "value": "list of authorised procedure_id values"
+  },
+  "compatibility": {
+    "P4800|A": ["PROC-P4800-PWR-A", "PROC-P4800-LAMP-A", "PROC-GEN-MISSING-ACCESSORY"],
+    "P4800|B": ["PROC-GEN-MISSING-ACCESSORY"],
+    "P4800|C": ["PROC-P4800-PWR-C", "PROC-P4800-TIMER-C", "PROC-P4800-LAMP-C", "PROC-GEN-MISSING-ACCESSORY"],
+    "Series-M|A": ["PROC-SERIESM-THERM", "PROC-SERIESM-LAMP", "PROC-SERIESM-CONTROLLER-SVC", "PROC-GEN-MISSING-ACCESSORY"],
+    "Series-M|B": ["PROC-SERIESM-THERM", "PROC-SERIESM-LAMP", "PROC-SERIESM-CONTROLLER-SVC", "PROC-GEN-MISSING-ACCESSORY"],
+    "Series-M|C": ["PROC-SERIESM-THERM", "PROC-SERIESM-LAMP", "PROC-SERIESM-CONTROLLER-SVC", "PROC-GEN-MISSING-ACCESSORY"],
+    "3-Series|A": ["PROC-3SERIES-PWR", "PROC-3SERIES-LAMP", "PROC-GEN-MISSING-ACCESSORY"],
+    "3-Series|B": ["PROC-3SERIES-PWR", "PROC-3SERIES-LAMP", "PROC-GEN-MISSING-ACCESSORY"],
+    "3-Series|C": ["PROC-3SERIES-PWR", "PROC-3SERIES-LAMP", "PROC-GEN-MISSING-ACCESSORY"],
+    "P2400|A": ["PROC-P2400-PWR", "PROC-P2400-LAMP", "PROC-GEN-MISSING-ACCESSORY"],
+    "P2400|B": ["PROC-P2400-PWR", "PROC-P2400-LAMP", "PROC-GEN-MISSING-ACCESSORY"],
+    "P2400|C": ["PROC-P2400-PWR", "PROC-P2400-LAMP", "PROC-GEN-MISSING-ACCESSORY"],
+    "P3410|A": ["PROC-P3410-PWR", "PROC-P3410-LAMP", "PROC-GEN-MISSING-ACCESSORY"],
+    "P3410|B": ["PROC-P3410-PWR", "PROC-P3410-LAMP", "PROC-GEN-MISSING-ACCESSORY"],
+    "P3410|C": ["PROC-P3410-PWR", "PROC-P3410-LAMP", "PROC-GEN-MISSING-ACCESSORY"],
+    "Home-NB|A": [],
+    "Home-NB|B": [],
+    "Home-NB|C": []
+  },
+  "coverage_gap_notes": {
+    "P4800|B": "Deliberate gap. Rev B has no approved power procedure; the general missing-accessory procedure is not revision-specific.",
+    "Home-NB|*": "Deliberate gap. No Home-NB customer-service procedures exist in the fictional corpus.",
+    "PROC-P4800-PWR-A-R1": "Absent deliberately: superseded and unauthorized.",
+    "PROC-GEN-MISSING-ACCESSORY": "Model-independent logistics procedure authorized for covered models.",
+    "PROC-SERIESM-CONTROLLER-SVC": "Authorized for Series-M but restricted to service; customer-service validation must reject it."
+  }
+}

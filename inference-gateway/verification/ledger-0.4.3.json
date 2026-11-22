@@ -1,0 +1,42 @@
+{
+  "src": "C:\\Users\\REDACTED\\AppData\\Local\\Temp\\claude\\7c2130423b73ca53\\f1a3a21e-8c26-4513-bbf5-a67ddf886973\\scratchpad\\gateway-before-0.4.4\\src",
+  "release": "0.4.3",
+  "history_requests": 20000,
+  "result_kb": 8,
+  "ledger_bytes": 187772928,
+  "hold": {
+    "place_20_queued_9_heads": {
+      "median_ms": 47.97,
+      "max_ms": 49.35
+    },
+    "submit": {
+      "median_ms": 7.81,
+      "max_ms": 8.5
+    },
+    "invocation_count_in_execute": {
+      "median_ms": 9.17,
+      "max_ms": 10.07
+    },
+    "expiry_pass": {
+      "median_ms": 7.23,
+      "max_ms": 20.99
+    },
+    "status_has_expired_read": {
+      "median_ms": 4.92,
+      "max_ms": 6.82
+    },
+    "models_read": {
+      "median_ms": 5.22,
+      "max_ms": 5.58
+    }
+  },
+  "scheduler_starvation": {
+    "scheduler_passes": 1120,
+    "renewals": 90,
+    "renewals_refused": 13,
+    "timeout_s": 3.0,
+    "wait_ms_p50": 165.2,
+    "wait_ms_p95": 2826.5,
+    "wait_ms_max": 3263.4
+  }
+}

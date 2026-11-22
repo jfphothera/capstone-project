@@ -1,0 +1,111 @@
+/* Scene composer layout. The agent rig styles come from the production stylesheets. */
+html,body{margin:0;height:100%;background:#07131f;color:#d7e6ea;font:13px 'Segoe UI',Arial,sans-serif;display:block;overflow:hidden}
+.bar{height:40px;display:flex;align-items:center;gap:16px;padding:0 14px;background:#0c1c2b;border-bottom:1px solid #2f4d63}
+.bar strong{letter-spacing:2px;color:#ffd38a}.bar #room-name{color:#9fd3e0}.bar #status{margin-left:auto;color:#8fb0bf;font:12px Consolas,monospace}
+.bar #room{background:#142e40;color:#d7e6ea;border:1px solid #315b74;border-radius:3px;padding:3px 6px;font:12px 'Segoe UI'}
+.synthetic{font:700 11px Consolas,monospace;color:#1b1203;background:#f0b84c;padding:3px 8px;border-radius:3px}
+.composer{display:grid;grid-template-columns:1fr 250px;height:calc(100% - 41px)}
+#viewport{position:relative;overflow:hidden;background:#040b12}
+#stage{position:absolute;left:0;top:0;width:1536px;height:1024px;transform-origin:0 0}
+#stage canvas{position:absolute;left:0;top:0;width:1536px;height:1024px;image-rendering:pixelated}
+#back{z-index:0}#front{z-index:5001;pointer-events:none}
+/* Light glow brightens whatever is underneath, agents included. */
+#glow{z-index:5000;pointer-events:none;mix-blend-mode:screen}
+/* Room darkness: above everyone, below the light glows, so lamps, tickers and doors still shine. */
+#dark{z-index:4999;pointer-events:none}
+#actors{position:absolute;inset:0;z-index:1}
+#actors>*{position:absolute}
+/* Agents: feet at left/top. The production rig keeps its own transform (translate + depth scale). */
+#actors .actor{transition:none!important;cursor:default}
+#actors .actor .actor-host{display:none}
+/* Waiting agents at a bench tinker: a small tapping hand and a look around (still "Waiting"). */
+#actors .actor.poking .avatar g.arm.right-arm{animation:cr-tap 1.4s steps(2,end) infinite}
+#actors .actor.poking .avatar .head{animation:idle-look 3.2s steps(4,end) infinite}
+/* The production idle gestures, applied to waiting agents standing in the room. */
+#actors .actor.idle-look .head{animation:idle-look 2.6s steps(4,end) both}
+#actors .actor.idle-blink .gaze{animation:idle-blink 1.8s steps(1,end) both}
+#actors .actor.idle-settle .torso{animation:idle-settle 2.4s steps(4,end) both}
+#actors .actor.idle-watch .head{animation:idle-watch 2.8s steps(4,end) both}
+#actors .actor.idle-ankles .feet{animation:idle-ankles 3.4s steps(4,end) both}
+#actors .staff{width:96px;height:112px;transform-origin:48px 104px;pointer-events:none}
+#actors .staff img{display:block;width:96px;height:112px;image-rendering:pixelated}
+#actors .staff.flip img{transform:scaleX(-1)}
+#actors .furniture{image-rendering:pixelated;pointer-events:none}
+.composer-controls{background:#0b1926;border-left:1px solid #2f4d63;padding:10px 12px;overflow:auto}
+.composer-controls h2{font:700 11px Consolas,monospace;letter-spacing:1.5px;color:#9fd3e0;margin:12px 0 6px}
+.composer-controls label{display:flex;align-items:center;gap:8px;margin:5px 0}
+.composer-controls select,.composer-controls button{background:#142e40;color:#d7e6ea;border:1px solid #315b74;border-radius:3px;padding:4px 7px;font:12px 'Segoe UI'}
+.composer-controls button:hover{background:#1d4058}
+.buttons{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+#hud{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;margin:0;font:12px Consolas,monospace}
+#hud dt{color:#8fb0bf}#hud dd{margin:0;color:#e9f4f6}
+.seed{font:11px Consolas,monospace;color:#7f9aa8;margin:6px 0;word-break:break-all}
+.note{font-size:11px;color:#7f9aa8;line-height:1.4;margin-top:16px}
+
+/* Embedded in the cluster view: the room only, filling its frame. */
+body.embed .bar,body.embed .composer-controls{display:none}
+body.embed .composer{display:block;height:100%}
+body.embed #viewport{height:100%}
+/* Live in the viewer: agents open their details; the room letterboxes on the viewer's own dark. */
+body.live,body.live #viewport{background:transparent}
+body.live #actors .actor{cursor:pointer}
+
+/* People from characters-v1 (160 x 144 frames, feet at 80,124), and the mop bucket. */
+#actors .staff.char,#actors .prop-sprite.char{width:160px;height:144px;transform-origin:80px 124px;pointer-events:none}
+#actors .staff.char img,#actors .prop-sprite.char img{display:block;width:160px;height:144px;image-rendering:pixelated}
+#actors .staff.char.flip img{transform:scaleX(-1);transform-origin:80px 0}
+/* Walking agents use the directional rig: its baked steps replace the original rig's leg cycle. */
+#actors .actor.framed .avatar:not(.body-svg),#actors .actor.framed .avatar:not(.body-svg) *{animation:none!important}
+#actors .actor.framed.jump .avatar{animation:arena-jump .6s cubic-bezier(.2,.9,.3,1)!important}
+/* Easter egg: the wall light switch. Flipping it makes everyone in the room jump. */
+#actors .light-switch{position:absolute;width:20px;height:30px;padding:0;margin:0;z-index:300;cursor:pointer;
+  background:linear-gradient(#ddd6c2,#a39b88);border:2px solid #1c2128;border-radius:3px;box-shadow:0 2px 0 #00000088}
+#actors .light-switch::after{content:'';position:absolute;left:6px;top:13px;width:4px;height:9px;background:#3a3f46;border-radius:1px}
+#actors .light-switch::before{content:'';position:absolute;left:6px;top:3px;width:4px;height:4px;border-radius:50%;background:#5a2a12;box-shadow:none}
+#actors .light-switch.on::after{top:4px}
+#actors .light-switch.on::before{top:21px;background:#ffb347;box-shadow:0 0 5px 2px #ffb34799}
+#actors .light-switch:hover{outline:2px solid #ffd38a}
+#actors .jump .avatar,#actors .staff.jump img,#actors .prop-sprite.jump img{animation:arena-jump .95s cubic-bezier(.25,.8,.35,1)}
+@keyframes arena-jump{0%{translate:0 0;scale:1 1}8%{translate:0 2px;scale:1.12 .86}30%{translate:0 -46px;scale:.92 1.1}50%{translate:0 0;scale:1.14 .84}
+  62%{translate:0 -20px;scale:.96 1.05}78%{translate:0 0;scale:1.06 .94}100%{translate:0 0;scale:1 1}}
+/* Arena 2.5.0. Lights off: the artist's "!" (startle-mark) over each agent, a hop in the startled pose, then frantic running
+   (run-frantic) until the light is back. Hand-offs: the sender walks to the receiver; they face each other, talk and listen
+   (talk / listen frames), with the typing bubble back and forth, then the received check. Props: fixed palette, 2x pixels. */
+#actors .actor.bang .speech,#actors .actor.say .speech{display:block!important;opacity:1!important;background:none!important;border:0!important;box-shadow:none!important;
+  padding:0!important;min-height:0!important;max-width:none!important;line-height:0!important;margin:0!important;
+  position:absolute!important;left:50%!important;top:auto!important;bottom:calc(100% - 2px)!important;translate:-50% 0;z-index:2}   /* above the status badge */
+#actors .actor.bang .speech,#actors .actor.meeting .speech{bottom:auto!important;top:-8px!important}   /* right over the head */
+#actors .actor.bang .actor-state,#actors .actor.meeting .actor-state{visibility:hidden}   /* the "!" and the bubbles say it */
+#actors .actor .speech img{display:block;margin:0 auto;image-rendering:pixelated;filter:drop-shadow(0 2px 0 #03111b80)}
+#actors .actor.say .speech img{animation:arena-pop .25s ease-out}
+@keyframes arena-pop{0%{scale:.3}70%{scale:1.15}100%{scale:1}}
+/* The new bodies animate by frame (body_frames.mjs). Two whole-figure touches stay: breathing while waiting, a bob while working. */
+#actors .actor .avatar.body-svg{transform-origin:50% 97%}
+#actors .actor.waiting .avatar.body-svg,#actors .actor.completed .avatar.body-svg,#actors .actor.failed .avatar.body-svg{animation:body-breathe 3.4s ease-in-out infinite}
+#actors .actor.executing:not(.poking) .avatar.body-svg{animation:body-work 1.1s ease-in-out infinite}
+#actors .actor.poking .avatar.body-svg,#actors .actor.talking .avatar.body-svg,#actors .actor[class*=" idle-"] .avatar.body-svg{animation:none}
+#actors .actor.talking .avatar:not(.body-svg){animation:body-talk .42s ease-in-out infinite!important}
+@keyframes body-breathe{0%,100%{scale:1 1}50%{scale:1.012 1.028}}
+@keyframes body-work{0%,100%{translate:0 0}50%{translate:0 -2px}}
+@keyframes body-talk{0%,100%{translate:0 0;scale:1 1}50%{translate:0 -2px;scale:1.03 1.02}}
+#actors .actor.jump .avatar.body-svg{animation:arena-jump .95s cubic-bezier(.25,.8,.35,1)!important}
+@keyframes body-breathe{0%,100%{scale:1 1}50%{scale:1.012 1.028}}
+@keyframes body-work{0%,100%{translate:0 0}50%{translate:0 -2px}}
+@keyframes body-tap{0%,100%{rotate:0deg}50%{rotate:calc(4deg * var(--tap,1))}}
+@keyframes body-look{0%,100%{rotate:0deg}25%{rotate:-6deg}60%{rotate:5deg}}
+@keyframes body-blink{0%,100%{scale:1 1}45%{scale:1.02 .96}52%{scale:1 1}}
+@keyframes body-settle{0%,100%{translate:0 0;scale:1 1}40%{translate:0 2px;scale:1.03 .96}}
+@keyframes body-watch{0%,100%{rotate:0deg}30%,70%{rotate:4deg}}
+@keyframes body-shuffle{0%{translate:0 0}25%{translate:-1px 0}50%{translate:1px 0}75%{translate:-1px 0}100%{translate:0 0}}
+@keyframes body-talk{0%,100%{translate:0 0;scale:1 1}50%{translate:0 -2px;scale:1.03 1.02}}
+/* The eight-character family's bodies sit on the classic rig's foot anchor (32,78 in a 64 x 80 frame). */
+#actors .actor .avatar.body-svg{top:33px}
+/* The robot cat: no name tag, no status, never startled. */
+#actors .actor.cat-bot .actor-name,#actors .actor.cat-bot .actor-state,#actors .actor.cat-bot .speech{display:none!important}
+#actors .actor.cat-bot{cursor:default}
+@keyframes arena-bang{0%{opacity:0}6%{opacity:1}90%{opacity:1}100%{opacity:0}}
+
+/* Admin hub room (admin-room.html): one canvas for the room and people, the screen-blended lights
+   above it, and the painted wall switch as the click target. */
+#stage #wall-switch{position:absolute;left:477px;top:160px;width:36px;height:60px;padding:0;margin:0;z-index:5002;background:none;border:0;cursor:pointer}
+#stage #wall-switch:hover{outline:2px solid #ffd38a}

@@ -1,0 +1,1145 @@
+{
+  "schema": "arena.doors.profiles.v1",
+  "profiles": [
+    {
+      "scene": "loading-dock",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "amber-cargo",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "amber-cargo",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "copper-foundry",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "copper-pressure",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "copper-pressure",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "relay-workshop",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "cobalt-relay",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "cobalt-relay",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "cooling-bay",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "teal-cryo",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "teal-cryo",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "botanical-lab",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "sage-bioseal",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "sage-bioseal",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "analysis-lab",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "pearl-lab",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "pearl-lab",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "turbine-hall",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "olive-turbine",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "olive-turbine",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "ceramic-works",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "terracotta-kiln",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "terracotta-kiln",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "orbital-hangar",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "ivory-airlock",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "ivory-airlock",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "subsea-station",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "petrol-pressure",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "petrol-pressure",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "solar-workshop",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "solar-shutter",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "solar-shutter",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "rail-depot",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "oxblood-freight",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "oxblood-freight",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "signal-room",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "plum-acoustic",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "plum-acoustic",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "polar-outpost",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "polar-insulated",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "polar-insulated",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "basalt-forge",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "graphite-forge",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "graphite-forge",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "salvage-workshop",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "mustard-salvage",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "mustard-salvage",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "astronomy-lab",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "midnight-observatory",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "midnight-observatory",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "crystal-lab",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "amethyst-vault",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "amethyst-vault",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "oceanography-lab",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "seaglass-seal",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "seaglass-seal",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    },
+    {
+      "scene": "materials-lab",
+      "geometry_id": "arena-shared-floor-v1",
+      "doors": {
+        "a": {
+          "design": "coral-materials",
+          "origin_px": [
+            1222,
+            70
+          ],
+          "threshold": [
+            0.858,
+            0.252
+          ],
+          "approach": [
+            0.82,
+            0.34
+          ],
+          "entry": [
+            0.82,
+            0.42
+          ],
+          "opening_bounds": [
+            0.81640625,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        },
+        "b": {
+          "design": "coral-materials",
+          "origin_px": [
+            122,
+            70
+          ],
+          "threshold": [
+            0.142,
+            0.252
+          ],
+          "approach": [
+            0.18,
+            0.34
+          ],
+          "entry": [
+            0.18,
+            0.42
+          ],
+          "opening_bounds": [
+            0.10026041666666667,
+            0.09765625,
+            0.08333333333333333,
+            0.1484375
+          ]
+        }
+      },
+      "replace_existing": "door moving layers and baked frame bay with the complete new rig; preserve scene navigation"
+    }
+  ]
+}

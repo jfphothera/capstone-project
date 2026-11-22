@@ -1,0 +1,77 @@
+{
+    "schema_version":  1,
+    "generated_at":  "2026-10-30T07:12:01.6888286-04:00",
+    "result":  "FAILED",
+    "ready_for_phase4":  false,
+    "run":  {
+                "Version":  "1.0.0",
+                "Mode":  "Provision",
+                "ComputerName":  "CAPSTONE-HEAD-04",
+                "LogFile":  "C:\\ProgramData\\CapstoneProvisioner\\logs\\run-20261030-091500.log",
+                "PreflightPath":  "C:\\ProgramData\\CapstoneProvisioner\\diagnostics\\preflight-20261030-091500.json",
+                "BackupPath":  "(none created - nothing was changed)",
+                "RegistrationPath":  "(not written - provisioning stopped before any change)",
+                "OsCaption":  "Microsoft Windows 11 Pro",
+                "OsBuild":  "26200",
+                "Cpu":  "Intel(R) Core(TM) i5-14400 CPU @ 2.50GHz",
+                "RamGB":  15.7,
+                "Gpu":  "Intel(R) UHD Graphics 730",
+                "NvidiaVramMB":  0,
+                "ModelDirectory":  "C:\\Users\\REDACTED\\.ollama\\models",
+                "FreeDisk":  "412.60 GB",
+                "NodeNumber":  4,
+                "NodeIp":  "192.0.2.4",
+                "AdapterSummary":  "(not selected)",
+                "NetworkVerified":  false,
+                "NetworkSummary":  "Not applied. 2 connected Ethernet adapters could each plausibly be the Capstone switch port.",
+                "CoordinatorNote":  "Layer-2/3 contact with 192.0.2.1 established (icmp=False tcp11434=True arp=02-00-00-00-00-01).",
+                "OllamaInstalled":  false,
+                "OllamaVersion":  "",
+                "OllamaExecutable":  "",
+                "LocalApiHealthy":  false,
+                "LocalApiEndpoint":  "",
+                "OllamaInstalledThisRun":  false,
+                "ProfileName":  "CPU16",
+                "ModelsRequested":  0,
+                "ModelsInstalled":  0,
+                "ModelsAlreadyPresent":  0,
+                "ModelsDownloaded":  0,
+                "ModelsFailed":  0,
+                "ModelsVerified":  0,
+                "FailedTags":  [
+
+                               ],
+                "InferenceVerified":  false,
+                "RemoteConfigured":  false,
+                "RemoteBinding":  "(not configured)",
+                "PrivateListenerHealthy":  false,
+                "FirewallSummary":  "(not configured)",
+                "CoordinatorVerified":  false,
+                "RemoteStatus":  "REMOTE_NOT_CONFIGURED",
+                "RemoteEndpoint":  "http://192.0.2.4:11434",
+                "MachineState":  "FAILED_REQUIRES_ACTION",
+                "Outcome":  {
+                                "Outcome":  "FAILED",
+                                "Blockers":  [
+                                                 "The private-LAN address was not verified.",
+                                                 "Ollama is not installed.",
+                                                 "The local Ollama API did not answer."
+                                             ],
+                                "Notes":  [
+                                              "Remote serving was not configured."
+                                          ],
+                                "PendingActions":  [
+                                                       "AMBIGUOUS_NETWORK_ADAPTER: 2 connected Ethernet adapters could each plausibly be the Capstone switch port, and nothing distinguishes them: Ethernet (index 6, Intel(R) Ethernet Controller I226-V); Ethernet 2 (index 11, Realtek PCIe GbE Family Controller). Nothing was changed. Set \"ethernet_mac\" in the configuration file to the adapter wired to the switch, then re-run."
+                                                   ],
+                                "ReadyForPhase4":  false,
+                                "ReadyNote":  "This head is NOT yet ready for Phase 4 integration. The items listed under WHAT STILL NEEDS ATTENTION explain why."
+                            }
+            },
+    "attention":  [
+                      "The private-LAN address was not verified.",
+                      "Ollama is not installed.",
+                      "The local Ollama API did not answer.",
+                      "Remote serving was not configured.",
+                      "AMBIGUOUS_NETWORK_ADAPTER: 2 connected Ethernet adapters could each plausibly be the Capstone switch port, and nothing distinguishes them: Ethernet (index 6, Intel(R) Ethernet Controller I226-V); Ethernet 2 (index 11, Realtek PCIe GbE Family Controller). Nothing was changed. Set \"ethernet_mac\" in the configuration file to the adapter wired to the switch, then re-run."
+                  ]
+}

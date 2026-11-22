@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Phothera Device Support · Educational simulation</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="/static/js/theme.js?v=rc28"></script>
+<link rel="stylesheet" href="/static/css/app.css?v=rc28">
+<link rel="stylesheet" href="/static/css/workflow.css?v=rc28">
+<link rel="stylesheet" href="/static/css/theme.css?v=rc28">
+<link rel="stylesheet" href="/static/css/studio.css?v=rc28">
+</head>
+<body>
+<a class="skip-link" href="#case-tabs">Skip to case workspace</a>
+<div class="app" data-region="case">
+
+  <div class="topbar">
+    <div class="brand"><span><b>Phothera Device Support</b><small>Educational simulation</small></span></div>
+    <nav class="nav" id="nav">
+      <button data-view="inbox" class="active">Inbox<span class="pip" id="pip-inbox">0</span></button>
+      <button data-view="trends">Trends</button>
+      <button data-view="movements">Logistics</button>
+      <button data-view="quality">Quality &amp; Safety<span class="pip" id="pip-quality">0</span></button>
+      <button data-view="audit">History</button>
+    </nav>
+    <span class="spacer"></span>
+    <label class="theme-control">Theme <select aria-label="Color theme" data-theme-picker><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+  </div>
+  <div class="workspace-toolbar">
+    <div class="workspace-title"><strong>Customer service workspace</strong></div>
+    <div class="ops" id="ops"><span class="dot off" id="ops-dot"></span><span id="ops-text">Connecting</span></div>
+    <div class="workspace-tools">
+      <a class="btn ghost small" href="/chat" target="_blank">Customer chat ↗</a>
+      <button class="btn primary" id="btn-manual">+ New ticket</button>
+    </div>
+  </div>
+  <nav class="region-switch" aria-label="Workspace panels"><button data-region="inbox">Inbox</button><button data-region="case" class="active">Case workspace</button><button data-region="copilot">Details</button></nav>
+
+  <main class="workspace" id="workspace">
+
+    <section class="panel inbox" id="panel-inbox">
+      <header><h2>Inbox</h2><span class="spacer" style="flex:1"></span>
+        <span class="chip muted" id="inbox-count">0</span></header>
+      <div class="filters">
+        <select id="inbox-status" aria-label="Case workflow filter"><option value="">All open work</option><option value="New">New cases</option><option value="Human Review Needed">Needs human decision</option><option value="Awaiting Customer/Shipment">Waiting / shipment</option><option value="follow_up">Customer follow-ups</option><option value="Resolved">Resolved</option><option value="Closed">Closed unresolved</option></select>
+        <input type="search" id="inbox-search" aria-label="Search tickets" placeholder="Search tickets, people, devices…">
+        <select id="inbox-priority" aria-label="Priority filter">
+          <option value="">All priorities</option>
+          <option>Critical</option><option>High</option>
+          <option>Medium</option><option>Low</option>
+        </select>
+        <select id="inbox-sort" aria-label="Ticket sort order">
+          <option value="priority">Priority</option>
+          <option value="newest">Newest</option>
+          <option value="updated">Recently updated</option>
+          <option value="oldest">Oldest</option>
+        </select>
+      </div>
+      <div class="queue-caption">YOUR QUEUE <span>Priority first</span></div>
+      <div class="scroll" id="inbox-list" aria-label="Ticket list"></div>
+      <footer>
+        <label style="display:flex;gap:6px;align-items:center;font-size:12px;color:var(--text-dim)">
+          <input type="checkbox" id="inbox-closed" style="width:auto">
+          Show resolved and closed
+        </label>
+      </footer>
+    </section>
+
+    <section class="panel conversation" id="panel-conversation">
+      <header class="case-toolbar"><span class="eyebrow">Case workspace</span><span style="flex:1"></span><details class="case-menu" hidden><summary class="btn ghost small">Case options</summary><div id="conv-actions"></div></details><button class="btn ghost small context-toggle" data-region="copilot">Details</button></header>
+      <div id="case-overview"></div>
+      <nav id="case-tabs" class="case-tabs" role="tablist" aria-label="Case sections">
+        <button id="tab-conversation" role="tab" disabled aria-controls="conv-body" aria-selected="true" data-tab="conversation">Conversation</button>
+        <button id="tab-notes" role="tab" disabled aria-controls="conv-body" aria-selected="false" tabindex="-1" data-tab="notes">Internal notes</button>
+        <button id="tab-actions" role="tab" disabled aria-controls="conv-body" aria-selected="false" tabindex="-1" data-tab="actions">Actions</button>
+        <button id="tab-history" role="tab" disabled aria-controls="conv-body" aria-selected="false" tabindex="-1" data-tab="history">History</button>
+      </nav>
+      <div class="scroll" id="conv-body" role="tabpanel" aria-labelledby="tab-conversation" tabindex="0">
+        <div class="empty case-empty"><h3>Select a ticket to begin</h3><p>Review the conversation, record internal notes or handle pending approvals.</p><p>Search the inbox by case, customer or device.</p></div>
+      </div>
+      <footer id="conv-composer"></footer>
+    </section>
+
+    <section class="panel copilot" id="panel-copilot">
+      <header><h2>Details</h2>
+        <span style="flex:1"></span>
+        <span class="chip muted" id="copilot-state"></span></header>
+      <div class="scroll" id="copilot-body">
+        <div class="empty">Select a ticket to see its status, context and next action.</div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="statusbar">
+    <span id="sb-queue">queue -</span>
+    <span id="sb-sim">arrivals -</span>
+    <span id="sb-model">model -</span>
+    <span id="sb-rep">-</span>
+    <span style="flex:1"></span>
+    <span id="sb-note">Educational simulation · Synthetic data only</span>
+  </div>
+
+</div>
+
+<div class="toast-host" id="toasts"></div>
+
+<dialog id="prompt-dialog">
+  <h3 id="prompt-title">Confirm</h3>
+  <div class="body">
+    <p id="prompt-message" style="margin-top:0;color:var(--text-dim)"></p>
+    <label class="field" id="prompt-field">
+      <span id="prompt-label">Reason</span>
+      <textarea id="prompt-input" rows="3"></textarea>
+    </label>
+    <label class="field" id="prompt-select-field" hidden>
+      <span id="prompt-select-label">Choice</span>
+      <select id="prompt-select"></select>
+    </label>
+  </div>
+  <div class="foot">
+    <button class="btn ghost" id="prompt-cancel">Cancel</button>
+    <button class="btn primary" id="prompt-ok">Confirm</button>
+  </div>
+</dialog>
+
+<script type="module" src="/static/js/app.js?v=rc28"></script>
+<script type="module" src="/static/js/global_nav.js?v=rc28"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* Live rooms: one location's room (arena-room.html) fills the floor panel. The classic floor
+   remains for the whole-cluster, application and role views. */
+.scene-frame{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:1;background:#040b12}
+.arena.scene-mode .floor{background:#040b12}
+.arena.scene-mode .roster,.arena.scene-mode .gridfloor,.arena.scene-mode .agent-layer,.arena.scene-mode #handoff-layer,
+.arena.scene-mode .door-threshold,.arena.scene-mode .empty-floor,.arena.scene-mode .floorhint{display:none}
+.arena.scene-mode .zones>:not(.room-controls){display:none}
+.arena:not(.scene-mode) .room-controls{display:none}
+.room-controls{display:flex;align-items:center;gap:8px;width:100%}
+.room-controls #room-title{min-width:150px;text-align:center;color:#ffd38a;font:700 11px Consolas,monospace;letter-spacing:1.5px;text-transform:uppercase}
+.room-controls #room-shuffle{margin-left:6px}
+.room-controls #room-pinned{color:#7f9aa8;font-size:9px}
+.room-controls #scene-overflow{margin-left:auto;color:#f2d5a5;font-size:9px}
+body.disconnected .scene-frame{filter:saturate(.45) brightness(.8)}

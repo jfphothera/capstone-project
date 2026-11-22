@@ -1,0 +1,355 @@
+{
+  "src": "C:\\Users\\REDACTED\\AppData\\Local\\Temp\\claude\\f6ad2b3017c54341\\50a5dcff-cfe4-4660-a6fa-0da02e8c51b3\\scratchpad\\pre-0.4.6\\src",
+  "release": "0.4.5",
+  "python": "3.12.10",
+  "workload": {
+    "heads": 9,
+    "authorized_models": 36,
+    "installed_models": 6,
+    "history_requests": 20000,
+    "launches": 24,
+    "workers": 24,
+    "seconds": 45,
+    "health_interval_s": 2.0,
+    "seed": 46
+  },
+  "ledger_bytes": 109191168,
+  "build_s": 8.2,
+  "launch_storm": {
+    "rc24_preflight": {
+      "launches": 24,
+      "api_calls": 216,
+      "api_calls_per_launch": 9.0,
+      "internal_availability_calculations": 17064,
+      "per_launch_internal_calculations": 711.0,
+      "wall_ms": 7722,
+      "per_call_ms": {
+        "/v1/availability": {
+          "n": 168,
+          "p50": 93.87,
+          "p95": 165.36,
+          "max": 424.25
+        },
+        "/v1/models": {
+          "n": 24,
+          "p50": 1118.79,
+          "p95": 1188.61,
+          "max": 1190.49
+        },
+        "/v1/policy": {
+          "n": 24,
+          "p50": 5199.69,
+          "p95": 5820.91,
+          "max": 6044.13
+        }
+      },
+      "all_calls_ms": {
+        "n": 216,
+        "p50": 104.79,
+        "p95": 5216.28,
+        "max": 6044.13
+      }
+    }
+  },
+  "admission": {
+    "workers": 24,
+    "seconds": 45,
+    "health_interval_s": 2.0,
+    "completed": 511,
+    "completed_per_minute": 681.3,
+    "failed": {},
+    "per_model": {
+      "qwen3.5:4b": {
+        "completed": 263,
+        "admission_s": {
+          "n": 263,
+          "p50": 0.31,
+          "p95": 1.05,
+          "max": 1.18
+        },
+        "execution_s": {
+          "n": 263,
+          "p50": 0.89,
+          "p95": 1.26,
+          "max": 1.37
+        }
+      },
+      "qwen3:4b": {
+        "completed": 248,
+        "admission_s": {
+          "n": 248,
+          "p50": 0.42,
+          "p95": 1.33,
+          "max": 1.93
+        },
+        "execution_s": {
+          "n": 248,
+          "p50": 0.81,
+          "p95": 1.25,
+          "max": 1.35
+        }
+      }
+    },
+    "admission_s": {
+      "n": 511,
+      "p50": 0.35,
+      "p95": 1.15,
+      "max": 1.93
+    },
+    "execution_s": {
+      "n": 511,
+      "p50": 0.84,
+      "p95": 1.25,
+      "max": 1.37
+    },
+    "total_s": {
+      "n": 511,
+      "p50": 1.51,
+      "p95": 2.41,
+      "max": 2.87
+    },
+    "health_cycle_ms": {
+      "n": 15,
+      "p50": 907.59,
+      "p95": 1647.99,
+      "max": 1647.99
+    },
+    "head_peak_concurrency": {
+      "http://127.0.0.1:22002": 3,
+      "http://127.0.0.1:22010": 3,
+      "http://127.0.0.1:22007": 3,
+      "http://127.0.0.1:22009": 3,
+      "http://127.0.0.1:22008": 3,
+      "http://127.0.0.1:22004": 3,
+      "http://127.0.0.1:22003": 3,
+      "http://127.0.0.1:22005": 3
+    },
+    "ledger": {
+      "complete": {
+        "transactions": 511,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 511,
+          "p50": 4.8,
+          "p95": 25.29,
+          "max": 36.15
+        },
+        "wait_ms": {
+          "n": 511,
+          "p50": 45.54,
+          "p95": 175.52,
+          "max": 246.63
+        },
+        "hold_ms_total": 3671
+      },
+      "executing": {
+        "transactions": 511,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 511,
+          "p50": 2.45,
+          "p95": 19.42,
+          "max": 39.8
+        },
+        "wait_ms": {
+          "n": 511,
+          "p50": 46.9,
+          "p95": 145.95,
+          "max": 247.13
+        },
+        "hold_ms_total": 2176
+      },
+      "expire": {
+        "transactions": 15,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 15,
+          "p50": 1.35,
+          "p95": 9.81,
+          "max": 9.81
+        },
+        "wait_ms": {
+          "n": 15,
+          "p50": 64.68,
+          "p95": 126.86,
+          "max": 126.86
+        },
+        "hold_ms_total": 34
+      },
+      "health": {
+        "transactions": 135,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 135,
+          "p50": 2.33,
+          "p95": 11.23,
+          "max": 32.47
+        },
+        "wait_ms": {
+          "n": 135,
+          "p50": 8.79,
+          "p95": 118.84,
+          "max": 230.3
+        },
+        "hold_ms_total": 503
+      },
+      "invocation": {
+        "transactions": 511,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 511,
+          "p50": 3.34,
+          "p95": 21.16,
+          "max": 41.62
+        },
+        "wait_ms": {
+          "n": 511,
+          "p50": 56.28,
+          "p95": 193.31,
+          "max": 429.92
+        },
+        "hold_ms_total": 2799
+      },
+      "mark_loaded": {
+        "transactions": 223,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 223,
+          "p50": 2.45,
+          "p95": 19.02,
+          "max": 44.14
+        },
+        "wait_ms": {
+          "n": 223,
+          "p50": 39.28,
+          "p95": 149.27,
+          "max": 196.48
+        },
+        "hold_ms_total": 973
+      },
+      "nodes": {
+        "transactions": 511,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 511,
+          "p50": 2.65,
+          "p95": 18.36,
+          "max": 39.34
+        },
+        "wait_ms": {
+          "n": 511,
+          "p50": 58.2,
+          "p95": 181.92,
+          "max": 443.03
+        },
+        "hold_ms_total": 2329
+      },
+      "place": {
+        "transactions": 409,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 409,
+          "p50": 9.26,
+          "p95": 56.61,
+          "max": 220.72
+        },
+        "wait_ms": {
+          "n": 409,
+          "p50": 24.53,
+          "p95": 128.87,
+          "max": 246.11
+        },
+        "hold_ms_total": 7166
+      },
+      "publish_counters": {
+        "transactions": 15,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 15,
+          "p50": 2.35,
+          "p95": 31.3,
+          "max": 31.3
+        },
+        "wait_ms": {
+          "n": 15,
+          "p50": 9.92,
+          "p95": 173.22,
+          "max": 173.22
+        },
+        "hold_ms_total": 66
+      },
+      "record_inventory": {
+        "transactions": 135,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 135,
+          "p50": 2.44,
+          "p95": 27.44,
+          "max": 35.15
+        },
+        "wait_ms": {
+          "n": 135,
+          "p50": 8.07,
+          "p95": 89.55,
+          "max": 254.01
+        },
+        "hold_ms_total": 730
+      },
+      "record_runtime": {
+        "transactions": 135,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 135,
+          "p50": 2.15,
+          "p95": 17.76,
+          "max": 31.77
+        },
+        "wait_ms": {
+          "n": 135,
+          "p50": 8.98,
+          "p95": 96.91,
+          "max": 356.15
+        },
+        "hold_ms_total": 545
+      },
+      "started": {
+        "transactions": 511,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 511,
+          "p50": 2.34,
+          "p95": 19.23,
+          "max": 44.65
+        },
+        "wait_ms": {
+          "n": 511,
+          "p50": 49.97,
+          "p95": 163.08,
+          "max": 268.45
+        },
+        "hold_ms_total": 2106
+      },
+      "submit": {
+        "transactions": 511,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 511,
+          "p50": 4.6,
+          "p95": 26.58,
+          "max": 38.31
+        },
+        "wait_ms": {
+          "n": 511,
+          "p50": 57.76,
+          "p95": 176.55,
+          "max": 242.8
+        },
+        "hold_ms_total": 3667
+      }
+    },
+    "ledger_hold_ms_total": 26765,
+    "place_transactions": 409,
+    "placement_passes": null,
+    "scheduler_passes": 409
+  }
+}

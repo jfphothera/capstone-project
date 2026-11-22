@@ -1,0 +1,265 @@
+{
+  "schema": "arena.classic-refined.direction-art.v1",
+  "views": [
+    {
+      "view": "front",
+      "idle": "front/idle.svg",
+      "idle_png": "front/idle.png",
+      "walk_sheet": "front/walk-sheet.png",
+      "frames": [
+        "front/walk-01.png",
+        "front/walk-02.png",
+        "front/walk-03.png",
+        "front/walk-04.png"
+      ],
+      "frame_rects_px": [
+        [
+          0,
+          0,
+          64,
+          80
+        ],
+        [
+          64,
+          0,
+          64,
+          80
+        ],
+        [
+          128,
+          0,
+          64,
+          80
+        ],
+        [
+          192,
+          0,
+          64,
+          80
+        ]
+      ],
+      "frame_ms": 180,
+      "loop": true,
+      "size": [
+        64,
+        80
+      ],
+      "ground_anchor_px": [
+        32,
+        78
+      ],
+      "palette_masks": {
+        "shell": {
+          "idle": "front/idle-shell-mask.png",
+          "walk": "front/walk-shell-mask.png"
+        },
+        "shade": {
+          "idle": "front/idle-shade-mask.png",
+          "walk": "front/walk-shade-mask.png"
+        },
+        "shine": {
+          "idle": "front/idle-shine-mask.png",
+          "walk": "front/walk-shine-mask.png"
+        }
+      }
+    },
+    {
+      "view": "back",
+      "idle": "back/idle.svg",
+      "idle_png": "back/idle.png",
+      "walk_sheet": "back/walk-sheet.png",
+      "frames": [
+        "back/walk-01.png",
+        "back/walk-02.png",
+        "back/walk-03.png",
+        "back/walk-04.png"
+      ],
+      "frame_rects_px": [
+        [
+          0,
+          0,
+          64,
+          80
+        ],
+        [
+          64,
+          0,
+          64,
+          80
+        ],
+        [
+          128,
+          0,
+          64,
+          80
+        ],
+        [
+          192,
+          0,
+          64,
+          80
+        ]
+      ],
+      "frame_ms": 180,
+      "loop": true,
+      "size": [
+        64,
+        80
+      ],
+      "ground_anchor_px": [
+        32,
+        78
+      ],
+      "palette_masks": {
+        "shell": {
+          "idle": "back/idle-shell-mask.png",
+          "walk": "back/walk-shell-mask.png"
+        },
+        "shade": {
+          "idle": "back/idle-shade-mask.png",
+          "walk": "back/walk-shade-mask.png"
+        },
+        "shine": {
+          "idle": "back/idle-shine-mask.png",
+          "walk": "back/walk-shine-mask.png"
+        }
+      }
+    },
+    {
+      "view": "left",
+      "idle": "left/idle.svg",
+      "idle_png": "left/idle.png",
+      "walk_sheet": "left/walk-sheet.png",
+      "frames": [
+        "left/walk-01.png",
+        "left/walk-02.png",
+        "left/walk-03.png",
+        "left/walk-04.png"
+      ],
+      "frame_rects_px": [
+        [
+          0,
+          0,
+          64,
+          80
+        ],
+        [
+          64,
+          0,
+          64,
+          80
+        ],
+        [
+          128,
+          0,
+          64,
+          80
+        ],
+        [
+          192,
+          0,
+          64,
+          80
+        ]
+      ],
+      "frame_ms": 180,
+      "loop": true,
+      "size": [
+        64,
+        80
+      ],
+      "ground_anchor_px": [
+        32,
+        78
+      ],
+      "palette_masks": {
+        "shell": {
+          "idle": "left/idle-shell-mask.png",
+          "walk": "left/walk-shell-mask.png"
+        },
+        "shade": {
+          "idle": "left/idle-shade-mask.png",
+          "walk": "left/walk-shade-mask.png"
+        },
+        "shine": {
+          "idle": "left/idle-shine-mask.png",
+          "walk": "left/walk-shine-mask.png"
+        }
+      }
+    },
+    {
+      "view": "right",
+      "idle": "right/idle.svg",
+      "idle_png": "right/idle.png",
+      "walk_sheet": "right/walk-sheet.png",
+      "frames": [
+        "right/walk-01.png",
+        "right/walk-02.png",
+        "right/walk-03.png",
+        "right/walk-04.png"
+      ],
+      "frame_rects_px": [
+        [
+          0,
+          0,
+          64,
+          80
+        ],
+        [
+          64,
+          0,
+          64,
+          80
+        ],
+        [
+          128,
+          0,
+          64,
+          80
+        ],
+        [
+          192,
+          0,
+          64,
+          80
+        ]
+      ],
+      "frame_ms": 180,
+      "loop": true,
+      "size": [
+        64,
+        80
+      ],
+      "ground_anchor_px": [
+        32,
+        78
+      ],
+      "palette_masks": {
+        "shell": {
+          "idle": "right/idle-shell-mask.png",
+          "walk": "right/walk-shell-mask.png"
+        },
+        "shade": {
+          "idle": "right/idle-shade-mask.png",
+          "walk": "right/walk-shade-mask.png"
+        },
+        "shine": {
+          "idle": "right/idle-shine-mask.png",
+          "walk": "right/walk-shine-mask.png"
+        }
+      }
+    }
+  ],
+  "source_project_path": "frontend/assets/classic-arcade/classic-refined.svg",
+  "mode": "repo-native SVG extension; no image-generation redraw of the agent",
+  "palette": {
+    "shell": "#20c9cd",
+    "shade": "#147f8c",
+    "shine": "#90eee0"
+  },
+  "supported_states": [
+    "idle",
+    "walk"
+  ],
+  "note": "Standalone art only; not installed into a renderer. Front seated leg geometry is retained but hidden in idle; back/profile seated and other action poses are not authored."
+}

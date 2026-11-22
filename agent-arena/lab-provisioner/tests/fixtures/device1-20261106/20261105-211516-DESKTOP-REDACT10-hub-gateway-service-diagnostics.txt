@@ -1,0 +1,77 @@
+Service diagnostics for InferenceGateway on DESKTOP-REDACT10, 2026-11-05T21:19:11
+--- sc.exe queryex / qc / qfailure
+  SERVICE_NAME: InferenceGateway
+  TYPE               : 10  WIN32_OWN_PROCESS
+  STATE              : 1  STOPPED
+  WIN32_EXIT_CODE    : 0  (0x0)
+  SERVICE_EXIT_CODE  : 0  (0x0)
+  CHECKPOINT         : 0x0
+  WAIT_HINT          : 0x7d0
+  PID                : 0
+  FLAGS              :
+  [SC] QueryServiceConfig SUCCESS
+  SERVICE_NAME: InferenceGateway
+  TYPE               : 10  WIN32_OWN_PROCESS
+  START_TYPE         : 2   AUTO_START  (DELAYED)
+  ERROR_CONTROL      : 1   NORMAL
+  BINARY_PATH_NAME   : "C:\Program Files\Python312\python.exe" -I "C:\Program Files\InferenceGateway\releases\0.3.0\inference_gateway\service_launcher.py" service --config "C:\ProgramData\InferenceGateway\config\gateway-service.json" --name InferenceGateway
+  LOAD_ORDER_GROUP   :
+  TAG                : 0
+  DISPLAY_NAME       : Inference Gateway
+  DEPENDENCIES       : Tcpip
+  SERVICE_START_NAME : .\svc-inference-gw
+  [SC] QueryServiceConfig2 SUCCESS
+  SERVICE_NAME: InferenceGateway
+  RESET_PERIOD (in seconds)    : 86400
+  REBOOT_MESSAGE               :
+  COMMAND_LINE                 :
+  FAILURE_ACTIONS              : RESTART -- Delay = 30000 milliseconds.
+  RESTART -- Delay = 60000 milliseconds.
+  RESTART -- Delay = 300000 milliseconds.
+--- Service Control Manager events about it (System log)
+  2026-11-05T21:16:41 id 7000: The Inference Gateway service failed to start due to the following error: The service did not respond to the start or control request in a timely fashion.
+  2026-11-05T21:16:41 id 7009: A timeout was reached (30000 milliseconds) while waiting for the Inference Gateway service to connect.
+  2026-11-05T20:42:05 id 7000: The Inference Gateway service failed to start due to the following error: The service did not respond to the start or control request in a timely fashion.
+  2026-11-05T20:42:05 id 7009: A timeout was reached (30000 milliseconds) while waiting for the Inference Gateway service to connect.
+  2026-11-05T20:42:05 id 7045: A service was installed in the system. Service Name: Inference Gateway Service File Name: "C:\Program Files\Python312\python.exe" -I "C:\Program Files\InferenceGateway\releases\0.3.0\inference_gateway\service_launcher.py" service --config "C:\ProgramData\InferenceGateway\config\gateway-service.json" --name InferenceGateway Service Type: user mode service Service Start Type: auto start Service Account: DESKTOP-REDACT10\svc-inference-gw
+--- Application errors for python.exe (Application log)
+  none
+--- C:\ProgramData\InferenceGateway\logs\gateway-fault.log (last 60 lines)
+  absent
+--- C:\ProgramData\InferenceGateway\logs\gateway-service.log (last 60 lines)
+  absent
+--- account .\svc-inference-gw (S-1-5-21-1000000001-1000000002-1000000003-1003): profile
+  C:\Users\svc-inference-gw, loaded True, last used 11/5/2026 9:19:13 PM
+--- permissions on what the service opens before it connects
+  C:\Program Files\Python312\python.exe
+    C:\Program Files\Python312\python.exe NT AUTHORITY\SYSTEM:(I)(F)
+    BUILTIN\Administrators:(I)(F)
+    BUILTIN\Users:(I)(RX)
+    APPLICATION PACKAGE AUTHORITY\ALL APPLICATION PACKAGES:(I)(RX)
+    APPLICATION PACKAGE AUTHORITY\ALL RESTRICTED APPLICATION PACKAGES:(I)(RX)
+  C:\Program Files\InferenceGateway\releases\0.3.0\inference_gateway\service_launcher.py
+    C:\Program Files\InferenceGateway\releases\0.3.0\inference_gateway\service_launcher.py NT AUTHORITY\SYSTEM:(F)
+    BUILTIN\Administrators:(F)
+    OWNER RIGHTS:(F)
+  C:\ProgramData\InferenceGateway\config\gateway-service.json
+    C:\ProgramData\InferenceGateway\config\gateway-service.json Desktop-Redact10\svc-inference-gw:(I)(RX)
+    BUILTIN\Administrators:(I)(F)
+    NT AUTHORITY\SYSTEM:(I)(F)
+  C:\ProgramData\InferenceGateway\state\capacity-ledger.db
+    C:\ProgramData\InferenceGateway\state\capacity-ledger.db Desktop-Redact10\svc-inference-gw:(I)(M)
+    BUILTIN\Administrators:(I)(F)
+    NT AUTHORITY\SYSTEM:(I)(F)
+  C:\ProgramData\InferenceGateway\tls\server.pem
+    C:\ProgramData\InferenceGateway\tls\server.pem Desktop-Redact10\svc-inference-gw:(R)
+    Desktop-Redact10\svc-inference-gw:(I)(RX)
+    BUILTIN\Administrators:(I)(F)
+    NT AUTHORITY\SYSTEM:(I)(F)
+  C:\ProgramData\InferenceGateway\tls\server.key
+    C:\ProgramData\InferenceGateway\tls\server.key Desktop-Redact10\svc-inference-gw:(R)
+    Desktop-Redact10\svc-inference-gw:(I)(RX)
+    BUILTIN\Administrators:(I)(F)
+    NT AUTHORITY\SYSTEM:(I)(F)
+  C:\ProgramData\InferenceGateway\logs
+    C:\ProgramData\InferenceGateway\logs Desktop-Redact10\svc-inference-gw:(OI)(CI)(M)
+    BUILTIN\Administrators:(OI)(CI)(F)
+    NT AUTHORITY\SYSTEM:(OI)(CI)(F)

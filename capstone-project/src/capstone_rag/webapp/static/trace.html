@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agent Activity · Phothera Device Support</title><script src="/static/js/theme.js?v=rc28"></script><link rel="stylesheet" href="/static/css/trace.css?v=rc28"><link rel="stylesheet" href="/static/css/console.css?v=rc28"><link rel="stylesheet" href="/static/css/theme.css?v=rc28"><link rel="stylesheet" href="/static/css/studio.css?v=rc28"></head>
+<body class="trace-page"><header><div><h1>Agent Activity</h1><p>Phothera Device Support · Recorded execution evidence</p></div>
+<nav><a href="/" target="_blank">Representative workspace</a><a href="/chat" target="_blank">Customer chat</a><label class="theme-control">Theme <select aria-label="Color theme" data-theme-picker><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label></nav></header>
+<section class="toolbar"><label>Find a case<input type="search" id="subject-search" placeholder="Case, person or issue" aria-label="Find investigation"></label><label>Conversation or case <select id="subject" aria-label="Selected investigation"><option value="">Select a conversation or case</option></select></label>
+<label>Category <select id="category" aria-label="Event category"><option value="">All events</option></select></label>
+<label><input type="checkbox" id="follow-latest"> Follow latest active case</label>
+<button id="refresh">Refresh</button><button id="export" disabled>Export JSON + Markdown</button></section>
+<section class="active-strip"><div><span id="processing-state">No investigation selected</span><strong id="current-task">Waiting for recorded activity</strong></div>
+<dl><dt>Run</dt><dd id="active-run">—</dd><dt>Model on this run</dt><dd id="active-model">No recorded request</dd><dt>Endpoint</dt><dd id="active-endpoint">—</dd><dt>Elapsed</dt><dd id="elapsed">—</dd></dl></section>
+<details class="runtime-details"><summary>Runtime &amp; connection</summary><section class="status"><span id="runtime">Loading shared runtime…</span><span id="live">Live updates every 2 seconds</span></section></details>
+<details class="qms-inventory"><summary>Controlled QMS document inventory and authorization matrix</summary><div id="qms-inventory">Loading controlled metadata…</div></details>
+<main><section class="event-panel"><div class="console-heading"><h2>Live event console</h2><label><input type="checkbox" id="auto-follow" checked> Auto-follow / scroll lock</label><button id="pause">Pause console</button></div><p id="context">Select an active chat or case. This view observes the existing worker.</p><a id="chat-link" hidden target="_blank">Open this customer conversation</a><ol id="timeline"></ol></section>
+<aside><details class="qms-inventory"><summary>Specialist coordination, candidate plans and corrections</summary><div id="coordination-summary">Select a case to inspect specialist findings.</div></details>
+<h2>Event details</h2><p id="selected">Select an event to inspect its evidence.</p><dl id="structured-evidence"></dl><details><summary>Full event JSON</summary><pre id="evidence"></pre></details></aside></main>
+<p id="export-result" role="status"></p><footer>Read-only activity. Fictional local data. Events show observable execution evidence, not hidden model reasoning.</footer>
+<script type="module" src="/static/js/trace.js?v=rc28"></script><script type="module" src="/static/js/global_nav.js?v=rc28"></script></body></html>

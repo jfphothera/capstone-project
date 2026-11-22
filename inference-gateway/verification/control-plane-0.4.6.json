@@ -1,0 +1,356 @@
+{
+  "src": "C:\\Users\\REDACTED\\PycharmProjects\\Inference Gateway\\src",
+  "release": "0.4.6",
+  "python": "3.12.10",
+  "workload": {
+    "heads": 9,
+    "authorized_models": 36,
+    "installed_models": 6,
+    "history_requests": 20000,
+    "launches": 24,
+    "workers": 24,
+    "seconds": 45,
+    "health_interval_s": 2.0,
+    "seed": 46
+  },
+  "ledger_bytes": 109215744,
+  "build_s": 7.5,
+  "launch_storm": {
+    "rc24_preflight": {
+      "launches": 24,
+      "api_calls": 216,
+      "api_calls_per_launch": 9.0,
+      "internal_availability_calculations": 17064,
+      "per_launch_internal_calculations": 711.0,
+      "wall_ms": 927,
+      "per_call_ms": {
+        "/v1/availability": {
+          "n": 168,
+          "p50": 74.81,
+          "p95": 113.96,
+          "max": 155.41
+        },
+        "/v1/models": {
+          "n": 24,
+          "p50": 235.2,
+          "p95": 275.1,
+          "max": 280.13
+        },
+        "/v1/policy": {
+          "n": 24,
+          "p50": 130.62,
+          "p95": 159.84,
+          "max": 159.85
+        }
+      },
+      "all_calls_ms": {
+        "n": 216,
+        "p50": 77.55,
+        "p95": 235.61,
+        "max": 280.13
+      }
+    },
+    "gateway_0_4_6_scoped": {
+      "launches": 24,
+      "api_calls": 48,
+      "api_calls_per_launch": 2.0,
+      "internal_availability_calculations": 36,
+      "per_launch_internal_calculations": 1.5,
+      "wall_ms": 171,
+      "per_call_ms": {
+        "/v1/fleet": {
+          "n": 24,
+          "p50": 55.98,
+          "p95": 109.49,
+          "max": 115.55
+        },
+        "/v1/policy?availability=0": {
+          "n": 24,
+          "p50": 53.77,
+          "p95": 103.0,
+          "max": 116.69
+        }
+      },
+      "all_calls_ms": {
+        "n": 48,
+        "p50": 53.77,
+        "p95": 109.49,
+        "max": 116.69
+      }
+    }
+  },
+  "admission": {
+    "workers": 24,
+    "seconds": 45,
+    "health_interval_s": 2.0,
+    "completed": 522,
+    "completed_per_minute": 696.0,
+    "failed": {},
+    "per_model": {
+      "qwen3.5:4b": {
+        "completed": 267,
+        "admission_s": {
+          "n": 267,
+          "p50": 0.2,
+          "p95": 0.77,
+          "max": 1.08
+        },
+        "execution_s": {
+          "n": 267,
+          "p50": 0.88,
+          "p95": 1.28,
+          "max": 1.5
+        }
+      },
+      "qwen3:4b": {
+        "completed": 255,
+        "admission_s": {
+          "n": 255,
+          "p50": 0.41,
+          "p95": 1.07,
+          "max": 2.01
+        },
+        "execution_s": {
+          "n": 255,
+          "p50": 0.82,
+          "p95": 1.29,
+          "max": 1.49
+        }
+      }
+    },
+    "admission_s": {
+      "n": 522,
+      "p50": 0.28,
+      "p95": 0.92,
+      "max": 2.01
+    },
+    "execution_s": {
+      "n": 522,
+      "p50": 0.84,
+      "p95": 1.28,
+      "max": 1.5
+    },
+    "total_s": {
+      "n": 522,
+      "p50": 1.5,
+      "p95": 2.52,
+      "max": 3.56
+    },
+    "health_cycle_ms": {
+      "n": 17,
+      "p50": 449.9,
+      "p95": 2389.69,
+      "max": 2389.69
+    },
+    "head_peak_concurrency": {
+      "http://127.0.0.1:22004": 3,
+      "http://127.0.0.1:22009": 3,
+      "http://127.0.0.1:22007": 3,
+      "http://127.0.0.1:22010": 3,
+      "http://127.0.0.1:22005": 3,
+      "http://127.0.0.1:22002": 3,
+      "http://127.0.0.1:22003": 3,
+      "http://127.0.0.1:22008": 3
+    },
+    "ledger": {
+      "complete": {
+        "transactions": 522,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 522,
+          "p50": 4.34,
+          "p95": 31.9,
+          "max": 52.71
+        },
+        "wait_ms": {
+          "n": 522,
+          "p50": 45.42,
+          "p95": 207.11,
+          "max": 392.29
+        },
+        "hold_ms_total": 4357
+      },
+      "executing": {
+        "transactions": 522,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 522,
+          "p50": 2.4,
+          "p95": 24.72,
+          "max": 45.37
+        },
+        "wait_ms": {
+          "n": 522,
+          "p50": 45.17,
+          "p95": 219.04,
+          "max": 418.93
+        },
+        "hold_ms_total": 2625
+      },
+      "expire": {
+        "transactions": 17,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 17,
+          "p50": 0.93,
+          "p95": 33.57,
+          "max": 33.57
+        },
+        "wait_ms": {
+          "n": 17,
+          "p50": 20.31,
+          "p95": 212.58,
+          "max": 212.58
+        },
+        "hold_ms_total": 65
+      },
+      "health": {
+        "transactions": 153,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 153,
+          "p50": 3.06,
+          "p95": 29.71,
+          "max": 37.35
+        },
+        "wait_ms": {
+          "n": 153,
+          "p50": 28.94,
+          "p95": 217.01,
+          "max": 346.15
+        },
+        "hold_ms_total": 892
+      },
+      "invocation": {
+        "transactions": 522,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 522,
+          "p50": 2.78,
+          "p95": 26.19,
+          "max": 42.32
+        },
+        "wait_ms": {
+          "n": 522,
+          "p50": 44.38,
+          "p95": 240.77,
+          "max": 414.14
+        },
+        "hold_ms_total": 2928
+      },
+      "mark_loaded": {
+        "transactions": 266,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 266,
+          "p50": 2.41,
+          "p95": 29.81,
+          "max": 221.04
+        },
+        "wait_ms": {
+          "n": 266,
+          "p50": 25.17,
+          "p95": 216.2,
+          "max": 359.65
+        },
+        "hold_ms_total": 1545
+      },
+      "nodes": {
+        "transactions": 522,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 522,
+          "p50": 2.45,
+          "p95": 28.21,
+          "max": 42.08
+        },
+        "wait_ms": {
+          "n": 522,
+          "p50": 47.36,
+          "p95": 240.47,
+          "max": 399.51
+        },
+        "hold_ms_total": 2768
+      },
+      "place": {
+        "transactions": 201,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 201,
+          "p50": 6.82,
+          "p95": 34.47,
+          "max": 75.78
+        },
+        "wait_ms": {
+          "n": 201,
+          "p50": 31.26,
+          "p95": 176.59,
+          "max": 333.69
+        },
+        "hold_ms_total": 2168
+      },
+      "publish_counters": {
+        "transactions": 17,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 17,
+          "p50": 2.26,
+          "p95": 16.46,
+          "max": 16.46
+        },
+        "wait_ms": {
+          "n": 17,
+          "p50": 33.3,
+          "p95": 276.17,
+          "max": 276.17
+        },
+        "hold_ms_total": 63
+      },
+      "started": {
+        "transactions": 522,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 522,
+          "p50": 2.48,
+          "p95": 28.08,
+          "max": 46.74
+        },
+        "wait_ms": {
+          "n": 522,
+          "p50": 45.97,
+          "p95": 231.33,
+          "max": 416.3
+        },
+        "hold_ms_total": 2763
+      },
+      "submit": {
+        "transactions": 522,
+        "timeouts": 0,
+        "hold_ms": {
+          "n": 522,
+          "p50": 3.99,
+          "p95": 28.41,
+          "max": 53.28
+        },
+        "wait_ms": {
+          "n": 522,
+          "p50": 50.14,
+          "p95": 237.74,
+          "max": 409.32
+        },
+        "hold_ms_total": 3830
+      }
+    },
+    "ledger_hold_ms_total": 24004,
+    "place_transactions": 201,
+    "placement_passes": {
+      "passes": 308,
+      "read_only_passes": 107,
+      "write_passes": 201,
+      "granted": 522,
+      "choices": 1522,
+      "memo_skips": 704
+    },
+    "scheduler_passes": 308
+  }
+}

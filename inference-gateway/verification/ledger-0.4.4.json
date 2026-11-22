@@ -1,0 +1,66 @@
+{
+  "src": "C:\\Users\\REDACTED\\PycharmProjects\\Inference Gateway\\src",
+  "release": "0.4.4",
+  "history_requests": 20000,
+  "result_kb": 8,
+  "ledger_bytes": 189300736,
+  "hold": {
+    "place_20_queued_9_heads": {
+      "median_ms": 3.79,
+      "max_ms": 5.36
+    },
+    "submit": {
+      "median_ms": 2.1,
+      "max_ms": 2.34
+    },
+    "invocation_count_in_execute": {
+      "median_ms": 0.59,
+      "max_ms": 0.77
+    },
+    "expiry_pass": {
+      "median_ms": 0.66,
+      "max_ms": 6.15
+    },
+    "status_has_expired_read": {
+      "median_ms": 0.63,
+      "max_ms": 0.77
+    },
+    "models_read": {
+      "median_ms": 6.36,
+      "max_ms": 6.39
+    }
+  },
+  "scheduler_starvation": {
+    "scheduler_passes": 10038,
+    "renewals": 320,
+    "renewals_refused": 0,
+    "timeout_s": 3.0,
+    "wait_ms_p50": 2.2,
+    "wait_ms_p95": 4.2,
+    "wait_ms_max": 7.1
+  },
+  "fairness": {
+    "threads": 24,
+    "hold_ms": 30,
+    "mean_interval_ms": 750,
+    "seconds": 20.0,
+    "timeout_s": 2.0,
+    "offered_utilization": 0.92,
+    "sqlite_busy_handler": {
+      "transactions": 571,
+      "refused_after_timeout": 0,
+      "wait_ms_p50": 11.0,
+      "wait_ms_p95": 329.4,
+      "wait_ms_p99": 1319.2,
+      "wait_ms_max": 2264.2
+    },
+    "fifo_gate": {
+      "transactions": 582,
+      "refused_after_timeout": 0,
+      "wait_ms_p50": 43.7,
+      "wait_ms_p95": 167.7,
+      "wait_ms_p99": 218.7,
+      "wait_ms_max": 280.1
+    }
+  }
+}

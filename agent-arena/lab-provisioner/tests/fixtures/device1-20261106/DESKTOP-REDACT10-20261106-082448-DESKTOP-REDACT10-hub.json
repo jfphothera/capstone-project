@@ -1,0 +1,1268 @@
+{
+    "schema":  "agent-arena.lab-report/1",
+    "provisioner":  "Agent Arena Lab Provisioner 1.3.6",
+    "run":  "20261106-082448-DESKTOP-REDACT10-hub",
+    "role":  "hub",
+    "computer":  "DESKTOP-REDACT10",
+    "started":  "2026-11-06T08:24:48.8702080-05:00",
+    "finished":  "2026-11-06T08:48:40.2651589-05:00",
+    "final_status":  "failed",
+    "identity":  {
+                     "detected":  {
+                                      "Role":  "hub",
+                                      "Address":  "192.0.2.254",
+                                      "Reason":  "holds the hub address 192.0.2.254"
+                                  },
+                     "os":  {
+                                "Caption":  "Microsoft Windows 11 Pro",
+                                "Edition":  "Professional",
+                                "Version":  "10.0.26200",
+                                "Build":  "26200",
+                                "Arch":  "64-bit",
+                                "LastBoot":  "2026-11-05T07:03:00.5000000-05:00",
+                                "TimeZone":  "Eastern Standard Time",
+                                "Domain":  "WORKGROUP",
+                                "PartOfDomain":  false
+                            },
+                     "user":  "Desktop-Redact10\\LabOperator1",
+                     "elevated":  true
+                 },
+    "inventory":  [
+                      {
+                          "area":  "identity",
+                          "name":  "computer",
+                          "value":  "DESKTOP-REDACT10",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "signed-in user",
+                          "value":  "Desktop-Redact10\\LabOperator1",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "running as administrator",
+                          "value":  "True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "os",
+                          "name":  "Windows",
+                          "value":  "Microsoft Windows 11 Pro (Professional) 10.0.26200 build 26200 64-bit",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "os",
+                          "name":  "last boot",
+                          "value":  "2026-11-05T07:03:00.5000000-05:00",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "os",
+                          "name":  "domain or workgroup",
+                          "value":  "WORKGROUP (domain joined: False)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "CPU",
+                          "value":  "Intel(R) Core(TM) i5-10310U CPU @ 1.70GHz (4 cores, 8 threads)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "RAM",
+                          "value":  "23.8 GB",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "GPU",
+                          "value":  "Intel(R) UHD Graphics",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "NVIDIA VRAM",
+                          "value":  "no NVIDIA GPU",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "storage",
+                          "name":  "volume C:",
+                          "value":  "417.97 GB free of 475.61 GB",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Wi-Fi",
+                          "value":  "Intel(R) Wi-Fi 6 AX201 160MHz; Up; MAC 02-00-00-00-00-03; IPv4 198.51.100.67/24; gateway 198.51.100.1; DHCP Enabled; profile Public",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Ethernet",
+                          "value":  "Intel(R) Ethernet Connection (10) I219-LM; Up; MAC 02-00-00-00-00-04; IPv4 192.0.2.254/24; gateway ; DHCP Disabled; profile Private",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Bluetooth Network Connection",
+                          "value":  "Bluetooth Device (Personal Area Network); Disconnected; MAC 02-00-00-00-00-05; IPv4 169.254.2.181/16; gateway ; DHCP Enabled; profile none",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "lab address",
+                          "value":  "192.0.2.254/24 on Ethernet",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "installed",
+                          "value":  "ollama.exe not found",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "API http://127.0.0.1:11434",
+                          "value":  "no answer",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "API http://192.0.2.254:11434",
+                          "value":  "no answer",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "listeners on 11434",
+                          "value":  "none",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "models",
+                          "name":  "installed models",
+                          "value":  "no Ollama API answers, so the inventory cannot be read",
+                          "status":  "inaccessible",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "OLLAMA_HOST",
+                          "value":  "machine \"\", user \"\"",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "OLLAMA_MODELS",
+                          "value":  "machine \"\", user \"\"",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "boot task",
+                          "value":  "\"Capstone Ollama Server\" not present",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "profile Domain",
+                          "value":  "enabled True; default inbound Block; local rules allowed True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "profile Private",
+                          "value":  "enabled True; default inbound Block; local rules allowed True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "profile Public",
+                          "value":  "enabled True; default inbound Block; local rules allowed True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "active profile on the lab adapter",
+                          "value":  "Private",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.254",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.1",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.201",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.202",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.50",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "time",
+                          "name":  "time zone",
+                          "value":  "Eastern Standard Time",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "time",
+                          "name":  "Windows Time",
+                          "value":  "Running, start Auto, source \"time.windows.com,0x8\" (NTP)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "power",
+                          "name":  "sleep on AC",
+                          "value":  "standby 0 s, hibernate 0 s",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "power",
+                          "name":  "adapter Ethernet",
+                          "value":  "may be turned off: Unsupported; EEE Energy Efficient Ethernet=Off",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "tasks",
+                          "name":  "relevant scheduled tasks",
+                          "value":  "none",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "services",
+                          "name":  "relevant Windows services",
+                          "value":  "InferenceGateway (Stopped)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "event service",
+                          "value":  "http://192.0.2.254:8790: ok aes-a1e79a8b3902 2.2.0",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "head viewer",
+                          "value":  "not installed for LabOperator1",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "admin hub",
+                          "value":  "account Desktop-Redact10\\ArenaSvcUser; program True; data True; listens on http://192.0.2.254:8790: ok aes-a1e79a8b3902 2.2.0; firewall rule True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "Python 3.12+ for the Arena installers",
+                          "value":  "3.12.10 at C:\\Program Files\\Python312\\python.exe (py -3, for Desktop-Redact10\\LabOperator1; elevated True)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "observation file",
+                          "value":  "not published on this machine",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "release on this USB",
+                          "value":  "inference-gateway-0.3.0.zip (installed by Administration hub \u003e 2; service port 8443)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "default outbound action",
+                          "value":  "Private profile: Allow",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.2",
+                          "value":  "ALLOWED: no outbound block rule applies to the Gateway\u0027s process; the Private profile allows outbound by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.3",
+                          "value":  "ALLOWED: no outbound block rule applies to the Gateway\u0027s process; the Private profile allows outbound by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.4",
+                          "value":  "ALLOWED: no outbound block rule applies to the Gateway\u0027s process; the Private profile allows outbound by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.5",
+                          "value":  "ALLOWED: no outbound block rule applies to the Gateway\u0027s process; the Private profile allows outbound by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.6",
+                          "value":  "ALLOWED: no outbound block rule applies to the Gateway\u0027s process; the Private profile allows outbound by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.7",
+                          "value":  "ALLOWED: no outbound block rule applies to the Gateway\u0027s process; the Private profile allows outbound by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.8",
+                          "value":  "ALLOWED: no outbound block rule applies to the Gateway\u0027s process; the Private profile allows outbound by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.9",
+                          "value":  "ALLOWED: no outbound block rule applies to the Gateway\u0027s process; the Private profile allows outbound by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.10",
+                          "value":  "ALLOWED: no outbound block rule applies to the Gateway\u0027s process; the Private profile allows outbound by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.2",
+                          "value":  "no connection from this host",
+                          "status":  "missing",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.3",
+                          "value":  "answers, version 0.40.13, 21 model(s)",
+                          "status":  "observed",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.4",
+                          "value":  "answers, version 0.40.13, 21 model(s)",
+                          "status":  "observed",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.5",
+                          "value":  "answers, version 0.40.13, 21 model(s)",
+                          "status":  "observed",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.6",
+                          "value":  "no connection from this host",
+                          "status":  "missing",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.7",
+                          "value":  "no connection from this host",
+                          "status":  "missing",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.8",
+                          "value":  "no connection from this host",
+                          "status":  "missing",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.9",
+                          "value":  "no connection from this host",
+                          "status":  "missing",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.10",
+                          "value":  "no connection from this host",
+                          "status":  "missing",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "Arena hub installed for",
+                          "value":  "Desktop-Redact10\\ArenaSvcUser",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "Arena running as",
+                          "value":  "admin window: Desktop-Redact10\\ArenaSvcUser; admin console: Desktop-Redact10\\ArenaSvcUser; event service: Desktop-Redact10\\ArenaSvcUser",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "Administrators (direct members)",
+                          "value":  "Desktop-Redact10\\Administrator; Desktop-Redact10\\LabOperator1",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "Gateway account prerequisites",
+                          "value":  "OK",
+                          "status":  "inferred",
+                          "source":  "rules of the Gateway\u0027s Set-ObservationPublicationAcl.ps1"
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "ledger folder",
+                          "value":  "C:\\ProgramData\\InferenceGateway\\state: allow NT AUTHORITY\\SYSTEM, Desktop-Redact10\\svc-inference-gw, BUILTIN\\Administrators",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "state folder",
+                          "value":  "C:\\ProgramData\\InferenceGateway\\observation-state: allow NT AUTHORITY\\SYSTEM, Desktop-Redact10\\svc-inference-gw, BUILTIN\\Administrators",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "logs folder",
+                          "value":  "C:\\ProgramData\\InferenceGateway\\logs: allow NT AUTHORITY\\SYSTEM, Desktop-Redact10\\svc-inference-gw, BUILTIN\\Administrators",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "publication folder",
+                          "value":  "C:\\ProgramData\\InferenceGateway\\observation: allow NT AUTHORITY\\SYSTEM, Desktop-Redact10\\svc-inference-gw, BUILTIN\\Administrators",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "observation",
+                          "value":  "PENDING GATEWAY INSTALLATION: nothing is published yet (Arena is configured and waiting) (configured True, file False, access no read grant for the Arena account on the publication folder, fresh False, service False)",
+                          "status":  "inferred",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "InferenceGateway service",
+                          "value":  "Stopped, Auto, as .\\svc-inference-gw",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "account svc-inference-gw",
+                          "value":  "S-1-5-21-1000000001-1000000002-1000000003-1003; Users True; standard; rights SeServiceLogonRight, SeDenyInteractiveLogonRight, SeDenyRemoteInteractiveLogonRight",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "Arena account Desktop-Redact10\\ArenaSvcUser",
+                          "value":  "standard",
+                          "status":  "inferred",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "machine-wide Python",
+                          "value":  "3.12.10 at C:\\Program Files\\Python312\\python.exe (base interpreter True)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "machine-wide PowerShell 7",
+                          "value":  "7.4.22 at C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "backups",
+                          "name":  "lab provisioner runs with changes",
+                          "value":  "20261105-130424-DESKTOP-REDACT10-hub; 20261105-131158-DESKTOP-REDACT10-hub; 20261105-141415-DESKTOP-REDACT10-hub; 20261105-144256-DESKTOP-REDACT10-hub; 20261105-200509-DESKTOP-REDACT10-hub; 20261105-203601-DESKTOP-REDACT10-hub",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "appears to be",
+                          "value":  "hub (holds the hub address 192.0.2.254)",
+                          "status":  "inferred",
+                          "source":  ""
+                      }
+                  ],
+    "plan":  {
+                 "address":  "192.0.2.254",
+                 "address_verdict":  {
+                                         "Allowed":  true,
+                                         "Reasons":  [
+
+                                                     ],
+                                         "Warnings":  [
+
+                                                      ],
+                                         "HeldHere":  true
+                                     },
+                 "conflict":  null,
+                 "hardware":  null,
+                 "profile":  null,
+                 "models":  [
+
+                            ],
+                 "client_mode":  "cutover",
+                 "clients":  [
+                                 "192.0.2.254",
+                                 "192.0.2.1"
+                             ],
+                 "denied":  [
+                                "192.0.2.201",
+                                "192.0.2.202",
+                                "192.0.2.50"
+                            ],
+                 "steps":  [
+                               {
+                                   "id":  "g-intake",
+                                   "stage":  "C",
+                                   "title":  "Validate the Gateway release: archive SHA-256, SHA256SUMS, deployment manifest against the lab",
+                                   "kind":  "read",
+                                   "detail":  "F: read-only",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  false,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-runtime",
+                                   "stage":  "C",
+                                   "title":  "Machine-wide Python 3.12.10 and PowerShell 7.4.22 (official installers on F:, publisher hash and signature checked)",
+                                   "kind":  "privileged",
+                                   "detail":  "F: machine prerequisite (manifest runtime)",
+                                   "rollback":  "manual uninstall, only after the Gateway is uninstalled",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-account",
+                                   "stage":  "C",
+                                   "title":  "Local standard account svc-inference-gw: Users only, Log on as a service, interactive and Remote Desktop logon denied",
+                                   "kind":  "privileged",
+                                   "detail":  "F: machine prerequisite; password typed by the operator, never stored",
+                                   "rollback":  "rights removed and the account deleted (only if this run created it)",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-arena-accounts",
+                                   "stage":  "C",
+                                   "title":  "Every Arena account is a standard account, not in Administrators or Backup Operators (transitively), not the Gateway account",
+                                   "kind":  "read",
+                                   "detail":  "F: check; the Gateway\u0027s plan and ACL script decide",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  false,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-settings",
+                                   "stage":  "C",
+                                   "title":  "deployment-settings.json from the Gateway template (arena_accounts filled in; every account as \u003ccomputer\u003e\\name)",
+                                   "kind":  "change",
+                                   "detail":  "",
+                                   "rollback":  "earlier file restored",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-plan",
+                                   "stage":  "C",
+                                   "title":  "Gateway: plan (read-only checks; on a first install only tls and ledger may be missing)",
+                                   "kind":  "read",
+                                   "detail":  "",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  false,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-certificate",
+                                   "stage":  "C",
+                                   "title":  "Gateway: certificate (lab CA and server certificate); then move ca.key to offline media; the public CA is copied to F:",
+                                   "kind":  "privileged",
+                                   "detail":  "Gateway command",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-install",
+                                   "stage":  "C",
+                                   "title":  "Gateway: install --password-stdin --new-ledger (or --restore-backup for a migration)",
+                                   "kind":  "disruptive",
+                                   "detail":  "Gateway command; creates the InferenceGateway service and its folders and ACLs",
+                                   "rollback":  "Gateway uninstall (data is never deleted)",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-inventory",
+                                   "stage":  "C",
+                                   "title":  "Export the verified head inventory (agent-arena.verified-head-inventory/1); with no reachable head the run stops safely here and resumes on the next run",
+                                   "kind":  "read",
+                                   "detail":  "F: real connections from the hub",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  false,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-heads",
+                                   "stage":  "C",
+                                   "title":  "Gateway: heads --inventory ... --policy \u003capproved\u003e --output policy-review-\u003ctime\u003e.json; operator reviews it",
+                                   "kind":  "change",
+                                   "detail":  "Gateway command; nothing enrolled yet; a new review file each run (the Gateway never overwrites one)",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-credentials",
+                                   "stage":  "C",
+                                   "title":  "Gateway: credentials issue for capstone and capstone-research (before bootstrap; an application that already holds one is kept unless ROTATE is chosen); files carried privately, never read by F:",
+                                   "kind":  "privileged",
+                                   "detail":  "Gateway command; coder when open item O5 is decided",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-bootstrap",
+                                   "stage":  "C",
+                                   "title":  "Gateway: bootstrap --policy \u003creview\u003e (client policies and the reviewed heads; refused for a declared client without a credential)",
+                                   "kind":  "privileged",
+                                   "detail":  "Gateway command",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-qualify",
+                                   "stage":  "C",
+                                   "title":  "Gateway: qualify each head and model (real inference, recorded evidence)",
+                                   "kind":  "disruptive",
+                                   "detail":  "Gateway command; uses head capacity",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-accept",
+                                   "stage":  "C",
+                                   "title":  "Tell the Arena operator the ledger_id; Gateway: publisher accept-ledger",
+                                   "kind":  "privileged",
+                                   "detail":  "Gateway command",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-acl",
+                                   "stage":  "C",
+                                   "title":  "Gateway: Set-ObservationPublicationAcl.ps1 with every Arena account (PlanOnly first; must return ok)",
+                                   "kind":  "privileged",
+                                   "detail":  "Gateway script under PowerShell 7",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-verify",
+                                   "stage":  "C",
+                                   "title":  "Gateway: verify (must return ok)",
+                                   "kind":  "read",
+                                   "detail":  "",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  false,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-listener",
+                                   "stage":  "C",
+                                   "title":  "Inbound rule InferenceGateway-HTTPS-8443: TCP 8443 on 192.0.2.254 from 192.0.2.201 and 192.0.2.202 only, Private profile",
+                                   "kind":  "privileged",
+                                   "detail":  "F: exactly manifest listener.firewall_rule, after verify",
+                                   "rollback":  "rule removed",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-cutover",
+                                   "stage":  "C",
+                                   "title":  "Optional, separately approved: temporary rule for 192.0.2.1 during an approved Capstone migration (open item O2)",
+                                   "kind":  "change",
+                                   "detail":  "",
+                                   "rollback":  "rule removed",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "g-health",
+                                   "stage":  "E",
+                                   "title":  "Gateway /health and /ready over TLS with the Gateway CA; Arena observation checked separately",
+                                   "kind":  "read",
+                                   "detail":  "",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  false,
+                                   "state":  "planned"
+                               }
+                           ],
+                 "external":  [
+                                  "the svc-inference-gw password (typed twice: account creation, then install), never stored",
+                                  "an approved Gateway policy (from the release\u0027s config\\policy.template.json: approved models per application)",
+                                  "offline media for the Gateway CA private key; a private transfer medium (not F:) for each application token file"
+                              ],
+                 "warnings":  [
+
+                              ],
+                 "blocked":  [
+
+                             ],
+                 "preserves":  [
+                                   "Arena data and identity; the Gateway\u0027s ledger, config, tls, ca, observation, logs and backups (preserved by every Gateway verb)"
+                               ],
+                 "hub_mode":  "gateway"
+             },
+    "approvals":  [
+                      {
+                          "at":  "2026-11-06T08:26:03.1786601-05:00",
+                          "kind":  "privileged",
+                          "word":  "APPROVE",
+                          "prompt":  "Carry out this plan on DESKTOP-REDACT10? 13 step(s) change this machine; each change is recorded with its undo.",
+                          "result":  "approved"
+                      },
+                      {
+                          "at":  "2026-11-06T08:27:47.2447552-05:00",
+                          "kind":  "change",
+                          "word":  "ISSUE",
+                          "prompt":  "Issue the Gateway credentials for capstone and capstone-research? Each is written once to C:\\ProgramData\\AgentArenaLab\\gateway\\outbox, readable on its target by NT AUTHORITY\\LOCAL SERVICE; F: never reads them.",
+                          "result":  "approved"
+                      },
+                      {
+                          "at":  "2026-11-06T08:27:52.1351513-05:00",
+                          "kind":  "change",
+                          "word":  "APPLY",
+                          "prompt":  "Apply the reviewed policy C:\\ProgramData\\InferenceGateway\\config\\policy-review-20261106-082645.json (enrolls its heads and clients; never re-enables a revoked client)? Read it first.",
+                          "result":  "approved"
+                      },
+                      {
+                          "at":  "2026-11-06T08:28:07.1300272-05:00",
+                          "kind":  "disruptive",
+                          "word":  "QUALIFY",
+                          "prompt":  "Qualify 6 head/model pair(s) at 8192 tokens (real inference on each head, about 10 s each): head-192-0-2-3 qwen3.5:4b, head-192-0-2-3 gemma3:4b, head-192-0-2-4 qwen3.5:4b, head-192-0-2-4 gemma3:4b, head-192-0-2-5 qwen3.5:4b, head-192-0-2-5 gemma3:4b?",
+                          "result":  "approved"
+                      },
+                      {
+                          "at":  "2026-11-06T08:29:14.9336494-05:00",
+                          "kind":  "change",
+                          "word":  "ACCEPT",
+                          "prompt":  "The Arena operator has been told ledger_id LEDGER-fa3eee0609d0e9ab42be45a76569f3b1. Accept it for publication?",
+                          "result":  "approved"
+                      },
+                      {
+                          "at":  "2026-11-06T08:29:25.9912398-05:00",
+                          "kind":  "change",
+                          "word":  "APPROVE",
+                          "prompt":  "Apply the publication ACL for Arena account(s) Desktop-Redact10\\ArenaSvcUser?",
+                          "result":  "approved"
+                      },
+                      {
+                          "at":  "2026-11-06T08:40:42.0997579-05:00",
+                          "kind":  "privileged",
+                          "word":  "APPROVE",
+                          "prompt":  "Add the inbound rule InferenceGateway-HTTPS-8443: TCP 8443 on 192.0.2.254 from 192.0.2.201, 192.0.2.202 only?",
+                          "result":  "approved"
+                      },
+                      {
+                          "at":  "2026-11-06T08:48:29.4965325-05:00",
+                          "kind":  "privileged",
+                          "word":  "CUTOVER",
+                          "prompt":  "Add the SEPARATE cutover rule for 192.0.2.1 until 2026-11-14 (open item O2)?",
+                          "result":  "approved"
+                      }
+                  ],
+    "actual":  [
+                   {
+                       "id":  "g-intake",
+                       "title":  "Gateway release intake",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:26:03.2559998-05:00",
+                       "finished":  "2026-11-06T08:26:03.6176761-05:00",
+                       "detail":  "inference-gateway-0.3.0.zip: archive 4b2ae17abf06 matches its .sha256; 16 files match SHA256SUMS and the manifest"
+                   },
+                   {
+                       "id":  "g-runtime",
+                       "title":  "Machine-wide Python 3.12.10 and PowerShell 7.4",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:26:03.6196674-05:00",
+                       "finished":  "2026-11-06T08:26:04.3866568-05:00",
+                       "detail":  "python present; pwsh present"
+                   },
+                   {
+                       "id":  "g-account",
+                       "title":  "Gateway service account",
+                       "status":  "UNCHANGED",
+                       "started":  "2026-11-06T08:26:04.3876646-05:00",
+                       "finished":  "2026-11-06T08:26:04.5261646-05:00",
+                       "detail":  "svc-inference-gw (S-1-5-21-1000000001-1000000002-1000000003-1003): standard; rights SeServiceLogonRight, SeDenyInteractiveLogonRight, SeDenyRemoteInteractiveLogonRight"
+                   },
+                   {
+                       "id":  "g-arena-accounts",
+                       "title":  "Arena accounts are standard accounts",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:26:04.5271641-05:00",
+                       "finished":  "2026-11-06T08:26:06.6921348-05:00",
+                       "detail":  "Arena accounts: Desktop-Redact10\\ArenaSvcUser (standard, transitive check)"
+                   },
+                   {
+                       "id":  "g-settings",
+                       "title":  "Gateway installer settings",
+                       "status":  "UNCHANGED",
+                       "started":  "2026-11-06T08:26:06.6921348-05:00",
+                       "finished":  "2026-11-06T08:26:06.8173528-05:00",
+                       "detail":  "C:\\ProgramData\\AgentArenaLab\\gateway\\deployment-settings.json"
+                   },
+                   {
+                       "id":  "g-plan",
+                       "title":  "Gateway: plan",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:26:06.8271141-05:00",
+                       "finished":  "2026-11-06T08:26:08.8681732-05:00",
+                       "detail":  "checks ok except: none; service stopped"
+                   },
+                   {
+                       "id":  "g-certificate",
+                       "title":  "Gateway: certificate",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:26:08.8692521-05:00",
+                       "finished":  "2026-11-06T08:26:09.0275693-05:00",
+                       "detail":  "certificate present; public CA copied to E:\\gateway-ca\\inference-gateway-ca.pem (sha256 df314e06ffdd)"
+                   },
+                   {
+                       "id":  "g-install",
+                       "title":  "Gateway: install",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:26:09.0285371-05:00",
+                       "finished":  "2026-11-06T08:26:16.0755278-05:00",
+                       "detail":  "service InferenceGateway was installed but Stopped; started now (6 s), as .\\svc-inference-gw; release 0.3.0: 41 of 41 files were owner-only (pip temporary folder); now inherit Users read from C:\\Program Files\\InferenceGateway"
+                   },
+                   {
+                       "id":  "g-inventory",
+                       "title":  "Verified head inventory for the Gateway",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:26:16.0890874-05:00",
+                       "finished":  "2026-11-06T08:26:29.6376016-05:00",
+                       "detail":  "3 verified head(s), 6 excluded: C:\\ProgramData\\AgentArenaLab\\gateway\\verified-head-inventory-20261106-082629.json"
+                   },
+                   {
+                       "id":  "g-heads",
+                       "title":  "Gateway: heads (reviewable policy)",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:26:29.6402040-05:00",
+                       "finished":  "2026-11-06T08:26:45.4799044-05:00",
+                       "detail":  "reviewable policy written: C:\\ProgramData\\InferenceGateway\\config\\policy-review-20261106-082645.json"
+                   },
+                   {
+                       "id":  "g-credentials",
+                       "title":  "Gateway: application credentials",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:26:45.4819227-05:00",
+                       "finished":  "2026-11-06T08:27:47.7472879-05:00",
+                       "detail":  "capstone issued; capstone-research issued"
+                   },
+                   {
+                       "id":  "g-bootstrap",
+                       "title":  "Gateway: bootstrap",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:27:47.7483160-05:00",
+                       "finished":  "2026-11-06T08:27:52.3345021-05:00",
+                       "detail":  "policy applied: C:\\ProgramData\\InferenceGateway\\config\\policy-review-20261106-082645.json"
+                   },
+                   {
+                       "id":  "g-qualify",
+                       "title":  "Gateway: qualification",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:27:52.3355020-05:00",
+                       "finished":  "2026-11-06T08:29:06.7512744-05:00",
+                       "detail":  "head-192-0-2-3 qwen3.5:4b: passed; head-192-0-2-3 gemma3:4b: passed; head-192-0-2-4 qwen3.5:4b: passed; head-192-0-2-4 gemma3:4b: passed; head-192-0-2-5 qwen3.5:4b: passed; head-192-0-2-5 gemma3:4b: passed"
+                   },
+                   {
+                       "id":  "g-accept",
+                       "title":  "Gateway: observation ledger acceptance",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:29:06.7512744-05:00",
+                       "finished":  "2026-11-06T08:29:15.1492781-05:00",
+                       "detail":  "ledger LEDGER-fa3eee0609d0e9ab42be45a76569f3b1 accepted by LabOperator1"
+                   },
+                   {
+                       "id":  "g-acl",
+                       "title":  "Gateway: observation publication ACL",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:29:15.1502786-05:00",
+                       "finished":  "2026-11-06T08:29:27.6625939-05:00",
+                       "detail":  "publication ACL applied and verified by the Gateway script (ok: true)"
+                   },
+                   {
+                       "id":  "g-verify",
+                       "title":  "Gateway: verify",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:29:27.6636306-05:00",
+                       "finished":  "2026-11-06T08:29:29.7534736-05:00",
+                       "detail":  "verify ok"
+                   },
+                   {
+                       "id":  "g-listener",
+                       "title":  "Gateway listener firewall rule",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:29:29.7620353-05:00",
+                       "finished":  "2026-11-06T08:40:45.4303609-05:00",
+                       "detail":  "InferenceGateway-HTTPS-8443: TCP 8443 from 192.0.2.201, 192.0.2.202"
+                   },
+                   {
+                       "id":  "g-cutover",
+                       "title":  "Temporary cutover access for 192.0.2.1 (optional)",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T08:40:45.4323539-05:00",
+                       "finished":  "2026-11-06T08:48:32.7825470-05:00",
+                       "detail":  "InferenceGateway-HTTPS-8443-cutover: TCP 8443 from 192.0.2.1"
+                   }
+               ],
+    "software":  {
+                     "ollama":  "not installed",
+                     "arena_viewer":  "not installed",
+                     "arena_hub":  "installed (service 2.2.0)"
+                 },
+    "models":  null,
+    "registration":  [
+
+                     ],
+    "verification":  [
+                         {
+                             "check":  "InferenceGateway service runs (delayed automatic, as the service account)",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "Running, Auto (delayed), as .\\svc-inference-gw"
+                         },
+                         {
+                             "check":  "Gateway status command",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "success; ledger acceptance accepted (see gateway-status.json)"
+                         },
+                         {
+                             "check":  "Gateway /health and /ready over TLS with the Gateway CA (from the hub)",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "/health 200 service shared-inference; /ready 200; certificate CN=192.0.2.254 until 2027-12-07T20:38:28"
+                         },
+                         {
+                             "check":  "listener 8443 from 192.0.2.201 is ADMITTED (rule analysis)",
+                             "status":  "FAIL",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "no allow rule matches; the profile blocks inbound connections by default"
+                         },
+                         {
+                             "check":  "listener 8443 from 192.0.2.202 is ADMITTED (rule analysis)",
+                             "status":  "FAIL",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "no allow rule matches; the profile blocks inbound connections by default"
+                         },
+                         {
+                             "check":  "listener 8443 from 192.0.2.1 is ADMITTED (rule analysis)",
+                             "status":  "FAIL",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "no allow rule matches; the profile blocks inbound connections by default"
+                         },
+                         {
+                             "check":  "listener 8443 from 192.0.2.50 is DENIED (rule analysis)",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "no allow rule matches; the profile blocks inbound connections by default"
+                         },
+                         {
+                             "check":  "listener 8443 from 192.0.2.3 is DENIED (rule analysis)",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "no allow rule matches; the profile blocks inbound connections by default"
+                         },
+                         {
+                             "check":  "Arena observation (separate from the Gateway\u0027s own health)",
+                             "status":  "PASS",
+                             "scope":  "external",
+                             "required":  true,
+                             "detail":  "LIVE: Arena reads fresh observations from the InferenceGateway service (configured True, file True, access verified, fresh True, service True, ledger accepted)"
+                         },
+                         {
+                             "check":  "Arena accounts meet the Gateway account rule (transitive)",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  ""
+                         },
+                         {
+                             "check":  "no application token left on the hub",
+                             "status":  "FAIL",
+                             "scope":  "local",
+                             "required":  false,
+                             "detail":  "still in the outbox: capstone-research.token, capstone.token (carry them, then delete)"
+                         }
+                     ],
+    "security":  {
+                     "HeadIp":  "192.0.2.254",
+                     "ActiveProfile":  "Private",
+                     "ProfileEnabled":  true,
+                     "DefaultInbound":  "Block",
+                     "PolicyNote":  "",
+                     "Sources":  [
+                                     {
+                                         "Source":  "192.0.2.254",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.1",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.201",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.202",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.50",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     }
+                                 ],
+                     "RelevantRules":  [
+
+                                       ],
+                     "Analysis":  "rule analysis (inferred); a real connection from each address is the field proof"
+                 },
+    "changes":  [
+                    {
+                        "at":  "2026-11-06T08:26:09.7991125-05:00",
+                        "kind":  "acl",
+                        "description":  "reset the ACL of C:\\Program Files\\InferenceGateway\\releases\\0.3.0 to inherit (Users read, as the Gateway manifest declares)",
+                        "backup":  "",
+                        "undo":  {
+                                     "type":  "manual",
+                                     "instructions":  "none needed: the release now has the ACL the Gateway manifest declares"
+                                 },
+                        "undone":  false
+                    },
+                    {
+                        "at":  "2026-11-06T08:40:45.4110435-05:00",
+                        "kind":  "firewall",
+                        "description":  "added \u0027Inference Gateway HTTPS 8443 from 192.0.2.201, 192.0.2.202\u0027 (TCP 8443 on 192.0.2.254 from 192.0.2.201, 192.0.2.202, Private profile)",
+                        "backup":  "",
+                        "undo":  {
+                                     "type":  "firewall",
+                                     "action":  "remove",
+                                     "name":  "InferenceGateway-HTTPS-8443"
+                                 },
+                        "undone":  false
+                    },
+                    {
+                        "at":  "2026-11-06T08:48:32.7607135-05:00",
+                        "kind":  "firewall",
+                        "description":  "added \u0027Inference Gateway HTTPS 8443 from 192.0.2.1 (CUTOVER until 2026-11-14)\u0027 (TCP 8443 on 192.0.2.254 from 192.0.2.1, Private profile)",
+                        "backup":  "",
+                        "undo":  {
+                                     "type":  "firewall",
+                                     "action":  "remove",
+                                     "name":  "InferenceGateway-HTTPS-8443-cutover"
+                                 },
+                        "undone":  false
+                    }
+                ],
+    "rollback":  {
+                     "change_record":  "C:\\ProgramData\\AgentArenaLab\\runs\\20261106-082448-DESKTOP-REDACT10-hub\\changes.json",
+                     "backups":  "C:\\ProgramData\\AgentArenaLab\\runs\\20261106-082448-DESKTOP-REDACT10-hub\\backups",
+                     "how":  "START-LAB-PROVISIONER.cmd \u003e Existing machine \u003e Roll back a previous run"
+                 },
+    "warnings":  [
+                     "Gateway release: the manifest names its contract as \u0027deploy/windows/DEPLOYMENT-CONTRACT.md\u0027, which is the source-tree path; in the package it is docs\\DEPLOYMENT-CONTRACT.md",
+                     "Gateway release: open item O1 (lab/security operator): Approve the lab LAN for the data classes sent over plain HTTP to heads, or require the mTLS head proxy",
+                     "Gateway release: open item O2 (operator, Capstone): Whether 192.0.2.1 is allowed during cutover, and its end date",
+                     "Gateway release: open item O3 (Agent Arena): Arena standard account name(s) on the hub; Arena moves off the administrative account",
+                     "Gateway release: open item O4 (Capstone): Capstone reads gateway-client.json with token_file; retire the three token variable names",
+                     "Gateway release: open item O5 (Coder): Coder client adoption and its approved models",
+                     "Gateway release: open item O6 (operator): Physical acceptance per docs/ACCEPTANCE_PLAN.md"
+                 ],
+    "pending":  [
+                    {
+                        "area":  "gateway",
+                        "detail":  "coder credential: issued when Coder adopts the Gateway client (open item O5)"
+                    },
+                    {
+                        "area":  "gateway",
+                        "detail":  "carry each token file from C:\\ProgramData\\AgentArenaLab\\gateway\\outbox to its application host on a private medium (not F:), then delete the hub copy: capstone, capstone-research"
+                    },
+                    {
+                        "area":  "gateway",
+                        "detail":  "remove the cutover rule InferenceGateway-HTTPS-8443-cutover on 2026-11-14 (Existing machine \u003e roll back, or Remove-NetFirewallRule)"
+                    }
+                ],
+    "stop_reason":  "",
+    "extra":  null,
+    "scope_note":  "Checks marked scope=lan used real connections over the LAN; scope=local are on this machine only; scope=external need another project or machine."
+}

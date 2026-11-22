@@ -1,0 +1,3618 @@
+{
+  "schema": "arena.decorations.v1",
+  "canvas_units": "sprite pixels",
+  "items": [
+    {
+      "id": "plants/monstera",
+      "name": "Monstera",
+      "category": "plants",
+      "description": "broad-leaf monstera in squat rust ceramic pot",
+      "base": "plants/monstera/base.png",
+      "unlit": "plants/monstera/unlit.png",
+      "emission_mask": "plants/monstera/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        29,
+        24,
+        227,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "plants/monstera/frame-1.png",
+          "plants/monstera/frame-2.png",
+          "plants/monstera/frame-3.png",
+          "plants/monstera/frame-4.png",
+          "plants/monstera/frame-5.png",
+          "plants/monstera/frame-6.png",
+          "plants/monstera/frame-7.png",
+          "plants/monstera/frame-8.png"
+        ],
+        "glow_frames": [
+          "plants/monstera/glow-1.png",
+          "plants/monstera/glow-2.png",
+          "plants/monstera/glow-3.png",
+          "plants/monstera/glow-4.png",
+          "plants/monstera/glow-5.png",
+          "plants/monstera/glow-6.png",
+          "plants/monstera/glow-7.png",
+          "plants/monstera/glow-8.png"
+        ],
+        "frame_ms": 210,
+        "loop": true,
+        "minimum_interval_ms": 3200,
+        "maximum_interval_ms": 11000,
+        "reduced_motion_frame": 0,
+        "rig": "anchored-foliage"
+      },
+      "lighting": {
+        "enabled": false,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "plants/steel-fern",
+      "name": "Steel Fern",
+      "category": "plants",
+      "description": "arching fern in riveted round steel planter",
+      "base": "plants/steel-fern/base.png",
+      "unlit": "plants/steel-fern/unlit.png",
+      "emission_mask": "plants/steel-fern/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        34,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "plants/steel-fern/frame-1.png",
+          "plants/steel-fern/frame-2.png",
+          "plants/steel-fern/frame-3.png",
+          "plants/steel-fern/frame-4.png",
+          "plants/steel-fern/frame-5.png",
+          "plants/steel-fern/frame-6.png",
+          "plants/steel-fern/frame-7.png",
+          "plants/steel-fern/frame-8.png"
+        ],
+        "glow_frames": [
+          "plants/steel-fern/glow-1.png",
+          "plants/steel-fern/glow-2.png",
+          "plants/steel-fern/glow-3.png",
+          "plants/steel-fern/glow-4.png",
+          "plants/steel-fern/glow-5.png",
+          "plants/steel-fern/glow-6.png",
+          "plants/steel-fern/glow-7.png",
+          "plants/steel-fern/glow-8.png"
+        ],
+        "frame_ms": 210,
+        "loop": true,
+        "minimum_interval_ms": 3200,
+        "maximum_interval_ms": 11000,
+        "reduced_motion_frame": 0,
+        "rig": "anchored-foliage"
+      },
+      "lighting": {
+        "enabled": false,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "plants/bamboo",
+      "name": "Bamboo",
+      "category": "plants",
+      "description": "slender bamboo cluster in tall cream rectangular pot",
+      "base": "plants/bamboo/base.png",
+      "unlit": "plants/bamboo/unlit.png",
+      "emission_mask": "plants/bamboo/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        58,
+        24,
+        198,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "plants/bamboo/frame-1.png",
+          "plants/bamboo/frame-2.png",
+          "plants/bamboo/frame-3.png",
+          "plants/bamboo/frame-4.png",
+          "plants/bamboo/frame-5.png",
+          "plants/bamboo/frame-6.png",
+          "plants/bamboo/frame-7.png",
+          "plants/bamboo/frame-8.png"
+        ],
+        "glow_frames": [
+          "plants/bamboo/glow-1.png",
+          "plants/bamboo/glow-2.png",
+          "plants/bamboo/glow-3.png",
+          "plants/bamboo/glow-4.png",
+          "plants/bamboo/glow-5.png",
+          "plants/bamboo/glow-6.png",
+          "plants/bamboo/glow-7.png",
+          "plants/bamboo/glow-8.png"
+        ],
+        "frame_ms": 210,
+        "loop": true,
+        "minimum_interval_ms": 3200,
+        "maximum_interval_ms": 11000,
+        "reduced_motion_frame": 0,
+        "rig": "anchored-foliage"
+      },
+      "lighting": {
+        "enabled": false,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "plants/snake-plant",
+      "name": "Snake Plant",
+      "category": "plants",
+      "description": "striped snake plant in black cylindrical pot",
+      "base": "plants/snake-plant/base.png",
+      "unlit": "plants/snake-plant/unlit.png",
+      "emission_mask": "plants/snake-plant/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        61,
+        24,
+        194,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "plants/snake-plant/frame-1.png",
+          "plants/snake-plant/frame-2.png",
+          "plants/snake-plant/frame-3.png",
+          "plants/snake-plant/frame-4.png",
+          "plants/snake-plant/frame-5.png",
+          "plants/snake-plant/frame-6.png",
+          "plants/snake-plant/frame-7.png",
+          "plants/snake-plant/frame-8.png"
+        ],
+        "glow_frames": [
+          "plants/snake-plant/glow-1.png",
+          "plants/snake-plant/glow-2.png",
+          "plants/snake-plant/glow-3.png",
+          "plants/snake-plant/glow-4.png",
+          "plants/snake-plant/glow-5.png",
+          "plants/snake-plant/glow-6.png",
+          "plants/snake-plant/glow-7.png",
+          "plants/snake-plant/glow-8.png"
+        ],
+        "frame_ms": 210,
+        "loop": true,
+        "minimum_interval_ms": 3200,
+        "maximum_interval_ms": 11000,
+        "reduced_motion_frame": 0,
+        "rig": "anchored-foliage"
+      },
+      "lighting": {
+        "enabled": false,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "plants/bonsai",
+      "name": "Bonsai",
+      "category": "plants",
+      "description": "bonsai tree in wide shallow teal tray",
+      "base": "plants/bonsai/base.png",
+      "unlit": "plants/bonsai/unlit.png",
+      "emission_mask": "plants/bonsai/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        62,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "plants/bonsai/frame-1.png",
+          "plants/bonsai/frame-2.png",
+          "plants/bonsai/frame-3.png",
+          "plants/bonsai/frame-4.png",
+          "plants/bonsai/frame-5.png",
+          "plants/bonsai/frame-6.png",
+          "plants/bonsai/frame-7.png",
+          "plants/bonsai/frame-8.png"
+        ],
+        "glow_frames": [
+          "plants/bonsai/glow-1.png",
+          "plants/bonsai/glow-2.png",
+          "plants/bonsai/glow-3.png",
+          "plants/bonsai/glow-4.png",
+          "plants/bonsai/glow-5.png",
+          "plants/bonsai/glow-6.png",
+          "plants/bonsai/glow-7.png",
+          "plants/bonsai/glow-8.png"
+        ],
+        "frame_ms": 210,
+        "loop": true,
+        "minimum_interval_ms": 3200,
+        "maximum_interval_ms": 11000,
+        "reduced_motion_frame": 0,
+        "rig": "anchored-foliage"
+      },
+      "lighting": {
+        "enabled": false,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "plants/hanging-pothos",
+      "name": "Hanging Pothos",
+      "category": "plants",
+      "description": "trailing pothos in hanging brass basket with short support bracket",
+      "base": "plants/hanging-pothos/base.png",
+      "unlit": "plants/hanging-pothos/unlit.png",
+      "emission_mask": "plants/hanging-pothos/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        39,
+        24,
+        217,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "plants/hanging-pothos/frame-1.png",
+          "plants/hanging-pothos/frame-2.png",
+          "plants/hanging-pothos/frame-3.png",
+          "plants/hanging-pothos/frame-4.png",
+          "plants/hanging-pothos/frame-5.png",
+          "plants/hanging-pothos/frame-6.png",
+          "plants/hanging-pothos/frame-7.png",
+          "plants/hanging-pothos/frame-8.png"
+        ],
+        "glow_frames": [
+          "plants/hanging-pothos/glow-1.png",
+          "plants/hanging-pothos/glow-2.png",
+          "plants/hanging-pothos/glow-3.png",
+          "plants/hanging-pothos/glow-4.png",
+          "plants/hanging-pothos/glow-5.png",
+          "plants/hanging-pothos/glow-6.png",
+          "plants/hanging-pothos/glow-7.png",
+          "plants/hanging-pothos/glow-8.png"
+        ],
+        "frame_ms": 210,
+        "loop": true,
+        "minimum_interval_ms": 3200,
+        "maximum_interval_ms": 11000,
+        "reduced_motion_frame": 0,
+        "rig": "fixed-bracket-foliage"
+      },
+      "lighting": {
+        "enabled": false,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "plants/cactus-garden",
+      "name": "Cactus Garden",
+      "category": "plants",
+      "description": "round cactus cluster in terracotta bowl",
+      "base": "plants/cactus-garden/base.png",
+      "unlit": "plants/cactus-garden/unlit.png",
+      "emission_mask": "plants/cactus-garden/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        31,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "plants/cactus-garden/frame-1.png",
+          "plants/cactus-garden/frame-2.png",
+          "plants/cactus-garden/frame-3.png",
+          "plants/cactus-garden/frame-4.png",
+          "plants/cactus-garden/frame-5.png",
+          "plants/cactus-garden/frame-6.png",
+          "plants/cactus-garden/frame-7.png",
+          "plants/cactus-garden/frame-8.png"
+        ],
+        "glow_frames": [
+          "plants/cactus-garden/glow-1.png",
+          "plants/cactus-garden/glow-2.png",
+          "plants/cactus-garden/glow-3.png",
+          "plants/cactus-garden/glow-4.png",
+          "plants/cactus-garden/glow-5.png",
+          "plants/cactus-garden/glow-6.png",
+          "plants/cactus-garden/glow-7.png",
+          "plants/cactus-garden/glow-8.png"
+        ],
+        "frame_ms": 210,
+        "loop": true,
+        "minimum_interval_ms": 3200,
+        "maximum_interval_ms": 11000,
+        "reduced_motion_frame": 0,
+        "rig": "anchored-foliage"
+      },
+      "lighting": {
+        "enabled": false,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "plants/lavender",
+      "name": "Lavender",
+      "category": "plants",
+      "description": "lavender flowering shrub in white laboratory planter",
+      "base": "plants/lavender/base.png",
+      "unlit": "plants/lavender/unlit.png",
+      "emission_mask": "plants/lavender/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        26,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "plants/lavender/frame-1.png",
+          "plants/lavender/frame-2.png",
+          "plants/lavender/frame-3.png",
+          "plants/lavender/frame-4.png",
+          "plants/lavender/frame-5.png",
+          "plants/lavender/frame-6.png",
+          "plants/lavender/frame-7.png",
+          "plants/lavender/frame-8.png"
+        ],
+        "glow_frames": [
+          "plants/lavender/glow-1.png",
+          "plants/lavender/glow-2.png",
+          "plants/lavender/glow-3.png",
+          "plants/lavender/glow-4.png",
+          "plants/lavender/glow-5.png",
+          "plants/lavender/glow-6.png",
+          "plants/lavender/glow-7.png",
+          "plants/lavender/glow-8.png"
+        ],
+        "frame_ms": 210,
+        "loop": true,
+        "minimum_interval_ms": 3200,
+        "maximum_interval_ms": 11000,
+        "reduced_motion_frame": 0,
+        "rig": "anchored-foliage"
+      },
+      "lighting": {
+        "enabled": false,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "plants/rubber-plant",
+      "name": "Rubber Plant",
+      "category": "plants",
+      "description": "red-leaf rubber plant in hexagonal graphite planter",
+      "base": "plants/rubber-plant/base.png",
+      "unlit": "plants/rubber-plant/unlit.png",
+      "emission_mask": "plants/rubber-plant/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        41,
+        24,
+        215,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "plants/rubber-plant/frame-1.png",
+          "plants/rubber-plant/frame-2.png",
+          "plants/rubber-plant/frame-3.png",
+          "plants/rubber-plant/frame-4.png",
+          "plants/rubber-plant/frame-5.png",
+          "plants/rubber-plant/frame-6.png",
+          "plants/rubber-plant/frame-7.png",
+          "plants/rubber-plant/frame-8.png"
+        ],
+        "glow_frames": [
+          "plants/rubber-plant/glow-1.png",
+          "plants/rubber-plant/glow-2.png",
+          "plants/rubber-plant/glow-3.png",
+          "plants/rubber-plant/glow-4.png",
+          "plants/rubber-plant/glow-5.png",
+          "plants/rubber-plant/glow-6.png",
+          "plants/rubber-plant/glow-7.png",
+          "plants/rubber-plant/glow-8.png"
+        ],
+        "frame_ms": 210,
+        "loop": true,
+        "minimum_interval_ms": 3200,
+        "maximum_interval_ms": 11000,
+        "reduced_motion_frame": 0,
+        "rig": "anchored-foliage"
+      },
+      "lighting": {
+        "enabled": false,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "plants/olive-palm",
+      "name": "Olive Palm",
+      "category": "plants",
+      "description": "compact palm in ribbed olive drum",
+      "base": "plants/olive-palm/base.png",
+      "unlit": "plants/olive-palm/unlit.png",
+      "emission_mask": "plants/olive-palm/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        29,
+        24,
+        226,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "plants/olive-palm/frame-1.png",
+          "plants/olive-palm/frame-2.png",
+          "plants/olive-palm/frame-3.png",
+          "plants/olive-palm/frame-4.png",
+          "plants/olive-palm/frame-5.png",
+          "plants/olive-palm/frame-6.png",
+          "plants/olive-palm/frame-7.png",
+          "plants/olive-palm/frame-8.png"
+        ],
+        "glow_frames": [
+          "plants/olive-palm/glow-1.png",
+          "plants/olive-palm/glow-2.png",
+          "plants/olive-palm/glow-3.png",
+          "plants/olive-palm/glow-4.png",
+          "plants/olive-palm/glow-5.png",
+          "plants/olive-palm/glow-6.png",
+          "plants/olive-palm/glow-7.png",
+          "plants/olive-palm/glow-8.png"
+        ],
+        "frame_ms": 210,
+        "loop": true,
+        "minimum_interval_ms": 3200,
+        "maximum_interval_ms": 11000,
+        "reduced_motion_frame": 0,
+        "rig": "anchored-foliage"
+      },
+      "lighting": {
+        "enabled": false,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "plants/succulent-trough",
+      "name": "Succulent Trough",
+      "category": "plants",
+      "description": "succulent rosette garden in low amber trough",
+      "base": "plants/succulent-trough/base.png",
+      "unlit": "plants/succulent-trough/unlit.png",
+      "emission_mask": "plants/succulent-trough/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        106,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "plants/succulent-trough/frame-1.png",
+          "plants/succulent-trough/frame-2.png",
+          "plants/succulent-trough/frame-3.png",
+          "plants/succulent-trough/frame-4.png",
+          "plants/succulent-trough/frame-5.png",
+          "plants/succulent-trough/frame-6.png",
+          "plants/succulent-trough/frame-7.png",
+          "plants/succulent-trough/frame-8.png"
+        ],
+        "glow_frames": [
+          "plants/succulent-trough/glow-1.png",
+          "plants/succulent-trough/glow-2.png",
+          "plants/succulent-trough/glow-3.png",
+          "plants/succulent-trough/glow-4.png",
+          "plants/succulent-trough/glow-5.png",
+          "plants/succulent-trough/glow-6.png",
+          "plants/succulent-trough/glow-7.png",
+          "plants/succulent-trough/glow-8.png"
+        ],
+        "frame_ms": 210,
+        "loop": true,
+        "minimum_interval_ms": 3200,
+        "maximum_interval_ms": 11000,
+        "reduced_motion_frame": 0,
+        "rig": "anchored-foliage"
+      },
+      "lighting": {
+        "enabled": false,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "plants/moss-terrarium",
+      "name": "Moss Terrarium",
+      "category": "plants",
+      "description": "lush moss terrarium in glass bell jar on small metal base",
+      "base": "plants/moss-terrarium/base.png",
+      "unlit": "plants/moss-terrarium/unlit.png",
+      "emission_mask": "plants/moss-terrarium/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        57,
+        24,
+        199,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "plants/moss-terrarium/frame-1.png",
+          "plants/moss-terrarium/frame-2.png",
+          "plants/moss-terrarium/frame-3.png",
+          "plants/moss-terrarium/frame-4.png",
+          "plants/moss-terrarium/frame-5.png",
+          "plants/moss-terrarium/frame-6.png",
+          "plants/moss-terrarium/frame-7.png",
+          "plants/moss-terrarium/frame-8.png"
+        ],
+        "glow_frames": [
+          "plants/moss-terrarium/glow-1.png",
+          "plants/moss-terrarium/glow-2.png",
+          "plants/moss-terrarium/glow-3.png",
+          "plants/moss-terrarium/glow-4.png",
+          "plants/moss-terrarium/glow-5.png",
+          "plants/moss-terrarium/glow-6.png",
+          "plants/moss-terrarium/glow-7.png",
+          "plants/moss-terrarium/glow-8.png"
+        ],
+        "frame_ms": 210,
+        "loop": true,
+        "minimum_interval_ms": 3200,
+        "maximum_interval_ms": 11000,
+        "reduced_motion_frame": 0,
+        "rig": "dew-glint"
+      },
+      "lighting": {
+        "enabled": false,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "terminals/hooded-crt",
+      "name": "Hooded Crt",
+      "category": "terminals",
+      "description": "hooded CRT pedestal console",
+      "base": "terminals/hooded-crt/base.png",
+      "unlit": "terminals/hooded-crt/unlit.png",
+      "emission_mask": "terminals/hooded-crt/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        38,
+        24,
+        217,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "terminals/hooded-crt/frame-1.png",
+          "terminals/hooded-crt/frame-2.png",
+          "terminals/hooded-crt/frame-3.png",
+          "terminals/hooded-crt/frame-4.png",
+          "terminals/hooded-crt/frame-5.png",
+          "terminals/hooded-crt/frame-6.png",
+          "terminals/hooded-crt/frame-7.png",
+          "terminals/hooded-crt/frame-8.png"
+        ],
+        "glow_frames": [
+          "terminals/hooded-crt/glow-1.png",
+          "terminals/hooded-crt/glow-2.png",
+          "terminals/hooded-crt/glow-3.png",
+          "terminals/hooded-crt/glow-4.png",
+          "terminals/hooded-crt/glow-5.png",
+          "terminals/hooded-crt/glow-6.png",
+          "terminals/hooded-crt/glow-7.png",
+          "terminals/hooded-crt/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "linear-chase"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        46,
+        34,
+        161,
+        196
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "terminals/twin-screen",
+      "name": "Twin Screen",
+      "category": "terminals",
+      "description": "compact twin-screen workstation",
+      "base": "terminals/twin-screen/base.png",
+      "unlit": "terminals/twin-screen/unlit.png",
+      "emission_mask": "terminals/twin-screen/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        58,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "terminals/twin-screen/frame-1.png",
+          "terminals/twin-screen/frame-2.png",
+          "terminals/twin-screen/frame-3.png",
+          "terminals/twin-screen/frame-4.png",
+          "terminals/twin-screen/frame-5.png",
+          "terminals/twin-screen/frame-6.png",
+          "terminals/twin-screen/frame-7.png",
+          "terminals/twin-screen/frame-8.png"
+        ],
+        "glow_frames": [
+          "terminals/twin-screen/glow-1.png",
+          "terminals/twin-screen/glow-2.png",
+          "terminals/twin-screen/glow-3.png",
+          "terminals/twin-screen/glow-4.png",
+          "terminals/twin-screen/glow-5.png",
+          "terminals/twin-screen/glow-6.png",
+          "terminals/twin-screen/glow-7.png",
+          "terminals/twin-screen/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "slow-breathe"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        29,
+        63,
+        198,
+        167
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "terminals/radar-console",
+      "name": "Radar Console",
+      "category": "terminals",
+      "description": "round radar display console",
+      "base": "terminals/radar-console/base.png",
+      "unlit": "terminals/radar-console/unlit.png",
+      "emission_mask": "terminals/radar-console/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        26,
+        24,
+        230,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "terminals/radar-console/frame-1.png",
+          "terminals/radar-console/frame-2.png",
+          "terminals/radar-console/frame-3.png",
+          "terminals/radar-console/frame-4.png",
+          "terminals/radar-console/frame-5.png",
+          "terminals/radar-console/frame-6.png",
+          "terminals/radar-console/frame-7.png",
+          "terminals/radar-console/frame-8.png"
+        ],
+        "glow_frames": [
+          "terminals/radar-console/glow-1.png",
+          "terminals/radar-console/glow-2.png",
+          "terminals/radar-console/glow-3.png",
+          "terminals/radar-console/glow-4.png",
+          "terminals/radar-console/glow-5.png",
+          "terminals/radar-console/glow-6.png",
+          "terminals/radar-console/glow-7.png",
+          "terminals/radar-console/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "diagonal-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        33,
+        62,
+        191,
+        168
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "terminals/touch-kiosk",
+      "name": "Touch Kiosk",
+      "category": "terminals",
+      "description": "angled touchscreen kiosk",
+      "base": "terminals/touch-kiosk/base.png",
+      "unlit": "terminals/touch-kiosk/unlit.png",
+      "emission_mask": "terminals/touch-kiosk/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        31,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "terminals/touch-kiosk/frame-1.png",
+          "terminals/touch-kiosk/frame-2.png",
+          "terminals/touch-kiosk/frame-3.png",
+          "terminals/touch-kiosk/frame-4.png",
+          "terminals/touch-kiosk/frame-5.png",
+          "terminals/touch-kiosk/frame-6.png",
+          "terminals/touch-kiosk/frame-7.png",
+          "terminals/touch-kiosk/frame-8.png"
+        ],
+        "glow_frames": [
+          "terminals/touch-kiosk/glow-1.png",
+          "terminals/touch-kiosk/glow-2.png",
+          "terminals/touch-kiosk/glow-3.png",
+          "terminals/touch-kiosk/glow-4.png",
+          "terminals/touch-kiosk/glow-5.png",
+          "terminals/touch-kiosk/glow-6.png",
+          "terminals/touch-kiosk/glow-7.png",
+          "terminals/touch-kiosk/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "radial-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        69,
+        54,
+        111,
+        63
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "terminals/server-terminal",
+      "name": "Server Terminal",
+      "category": "terminals",
+      "description": "tall server terminal with three small screens",
+      "base": "terminals/server-terminal/base.png",
+      "unlit": "terminals/server-terminal/unlit.png",
+      "emission_mask": "terminals/server-terminal/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        56,
+        24,
+        200,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "terminals/server-terminal/frame-1.png",
+          "terminals/server-terminal/frame-2.png",
+          "terminals/server-terminal/frame-3.png",
+          "terminals/server-terminal/frame-4.png",
+          "terminals/server-terminal/frame-5.png",
+          "terminals/server-terminal/frame-6.png",
+          "terminals/server-terminal/frame-7.png",
+          "terminals/server-terminal/frame-8.png"
+        ],
+        "glow_frames": [
+          "terminals/server-terminal/glow-1.png",
+          "terminals/server-terminal/glow-2.png",
+          "terminals/server-terminal/glow-3.png",
+          "terminals/server-terminal/glow-4.png",
+          "terminals/server-terminal/glow-5.png",
+          "terminals/server-terminal/glow-6.png",
+          "terminals/server-terminal/glow-7.png",
+          "terminals/server-terminal/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "linear-chase"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        61,
+        29,
+        133,
+        202
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "terminals/field-laptop",
+      "name": "Field Laptop",
+      "category": "terminals",
+      "description": "low rugged field laptop on small integral stand",
+      "base": "terminals/field-laptop/base.png",
+      "unlit": "terminals/field-laptop/unlit.png",
+      "emission_mask": "terminals/field-laptop/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        41,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "terminals/field-laptop/frame-1.png",
+          "terminals/field-laptop/frame-2.png",
+          "terminals/field-laptop/frame-3.png",
+          "terminals/field-laptop/frame-4.png",
+          "terminals/field-laptop/frame-5.png",
+          "terminals/field-laptop/frame-6.png",
+          "terminals/field-laptop/frame-7.png",
+          "terminals/field-laptop/frame-8.png"
+        ],
+        "glow_frames": [
+          "terminals/field-laptop/glow-1.png",
+          "terminals/field-laptop/glow-2.png",
+          "terminals/field-laptop/glow-3.png",
+          "terminals/field-laptop/glow-4.png",
+          "terminals/field-laptop/glow-5.png",
+          "terminals/field-laptop/glow-6.png",
+          "terminals/field-laptop/glow-7.png",
+          "terminals/field-laptop/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "slow-breathe"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        36,
+        47,
+        189,
+        183
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "terminals/glass-data-cabinet",
+      "name": "Glass Data Cabinet",
+      "category": "terminals",
+      "description": "hologram-style enclosed glass data display",
+      "base": "terminals/glass-data-cabinet/base.png",
+      "unlit": "terminals/glass-data-cabinet/unlit.png",
+      "emission_mask": "terminals/glass-data-cabinet/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        30,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "terminals/glass-data-cabinet/frame-1.png",
+          "terminals/glass-data-cabinet/frame-2.png",
+          "terminals/glass-data-cabinet/frame-3.png",
+          "terminals/glass-data-cabinet/frame-4.png",
+          "terminals/glass-data-cabinet/frame-5.png",
+          "terminals/glass-data-cabinet/frame-6.png",
+          "terminals/glass-data-cabinet/frame-7.png",
+          "terminals/glass-data-cabinet/frame-8.png"
+        ],
+        "glow_frames": [
+          "terminals/glass-data-cabinet/glow-1.png",
+          "terminals/glass-data-cabinet/glow-2.png",
+          "terminals/glass-data-cabinet/glow-3.png",
+          "terminals/glass-data-cabinet/glow-4.png",
+          "terminals/glass-data-cabinet/glow-5.png",
+          "terminals/glass-data-cabinet/glow-6.png",
+          "terminals/glass-data-cabinet/glow-7.png",
+          "terminals/glass-data-cabinet/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "diagonal-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        29,
+        156,
+        197,
+        74
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "terminals/lab-instrument",
+      "name": "Lab Instrument",
+      "category": "terminals",
+      "description": "cream laboratory instrument with wide screen",
+      "base": "terminals/lab-instrument/base.png",
+      "unlit": "terminals/lab-instrument/unlit.png",
+      "emission_mask": "terminals/lab-instrument/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        81,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "terminals/lab-instrument/frame-1.png",
+          "terminals/lab-instrument/frame-2.png",
+          "terminals/lab-instrument/frame-3.png",
+          "terminals/lab-instrument/frame-4.png",
+          "terminals/lab-instrument/frame-5.png",
+          "terminals/lab-instrument/frame-6.png",
+          "terminals/lab-instrument/frame-7.png",
+          "terminals/lab-instrument/frame-8.png"
+        ],
+        "glow_frames": [
+          "terminals/lab-instrument/glow-1.png",
+          "terminals/lab-instrument/glow-2.png",
+          "terminals/lab-instrument/glow-3.png",
+          "terminals/lab-instrument/glow-4.png",
+          "terminals/lab-instrument/glow-5.png",
+          "terminals/lab-instrument/glow-6.png",
+          "terminals/lab-instrument/glow-7.png",
+          "terminals/lab-instrument/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "radial-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        30,
+        100,
+        190,
+        130
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "terminals/communications-desk",
+      "name": "Communications Desk",
+      "category": "terminals",
+      "description": "burgundy retro communications desk terminal",
+      "base": "terminals/communications-desk/base.png",
+      "unlit": "terminals/communications-desk/unlit.png",
+      "emission_mask": "terminals/communications-desk/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        40,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "terminals/communications-desk/frame-1.png",
+          "terminals/communications-desk/frame-2.png",
+          "terminals/communications-desk/frame-3.png",
+          "terminals/communications-desk/frame-4.png",
+          "terminals/communications-desk/frame-5.png",
+          "terminals/communications-desk/frame-6.png",
+          "terminals/communications-desk/frame-7.png",
+          "terminals/communications-desk/frame-8.png"
+        ],
+        "glow_frames": [
+          "terminals/communications-desk/glow-1.png",
+          "terminals/communications-desk/glow-2.png",
+          "terminals/communications-desk/glow-3.png",
+          "terminals/communications-desk/glow-4.png",
+          "terminals/communications-desk/glow-5.png",
+          "terminals/communications-desk/glow-6.png",
+          "terminals/communications-desk/glow-7.png",
+          "terminals/communications-desk/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "linear-chase"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        29,
+        83,
+        193,
+        145
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "terminals/triple-monitor",
+      "name": "Triple Monitor",
+      "category": "terminals",
+      "description": "wall-mounted triple monitor cluster",
+      "base": "terminals/triple-monitor/base.png",
+      "unlit": "terminals/triple-monitor/unlit.png",
+      "emission_mask": "terminals/triple-monitor/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        106,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "terminals/triple-monitor/frame-1.png",
+          "terminals/triple-monitor/frame-2.png",
+          "terminals/triple-monitor/frame-3.png",
+          "terminals/triple-monitor/frame-4.png",
+          "terminals/triple-monitor/frame-5.png",
+          "terminals/triple-monitor/frame-6.png",
+          "terminals/triple-monitor/frame-7.png",
+          "terminals/triple-monitor/frame-8.png"
+        ],
+        "glow_frames": [
+          "terminals/triple-monitor/glow-1.png",
+          "terminals/triple-monitor/glow-2.png",
+          "terminals/triple-monitor/glow-3.png",
+          "terminals/triple-monitor/glow-4.png",
+          "terminals/triple-monitor/glow-5.png",
+          "terminals/triple-monitor/glow-6.png",
+          "terminals/triple-monitor/glow-7.png",
+          "terminals/triple-monitor/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "slow-breathe"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        29,
+        112,
+        197,
+        118
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "terminals/round-diagnostic",
+      "name": "Round Diagnostic",
+      "category": "terminals",
+      "description": "brass-rimmed circular diagnostic terminal",
+      "base": "terminals/round-diagnostic/base.png",
+      "unlit": "terminals/round-diagnostic/unlit.png",
+      "emission_mask": "terminals/round-diagnostic/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        28,
+        24,
+        228,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "terminals/round-diagnostic/frame-1.png",
+          "terminals/round-diagnostic/frame-2.png",
+          "terminals/round-diagnostic/frame-3.png",
+          "terminals/round-diagnostic/frame-4.png",
+          "terminals/round-diagnostic/frame-5.png",
+          "terminals/round-diagnostic/frame-6.png",
+          "terminals/round-diagnostic/frame-7.png",
+          "terminals/round-diagnostic/frame-8.png"
+        ],
+        "glow_frames": [
+          "terminals/round-diagnostic/glow-1.png",
+          "terminals/round-diagnostic/glow-2.png",
+          "terminals/round-diagnostic/glow-3.png",
+          "terminals/round-diagnostic/glow-4.png",
+          "terminals/round-diagnostic/glow-5.png",
+          "terminals/round-diagnostic/glow-6.png",
+          "terminals/round-diagnostic/glow-7.png",
+          "terminals/round-diagnostic/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "diagonal-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        87,
+        51,
+        78,
+        80
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "terminals/amber-operator",
+      "name": "Amber Operator",
+      "category": "terminals",
+      "description": "stacked amber monochrome operator console",
+      "base": "terminals/amber-operator/base.png",
+      "unlit": "terminals/amber-operator/unlit.png",
+      "emission_mask": "terminals/amber-operator/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        35,
+        24,
+        220,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "terminals/amber-operator/frame-1.png",
+          "terminals/amber-operator/frame-2.png",
+          "terminals/amber-operator/frame-3.png",
+          "terminals/amber-operator/frame-4.png",
+          "terminals/amber-operator/frame-5.png",
+          "terminals/amber-operator/frame-6.png",
+          "terminals/amber-operator/frame-7.png",
+          "terminals/amber-operator/frame-8.png"
+        ],
+        "glow_frames": [
+          "terminals/amber-operator/glow-1.png",
+          "terminals/amber-operator/glow-2.png",
+          "terminals/amber-operator/glow-3.png",
+          "terminals/amber-operator/glow-4.png",
+          "terminals/amber-operator/glow-5.png",
+          "terminals/amber-operator/glow-6.png",
+          "terminals/amber-operator/glow-7.png",
+          "terminals/amber-operator/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "radial-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        45,
+        162,
+        162,
+        68
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "signs/riveted-plaque",
+      "name": "Riveted Plaque",
+      "category": "signs",
+      "description": "wide riveted enamel notice plaque",
+      "base": "signs/riveted-plaque/base.png",
+      "unlit": "signs/riveted-plaque/unlit.png",
+      "emission_mask": "signs/riveted-plaque/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        111,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "signs/riveted-plaque/frame-1.png",
+          "signs/riveted-plaque/frame-2.png",
+          "signs/riveted-plaque/frame-3.png",
+          "signs/riveted-plaque/frame-4.png",
+          "signs/riveted-plaque/frame-5.png",
+          "signs/riveted-plaque/frame-6.png",
+          "signs/riveted-plaque/frame-7.png",
+          "signs/riveted-plaque/frame-8.png"
+        ],
+        "glow_frames": [
+          "signs/riveted-plaque/glow-1.png",
+          "signs/riveted-plaque/glow-2.png",
+          "signs/riveted-plaque/glow-3.png",
+          "signs/riveted-plaque/glow-4.png",
+          "signs/riveted-plaque/glow-5.png",
+          "signs/riveted-plaque/glow-6.png",
+          "signs/riveted-plaque/glow-7.png",
+          "signs/riveted-plaque/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "linear-chase"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        47,
+        172,
+        161,
+        39
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "signs/capsule-lightbox",
+      "name": "Capsule Lightbox",
+      "category": "signs",
+      "description": "rounded capsule lightbox",
+      "base": "signs/capsule-lightbox/base.png",
+      "unlit": "signs/capsule-lightbox/unlit.png",
+      "emission_mask": "signs/capsule-lightbox/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        107,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "signs/capsule-lightbox/frame-1.png",
+          "signs/capsule-lightbox/frame-2.png",
+          "signs/capsule-lightbox/frame-3.png",
+          "signs/capsule-lightbox/frame-4.png",
+          "signs/capsule-lightbox/frame-5.png",
+          "signs/capsule-lightbox/frame-6.png",
+          "signs/capsule-lightbox/frame-7.png",
+          "signs/capsule-lightbox/frame-8.png"
+        ],
+        "glow_frames": [
+          "signs/capsule-lightbox/glow-1.png",
+          "signs/capsule-lightbox/glow-2.png",
+          "signs/capsule-lightbox/glow-3.png",
+          "signs/capsule-lightbox/glow-4.png",
+          "signs/capsule-lightbox/glow-5.png",
+          "signs/capsule-lightbox/glow-6.png",
+          "signs/capsule-lightbox/glow-7.png",
+          "signs/capsule-lightbox/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "slow-breathe"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        58,
+        183,
+        139,
+        25
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "signs/hex-station",
+      "name": "Hex Station",
+      "category": "signs",
+      "description": "hexagonal suspended station sign",
+      "base": "signs/hex-station/base.png",
+      "unlit": "signs/hex-station/unlit.png",
+      "emission_mask": "signs/hex-station/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        49,
+        24,
+        207,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "signs/hex-station/frame-1.png",
+          "signs/hex-station/frame-2.png",
+          "signs/hex-station/frame-3.png",
+          "signs/hex-station/frame-4.png",
+          "signs/hex-station/frame-5.png",
+          "signs/hex-station/frame-6.png",
+          "signs/hex-station/frame-7.png",
+          "signs/hex-station/frame-8.png"
+        ],
+        "glow_frames": [
+          "signs/hex-station/glow-1.png",
+          "signs/hex-station/glow-2.png",
+          "signs/hex-station/glow-3.png",
+          "signs/hex-station/glow-4.png",
+          "signs/hex-station/glow-5.png",
+          "signs/hex-station/glow-6.png",
+          "signs/hex-station/glow-7.png",
+          "signs/hex-station/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "diagonal-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        78,
+        98,
+        99,
+        108
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "signs/split-flap",
+      "name": "Split Flap",
+      "category": "signs",
+      "description": "split-flap mechanical display board",
+      "base": "signs/split-flap/base.png",
+      "unlit": "signs/split-flap/unlit.png",
+      "emission_mask": "signs/split-flap/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        69,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "signs/split-flap/frame-1.png",
+          "signs/split-flap/frame-2.png",
+          "signs/split-flap/frame-3.png",
+          "signs/split-flap/frame-4.png",
+          "signs/split-flap/frame-5.png",
+          "signs/split-flap/frame-6.png",
+          "signs/split-flap/frame-7.png",
+          "signs/split-flap/frame-8.png"
+        ],
+        "glow_frames": [
+          "signs/split-flap/glow-1.png",
+          "signs/split-flap/glow-2.png",
+          "signs/split-flap/glow-3.png",
+          "signs/split-flap/glow-4.png",
+          "signs/split-flap/glow-5.png",
+          "signs/split-flap/glow-6.png",
+          "signs/split-flap/glow-7.png",
+          "signs/split-flap/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "radial-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        29,
+        123,
+        197,
+        107
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "signs/retro-marquee",
+      "name": "Retro Marquee",
+      "category": "signs",
+      "description": "brass edged retro marquee",
+      "base": "signs/retro-marquee/base.png",
+      "unlit": "signs/retro-marquee/unlit.png",
+      "emission_mask": "signs/retro-marquee/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        123,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "signs/retro-marquee/frame-1.png",
+          "signs/retro-marquee/frame-2.png",
+          "signs/retro-marquee/frame-3.png",
+          "signs/retro-marquee/frame-4.png",
+          "signs/retro-marquee/frame-5.png",
+          "signs/retro-marquee/frame-6.png",
+          "signs/retro-marquee/frame-7.png",
+          "signs/retro-marquee/frame-8.png"
+        ],
+        "glow_frames": [
+          "signs/retro-marquee/glow-1.png",
+          "signs/retro-marquee/glow-2.png",
+          "signs/retro-marquee/glow-3.png",
+          "signs/retro-marquee/glow-4.png",
+          "signs/retro-marquee/glow-5.png",
+          "signs/retro-marquee/glow-6.png",
+          "signs/retro-marquee/glow-7.png",
+          "signs/retro-marquee/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "linear-chase"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        50,
+        174,
+        156,
+        35
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "signs/three-cell-directory",
+      "name": "Three Cell Directory",
+      "category": "signs",
+      "description": "vertical stacked three-cell directory",
+      "base": "signs/three-cell-directory/base.png",
+      "unlit": "signs/three-cell-directory/unlit.png",
+      "emission_mask": "signs/three-cell-directory/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        41,
+        24,
+        215,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "signs/three-cell-directory/frame-1.png",
+          "signs/three-cell-directory/frame-2.png",
+          "signs/three-cell-directory/frame-3.png",
+          "signs/three-cell-directory/frame-4.png",
+          "signs/three-cell-directory/frame-5.png",
+          "signs/three-cell-directory/frame-6.png",
+          "signs/three-cell-directory/frame-7.png",
+          "signs/three-cell-directory/frame-8.png"
+        ],
+        "glow_frames": [
+          "signs/three-cell-directory/glow-1.png",
+          "signs/three-cell-directory/glow-2.png",
+          "signs/three-cell-directory/glow-3.png",
+          "signs/three-cell-directory/glow-4.png",
+          "signs/three-cell-directory/glow-5.png",
+          "signs/three-cell-directory/glow-6.png",
+          "signs/three-cell-directory/glow-7.png",
+          "signs/three-cell-directory/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "slow-breathe"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        46,
+        29,
+        163,
+        201
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "signs/square-hanger",
+      "name": "Square Hanger",
+      "category": "signs",
+      "description": "small square hanging pictogram panel",
+      "base": "signs/square-hanger/base.png",
+      "unlit": "signs/square-hanger/unlit.png",
+      "emission_mask": "signs/square-hanger/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        25,
+        24,
+        231,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "signs/square-hanger/frame-1.png",
+          "signs/square-hanger/frame-2.png",
+          "signs/square-hanger/frame-3.png",
+          "signs/square-hanger/frame-4.png",
+          "signs/square-hanger/frame-5.png",
+          "signs/square-hanger/frame-6.png",
+          "signs/square-hanger/frame-7.png",
+          "signs/square-hanger/frame-8.png"
+        ],
+        "glow_frames": [
+          "signs/square-hanger/glow-1.png",
+          "signs/square-hanger/glow-2.png",
+          "signs/square-hanger/glow-3.png",
+          "signs/square-hanger/glow-4.png",
+          "signs/square-hanger/glow-5.png",
+          "signs/square-hanger/glow-6.png",
+          "signs/square-hanger/glow-7.png",
+          "signs/square-hanger/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "diagonal-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        107,
+        130,
+        81,
+        74
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "signs/hazard-lightbox",
+      "name": "Hazard Lightbox",
+      "category": "signs",
+      "description": "industrial hazard-chevron lightbox",
+      "base": "signs/hazard-lightbox/base.png",
+      "unlit": "signs/hazard-lightbox/unlit.png",
+      "emission_mask": "signs/hazard-lightbox/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        111,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "signs/hazard-lightbox/frame-1.png",
+          "signs/hazard-lightbox/frame-2.png",
+          "signs/hazard-lightbox/frame-3.png",
+          "signs/hazard-lightbox/frame-4.png",
+          "signs/hazard-lightbox/frame-5.png",
+          "signs/hazard-lightbox/frame-6.png",
+          "signs/hazard-lightbox/frame-7.png",
+          "signs/hazard-lightbox/frame-8.png"
+        ],
+        "glow_frames": [
+          "signs/hazard-lightbox/glow-1.png",
+          "signs/hazard-lightbox/glow-2.png",
+          "signs/hazard-lightbox/glow-3.png",
+          "signs/hazard-lightbox/glow-4.png",
+          "signs/hazard-lightbox/glow-5.png",
+          "signs/hazard-lightbox/glow-6.png",
+          "signs/hazard-lightbox/glow-7.png",
+          "signs/hazard-lightbox/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "radial-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        29,
+        150,
+        196,
+        75
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "signs/arched-nameplate",
+      "name": "Arched Nameplate",
+      "category": "signs",
+      "description": "arched laboratory nameplate",
+      "base": "signs/arched-nameplate/base.png",
+      "unlit": "signs/arched-nameplate/unlit.png",
+      "emission_mask": "signs/arched-nameplate/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        142,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "signs/arched-nameplate/frame-1.png",
+          "signs/arched-nameplate/frame-2.png",
+          "signs/arched-nameplate/frame-3.png",
+          "signs/arched-nameplate/frame-4.png",
+          "signs/arched-nameplate/frame-5.png",
+          "signs/arched-nameplate/frame-6.png",
+          "signs/arched-nameplate/frame-7.png",
+          "signs/arched-nameplate/frame-8.png"
+        ],
+        "glow_frames": [
+          "signs/arched-nameplate/glow-1.png",
+          "signs/arched-nameplate/glow-2.png",
+          "signs/arched-nameplate/glow-3.png",
+          "signs/arched-nameplate/glow-4.png",
+          "signs/arched-nameplate/glow-5.png",
+          "signs/arched-nameplate/glow-6.png",
+          "signs/arched-nameplate/glow-7.png",
+          "signs/arched-nameplate/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "linear-chase"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        74,
+        171,
+        109,
+        38
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "signs/folding-status",
+      "name": "Folding Status",
+      "category": "signs",
+      "description": "two-panel folding wall status board",
+      "base": "signs/folding-status/base.png",
+      "unlit": "signs/folding-status/unlit.png",
+      "emission_mask": "signs/folding-status/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        108,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "signs/folding-status/frame-1.png",
+          "signs/folding-status/frame-2.png",
+          "signs/folding-status/frame-3.png",
+          "signs/folding-status/frame-4.png",
+          "signs/folding-status/frame-5.png",
+          "signs/folding-status/frame-6.png",
+          "signs/folding-status/frame-7.png",
+          "signs/folding-status/frame-8.png"
+        ],
+        "glow_frames": [
+          "signs/folding-status/glow-1.png",
+          "signs/folding-status/glow-2.png",
+          "signs/folding-status/glow-3.png",
+          "signs/folding-status/glow-4.png",
+          "signs/folding-status/glow-5.png",
+          "signs/folding-status/glow-6.png",
+          "signs/folding-status/glow-7.png",
+          "signs/folding-status/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "slow-breathe"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        149,
+        149,
+        53,
+        66
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "signs/triangle-wayfinder",
+      "name": "Triangle Wayfinder",
+      "category": "signs",
+      "description": "rounded triangular overhead wayfinding sign",
+      "base": "signs/triangle-wayfinder/base.png",
+      "unlit": "signs/triangle-wayfinder/unlit.png",
+      "emission_mask": "signs/triangle-wayfinder/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        32,
+        24,
+        224,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "signs/triangle-wayfinder/frame-1.png",
+          "signs/triangle-wayfinder/frame-2.png",
+          "signs/triangle-wayfinder/frame-3.png",
+          "signs/triangle-wayfinder/frame-4.png",
+          "signs/triangle-wayfinder/frame-5.png",
+          "signs/triangle-wayfinder/frame-6.png",
+          "signs/triangle-wayfinder/frame-7.png",
+          "signs/triangle-wayfinder/frame-8.png"
+        ],
+        "glow_frames": [
+          "signs/triangle-wayfinder/glow-1.png",
+          "signs/triangle-wayfinder/glow-2.png",
+          "signs/triangle-wayfinder/glow-3.png",
+          "signs/triangle-wayfinder/glow-4.png",
+          "signs/triangle-wayfinder/glow-5.png",
+          "signs/triangle-wayfinder/glow-6.png",
+          "signs/triangle-wayfinder/glow-7.png",
+          "signs/triangle-wayfinder/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "diagonal-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        67,
+        105,
+        121,
+        94
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "signs/segmented-ticker",
+      "name": "Segmented Ticker",
+      "category": "signs",
+      "description": "slim horizontal segmented ticker housing",
+      "base": "signs/segmented-ticker/base.png",
+      "unlit": "signs/segmented-ticker/unlit.png",
+      "emission_mask": "signs/segmented-ticker/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        155,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "signs/segmented-ticker/frame-1.png",
+          "signs/segmented-ticker/frame-2.png",
+          "signs/segmented-ticker/frame-3.png",
+          "signs/segmented-ticker/frame-4.png",
+          "signs/segmented-ticker/frame-5.png",
+          "signs/segmented-ticker/frame-6.png",
+          "signs/segmented-ticker/frame-7.png",
+          "signs/segmented-ticker/frame-8.png"
+        ],
+        "glow_frames": [
+          "signs/segmented-ticker/glow-1.png",
+          "signs/segmented-ticker/glow-2.png",
+          "signs/segmented-ticker/glow-3.png",
+          "signs/segmented-ticker/glow-4.png",
+          "signs/segmented-ticker/glow-5.png",
+          "signs/segmented-ticker/glow-6.png",
+          "signs/segmented-ticker/glow-7.png",
+          "signs/segmented-ticker/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "radial-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": [
+        54,
+        202,
+        146,
+        18
+      ],
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "lights/grille-strip",
+      "name": "Grille Strip",
+      "category": "lights",
+      "description": "wide amber ceiling strip with protective grille",
+      "base": "lights/grille-strip/base.png",
+      "unlit": "lights/grille-strip/unlit.png",
+      "emission_mask": "lights/grille-strip/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        151,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "lights/grille-strip/frame-1.png",
+          "lights/grille-strip/frame-2.png",
+          "lights/grille-strip/frame-3.png",
+          "lights/grille-strip/frame-4.png",
+          "lights/grille-strip/frame-5.png",
+          "lights/grille-strip/frame-6.png",
+          "lights/grille-strip/frame-7.png",
+          "lights/grille-strip/frame-8.png"
+        ],
+        "glow_frames": [
+          "lights/grille-strip/glow-1.png",
+          "lights/grille-strip/glow-2.png",
+          "lights/grille-strip/glow-3.png",
+          "lights/grille-strip/glow-4.png",
+          "lights/grille-strip/glow-5.png",
+          "lights/grille-strip/glow-6.png",
+          "lights/grille-strip/glow-7.png",
+          "lights/grille-strip/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "linear-chase"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "lights/bulkhead-ring",
+      "name": "Bulkhead Ring",
+      "category": "lights",
+      "description": "circular teal bulkhead porthole lamp",
+      "base": "lights/bulkhead-ring/base.png",
+      "unlit": "lights/bulkhead-ring/unlit.png",
+      "emission_mask": "lights/bulkhead-ring/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        35,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "lights/bulkhead-ring/frame-1.png",
+          "lights/bulkhead-ring/frame-2.png",
+          "lights/bulkhead-ring/frame-3.png",
+          "lights/bulkhead-ring/frame-4.png",
+          "lights/bulkhead-ring/frame-5.png",
+          "lights/bulkhead-ring/frame-6.png",
+          "lights/bulkhead-ring/frame-7.png",
+          "lights/bulkhead-ring/frame-8.png"
+        ],
+        "glow_frames": [
+          "lights/bulkhead-ring/glow-1.png",
+          "lights/bulkhead-ring/glow-2.png",
+          "lights/bulkhead-ring/glow-3.png",
+          "lights/bulkhead-ring/glow-4.png",
+          "lights/bulkhead-ring/glow-5.png",
+          "lights/bulkhead-ring/glow-6.png",
+          "lights/bulkhead-ring/glow-7.png",
+          "lights/bulkhead-ring/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "slow-breathe"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "lights/signal-tower",
+      "name": "Signal Tower",
+      "category": "lights",
+      "description": "vertical three-cell signal tower",
+      "base": "lights/signal-tower/base.png",
+      "unlit": "lights/signal-tower/unlit.png",
+      "emission_mask": "lights/signal-tower/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        69,
+        24,
+        187,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "lights/signal-tower/frame-1.png",
+          "lights/signal-tower/frame-2.png",
+          "lights/signal-tower/frame-3.png",
+          "lights/signal-tower/frame-4.png",
+          "lights/signal-tower/frame-5.png",
+          "lights/signal-tower/frame-6.png",
+          "lights/signal-tower/frame-7.png",
+          "lights/signal-tower/frame-8.png"
+        ],
+        "glow_frames": [
+          "lights/signal-tower/glow-1.png",
+          "lights/signal-tower/glow-2.png",
+          "lights/signal-tower/glow-3.png",
+          "lights/signal-tower/glow-4.png",
+          "lights/signal-tower/glow-5.png",
+          "lights/signal-tower/glow-6.png",
+          "lights/signal-tower/glow-7.png",
+          "lights/signal-tower/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "diagonal-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "lights/dome-lamp",
+      "name": "Dome Lamp",
+      "category": "lights",
+      "description": "hanging dome workshop lamp",
+      "base": "lights/dome-lamp/base.png",
+      "unlit": "lights/dome-lamp/unlit.png",
+      "emission_mask": "lights/dome-lamp/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        30,
+        24,
+        225,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "lights/dome-lamp/frame-1.png",
+          "lights/dome-lamp/frame-2.png",
+          "lights/dome-lamp/frame-3.png",
+          "lights/dome-lamp/frame-4.png",
+          "lights/dome-lamp/frame-5.png",
+          "lights/dome-lamp/frame-6.png",
+          "lights/dome-lamp/frame-7.png",
+          "lights/dome-lamp/frame-8.png"
+        ],
+        "glow_frames": [
+          "lights/dome-lamp/glow-1.png",
+          "lights/dome-lamp/glow-2.png",
+          "lights/dome-lamp/glow-3.png",
+          "lights/dome-lamp/glow-4.png",
+          "lights/dome-lamp/glow-5.png",
+          "lights/dome-lamp/glow-6.png",
+          "lights/dome-lamp/glow-7.png",
+          "lights/dome-lamp/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "radial-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "lights/honeycomb-panel",
+      "name": "Honeycomb Panel",
+      "category": "lights",
+      "description": "hexagonal honeycomb wall light panel",
+      "base": "lights/honeycomb-panel/base.png",
+      "unlit": "lights/honeycomb-panel/unlit.png",
+      "emission_mask": "lights/honeycomb-panel/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        53,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "lights/honeycomb-panel/frame-1.png",
+          "lights/honeycomb-panel/frame-2.png",
+          "lights/honeycomb-panel/frame-3.png",
+          "lights/honeycomb-panel/frame-4.png",
+          "lights/honeycomb-panel/frame-5.png",
+          "lights/honeycomb-panel/frame-6.png",
+          "lights/honeycomb-panel/frame-7.png",
+          "lights/honeycomb-panel/frame-8.png"
+        ],
+        "glow_frames": [
+          "lights/honeycomb-panel/glow-1.png",
+          "lights/honeycomb-panel/glow-2.png",
+          "lights/honeycomb-panel/glow-3.png",
+          "lights/honeycomb-panel/glow-4.png",
+          "lights/honeycomb-panel/glow-5.png",
+          "lights/honeycomb-panel/glow-6.png",
+          "lights/honeycomb-panel/glow-7.png",
+          "lights/honeycomb-panel/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "linear-chase"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "lights/double-task",
+      "name": "Double Task",
+      "category": "lights",
+      "description": "double angled task-lamp wall fixture",
+      "base": "lights/double-task/base.png",
+      "unlit": "lights/double-task/unlit.png",
+      "emission_mask": "lights/double-task/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        127,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "lights/double-task/frame-1.png",
+          "lights/double-task/frame-2.png",
+          "lights/double-task/frame-3.png",
+          "lights/double-task/frame-4.png",
+          "lights/double-task/frame-5.png",
+          "lights/double-task/frame-6.png",
+          "lights/double-task/frame-7.png",
+          "lights/double-task/frame-8.png"
+        ],
+        "glow_frames": [
+          "lights/double-task/glow-1.png",
+          "lights/double-task/glow-2.png",
+          "lights/double-task/glow-3.png",
+          "lights/double-task/glow-4.png",
+          "lights/double-task/glow-5.png",
+          "lights/double-task/glow-6.png",
+          "lights/double-task/glow-7.png",
+          "lights/double-task/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "slow-breathe"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "lights/square-bank",
+      "name": "Square Bank",
+      "category": "lights",
+      "description": "four-square laboratory light bank",
+      "base": "lights/square-bank/base.png",
+      "unlit": "lights/square-bank/unlit.png",
+      "emission_mask": "lights/square-bank/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        29,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "lights/square-bank/frame-1.png",
+          "lights/square-bank/frame-2.png",
+          "lights/square-bank/frame-3.png",
+          "lights/square-bank/frame-4.png",
+          "lights/square-bank/frame-5.png",
+          "lights/square-bank/frame-6.png",
+          "lights/square-bank/frame-7.png",
+          "lights/square-bank/frame-8.png"
+        ],
+        "glow_frames": [
+          "lights/square-bank/glow-1.png",
+          "lights/square-bank/glow-2.png",
+          "lights/square-bank/glow-3.png",
+          "lights/square-bank/glow-4.png",
+          "lights/square-bank/glow-5.png",
+          "lights/square-bank/glow-6.png",
+          "lights/square-bank/glow-7.png",
+          "lights/square-bank/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "diagonal-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "lights/caged-beacon",
+      "name": "Caged Beacon",
+      "category": "lights",
+      "description": "caged orange industrial beacon",
+      "base": "lights/caged-beacon/base.png",
+      "unlit": "lights/caged-beacon/unlit.png",
+      "emission_mask": "lights/caged-beacon/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        54,
+        24,
+        201,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "lights/caged-beacon/frame-1.png",
+          "lights/caged-beacon/frame-2.png",
+          "lights/caged-beacon/frame-3.png",
+          "lights/caged-beacon/frame-4.png",
+          "lights/caged-beacon/frame-5.png",
+          "lights/caged-beacon/frame-6.png",
+          "lights/caged-beacon/frame-7.png",
+          "lights/caged-beacon/frame-8.png"
+        ],
+        "glow_frames": [
+          "lights/caged-beacon/glow-1.png",
+          "lights/caged-beacon/glow-2.png",
+          "lights/caged-beacon/glow-3.png",
+          "lights/caged-beacon/glow-4.png",
+          "lights/caged-beacon/glow-5.png",
+          "lights/caged-beacon/glow-6.png",
+          "lights/caged-beacon/glow-7.png",
+          "lights/caged-beacon/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "radial-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "lights/vertical-bar",
+      "name": "Vertical Bar",
+      "category": "lights",
+      "description": "slender vertical icy-blue light bar",
+      "base": "lights/vertical-bar/base.png",
+      "unlit": "lights/vertical-bar/unlit.png",
+      "emission_mask": "lights/vertical-bar/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        84,
+        24,
+        171,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "lights/vertical-bar/frame-1.png",
+          "lights/vertical-bar/frame-2.png",
+          "lights/vertical-bar/frame-3.png",
+          "lights/vertical-bar/frame-4.png",
+          "lights/vertical-bar/frame-5.png",
+          "lights/vertical-bar/frame-6.png",
+          "lights/vertical-bar/frame-7.png",
+          "lights/vertical-bar/frame-8.png"
+        ],
+        "glow_frames": [
+          "lights/vertical-bar/glow-1.png",
+          "lights/vertical-bar/glow-2.png",
+          "lights/vertical-bar/glow-3.png",
+          "lights/vertical-bar/glow-4.png",
+          "lights/vertical-bar/glow-5.png",
+          "lights/vertical-bar/glow-6.png",
+          "lights/vertical-bar/glow-7.png",
+          "lights/vertical-bar/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "linear-chase"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "lights/brass-utility",
+      "name": "Brass Utility",
+      "category": "lights",
+      "description": "brass framed rectangular utility lamp",
+      "base": "lights/brass-utility/base.png",
+      "unlit": "lights/brass-utility/unlit.png",
+      "emission_mask": "lights/brass-utility/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        128,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "lights/brass-utility/frame-1.png",
+          "lights/brass-utility/frame-2.png",
+          "lights/brass-utility/frame-3.png",
+          "lights/brass-utility/frame-4.png",
+          "lights/brass-utility/frame-5.png",
+          "lights/brass-utility/frame-6.png",
+          "lights/brass-utility/frame-7.png",
+          "lights/brass-utility/frame-8.png"
+        ],
+        "glow_frames": [
+          "lights/brass-utility/glow-1.png",
+          "lights/brass-utility/glow-2.png",
+          "lights/brass-utility/glow-3.png",
+          "lights/brass-utility/glow-4.png",
+          "lights/brass-utility/glow-5.png",
+          "lights/brass-utility/glow-6.png",
+          "lights/brass-utility/glow-7.png",
+          "lights/brass-utility/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "slow-breathe"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "lights/articulated-lamp",
+      "name": "Articulated Lamp",
+      "category": "lights",
+      "description": "small articulated desk lamp on wall bracket",
+      "base": "lights/articulated-lamp/base.png",
+      "unlit": "lights/articulated-lamp/unlit.png",
+      "emission_mask": "lights/articulated-lamp/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        82,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "lights/articulated-lamp/frame-1.png",
+          "lights/articulated-lamp/frame-2.png",
+          "lights/articulated-lamp/frame-3.png",
+          "lights/articulated-lamp/frame-4.png",
+          "lights/articulated-lamp/frame-5.png",
+          "lights/articulated-lamp/frame-6.png",
+          "lights/articulated-lamp/frame-7.png",
+          "lights/articulated-lamp/frame-8.png"
+        ],
+        "glow_frames": [
+          "lights/articulated-lamp/glow-1.png",
+          "lights/articulated-lamp/glow-2.png",
+          "lights/articulated-lamp/glow-3.png",
+          "lights/articulated-lamp/glow-4.png",
+          "lights/articulated-lamp/glow-5.png",
+          "lights/articulated-lamp/glow-6.png",
+          "lights/articulated-lamp/glow-7.png",
+          "lights/articulated-lamp/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "diagonal-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "lights/retro-sconce",
+      "name": "Retro Sconce",
+      "category": "lights",
+      "description": "semicircular retro wall sconce",
+      "base": "lights/retro-sconce/base.png",
+      "unlit": "lights/retro-sconce/unlit.png",
+      "emission_mask": "lights/retro-sconce/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        112,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "lights/retro-sconce/frame-1.png",
+          "lights/retro-sconce/frame-2.png",
+          "lights/retro-sconce/frame-3.png",
+          "lights/retro-sconce/frame-4.png",
+          "lights/retro-sconce/frame-5.png",
+          "lights/retro-sconce/frame-6.png",
+          "lights/retro-sconce/frame-7.png",
+          "lights/retro-sconce/frame-8.png"
+        ],
+        "glow_frames": [
+          "lights/retro-sconce/glow-1.png",
+          "lights/retro-sconce/glow-2.png",
+          "lights/retro-sconce/glow-3.png",
+          "lights/retro-sconce/glow-4.png",
+          "lights/retro-sconce/glow-5.png",
+          "lights/retro-sconce/glow-6.png",
+          "lights/retro-sconce/glow-7.png",
+          "lights/retro-sconce/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "radial-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "utilities/ventilation-fan",
+      "name": "Ventilation Fan",
+      "category": "utilities",
+      "description": "caged circular ventilation fan unit",
+      "base": "utilities/ventilation-fan/base.png",
+      "unlit": "utilities/ventilation-fan/unlit.png",
+      "emission_mask": "utilities/ventilation-fan/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        45,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "utilities/ventilation-fan/frame-1.png",
+          "utilities/ventilation-fan/frame-2.png",
+          "utilities/ventilation-fan/frame-3.png",
+          "utilities/ventilation-fan/frame-4.png",
+          "utilities/ventilation-fan/frame-5.png",
+          "utilities/ventilation-fan/frame-6.png",
+          "utilities/ventilation-fan/frame-7.png",
+          "utilities/ventilation-fan/frame-8.png"
+        ],
+        "glow_frames": [
+          "utilities/ventilation-fan/glow-1.png",
+          "utilities/ventilation-fan/glow-2.png",
+          "utilities/ventilation-fan/glow-3.png",
+          "utilities/ventilation-fan/glow-4.png",
+          "utilities/ventilation-fan/glow-5.png",
+          "utilities/ventilation-fan/glow-6.png",
+          "utilities/ventilation-fan/glow-7.png",
+          "utilities/ventilation-fan/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "linear-chase"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "utilities/piston-compressor",
+      "name": "Piston Compressor",
+      "category": "utilities",
+      "description": "compact compressor with two pistons",
+      "base": "utilities/piston-compressor/base.png",
+      "unlit": "utilities/piston-compressor/unlit.png",
+      "emission_mask": "utilities/piston-compressor/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        78,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "utilities/piston-compressor/frame-1.png",
+          "utilities/piston-compressor/frame-2.png",
+          "utilities/piston-compressor/frame-3.png",
+          "utilities/piston-compressor/frame-4.png",
+          "utilities/piston-compressor/frame-5.png",
+          "utilities/piston-compressor/frame-6.png",
+          "utilities/piston-compressor/frame-7.png",
+          "utilities/piston-compressor/frame-8.png"
+        ],
+        "glow_frames": [
+          "utilities/piston-compressor/glow-1.png",
+          "utilities/piston-compressor/glow-2.png",
+          "utilities/piston-compressor/glow-3.png",
+          "utilities/piston-compressor/glow-4.png",
+          "utilities/piston-compressor/glow-5.png",
+          "utilities/piston-compressor/glow-6.png",
+          "utilities/piston-compressor/glow-7.png",
+          "utilities/piston-compressor/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "slow-breathe"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "utilities/coolant-tank",
+      "name": "Coolant Tank",
+      "category": "utilities",
+      "description": "glass coolant circulation tank with pipes",
+      "base": "utilities/coolant-tank/base.png",
+      "unlit": "utilities/coolant-tank/unlit.png",
+      "emission_mask": "utilities/coolant-tank/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        33,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "utilities/coolant-tank/frame-1.png",
+          "utilities/coolant-tank/frame-2.png",
+          "utilities/coolant-tank/frame-3.png",
+          "utilities/coolant-tank/frame-4.png",
+          "utilities/coolant-tank/frame-5.png",
+          "utilities/coolant-tank/frame-6.png",
+          "utilities/coolant-tank/frame-7.png",
+          "utilities/coolant-tank/frame-8.png"
+        ],
+        "glow_frames": [
+          "utilities/coolant-tank/glow-1.png",
+          "utilities/coolant-tank/glow-2.png",
+          "utilities/coolant-tank/glow-3.png",
+          "utilities/coolant-tank/glow-4.png",
+          "utilities/coolant-tank/glow-5.png",
+          "utilities/coolant-tank/glow-6.png",
+          "utilities/coolant-tank/glow-7.png",
+          "utilities/coolant-tank/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "diagonal-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "utilities/reel-archive",
+      "name": "Reel Archive",
+      "category": "utilities",
+      "description": "small reel-to-reel data archive unit",
+      "base": "utilities/reel-archive/base.png",
+      "unlit": "utilities/reel-archive/unlit.png",
+      "emission_mask": "utilities/reel-archive/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        61,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "utilities/reel-archive/frame-1.png",
+          "utilities/reel-archive/frame-2.png",
+          "utilities/reel-archive/frame-3.png",
+          "utilities/reel-archive/frame-4.png",
+          "utilities/reel-archive/frame-5.png",
+          "utilities/reel-archive/frame-6.png",
+          "utilities/reel-archive/frame-7.png",
+          "utilities/reel-archive/frame-8.png"
+        ],
+        "glow_frames": [
+          "utilities/reel-archive/glow-1.png",
+          "utilities/reel-archive/glow-2.png",
+          "utilities/reel-archive/glow-3.png",
+          "utilities/reel-archive/glow-4.png",
+          "utilities/reel-archive/glow-5.png",
+          "utilities/reel-archive/glow-6.png",
+          "utilities/reel-archive/glow-7.png",
+          "utilities/reel-archive/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "radial-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "utilities/server-drives",
+      "name": "Server Drives",
+      "category": "utilities",
+      "description": "two stacked server drive modules",
+      "base": "utilities/server-drives/base.png",
+      "unlit": "utilities/server-drives/unlit.png",
+      "emission_mask": "utilities/server-drives/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        80,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "utilities/server-drives/frame-1.png",
+          "utilities/server-drives/frame-2.png",
+          "utilities/server-drives/frame-3.png",
+          "utilities/server-drives/frame-4.png",
+          "utilities/server-drives/frame-5.png",
+          "utilities/server-drives/frame-6.png",
+          "utilities/server-drives/frame-7.png",
+          "utilities/server-drives/frame-8.png"
+        ],
+        "glow_frames": [
+          "utilities/server-drives/glow-1.png",
+          "utilities/server-drives/glow-2.png",
+          "utilities/server-drives/glow-3.png",
+          "utilities/server-drives/glow-4.png",
+          "utilities/server-drives/glow-5.png",
+          "utilities/server-drives/glow-6.png",
+          "utilities/server-drives/glow-7.png",
+          "utilities/server-drives/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "linear-chase"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "utilities/centrifuge",
+      "name": "Centrifuge",
+      "category": "utilities",
+      "description": "brass laboratory centrifuge instrument",
+      "base": "utilities/centrifuge/base.png",
+      "unlit": "utilities/centrifuge/unlit.png",
+      "emission_mask": "utilities/centrifuge/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        53,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "utilities/centrifuge/frame-1.png",
+          "utilities/centrifuge/frame-2.png",
+          "utilities/centrifuge/frame-3.png",
+          "utilities/centrifuge/frame-4.png",
+          "utilities/centrifuge/frame-5.png",
+          "utilities/centrifuge/frame-6.png",
+          "utilities/centrifuge/frame-7.png",
+          "utilities/centrifuge/frame-8.png"
+        ],
+        "glow_frames": [
+          "utilities/centrifuge/glow-1.png",
+          "utilities/centrifuge/glow-2.png",
+          "utilities/centrifuge/glow-3.png",
+          "utilities/centrifuge/glow-4.png",
+          "utilities/centrifuge/glow-5.png",
+          "utilities/centrifuge/glow-6.png",
+          "utilities/centrifuge/glow-7.png",
+          "utilities/centrifuge/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "slow-breathe"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "utilities/charging-rack",
+      "name": "Charging Rack",
+      "category": "utilities",
+      "description": "compact battery charging rack",
+      "base": "utilities/charging-rack/base.png",
+      "unlit": "utilities/charging-rack/unlit.png",
+      "emission_mask": "utilities/charging-rack/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        73,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "utilities/charging-rack/frame-1.png",
+          "utilities/charging-rack/frame-2.png",
+          "utilities/charging-rack/frame-3.png",
+          "utilities/charging-rack/frame-4.png",
+          "utilities/charging-rack/frame-5.png",
+          "utilities/charging-rack/frame-6.png",
+          "utilities/charging-rack/frame-7.png",
+          "utilities/charging-rack/frame-8.png"
+        ],
+        "glow_frames": [
+          "utilities/charging-rack/glow-1.png",
+          "utilities/charging-rack/glow-2.png",
+          "utilities/charging-rack/glow-3.png",
+          "utilities/charging-rack/glow-4.png",
+          "utilities/charging-rack/glow-5.png",
+          "utilities/charging-rack/glow-6.png",
+          "utilities/charging-rack/glow-7.png",
+          "utilities/charging-rack/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "diagonal-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "utilities/gear-cabinet",
+      "name": "Gear Cabinet",
+      "category": "utilities",
+      "description": "small mechanical gear inspection cabinet",
+      "base": "utilities/gear-cabinet/base.png",
+      "unlit": "utilities/gear-cabinet/unlit.png",
+      "emission_mask": "utilities/gear-cabinet/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        34,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "utilities/gear-cabinet/frame-1.png",
+          "utilities/gear-cabinet/frame-2.png",
+          "utilities/gear-cabinet/frame-3.png",
+          "utilities/gear-cabinet/frame-4.png",
+          "utilities/gear-cabinet/frame-5.png",
+          "utilities/gear-cabinet/frame-6.png",
+          "utilities/gear-cabinet/frame-7.png",
+          "utilities/gear-cabinet/frame-8.png"
+        ],
+        "glow_frames": [
+          "utilities/gear-cabinet/glow-1.png",
+          "utilities/gear-cabinet/glow-2.png",
+          "utilities/gear-cabinet/glow-3.png",
+          "utilities/gear-cabinet/glow-4.png",
+          "utilities/gear-cabinet/glow-5.png",
+          "utilities/gear-cabinet/glow-6.png",
+          "utilities/gear-cabinet/glow-7.png",
+          "utilities/gear-cabinet/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "radial-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "utilities/air-filter",
+      "name": "Air Filter",
+      "category": "utilities",
+      "description": "wall-mounted air filtration duct box",
+      "base": "utilities/air-filter/base.png",
+      "unlit": "utilities/air-filter/unlit.png",
+      "emission_mask": "utilities/air-filter/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        115,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "utilities/air-filter/frame-1.png",
+          "utilities/air-filter/frame-2.png",
+          "utilities/air-filter/frame-3.png",
+          "utilities/air-filter/frame-4.png",
+          "utilities/air-filter/frame-5.png",
+          "utilities/air-filter/frame-6.png",
+          "utilities/air-filter/frame-7.png",
+          "utilities/air-filter/frame-8.png"
+        ],
+        "glow_frames": [
+          "utilities/air-filter/glow-1.png",
+          "utilities/air-filter/glow-2.png",
+          "utilities/air-filter/glow-3.png",
+          "utilities/air-filter/glow-4.png",
+          "utilities/air-filter/glow-5.png",
+          "utilities/air-filter/glow-6.png",
+          "utilities/air-filter/glow-7.png",
+          "utilities/air-filter/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "linear-chase"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "utilities/coil-regulator",
+      "name": "Coil Regulator",
+      "category": "utilities",
+      "description": "copper coil power regulator",
+      "base": "utilities/coil-regulator/base.png",
+      "unlit": "utilities/coil-regulator/unlit.png",
+      "emission_mask": "utilities/coil-regulator/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        47,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "utilities/coil-regulator/frame-1.png",
+          "utilities/coil-regulator/frame-2.png",
+          "utilities/coil-regulator/frame-3.png",
+          "utilities/coil-regulator/frame-4.png",
+          "utilities/coil-regulator/frame-5.png",
+          "utilities/coil-regulator/frame-6.png",
+          "utilities/coil-regulator/frame-7.png",
+          "utilities/coil-regulator/frame-8.png"
+        ],
+        "glow_frames": [
+          "utilities/coil-regulator/glow-1.png",
+          "utilities/coil-regulator/glow-2.png",
+          "utilities/coil-regulator/glow-3.png",
+          "utilities/coil-regulator/glow-4.png",
+          "utilities/coil-regulator/glow-5.png",
+          "utilities/coil-regulator/glow-6.png",
+          "utilities/coil-regulator/glow-7.png",
+          "utilities/coil-regulator/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "slow-breathe"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "utilities/sample-incubator",
+      "name": "Sample Incubator",
+      "category": "utilities",
+      "description": "glass sample incubator with sliding hatch",
+      "base": "utilities/sample-incubator/base.png",
+      "unlit": "utilities/sample-incubator/unlit.png",
+      "emission_mask": "utilities/sample-incubator/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        90,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "utilities/sample-incubator/frame-1.png",
+          "utilities/sample-incubator/frame-2.png",
+          "utilities/sample-incubator/frame-3.png",
+          "utilities/sample-incubator/frame-4.png",
+          "utilities/sample-incubator/frame-5.png",
+          "utilities/sample-incubator/frame-6.png",
+          "utilities/sample-incubator/frame-7.png",
+          "utilities/sample-incubator/frame-8.png"
+        ],
+        "glow_frames": [
+          "utilities/sample-incubator/glow-1.png",
+          "utilities/sample-incubator/glow-2.png",
+          "utilities/sample-incubator/glow-3.png",
+          "utilities/sample-incubator/glow-4.png",
+          "utilities/sample-incubator/glow-5.png",
+          "utilities/sample-incubator/glow-6.png",
+          "utilities/sample-incubator/glow-7.png",
+          "utilities/sample-incubator/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "diagonal-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    },
+    {
+      "id": "utilities/optical-scanner",
+      "name": "Optical Scanner",
+      "category": "utilities",
+      "description": "desk-sized optical scanning instrument",
+      "base": "utilities/optical-scanner/base.png",
+      "unlit": "utilities/optical-scanner/unlit.png",
+      "emission_mask": "utilities/optical-scanner/emission-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        30,
+        232,
+        236
+      ],
+      "animation": {
+        "frames": [
+          "utilities/optical-scanner/frame-1.png",
+          "utilities/optical-scanner/frame-2.png",
+          "utilities/optical-scanner/frame-3.png",
+          "utilities/optical-scanner/frame-4.png",
+          "utilities/optical-scanner/frame-5.png",
+          "utilities/optical-scanner/frame-6.png",
+          "utilities/optical-scanner/frame-7.png",
+          "utilities/optical-scanner/frame-8.png"
+        ],
+        "glow_frames": [
+          "utilities/optical-scanner/glow-1.png",
+          "utilities/optical-scanner/glow-2.png",
+          "utilities/optical-scanner/glow-3.png",
+          "utilities/optical-scanner/glow-4.png",
+          "utilities/optical-scanner/glow-5.png",
+          "utilities/optical-scanner/glow-6.png",
+          "utilities/optical-scanner/glow-7.png",
+          "utilities/optical-scanner/glow-8.png"
+        ],
+        "frame_ms": 170,
+        "loop": true,
+        "minimum_interval_ms": 2400,
+        "maximum_interval_ms": 9000,
+        "reduced_motion_frame": 0,
+        "rig": "radial-cycle"
+      },
+      "lighting": {
+        "enabled": true,
+        "blend": "screen",
+        "maximum_opacity": 0.55
+      },
+      "display_surface_hint_px": null,
+      "placement": "back-wall-only; keep solid bounds clear of navigation and fixed fixtures"
+    }
+  ],
+  "render_contract": {
+    "anchor": "bottom mount, pixel [128,236]",
+    "perspective": "depth only; no horizontal scaling",
+    "draw_order": [
+      "unlit or animation frame",
+      "optional display content",
+      "glow"
+    ],
+    "motion": "randomized per-instance intervals and phases, seeded by display identity; not a live workload signal",
+    "reduced_motion": "freeze animation frame; retain state-driven brightness",
+    "screen_content": "display_surface_hint_px is a conservative candidate, not a live-data text contract; review before drawing text"
+  }
+}

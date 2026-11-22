@@ -1,0 +1,48 @@
+{
+  "categories": {
+    "device_failed": 34,
+    "distributor_hcp_prospect": 32,
+    "general_question": 281,
+    "it_helpdesk": 38,
+    "missing_item": 9,
+    "order_status_shipping": 69,
+    "phone_ai_silent": 362,
+    "refill_code": 99,
+    "refund": 5,
+    "report_of_erythema": 2,
+    "rma_broken_lamp": 49,
+    "training": 20
+  },
+  "erp_match": {
+    "count": 900,
+    "percent": 90.0
+  },
+  "generated_at": "2026-10-27T11:10:40.020364+00:00",
+  "genuinely_unmatched": 100,
+  "problems": [],
+  "qms": {
+    "covered": 35,
+    "deliberate_gaps": 47,
+    "required": 82
+  },
+  "referential_integrity": "PASS",
+  "requires_follow_up": 400,
+  "seed": 20261026,
+  "sender_email_absent_from_erp": 900,
+  "sender_email_in_erp": {
+    "count": 100,
+    "percent": 10.0
+  },
+  "split": {
+    "development": 800,
+    "held_out": 200
+  },
+  "total": 1000,
+  "variations": {
+    "baseline": 950,
+    "safety_confirmed": 20,
+    "safety_hazard": 10,
+    "safety_negative": 10,
+    "safety_suspected": 10
+  }
+}

@@ -1,0 +1,20 @@
+/* Workflow components. Shell and responsive layout are owned by studio.css. */
+.workflow {padding:15px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:18px;background:var(--surface)}
+.workflow h3 {margin:0 0 8px}
+.next-action {font-size:14px;line-height:1.6;padding:10px;border-left:3px solid var(--accent);background:var(--surface-2)}
+.movement-card {padding:12px 0;border-top:1px solid var(--border);margin-top:12px}
+.movement-card summary {font-weight:600;cursor:pointer;line-height:1.5}
+.movement-card p {line-height:1.6}
+.workflow-controls {display:flex;flex-direction:column;gap:8px}
+.workflow-controls select,.simulation-panel textarea,.feedback-panel select,.feedback-panel textarea {width:100%;box-sizing:border-box}
+.sim-failure {display:flex;align-items:center;gap:8px;font-size:11px;color:var(--text-dim)}
+.sim-failure input {width:auto}
+.simulation-panel,.feedback-panel {padding:14px;margin:12px 0;border:1px solid var(--border);border-radius:var(--radius)}
+.simulation-panel summary,.feedback-panel summary {cursor:pointer;font-weight:600}
+.simulation-panel {margin:20px;background:var(--surface-2)}
+.feedback-panel .field {margin:10px 0}
+.feedback-comparison {display:grid;grid-template-columns:1fr 1fr;gap:12px;white-space:pre-wrap;overflow-wrap:anywhere}
+.feedback-entry {margin-top:12px;padding:10px;background:var(--surface-2)}
+.eligibility {font-size:12px;padding:8px;border-left:3px solid var(--warning)}
+.service-call {font-size:12px}
+@media(max-width:720px) {.feedback-comparison {grid-template-columns:1fr}}

@@ -1,0 +1,320 @@
+{
+ "source": "Capstone outputs/experiment-evaluation-c922/calls.json (EXP-c922a79470f945579bb2951cc758896a)",
+ "model": "gemma3:4b",
+ "role": "customer_communication",
+ "operation": "/api/chat",
+ "target_request_id": "REQ-90426799d3ab4e058c1d9f972525a5da",
+ "target_run": "RUN-1d7bb5ef27844b8095f70e05af86f8f8",
+ "bodies": [
+  {
+   "content_sha256": "4a9e7271416d3f00e52c1ada5052cc4a7cd1a990b806eb24f7a3e28d5f75d73b",
+   "payload": {
+    "messages": [
+     {
+      "content": "You are a helpful customer-service assistant. Compose the next\nreply from the customer context and authorized manual evidence.\nAcknowledge the actual symptom in ordinary language. Ask a useful question when\nnecessary. Give only the next applicable safe check and ask what the customer\nobserves before a dependent check. Do not dump manual sections.\nCustomer-reported facts may be acknowledged as reports, not verified diagnoses.\nOperating instructions must come only from the supplied authorized sections.\nHonor every safety restriction and prerequisite. Never invent a repair, approval,\naccount fact, tracking number, measurement, or cause. Do not expose document IDs,\nscope statements, classification, internal working notes, or technical status.\nUse 35-90 words, plain sentences, no headings, numbered sections, or email sign-off.\nWrite only the customer reply.  Return a JSON object containing only the finished reply in the reply field. Do not include analysis.",
+      "role": "system"
+     },
+     {
+      "content": "Customer supplied name: Ivan Nowak\nPublic equipment model: P4800. Account identity is not asserted.\nThese sections are independently authorized for all supported hardware variants. Do not claim the account is verified, expose account details, or invent a hardware revision.\nCustomer request: My name is Ivan Nowak. Serial 98148469. The protective goggles were missing from my box. Everything else arrived. Please send the goggles.\nAlready received observations: {\"all_lamps_affected\": false, \"power_on\": false}. Do not ask the customer to provide an observation already received. Focus on the next unknown.\n\nApproved customer-disclosable manual sections:\n[PROC-GEN-MISSING-ACCESSORY | QMS-DOC-0111 v1.2 | ALL Rev ALL | section: Scope and applicability]\nThis procedure applies to every model in the range when a customer reports\nthat an item expected with their delivery was not in the box: goggles, a mains\ncord, a filter, a spare lamp or the instructions for use.\n\nIt is a customer-service and logistics procedure, not a device-fault\nprocedure. It covers establishing what is actually missing and raising the\nright product movement. It does not cover any fault with the device itself.\n\n[PROC-GEN-MISSING-ACCESSORY | QMS-DOC-0111 v1.2 | ALL Rev ALL | section: Symptom confirmation]\nAsk the customer to confirm which items they have received, not only which\nthey believe are missing. Packing varies and accessories are often in a\nseparate compartment under the moulded insert rather than loose in the carton.\n\nAsk them to check that compartment before anything is shipped, and ask for the\npart name as printed on the carton label where one is visible.\nCompose the next helpful reply without printing source identifiers.",
+      "role": "user"
+     }
+    ],
+    "format": {
+     "additionalProperties": false,
+     "properties": {
+      "reply": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "reply"
+     ],
+     "type": "object"
+    },
+    "options": {
+     "num_ctx": 8192,
+     "num_predict": 320,
+     "seed": 7,
+     "temperature": 0
+    }
+   },
+   "observed": [
+    {
+     "call_id": "CALL-b4e8468b8d5a445f96fbf967d0a3f09b",
+     "gateway_request_id": "REQ-78ba0a60cc3d4a1396d2a668f16c038e",
+     "run": "RUN-de5eeef8399b4d0d8a56cf9591e192a0",
+     "head": "head-192-0-2-7",
+     "status": "failed",
+     "error": "Gateway execution failed: HTTP Error 500: Internal Server Error",
+     "at": 1795034868.0318136
+    },
+    {
+     "call_id": "CALL-c34e5352215145c7bd96936fee2f12d6",
+     "gateway_request_id": "REQ-b0dea2a28b4e4fd8bbeda825c9baefd1",
+     "run": "RUN-3a7ba8ca48934f14bb0ddb8c74ca5fe2",
+     "head": "head-192-0-2-4",
+     "status": "failed",
+     "error": "Gateway execution failed: HTTP Error 500: Internal Server Error",
+     "at": 1795037078.29531
+    },
+    {
+     "call_id": "CALL-bc1f2375c89e456c9fa13b8d6f10bf13",
+     "gateway_request_id": "REQ-0a8d4bff0c814de192a61be600d28bc5",
+     "run": "RUN-977a03016b2340298af5c87c09582790",
+     "head": "head-192-0-2-3",
+     "status": "completed",
+     "error": null,
+     "at": 1795039067.0994842
+    },
+    {
+     "call_id": "CALL-5c730f0ebb9b4dfc99dcfd8d86158966",
+     "gateway_request_id": "REQ-545c8985e7674ceeb091fabe936dc661",
+     "run": "RUN-44b26e01df8048dc869ee868a4ddd2ff",
+     "head": "head-192-0-2-7",
+     "status": "failed",
+     "error": "Gateway execution failed: HTTP Error 500: Internal Server Error",
+     "at": 1795040158.9295247
+    },
+    {
+     "call_id": "CALL-927dd10a8b3e465ea73233b769a89392",
+     "gateway_request_id": "REQ-611390ea4c24447db9e492f7b930ffcf",
+     "run": "RUN-975dcd91a7b4447cace081d90775f72e",
+     "head": "head-192-0-2-4",
+     "status": "failed",
+     "error": "Gateway execution failed: HTTP Error 500: Internal Server Error",
+     "at": 1795041492.0775697
+    }
+   ],
+   "label": "BODY-4a9e7271",
+   "observed_summary": "4 of 5 failed (HTTP 500) on heads head-192-0-2-3, head-192-0-2-4, head-192-0-2-7"
+  },
+  {
+   "content_sha256": "7a670ec6a78232a7bffffc0f88771d0e2fb36c9527561fa27c50f63a6f137017",
+   "payload": {
+    "messages": [
+     {
+      "content": "You are a helpful customer-service assistant. Compose the next\nreply from the customer context and authorized manual evidence.\nAcknowledge the actual symptom in ordinary language. Ask a useful question when\nnecessary. Give only the next applicable safe check and ask what the customer\nobserves before a dependent check. Do not dump manual sections.\nCustomer-reported facts may be acknowledged as reports, not verified diagnoses.\nOperating instructions must come only from the supplied authorized sections.\nHonor every safety restriction and prerequisite. Never invent a repair, approval,\naccount fact, tracking number, measurement, or cause. Do not expose document IDs,\nscope statements, classification, internal working notes, or technical status.\nUse 35-90 words, plain sentences, no headings, numbered sections, or email sign-off.\nWrite only the customer reply.  Return a JSON object containing only the finished reply in the reply field. Do not include analysis.",
+      "role": "system"
+     },
+     {
+      "content": "Customer supplied name: Ivan Nowak\nPublic equipment model: P4800. Account identity is not asserted.\nThese sections are independently authorized for all supported hardware variants. Do not claim the account is verified, expose account details, or invent a hardware revision.\nCustomer request: My name is Ivan Nowak. Serial 98148469. My P4800 is completely dead: no lights, no fan and no display. What can I check without opening it?\nAlready received observations: {\"all_lamps_affected\": false, \"power_on\": false}. Do not ask the customer to provide an observation already received. Focus on the next unknown.\n\nApproved customer-disclosable manual sections:\n[PROC-P4800-PWR-A | QMS-DOC-0101 v3.0 | P4800 Rev A | section: Scope and applicability]\nThis procedure applies to the P4800 benchtop phototherapy unit, hardware revision A\nonly. Revision A units are identified by an ERP install date earlier than 1 January\n2022 and carry a grey rear chassis plate with a single captive mains inlet. Do not\napply this procedure to revision B or revision C units; the rear panel interlock\nwiring differs and the checks below will give misleading results.\n\nUse this procedure when the customer reports that the unit shows no signs of power:\nno status LED, no fan noise, and no display backlight when the mains switch is set\nto the on position.\n\n[PROC-MANUAL-P4800 | QMS-DOC-0203 v1.0 | P4800 Rev A/B/C | section: Scope and prerequisites]\nThis independently fictional user manual covers ordinary customer observations for P4800 revisions A, B and C. These exterior checks are authorized across all supported variants; they do not authorize a repair or revision-specific service procedure. Establish the model from the label or the fictional equipment record. Account verification is not required for these public instructions.\n\n[PROC-MANUAL-P4800 | QMS-DOC-0203 v1.0 | P4800 Rev A/B/C | section: Safety before operation]\nStop using the device if smoke, an unusual burning smell, sparking, excessive heat or an injury is reported. Disconnect the unit if safe and contact support. Do not open the enclosure, remove a cover, bypass an interlock or change prescribed treatment settings.\n\n[PROC-MANUAL-P4800 | QMS-DOC-0203 v1.0 | P4800 Rev A/B/C | section: Basic power-on observations]\nWith the unit idle and no safety concern present, confirm whether the accessible power lead is connected and whether the normal power indicator illuminates. Observe the display and treatment indicator. If the display remains dark, record that observation and contact support for the exact equipment procedure; do not replace fuses or investigate internal wiring.\nCompose the next helpful reply without printing source identifiers.",
+      "role": "user"
+     }
+    ],
+    "format": {
+     "additionalProperties": false,
+     "properties": {
+      "reply": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "reply"
+     ],
+     "type": "object"
+    },
+    "options": {
+     "num_ctx": 8192,
+     "num_predict": 320,
+     "seed": 7,
+     "temperature": 0
+    }
+   },
+   "observed": [
+    {
+     "call_id": "CALL-5950bb2fe96645a1ac8030695b3395f8",
+     "gateway_request_id": "REQ-8b0333faa3bd4ba1be5501f1b0efcbc9",
+     "run": "RUN-c6dc51f8e94648f48c32a3c681ed21ee",
+     "head": "head-192-0-2-8",
+     "status": "failed",
+     "error": "Gateway execution failed: HTTP Error 500: Internal Server Error",
+     "at": 1795035188.1142778
+    },
+    {
+     "call_id": "CALL-9acf24f1d442478ebc013d71c6766f17",
+     "gateway_request_id": "REQ-f47dbc2e062e446eab2424ddc9bb3f44",
+     "run": "RUN-cf2e7477c7484d90a255ea64ceff1bd2",
+     "head": "head-192-0-2-4",
+     "status": "failed",
+     "error": "Gateway execution failed: HTTP Error 500: Internal Server Error",
+     "at": 1795037240.221228
+    },
+    {
+     "call_id": "CALL-22eb48d5e99944228666d7d4388cc6f1",
+     "gateway_request_id": "REQ-82941787cf2249a89f5e2d0953d40a0f",
+     "run": "RUN-ccbc2bb148614facb45f192a6e9dcbd2",
+     "head": "head-192-0-2-4",
+     "status": "failed",
+     "error": "Gateway execution failed: HTTP Error 500: Internal Server Error",
+     "at": 1795039040.1993563
+    },
+    {
+     "call_id": "CALL-2a82bea7c40a4ecc864216bc916daa13",
+     "gateway_request_id": "REQ-251fdcac7189451496f4dc854567b071",
+     "run": "RUN-a56d6e4b288c45fa9ef0b26c3e7d23b0",
+     "head": "head-192-0-2-8",
+     "status": "failed",
+     "error": "Gateway execution failed: HTTP Error 500: Internal Server Error",
+     "at": 1795040123.7845428
+    },
+    {
+     "call_id": "CALL-45d8b9944ddc496d81ec03d9edf64c4b",
+     "gateway_request_id": "REQ-ea7ead8b60d94c6aafc1ca04f0891af5",
+     "run": "RUN-81a897b2ecbf4024bca0a4b92ca9a936",
+     "head": "head-192-0-2-2",
+     "status": "failed",
+     "error": "Gateway execution failed: HTTP Error 500: Internal Server Error",
+     "at": 1795041520.2116168
+    }
+   ],
+   "label": "BODY-7a670ec6",
+   "observed_summary": "5 of 5 failed (HTTP 500) on heads head-192-0-2-2, head-192-0-2-4, head-192-0-2-8"
+  },
+  {
+   "content_sha256": "bde6b1f1749522896306e84210f8103aed1eef7a7a8a2ae0e613b307d260f7d6",
+   "payload": {
+    "messages": [
+     {
+      "content": "You are a helpful customer-service assistant. Compose the next\nreply from the customer context and authorized manual evidence.\nAcknowledge the actual symptom in ordinary language. Ask a useful question when\nnecessary. Give only the next applicable safe check and ask what the customer\nobserves before a dependent check. Do not dump manual sections.\nCustomer-reported facts may be acknowledged as reports, not verified diagnoses.\nOperating instructions must come only from the supplied authorized sections.\nHonor every safety restriction and prerequisite. Never invent a repair, approval,\naccount fact, tracking number, measurement, or cause. Do not expose document IDs,\nscope statements, classification, internal working notes, or technical status.\nUse 35-90 words, plain sentences, no headings, numbered sections, or email sign-off.\nWrite only the customer reply.  Return a JSON object containing only the finished reply in the reply field. Do not include analysis.",
+      "role": "system"
+     },
+     {
+      "content": "Customer supplied name: Ivan Nowak\nPublic equipment model: P4800. Account identity is not asserted.\nThese sections are independently authorized for all supported hardware variants. Do not claim the account is verified, expose account details, or invent a hardware revision.\nCustomer request: My name is Ivan Nowak. Serial 98148460. My P4800 is completely dead: no lights, no fan and no display. What can I check without opening it?\nAlready received observations: {\"all_lamps_affected\": false, \"power_on\": false}. Do not ask the customer to provide an observation already received. Focus on the next unknown.\n\nApproved customer-disclosable manual sections:\n[PROC-MANUAL-P4800 | QMS-DOC-0203 v1.0 | P4800 Rev A/B/C | section: Scope and prerequisites]\nThis independently fictional user manual covers ordinary customer observations for P4800 revisions A, B and C. These exterior checks are authorized across all supported variants; they do not authorize a repair or revision-specific service procedure. Establish the model from the label or the fictional equipment record. Account verification is not required for these public instructions.\n\n[PROC-MANUAL-P4800 | QMS-DOC-0203 v1.0 | P4800 Rev A/B/C | section: Safety before operation]\nStop using the device if smoke, an unusual burning smell, sparking, excessive heat or an injury is reported. Disconnect the unit if safe and contact support. Do not open the enclosure, remove a cover, bypass an interlock or change prescribed treatment settings.\n\n[PROC-MANUAL-P4800 | QMS-DOC-0203 v1.0 | P4800 Rev A/B/C | section: Basic power-on observations]\nWith the unit idle and no safety concern present, confirm whether the accessible power lead is connected and whether the normal power indicator illuminates. Observe the display and treatment indicator. If the display remains dark, record that observation and contact support for the exact equipment procedure; do not replace fuses or investigate internal wiring.\nCompose the next helpful reply without printing source identifiers.",
+      "role": "user"
+     }
+    ],
+    "format": {
+     "additionalProperties": false,
+     "properties": {
+      "reply": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "reply"
+     ],
+     "type": "object"
+    },
+    "options": {
+     "num_ctx": 8192,
+     "num_predict": 320,
+     "seed": 7,
+     "temperature": 0
+    }
+   },
+   "observed": [
+    {
+     "call_id": "CALL-7e032399a7c34f6b80961da2c292d59e",
+     "gateway_request_id": "REQ-f28d3c0867c046ad8c6251c6767c1a2e",
+     "run": "RUN-26e4e828e74d48b4ba6a449631e217cd",
+     "head": "head-192-0-2-2",
+     "status": "completed",
+     "error": null,
+     "at": 1795035521.4571233
+    },
+    {
+     "call_id": "CALL-77da68c2592f4c67bd47748d6bea6862",
+     "gateway_request_id": "REQ-1d5494e4b9a8460b8d2aeb5d3e08d966",
+     "run": "RUN-f799973783804dc0b46063173aa32960",
+     "head": "head-192-0-2-8",
+     "status": "completed",
+     "error": null,
+     "at": 1795037076.8563404
+    },
+    {
+     "call_id": "CALL-3e8eb80abc1f40e0a62f14647b98cda8",
+     "gateway_request_id": "REQ-ea33f4ea5aba4afb8f94c792907e4fa2",
+     "run": "RUN-d482eeda30e244ceb81a5e2dc690bb93",
+     "head": "head-192-0-2-2",
+     "status": "completed",
+     "error": null,
+     "at": 1795039039.0143347
+    },
+    {
+     "call_id": "CALL-3715f321eb7543fe9db74f561109dfac",
+     "gateway_request_id": "REQ-b33ca2181ff64239845693f814cacb2d",
+     "run": "RUN-3fbe9f7e3b6b41e3a88a225ccf2232c8",
+     "head": "head-192-0-2-10",
+     "status": "completed",
+     "error": null,
+     "at": 1795040143.6465013
+    },
+    {
+     "call_id": "CALL-49bdba798084413eae99902f08f60a66",
+     "gateway_request_id": "REQ-53a9623052f84c0884761b0ca229ea5f",
+     "run": "RUN-aea12471b3d247e7b9426d50188210f0",
+     "head": "head-192-0-2-10",
+     "status": "completed",
+     "error": null,
+     "at": 1795041437.3876798
+    }
+   ],
+   "label": "BODY-bde6b1f1",
+   "observed_summary": "0 of 5 failed (HTTP 500) on heads head-192-0-2-10, head-192-0-2-2, head-192-0-2-8"
+  },
+  {
+   "content_sha256": "7ced6646cba7c1635ff9df5d871e93c1a79e368ac83fae63fa42f1d8c5a49038",
+   "payload": {
+    "messages": [
+     {
+      "content": "You are a helpful customer-service assistant. Compose the next\nreply from the customer context and authorized manual evidence.\nAcknowledge the actual symptom in ordinary language. Ask a useful question when\nnecessary. Give only the next applicable safe check and ask what the customer\nobserves before a dependent check. Do not dump manual sections.\nCustomer-reported facts may be acknowledged as reports, not verified diagnoses.\nOperating instructions must come only from the supplied authorized sections.\nHonor every safety restriction and prerequisite. Never invent a repair, approval,\naccount fact, tracking number, measurement, or cause. Do not expose document IDs,\nscope statements, classification, internal working notes, or technical status.\nUse 35-90 words, plain sentences, no headings, numbered sections, or email sign-off.\nWrite only the customer reply.  Return a JSON object containing only the finished reply in the reply field. Do not include analysis.",
+      "role": "system"
+     },
+     {
+      "content": "Customer supplied name: Noah Thomas\nPublic equipment model: P4800. Account identity is not asserted.\nThese sections are independently authorized for all supported hardware variants. Do not claim the account is verified, expose account details, or invent a hardware revision.\nCustomer request: My name is Noah Thomas. Serial 98148469. My P4800 is completely dead: no lights, no fan and no display. What can I check without opening it?\nAlready received observations: {\"all_lamps_affected\": false, \"power_on\": false}. Do not ask the customer to provide an observation already received. Focus on the next unknown.\n\nApproved customer-disclosable manual sections:\n[PROC-MANUAL-P4800 | QMS-DOC-0203 v1.0 | P4800 Rev A/B/C | section: Scope and prerequisites]\nThis independently fictional user manual covers ordinary customer observations for P4800 revisions A, B and C. These exterior checks are authorized across all supported variants; they do not authorize a repair or revision-specific service procedure. Establish the model from the label or the fictional equipment record. Account verification is not required for these public instructions.\n\n[PROC-MANUAL-P4800 | QMS-DOC-0203 v1.0 | P4800 Rev A/B/C | section: Safety before operation]\nStop using the device if smoke, an unusual burning smell, sparking, excessive heat or an injury is reported. Disconnect the unit if safe and contact support. Do not open the enclosure, remove a cover, bypass an interlock or change prescribed treatment settings.\n\n[PROC-MANUAL-P4800 | QMS-DOC-0203 v1.0 | P4800 Rev A/B/C | section: Basic power-on observations]\nWith the unit idle and no safety concern present, confirm whether the accessible power lead is connected and whether the normal power indicator illuminates. Observe the display and treatment indicator. If the display remains dark, record that observation and contact support for the exact equipment procedure; do not replace fuses or investigate internal wiring.\nCompose the next helpful reply without printing source identifiers.",
+      "role": "user"
+     }
+    ],
+    "format": {
+     "additionalProperties": false,
+     "properties": {
+      "reply": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "reply"
+     ],
+     "type": "object"
+    },
+    "options": {
+     "num_ctx": 8192,
+     "num_predict": 320,
+     "seed": 7,
+     "temperature": 0
+    }
+   },
+   "observed": [
+    {
+     "call_id": "CALL-c0dc74c8cef249abb01502889a330d14",
+     "gateway_request_id": "REQ-90426799d3ab4e058c1d9f972525a5da",
+     "run": "RUN-1d7bb5ef27844b8095f70e05af86f8f8",
+     "head": "head-192-0-2-10",
+     "status": "failed",
+     "error": "Gateway execution failed: HTTP Error 500: Internal Server Error",
+     "at": 1795037121.9096096
+    },
+    {
+     "call_id": "CALL-32764228a5b54ef7962f035e54f3cc08",
+     "gateway_request_id": "REQ-62b9650110434b0aad240a4bf3922ca0",
+     "run": "RUN-744f2a1302db471ea1c7797b5d004906",
+     "head": "head-192-0-2-3",
+     "status": "failed",
+     "error": "Gateway execution failed: HTTP Error 500: Internal Server Error",
+     "at": 1795040280.0934114
+    },
+    {
+     "call_id": "CALL-3c7b592a574f4feca9f8b4f6e15404b6",
+     "gateway_request_id": "REQ-b9c5fd8065ba43ee9c36628d67befa9f",
+     "run": "RUN-e9dd227ff2cf4205a456088d2d7f95cc",
+     "head": "head-192-0-2-9",
+     "status": "failed",
+     "error": "Gateway execution failed: HTTP Error 500: Internal Server Error",
+     "at": 1795041535.1671627
+    }
+   ],
+   "label": "TARGET-7ced6646",
+   "observed_summary": "3 of 3 failed (HTTP 500) on heads head-192-0-2-10, head-192-0-2-3, head-192-0-2-9"
+  }
+ ]
+}

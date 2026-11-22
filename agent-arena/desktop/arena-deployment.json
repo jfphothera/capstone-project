@@ -1,0 +1,8 @@
+{
+  "config_version": "2026-11-03.1",
+  "_comment": "Deployment configuration, not identity and not a secret. The event service runs on the admin hub (192.0.2.254). Installed displays keep their own endpoints and follow signed endpoint updates from the service; this default is what a fresh install enrolls with. Which display a machine is comes from the service's registry by its address.",
+  "event_service_endpoints": ["http://192.0.2.254:8790"],
+  "display_networks": ["192.0.2.0/24"],
+  "exclude_addresses": [],
+  "orchestrator_displays": {}
+}

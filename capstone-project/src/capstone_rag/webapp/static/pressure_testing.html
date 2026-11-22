@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Testing Lab · Phothera Device Support</title>
+<script src="/static/js/theme.js?v=rc20"></script>
+<link rel="stylesheet" href="/static/css/app.css?v=rc20"><link rel="stylesheet" href="/static/css/theme.css?v=rc20"><link rel="stylesheet" href="/static/css/studio.css?v=rc20"><link rel="stylesheet" href="/static/css/testing_lab.css?v=rc20">
+</head><body class="testing-lab"><header class="lab-header"><div><span class="eyebrow">Testing Lab</span><h1>Evaluate methods and lab heads</h1><p id="lab-subtitle">Run ready-made checks or compare agentic methods across the same synthetic cases.</p></div><nav><a class="btn ghost" href="/">Representative workspace</a><a class="btn ghost" href="/trace">Execution traces</a></nav></header>
+<main class="lab-main"><span hidden>Phothera Testing Lab. Getting started: the five-minute Gateway smoke preset is selected automatically.</span><div id="lab-loading" class="lab-message">Opening the Testing Lab…</div><div id="lab-app"></div></main>
+<footer>Internal synthetic environment <span title="Test Tube Pastries">🧪🥐</span> · Never customer-facing</footer>
+<script>
+window.showLabBootError=function(detail){const loading=document.querySelector('#lab-loading'),app=document.querySelector('#lab-app');if(app&&app.childElementCount)return;loading.hidden=false;loading.className='lab-message error';loading.replaceChildren(document.createTextNode('The Testing Lab did not start. '+detail+' '));const retry=document.createElement('button');retry.className='btn primary';retry.textContent='Reload Testing Lab';retry.onclick=()=>location.replace('/pressure-testing?retry='+Date.now());loading.append(retry)};
+window.capstoneLabBootWatchdog=setTimeout(()=>window.showLabBootError('The application is responsive, but the Lab program did not finish loading within 12 seconds.'),12000);
+window.addEventListener('error',event=>{if(event.target&&event.target.tagName==='SCRIPT')window.showLabBootError('A required Lab file could not be loaded.')},true);
+</script>
+<script type="module" src="/static/js/testing_lab.js?v=rc20" onerror="window.showLabBootError('The Lab program file failed to load.')"></script><script type="module" src="/static/js/global_nav.js?v=rc20"></script></body></html>

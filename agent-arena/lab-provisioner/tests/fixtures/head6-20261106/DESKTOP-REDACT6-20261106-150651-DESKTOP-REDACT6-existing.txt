@@ -1,0 +1,144 @@
+AGENT ARENA LAB - INSTALLATION REPORT
+============================================================
+Final status : PARTIALLY VERIFIED
+Role         : existing
+Computer     : DESKTOP-REDACT6
+Run          : 20261106-150651-DESKTOP-REDACT6-existing
+Provisioner  : Agent Arena Lab Provisioner 1.4.2
+Started      : 2026-11-06T15:06:51.9562734-08:00
+Finished     : 2026-11-06T18:07:44.8281389-05:00
+Appears to be: head (holds head address 192.0.2.6)
+
+INVENTORY (observed / inferred / missing / inaccessible)
+------------------------------------------------------------
+[identity]
+  observed     computer: DESKTOP-REDACT6
+  observed     signed-in user: DESKTOP-REDACT6\LabOperator1
+  observed     running as administrator: True
+[os]
+  observed     Windows: Microsoft Windows 11 Pro (Professional) 10.0.26300 build 26300 64-bit
+  observed     last boot: 2026-10-30T19:59:58.4528460-07:00
+  observed     domain or workgroup: WORKGROUP (domain joined: False)
+[hardware]
+  observed     CPU: Intel(R) Core(TM) Ultra 5 235 (14 cores, 14 threads)
+  observed     RAM: 7.4 GB
+  observed     GPU: Intel(R) Graphics
+  missing      NVIDIA VRAM: no NVIDIA GPU
+[storage]
+  observed     volume C:: 139.95 GB free of 237.45 GB
+[network]
+  observed     adapter Wi-Fi 2: MediaTek Wi-Fi 7 MT7925 Wireless LAN Card; Not Present; MAC ; IPv4 ; gateway ; DHCP Unknown; profile none
+  observed     adapter Wi-Fi 5: MediaTek Wi-Fi 7 MT7925 Wireless LAN Card; Not Present; MAC ; IPv4 ; gateway ; DHCP Unknown; profile none
+  observed     adapter Wi-Fi: MediaTek Wi-Fi 7 MT7925 Wireless LAN Card; Disconnected; MAC 02-00-00-00-00-01; IPv4 198.51.100.69/24; gateway 198.51.100.1; DHCP Enabled; profile none
+  observed     adapter Ethernet: Intel(R) Ethernet Controller I226-V; Up; MAC 02-00-00-00-00-02; IPv4 192.0.2.6/24; gateway ; DHCP Disabled; profile Public
+  observed     lab address: 192.0.2.6/24 on Ethernet
+[ollama]
+  observed     installed: C:\Users\LabOperator1\AppData\Local\Programs\Ollama\ollama.exe (version 0.40.13)
+  observed     API http://127.0.0.1:11434: answers, version 0.40.13
+  observed     API http://192.0.2.6:11434: answers, version 0.40.13
+  observed     listeners on 11434: :: (ollama)
+[models]
+  observed     installed models: 17: all-minilm:latest, gemma3:1b, gemma3:270m, granite4:350m, granite-embedding:30m, hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M, hf.co/unsloth/SmolLM3-3B-GGUF:Q4_K_M, llama3.2:1b, qwen2.5:1.5b, qwen2.5-coder:1.5b, qwen3.5:0.8b, qwen3.5:2b, qwen3:0.6b, qwen3:1.7b, qwen3:4b-instruct-2507-q4_K_M, smollm2:135m, smollm2:360m
+  observed     loaded now: none
+[ollama]
+  observed     OLLAMA_HOST: machine "0.0.0.0:11434", user ""
+  observed     OLLAMA_MODELS: machine "C:\WINDOWS\System32\config\systemprofile\.ollama\models", user ""
+[models]
+  observed     model directory C:\WINDOWS\System32\config\systemprofile\.ollama\models: 17 manifests (OLLAMA_MODELS (Machine))
+  observed     model directory C:\Users\LabOperator1\.ollama\models: 12 manifests (user profile LabOperator1)
+[ollama]
+  observed     boot task: Capstone Ollama Server: C:\WINDOWS\System32\cmd.exe /c "C:\ProgramData\AgentArenaLab\ollama\ollama-serve.cmd" as SYSTEM; last run 11/6/2026 2:49:42 PM, result 267009
+[firewall]
+  observed     profile Domain: enabled True; default inbound Block; local rules allowed True
+  observed     profile Private: enabled True; default inbound Block; local rules allowed True
+  observed     profile Public: enabled True; default inbound Block; local rules allowed True
+  observed     active profile on the lab adapter: Public
+  inferred     Ollama 11434 from 192.0.2.254: ADMITTED: allowed by Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1
+  inferred     Ollama 11434 from 192.0.2.1: ADMITTED: allowed by Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1
+  inferred     Ollama 11434 from 192.0.2.201: DENIED: no allow rule matches; the profile blocks inbound connections by default
+  inferred     Ollama 11434 from 192.0.2.202: DENIED: no allow rule matches; the profile blocks inbound connections by default
+  inferred     Ollama 11434 from 192.0.2.50: DENIED: no allow rule matches; the profile blocks inbound connections by default
+  observed     rule Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1: MANAGED, Allow, profiles Domain,Private,Public, program Any, ports 11434, remote 192.0.2.254,192.0.2.1, source Local
+[time]
+  observed     time zone: Pacific Standard Time
+  observed     Windows Time: Stopped, start Manual, source "time.windows.com,0x9" (NTP)
+[power]
+  observed     sleep on AC: standby 0 s, hibernate 0 s
+  observed     adapter Ethernet: may be turned off: Enabled; EEE Energy Efficient Ethernet=On (when system is in S0, S0ix and Sx)
+[tasks]
+  observed     relevant scheduled tasks: Capstone Ollama Server (Running, SYSTEM)
+[services]
+  missing      relevant Windows services: none
+[arena]
+  observed     event service: http://192.0.2.254:8790: ok aes-a1e79a8b3902 2.2.0
+  observed     head viewer: version 2.1.1; credential present True; starts at sign-in True; endpoints 
+  missing      Python 3.12+ for the Arena installers: no Python 3.12+ found for DESKTOP-REDACT6\LabOperator1 (elevated True): py -3 -> not on PATH for this window; python [C:\Users\LabOperator1\AppData\Local\Microsoft\WindowsApps\python.exe] -> version check failed (exit 9009): Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings > Apps > Advanced app settings > App execution aliases.
+[backups]
+  observed     provisioner 1.0.3 records: C:\ProgramData\CapstoneProvisioner: 2 network backup(s); last outcome 
+  observed     lab provisioner runs with changes: 20261106-141050-DESKTOP-REDACT6-existing; 20261106-144524-DESKTOP-REDACT6-existing
+  observed     reboot checkpoint: saved 2026-11-06T14:49:50.7680279-08:00 by run 20261106-144524-DESKTOP-REDACT6-existing
+[identity]
+  inferred     appears to be: head (holds head address 192.0.2.6)
+
+PLAN
+------------------------------------------------------------
+Address: 192.0.2.6
+  [privileged] Time zone Eastern Standard Time; Windows Time from 192.0.2.254
+  [privileged] No sleep on AC; Ethernet power saving off
+
+APPROVALS (operator answers, in order)
+------------------------------------------------------------
+  approved  [privileged, APPROVE] Carry out this plan on DESKTOP-REDACT6? 2 step(s) change this machine; each change is recorded with its undo.
+
+WHAT WAS DONE (planned versus actual)
+------------------------------------------------------------
+  DONE      Time zone and time source - Eastern Standard Time; Windows Time syncs from 192.0.2.254 (retries until the hub answers)
+  DONE      Power and sleep - no sleep or hibernate on AC power; 'Ethernet' may no longer be turned off to save power; Energy Efficient Ethernet off
+  changes recorded: 2
+
+SOFTWARE
+------------------------------------------------------------
+  ollama: 0.40.13
+  arena_viewer: 2.1.1
+
+REGISTRATION
+------------------------------------------------------------
+  ALREADY_REGISTERED Arena registration: head-192-0-2-6
+
+VERIFICATION
+------------------------------------------------------------
+  PASS    [local] Ollama answers on 192.0.2.6:11434: version 0.40.13
+  PASS    [local] boot task runs the server as SYSTEM with an explicit model directory: C:\WINDOWS\System32\cmd.exe /c "C:\ProgramData\AgentArenaLab\ollama\ollama-serve.cmd" as SYSTEM
+  PASS    [local] the served models are the ones on disk: 17 served from OLLAMA_MODELS=C:\WINDOWS\System32\config\systemprofile\.ollama\models; a spare copy of the same models (not used; can be deleted later to free space): C:\Users\LabOperator1\.ollama\models
+  PASS    [local] firewall rules: Ollama from 192.0.2.254 is ADMITTED: ADMITTED - allowed by Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1 (rule analysis)
+  PASS    [local] firewall rules: Ollama from 192.0.2.1 is ADMITTED: ADMITTED - allowed by Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1 (rule analysis)
+  PASS    [local] firewall rules: Ollama from 192.0.2.201 is DENIED: DENIED - no allow rule matches; the profile blocks inbound connections by default (rule analysis)
+  PASS    [local] firewall rules: Ollama from 192.0.2.202 is DENIED: DENIED - no allow rule matches; the profile blocks inbound connections by default (rule analysis)
+  PASS    [local] firewall rules: Ollama from 192.0.2.50 is DENIED: DENIED - no allow rule matches; the profile blocks inbound connections by default (rule analysis)
+  PENDING [lan] Gateway on the hub reaches this head's Ollama: real connection from 192.0.2.254: run the provisioner there (Administration hub > verify), or Test-NetConnection 192.0.2.6 -Port 11434 on the hub
+  PENDING [lan] Application laptops cannot reach this head's Ollama: real connections from 192.0.2.201, 192.0.2.202, 192.0.2.50: their Verify stage tests every head
+  PASS    [lan] clock against the hub (Arena allows 120 s): offset -0.159 s
+  PASS    [lan] Arena event service reachable and genuine: ok aes-a1e79a8b3902 2.2.0
+  PASS    [lan] Arena registry knows this head: head-192-0-2-6
+  PASS    [local] Arena head viewer installed and enrolled: version 2.1.1, credential True, starts at sign-in True
+  PENDING [local] Ollama serves the same models after a reboot: not rebooted since the checkpoint of 2026-11-06T14:49:50.7680279-08:00. Reboot, sign in, then START-LAB-PROVISIONER > Existing machine > Post-reboot verification
+
+SECURITY: Ollama port exposure (after this run's changes; rule analysis (inferred); a real connection from each address is the field proof)
+------------------------------------------------------------
+  from 192.0.2.254   ADMITTED: allowed by Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1
+  from 192.0.2.1     ADMITTED: allowed by Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1
+  from 192.0.2.201   DENIED: no allow rule matches; the profile blocks inbound connections by default
+  from 192.0.2.202   DENIED: no allow rule matches; the profile blocks inbound connections by default
+  from 192.0.2.50    DENIED: no allow rule matches; the profile blocks inbound connections by default
+
+CHANGES MADE (each can be undone)
+------------------------------------------------------------
+  time time zone Eastern Standard Time (was Pacific Standard Time); Windows Time from 192.0.2.254 (was 'time.windows.com,0x9' NTP, start Manual)
+  power no sleep/hibernate on AC (were 0s/0s); 'Ethernet' may no longer be turned off to save power; Energy Efficient Ethernet off
+
+Rollback: START-LAB-PROVISIONER.cmd > Existing machine > Roll back a previous run
+  record  C:\ProgramData\AgentArenaLab\runs\20261106-150651-DESKTOP-REDACT6-existing\changes.json
+  backups C:\ProgramData\AgentArenaLab\runs\20261106-150651-DESKTOP-REDACT6-existing\backups
+
+Checks marked scope=lan used real connections over the LAN; scope=local are on this machine only; scope=external need another project or machine.
+Credentials, codes and tokens are redacted; none are written to this report.

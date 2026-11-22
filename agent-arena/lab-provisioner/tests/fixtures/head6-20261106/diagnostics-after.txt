@@ -1,0 +1,28 @@
+AGENT ARENA DIAGNOSTICS · 2026-11-06 18:10:28 · DESKTOP-REDACT6
+Secrets are never included; credential IDs are truncated.
+[INFO] Application               package 2.1.2; running from C:\Users\LabOperator1\AppData\Local\Programs\AgentArena\2.1.2\
+[INFO] Computer                  DESKTOP-REDACT6 · user LabOperator1 · Microsoft Windows NT 10.0.26300.0
+[INFO] Display                   \\.\DISPLAY1 1920x1080 primary · scaling 100%  — Arena zoom: Ctrl+ / Ctrl- / Ctrl+0 or the tray icon menu
+[INFO] Network                   192.0.2.6 · Up · Ethernet  — read only; nothing is reconfigured
+[INFO] Network                   169.254.42.245 · Down · Wi-Fi 3  — read only; nothing is reconfigured
+[INFO] Network                   169.254.251.80 · Down · Wi-Fi 4  — read only; nothing is reconfigured
+[INFO] Network                   198.51.100.69 · Down · Wi-Fi  — read only; nothing is reconfigured
+[PASS] Detected identity         head-192-0-2-6 (head) from 192.0.2.6  — address in an authorized display network
+[INFO] Identity note             Registry lookup at http://192.0.2.1:8790: not reachable (The operation has timed out).
+[INFO] Identity note             Identity proposed from the package's network convention because the registry could not be asked.
+[PASS] Installation              installed
+[INFO] Install directory         C:\Users\LabOperator1\AppData\Local\Programs\AgentArena\2.1.2  — data: C:\Users\LabOperator1\AppData\Local\AgentArena
+[PASS] Configuration             valid · display head-192-0-2-6 · role head · location head:head-192-0-2-6
+[INFO] Event service address     http://192.0.2.1:8790  — from installed configuration
+[FAIL] Service reachability      192.0.2.1:8790 not reachable  — coordinator / event service unavailable (not a local viewer fault)
+[WARN] Authentication            not checked: The operation has timed out  — service unreachable
+[PASS] Local frontend integrity  all program and Arena web files match the manifest
+[PASS] Viewer process            Agent Arena is running
+[PASS] Sign-in startup           "C:\Users\LabOperator1\AppData\Local\Programs\AgentArena\2.1.2\AgentArena.exe" --background  — one per-user Run entry; no service or scheduled task
+[PASS] Original Phase 4.2 viewer none found
+[PASS] Display engine            WebView2 Runtime 156.0.4314.50
+[INFO] .NET Framework            release 534296  — 528040 or later = 4.8
+[PASS] Local Ollama              reachable · version 0.40.13  — read-only probe; Arena never changes Ollama
+[INFO] Hardware telemetry        CPU/RAM via Windows CIM; GPU unavailable (no nvidia-smi; normal on CPU-only heads)  — reporting enabled
+[INFO] Persistent display        on while the Arena window is open  — process-scoped request; released on exit; no power plan or lock policy is changed
+[PASS] Recent errors             none  — log: C:\Users\LabOperator1\AppData\Local\AgentArena\logs\agent-arena.log

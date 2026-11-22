@@ -1,0 +1,114 @@
+/* Classic Refined + Classic Arcade. Pixel art is scenery; all facts remain live DOM text. */
+:root{--sky:#63d8e6;--gold:#efb759;--ivory:#edf4e7;--line:#2c536b;--agent:#29c9cf}
+body{background:#07131f;font-family:'Segoe UI',Arial,sans-serif}
+.mast{height:72px;padding:12px 22px;background:linear-gradient(90deg,#142638,#0c1c2b);border-bottom:1px solid #41627a}
+.brand{font-size:25px;letter-spacing:-.7px}.brand span{color:#62d9e6;font-size:10px}.node strong{font-size:15px;max-width:550px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.node small{font-size:10px}
+.toolbar{height:44px;background:#0a1825;gap:18px}.toolbar label{font-size:11px}.controls{font-size:11px}.controls button,.toolbar select,.toolbar input,.zones button{background:#142e40;border-color:#315b74}
+.layout{grid-template-columns:minmax(580px,1fr) minmax(215px,21%);gap:10px;padding:10px}
+.panel{border-color:#31556f;border-radius:5px;background:#0d202f;box-shadow:inset 0 1px #91d1e30b}
+.panel-title{height:38px;padding:10px 12px;font-size:11px;letter-spacing:1px;background:#102636}.panel-title small{font-size:9px;letter-spacing:0}
+.roster{position:absolute;inset:0;height:auto!important;background:none;z-index:3;pointer-events:none;display:block!important;overflow:visible!important}
+.roster .hint{display:none}
+.roster-list{position:absolute;inset:0;display:block;padding:0;overflow:visible;pointer-events:none}
+.roster-agent{position:absolute;display:block;width:130px;height:150px;min-height:0;border:0!important;border-radius:0;background:transparent;padding:0;box-shadow:none!important;cursor:pointer;text-align:center;transform:translate(-50%,-111px) scale(var(--depth,1));transform-origin:50% 111px;pointer-events:auto;transition:none;z-index:var(--order,3)}
+.roster-agent .mini-robot{position:absolute;top:35px;left:50%;transform:translateX(-50%);width:64px;height:80px;max-height:none}
+.mini-robot svg.avatar{width:100%;height:100%;image-rendering:pixelated;filter:drop-shadow(2px 3px #03111b80)}
+.roster-agent .roster-text{position:absolute;top:113px;left:50%;transform:translateX(-50%);width:70px;padding:3px;background:#091a27db;border:1px solid #37566b;box-shadow:0 2px #06101b;z-index:2}
+.roster-text strong{font:600 10px 'Segoe UI',sans-serif;color:var(--agent);line-height:1.25}.roster-text .roster-state{font:9px Consolas,monospace;color:#d6e2df;margin-top:3px}.roster-text small{display:none}.roster-agent:hover .roster-text,.roster-agent:focus-visible .roster-text{border-color:var(--agent)}
+.roster-agent.active .roster-text{border-bottom:2px solid var(--agent)}.roster-agent.away .mini-robot{visibility:hidden}.roster-agent.away .roster-text{border-style:dashed;color:#9ab6c7}.roster-agent.away:before{content:'↗';position:absolute;top:20%;left:42%;font:28px Consolas;color:#83c5dd;opacity:.7}
+.roster-agent[hidden]{display:none!important}
+.holding-controls{display:flex;align-items:center;gap:5px;padding:4px 8px;margin-right:auto;font:9px Consolas;color:#d4ddd8;image-rendering:auto}.holding-controls button{background:#153044;border:1px solid #416477;color:#c3dce4;cursor:pointer}.holding-controls button:disabled{opacity:.3;cursor:default}.holding-controls #holding-overflow{color:#d8bd86;margin-left:5px}
+.floor{min-height:310px;background:#1a2a3c url('../assets/classic-arcade/arena-room.png') center/100% 100% no-repeat;isolation:isolate;image-rendering:pixelated}
+.gridfloor,.floor:after{display:none}.agent-layer{z-index:2;pointer-events:none}.agent-layer .actor{pointer-events:auto}.floorhint{bottom:7px;color:#93a9b9;font-size:8px;letter-spacing:1.5px;text-shadow:0 2px #071421}
+.empty-floor{z-index:1;inset:54% 8% auto 37%;padding:18px;color:#c1cdd2;background:#0b1a288c;border:1px solid #58758c66;border-radius:3px;font:12px Consolas;backdrop-filter:blur(2px)}
+.door-threshold{position:absolute;left:85.8%;top:25.2%;width:1px;height:1px;pointer-events:none}
+.actor{width:130px;height:150px;display:block;transform:translate(-50%,-111px) scale(var(--depth,1));transform-origin:50% 111px;z-index:3;cursor:pointer;transition:left .65s ease,top .65s ease,opacity .2s;isolation:isolate}
+.actor svg.avatar{position:absolute;top:35px;left:33px;width:64px;height:80px;overflow:visible;filter:drop-shadow(2px 4px 1px #03111ba0);image-rendering:pixelated}
+.actor-name{position:absolute;top:113px;left:50%;transform:translateX(-50%);font:600 11px 'Segoe UI',sans-serif;color:var(--agent);background:#081b28ed;border:1px solid #34526a;padding:3px 7px;max-width:142px;text-shadow:0 1px #000;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.actor-state{position:absolute;top:0;left:50%;transform:translateX(-50%);max-width:150px;white-space:nowrap;font:600 10px 'Segoe UI',sans-serif;background:#0b2636f2;color:#d9f0ed;border:1px solid var(--agent);padding:4px 8px;box-shadow:0 2px #071421}
+.actor-state:after{content:'';position:absolute;bottom:-4px;left:calc(50% - 3px);width:5px;height:4px;background:var(--agent)}
+.actor-host{position:absolute;top:136px;left:50%;transform:translateX(-50%);font:9px Consolas;color:#b5c8d1;background:#091b28d9;padding:2px 5px;max-width:142px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.actor:focus-visible{outline:1px dashed var(--agent);outline-offset:3px}.actor.completed .actor-state{color:#bceaa0;border-color:#9cce80}.actor.failed .actor-state{color:#ffb9a5;border-color:#e89980}
+.work-prop{display:none;position:absolute;top:81px;left:55%;width:44px;height:30px;transform:skewY(-5deg);background:#0b293d;border:3px solid #326783;box-shadow:3px 3px #071421,-1px -1px #69b5c6;z-index:5;pointer-events:none}
+.work-prop i{display:block;margin:4px 5px;height:2px;background:var(--agent);width:24px}.work-prop i:nth-child(2){width:17px}.work-prop i:nth-child(3){width:21px}
+.actor.executing .work-prop{display:block}.actor.act-evaluation .work-prop{transform:rotate(-8deg);border-color:#ab9373;background:#dcc89b}.actor.act-evaluation .work-prop i{background:#526473}
+.actor.act-validation .work-prop,.actor.act-review .work-prop{height:37px;width:29px;left:59%;top:75px;background:#e1d9b8;border-color:#aa9876}.actor.act-validation .work-prop i,.actor.act-review .work-prop i{background:#4c7d72;width:15px}
+.actor.act-retrieval .work-prop{width:31px;height:32px;background:#b69359;border-color:#e1bc77}.actor.act-retrieval .work-prop i{background:#efd699;width:19px}.actor.act-tool_use .work-prop{border:0;box-shadow:none;background:none;transform:rotate(-30deg);width:29px}.actor.act-tool_use .work-prop:before{content:'⚒';color:#a6cfdb;font-size:36px}.actor.act-tool_use .work-prop i{display:none}
+.actor.act-error_handling .work-prop{border-color:#f0b068}.actor.act-error_handling .work-prop i{background:#f0b068}.actor.act-triage .work-prop{box-shadow:4px -4px #728f9b,7px -7px #243d53}.actor.act-handoff .work-prop{display:none}
+/* Override the legacy template's broad path styling. Explicit pixel layers preserve the rig. */
+.avatar *{stroke:none!important}.avatar .ink{fill:#071421!important}.avatar .shell{fill:var(--agent,#20c9cd)!important}.avatar .shade{fill:color-mix(in srgb,var(--agent,#20c9cd) 57%,#071421)!important}.avatar .shine{fill:color-mix(in srgb,var(--agent,#20c9cd) 45%,#e1fff3)!important}
+.avatar .boot{fill:#bad9dc!important}.avatar .glove{fill:#264d5c!important}.avatar .visor-edge{fill:color-mix(in srgb,var(--agent,#20c9cd) 38%,#123147)!important}.avatar .face{fill:#071c2b!important}.avatar .face-glint{fill:#153d4c!important}.avatar .screen{fill:#143744!important}
+.avatar .arm path{stroke:none!important;stroke-width:0!important}.avatar .arm .ink{fill:#071421!important}.avatar .arm .shell{fill:var(--agent,#20c9cd)!important}.avatar .arm .shine{fill:color-mix(in srgb,var(--agent,#20c9cd) 45%,#e1fff3)!important}.avatar .arm .glove{fill:#264d5c!important}
+.avatar .head{transform-origin:32px 37px;transform-box:view-box}.avatar .torso{transform-origin:32px 59px}.avatar .gaze{transform-origin:32px 25px;transform-box:view-box}
+.avatar .seated-feet,.mini-robot .avatar .seated-feet{display:none}.mini-robot .avatar .feet{display:block;transform-origin:32px 58px;transform-box:view-box}
+.mini-robot .avatar .left-arm,.mini-robot .avatar .right-arm{transform:none;transform-origin:top center}
+.actor.walking .work-prop{display:none}.actor.walking .avatar{transform:scaleX(var(--facing,1))}
+#transit-layer .walker{position:fixed;width:64px;height:80px;display:block;transform:translate(-50%,-95%);transform-origin:50% 95%;transition:none;z-index:25;pointer-events:none}
+#transit-layer .walker svg.avatar{position:static;width:64px;height:80px;display:block}
+.awaiting-walker{visibility:hidden!important}.actor.turn-left svg.avatar{transform:scaleX(-1)}
+/* Idle gestures occur in finite, independently scheduled bursts, never constant bobbing. */
+.roster-agent.idle-look .head{animation:idle-look 2.6s steps(4,end) both}.roster-agent.idle-blink .gaze{animation:idle-blink 1.8s steps(1,end) both}.roster-agent.idle-stretch .left-arm{animation:idle-stretch-left 3.6s steps(5,end) both}.roster-agent.idle-stretch .right-arm{animation:idle-stretch 3.6s steps(5,end) both}.roster-agent.idle-settle .torso{animation:idle-settle 2.4s steps(4,end) both}
+.roster-agent.idle-inspect .right-arm{animation:idle-inspect 3.2s steps(4,end) both}.roster-agent.idle-polish .left-arm{animation:idle-polish 3s steps(4,end) both}.roster-agent.idle-watch .head{animation:idle-watch 2.8s steps(4,end) both}.roster-agent.idle-ankles .feet{animation:idle-ankles 3.4s steps(4,end) both}
+.roster-agent.waiting .head,.roster-agent.queued .head{transform:rotate(4deg)}.roster-agent.wait-human .head{transform:rotate(-7deg)}
+.roster-agent.speaking .right-arm{animation:peer-gesture .8s steps(4,end) 2}.actor.speaking .right-arm{animation:peer-gesture .8s steps(4,end) 2}.actor.listening .head,.roster-agent.listening .head{animation:peer-listen 1.4s steps(3,end) 1}
+.actor.speaking .speech,.actor.listening .speech{display:none} /* badges carry event-derived labels; no invented dialogue */
+.peer-tag{position:absolute;top:30px;left:50%;transform:translateX(-50%);background:#0d2030;color:#efc485;border:1px solid #c39352;white-space:nowrap;padding:3px 6px;font:9px Consolas;z-index:9;pointer-events:none}.roster-agent .peer-tag{top:0}
+.packet-route{position:fixed;height:0;border-top:2px dashed #efc17b;transform-origin:0 0;z-index:22;pointer-events:none}.packet-route:after{content:'›';position:absolute;right:-3px;top:-12px;color:#ffe0a0;font:22px Consolas}.handoff-packet{position:fixed;width:18px;height:13px;background:#efc17b;border:2px solid #fff0c2;box-shadow:2px 2px #071421;z-index:23;pointer-events:none}.handoff-packet:after{content:'';position:absolute;inset:0;clip-path:polygon(0 0,50% 60%,100% 0,100% 20%,50% 80%,0 20%);background:#805d35}
+.journey-note{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);padding:7px 12px;background:#0a1d2df2;border:1px solid #bb935f;color:#f2d5a5;font:10px Consolas;z-index:10;max-width:85%;text-align:center;image-rendering:auto}
+.agent-details{position:relative;flex:none;background:#0a1c2a;border-top:1px solid #46738a;padding:10px 35px 10px 14px;max-height:150px;overflow:auto;font-size:11px}.agent-details>strong{color:#8cdde2;margin-right:12px}.agent-details>span{color:#cfdddf}.agent-details dl{display:flex;flex-wrap:wrap;gap:6px 18px;margin:8px 0 0}.agent-details dl>div{min-width:100px;max-width:100%;overflow-wrap:anywhere}.agent-details dt{color:#8daab9;font:9px Consolas;text-transform:uppercase;margin-bottom:3px}.agent-details dd{margin:0;color:#d7e2df}.agent-details button{position:absolute;right:8px;top:7px;background:#163246;color:#bcd5df;border:1px solid #38637a;font-size:17px;cursor:pointer}
+.feed-list{gap:0;padding:0 12px}.event{border-left:0;border-bottom:1px solid #254053;padding:13px 0 13px 13px;position:relative;font-size:11px;line-height:1.5}.event:before{content:'';position:absolute;left:0;top:19px;width:5px;height:5px;background:#67cbd6}.event time{font-size:9px;color:#93adbc}.event strong{color:#a4dfe3}.legend{font-size:9px;line-height:1.5}
+.health{min-height:65px;padding:9px 12px;margin:0 10px 10px;gap:12px}.health-title{font-size:10px;min-width:90px}.resource,.health-stat{padding:5px 7px;min-width:60px;background:#102838}.resource span,.health-stat span{font-size:8px}.resource b,.health-stat b{font-size:11px}.models{min-width:100px;font-size:8px}.models div{font-size:9px}
+.zones{height:38px;font-size:10px}.zones #offscreen-count{font-size:9px}.link-banner{z-index:15;font-size:11px}
+body.disconnected .avatar *,body.disconnected .work-prop,.render-stale .avatar *,.render-producer_offline .avatar *{animation-play-state:paused!important}.roster-agent.render-producer_offline,.roster-agent.render-stale{filter:saturate(.25);opacity:.65}
+body.presentation-paused .avatar *{animation-play-state:paused!important}
+@keyframes idle-look{0%,100%{transform:translateX(0)}30%,60%{transform:translateX(3px) rotate(5deg)}}
+@keyframes idle-blink{0%,20%,28%,55%,63%,100%{transform:scaleY(1)}24%,59%{transform:scaleY(.15)}}
+@keyframes idle-stretch{0%,100%{transform:rotate(0)}30%,60%{transform:rotate(-60deg)}}
+@keyframes idle-stretch-left{0%,100%{transform:rotate(0)}30%,60%{transform:rotate(60deg)}}
+@keyframes idle-settle{0%,100%{transform:rotate(0)}35%{transform:rotate(4deg)}65%{transform:rotate(-3deg)}}
+@keyframes idle-inspect{0%,100%{transform:rotate(0)}35%,70%{transform:rotate(95deg)}}
+@keyframes idle-polish{0%,100%{transform:rotate(0)}25%,65%{transform:rotate(-55deg)}45%,80%{transform:rotate(-42deg)}}
+@keyframes idle-watch{0%,100%{transform:rotate(0)}35%,65%{transform:rotate(-6deg) translateX(-2px)}}
+@keyframes idle-ankles{0%,100%{transform:translateX(0)}40%,70%{transform:translateX(3px)}}
+@keyframes peer-gesture{0%,100%{transform:rotate(0)}40%{transform:rotate(-55deg)}70%{transform:rotate(-35deg)}}
+@keyframes peer-listen{0%,100%{transform:rotate(0)}40%{transform:rotate(7deg)}70%{transform:rotate(2deg)}}
+@media(max-width:1450px){.layout{grid-template-columns:minmax(560px,1fr) minmax(210px,21%)}.brand{font-size:21px}.brand span{font-size:9px}.node{padding-left:15px}.node strong{font-size:13px}.health{gap:7px}.health-title{min-width:75px}.health-stat,.resource{min-width:51px}.actor{width:130px}}
+@media(max-height:820px){.mast{height:56px}.toolbar{height:38px}.layout{padding:8px;gap:8px}.health{min-height:55px;margin-bottom:8px;padding:6px 9px}.panel-title{height:33px;padding:8px 10px}.floor{min-height:270px}.actor-state{font-size:9px}.work-prop{top:78px}.actor-host{font-size:8px}.roster .hint{padding:0}.roster-text strong{font-size:9px}.roster-text .roster-state{font-size:8px}.node small{font-size:9px}}
+@media(max-width:1100px){body{overflow:auto}.layout{grid-template-columns:minmax(560px,1fr);grid-template-rows:560px 220px;flex:none;min-height:800px}.feed{grid-column:1}.feed-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}.health{flex-wrap:wrap}.node{display:none}}
+@media(max-width:760px){.layout{display:flex;flex-direction:column}.arena{height:570px}.feed{height:250px}.mast{height:auto;min-height:70px}.toolbar{height:auto}.roster .hint{display:none}.holding-controls{font-size:8px}}
+/* Classic Refined arm rig. Arms turn at the shoulder joint (view-box units of the 64x80 rig) in every
+   context: standing, working and walking. On this front-facing rig a positive turn moves the left arm
+   outward and the right arm inward, so each action is signed per arm. Turns stay small enough that the
+   blocky arm keeps overlapping the torso instead of swinging free of it. */
+.avatar g.arm.left-arm{transform-box:view-box;transform-origin:18px 40px}
+.avatar g.arm.right-arm{transform-box:view-box;transform-origin:46px 40px}
+.actor.act-triage .avatar .right-arm{animation:cr-sort .8s steps(2,end) infinite}
+.actor.act-retrieval .avatar .left-arm{animation:none}
+.actor.act-retrieval .avatar .right-arm{animation:cr-reach 1.1s steps(3,end) infinite}
+.actor.act-evaluation .avatar .right-arm{animation:cr-chin 1.8s steps(2,end) infinite}
+.actor.act-validation .avatar .left-arm{transform:rotate(-45deg)}
+.actor.act-validation .avatar .right-arm{animation:cr-tap .5s steps(2,end) infinite}
+.actor.act-review .avatar .left-arm{animation:cr-page-left 1.2s steps(2,end) infinite}
+.actor.act-review .avatar .right-arm{animation:cr-page-right 1.2s steps(2,end) infinite}
+.actor.act-code_generation .avatar .left-arm,.actor.executing:not([class*=" act-"]) .avatar .left-arm{animation:cr-type-left .36s steps(2,end) infinite}
+.actor.act-code_generation .avatar .right-arm,.actor.executing:not([class*=" act-"]) .avatar .right-arm{animation:cr-type-right .36s steps(2,end) infinite}
+.actor.act-testing .avatar .right-arm{animation:cr-press .9s steps(2,end) infinite}
+.actor.act-tool_use .avatar .right-arm{animation:cr-wrench .7s steps(3,end) infinite}
+.actor.act-inference .avatar .left-arm{transform:rotate(-35deg)}
+.actor.act-inference .avatar .right-arm{transform:rotate(35deg)}
+.actor.completed .avatar .left-arm{animation:cr-cheer-left .5s steps(2,end) 3}
+.actor.completed .avatar .right-arm{animation:cr-cheer-right .5s steps(2,end) 3}
+.actor.failed .avatar .left-arm{transform:rotate(-6deg)}
+.actor.failed .avatar .right-arm{transform:rotate(6deg)}
+@keyframes cr-sort{0%,100%{transform:rotate(15deg)}50%{transform:rotate(40deg)}}
+@keyframes cr-reach{0%,100%{transform:rotate(0)}50%{transform:rotate(-65deg)}}
+@keyframes cr-chin{0%,100%{transform:rotate(105deg)}50%{transform:rotate(115deg)}}
+@keyframes cr-tap{0%,100%{transform:rotate(30deg)}50%{transform:rotate(48deg)}}
+@keyframes cr-page-left{0%,100%{transform:rotate(-15deg)}50%{transform:rotate(-40deg)}}
+@keyframes cr-page-right{0%,100%{transform:rotate(40deg)}50%{transform:rotate(15deg)}}
+@keyframes cr-type-left{0%,100%{transform:rotate(-40deg)}50%{transform:rotate(-30deg)}}
+@keyframes cr-type-right{0%,100%{transform:rotate(30deg)}50%{transform:rotate(40deg)}}
+@keyframes cr-press{0%,100%{transform:rotate(20deg)}50%{transform:rotate(50deg)}}
+@keyframes cr-wrench{0%,100%{transform:rotate(30deg)}50%{transform:rotate(60deg)}}
+@keyframes cr-cheer-left{50%{transform:rotate(45deg)}}
+@keyframes cr-cheer-right{50%{transform:rotate(-45deg)}}
+@media(prefers-reduced-motion:reduce){.avatar *,.work-prop{animation:none!important}.actor,.walker{transition:none!important}.handoff-packet{display:none}.packet-route{border-top-style:solid}}

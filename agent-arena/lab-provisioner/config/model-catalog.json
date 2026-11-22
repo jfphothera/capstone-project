@@ -1,0 +1,5773 @@
+{
+ "schema": "agent-arena.model-catalog/2",
+ "imported_at": "2026-11-07T08:51:45",
+ "source": {
+  "file": "AI_Model_Deployment_and_Storage_Plan_Dependency_Packages.xlsx",
+  "sha256": "e6674425fa1cab15e940d571076480cce5cd72ed0477f247897bc227975ee70e"
+ },
+ "tiers": {
+  "CPU8": {
+   "label": "CPU, 8 GB RAM (Core Ultra 5 235U)",
+   "match": {
+    "kind": "cpu",
+    "ram_gb": [
+     0,
+     12
+    ]
+   },
+   "sheet": "235U 8 GB RAM"
+  },
+  "CPU16": {
+   "label": "CPU, 16 GB RAM (Core Ultra 5 235U)",
+   "match": {
+    "kind": "cpu",
+    "ram_gb": [
+     12,
+     24
+    ]
+   },
+   "sheet": "235U 16 GB RAM"
+  },
+  "CPU32": {
+   "label": "CPU, 32 GB RAM (Core Ultra 5 235U)",
+   "match": {
+    "kind": "cpu",
+    "ram_gb": [
+     24,
+     4096
+    ]
+   },
+   "sheet": "235U 32 GB RAM"
+  },
+  "GPU16": {
+   "label": "GPU, RTX 4060 Ti 16 GB (practical set)",
+   "match": {
+    "kind": "gpu",
+    "vram_gb": [
+     14,
+     20
+    ]
+   },
+   "sheet": "RTX 4060 Ti Practical"
+  },
+  "GPU16-OPT": {
+   "label": "GPU, RTX 4060 Ti 16 GB (borderline, optimized)",
+   "match": {
+    "kind": "gpu",
+    "vram_gb": [
+     14,
+     20
+    ]
+   },
+   "sheet": "RTX 4060 Ti Optimized"
+  },
+  "GPU24": {
+   "label": "GPU, 24 GB (RTX 3090 / 4090, future)",
+   "match": {
+    "kind": "gpu",
+    "vram_gb": [
+     20,
+     4096
+    ]
+   },
+   "sheet": "Future RTX 3090 RTX 4090"
+  }
+ },
+ "models": [
+  {
+   "key": "sentence-transformers/all-MiniLM-L6-v2",
+   "source_model": "sentence-transformers/all-MiniLM-L6-v2",
+   "name": "all-minilm:latest",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "Embeddings",
+   "parameters_b": 0.023,
+   "download_gb": 0.092,
+   "ram_gb": 1.592,
+   "vram_gb": 2.092,
+   "representation": "I64 / F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/tree/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:1b226e2802dbb772b5fc32a58f103ca1804ef7501331012de126ab22f67475ef",
+    "size_bytes": 45960996
+   }
+  },
+  {
+   "key": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+   "source_model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+   "name": "deepseek-r1:14b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 14.77,
+   "download_gb": 8.988,
+   "ram_gb": 15.79,
+   "vram_gb": 12.29,
+   "representation": "Q4_K_M",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-14B-GGUF/tree/7b05b58b41f623e66fc74cd27b35475267b2f3e3",
+   "tiers": {
+    "GPU16": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:c333b7232bdb521236694ffbb5f5a6b11cc45d98e9142c73123b670fca400b09",
+    "size_bytes": 8988112209
+   }
+  },
+  {
+   "key": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+   "source_model": "deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+   "name": "deepseek-r1:8b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 8.03,
+   "download_gb": 4.921,
+   "ram_gb": 11.46,
+   "vram_gb": 7.21,
+   "representation": "Q4_K_M",
+   "license": "mit",
+   "retention": "EXPERIMENTAL",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Llama-8B-GGUF/tree/615f8936e16dfde29dcc00be71145d4d5ce8ed53",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:6995872bfe4c521a67b32da386cd21d5c6e819b6e0d62f79f64ec83be99f5763",
+    "size_bytes": 5225376047
+   }
+  },
+  {
+   "key": "google/embeddinggemma-300m",
+   "source_model": "google/embeddinggemma-300m",
+   "name": "embeddinggemma:latest",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "Embeddings",
+   "parameters_b": 0.303,
+   "download_gb": 1.27,
+   "ram_gb": 2.77,
+   "vram_gb": 3.27,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "gemma",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/google/embeddinggemma-300m/tree/57c266a740f537b4dc058e1b0cda161fd15afa75",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:85462619ee721b466c5927d109d4cb765861907d5417b9109caebc4e614679f1",
+    "size_bytes": 621875917
+   }
+  },
+  {
+   "key": "google/gemma-3-12b-it",
+   "source_model": "google/gemma-3-12b-it",
+   "name": "gemma3:12b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 12.187,
+   "download_gb": 8.155,
+   "ram_gb": 14.9,
+   "vram_gb": 11.4,
+   "representation": "Q4_K_M",
+   "license": "gemma",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/gemma-3-12b-it-GGUF/tree/d15e4c7dc21dc55d56bf8549db57a71ad8a2a35d",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:b92b218582c521ba287f38f1d6057dcd3c6cbff036f13cac97b5d861f5e58ec3",
+    "size_bytes": 8164039732
+   }
+  },
+  {
+   "key": "google/gemma-3-1b-it",
+   "source_model": "google/gemma-3-1b-it",
+   "name": "gemma3:1b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 1.0,
+   "download_gb": 0.806,
+   "ram_gb": 7.56,
+   "vram_gb": 3.31,
+   "representation": "Q4_K_M",
+   "license": "gemma",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/gemma-3-1b-it-GGUF/tree/f0b45be0aac41bd6a100a4b5734cad5f67255bfb",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:97558784bdc9175075a72655bf360b15da17df6b3b9e5182af9f8c0c8e58ba7c",
+    "size_bytes": 806067407
+   }
+  },
+  {
+   "key": "google/gemma-3-270m-it",
+   "source_model": "google/gemma-3-270m-it",
+   "name": "gemma3:270m",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 0.268,
+   "download_gb": 0.253,
+   "ram_gb": 7.0,
+   "vram_gb": 2.75,
+   "representation": "Q4_K_M",
+   "license": "gemma",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/gemma-3-270m-it-GGUF/tree/c90975dbd40c0c7b275fefaae758c3415c906238",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:e7d36fb2c3b3293cfe56d55889867a064b3a2b22e98335f2e6e8a387e081d6be",
+    "size_bytes": 291554930
+   }
+  },
+  {
+   "key": "google/gemma-3-4b-it",
+   "source_model": "google/gemma-3-4b-it",
+   "name": "gemma3:4b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 4.3,
+   "download_gb": 3.341,
+   "ram_gb": 10.09,
+   "vram_gb": 5.84,
+   "representation": "Q4_K_M",
+   "license": "gemma",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/gemma-3-4b-it-GGUF/tree/5a3566e716d80f709ed7b79817eaf7733d2a1fce",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:68ceab7e468a31c988b44d5a4984a0e21f58c4f7158c6ce29c1804babac38df7",
+    "size_bytes": 3350272403
+   }
+  },
+  {
+   "key": "google/gemma-4-12B-it-qat-q4_0-gguf",
+   "source_model": "google/gemma-4-12B-it-qat-q4_0-gguf",
+   "name": null,
+   "runtime": "ollama",
+   "name_source": "GGUF, but its repository or quantization is not in the row",
+   "capability": "General",
+   "parameters_b": null,
+   "download_gb": 7.151,
+   "ram_gb": 12.151,
+   "vram_gb": 8.0,
+   "representation": "Published q4_0 source artifact; exact filename in ledger",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-gguf",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "ibm-granite/granite-embedding-30m-english",
+   "source_model": "ibm-granite/granite-embedding-30m-english",
+   "name": "granite-embedding:30m",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "Embeddings",
+   "parameters_b": 0.03,
+   "download_gb": 0.063,
+   "ram_gb": 1.563,
+   "vram_gb": 2.063,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/ibm-granite/granite-embedding-30m-english/tree/9b5b096411652ec1189c68fcfb90d0a82c5b45af",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:eb4c533ba6f7983afdc681a327251a34667340567bb160adfde1a3e07c468ec7",
+    "size_bytes": 62534804
+   }
+  },
+  {
+   "key": "ibm-granite/granite-4.0-h-350m",
+   "source_model": "ibm-granite/granite-4.0-h-350m",
+   "name": "granite4:350m",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 0.34,
+   "download_gb": 0.223,
+   "ram_gb": 6.22,
+   "vram_gb": 1.97,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/ibm-granite/granite-4.0-h-350m-GGUF/tree/a864f823cce6e6048b5752e2816fe7a23987d790",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:5eee845b49c4b72ef9e385463a1e2ea9f6f937e08b019f3bbecec12bc1927221",
+    "size_bytes": 708458314
+   }
+  },
+  {
+   "key": "ibm-granite/granite-4.0-h-micro",
+   "source_model": "ibm-granite/granite-4.0-h-micro",
+   "name": "granite4:3b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 3.191,
+   "download_gb": 1.943,
+   "ram_gb": 7.94,
+   "vram_gb": 3.69,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/ibm-granite/granite-4.0-h-micro-GGUF/tree/dc1dd2585fac18a78001c677d33ef8a7bbb7eb68",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:89962fcc75239ac434cdebceb6b7e0669397f92eaef9c487774b718bc36a3e5f",
+    "size_bytes": 2099521385
+   }
+  },
+  {
+   "key": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+   "source_model": "deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct",
+   "name": "hf.co/bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Coding",
+   "parameters_b": 15.707,
+   "download_gb": 10.364,
+   "ram_gb": 17.27,
+   "vram_gb": 13.77,
+   "representation": "Q4_K_M",
+   "license": "deepseek-license",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/bartowski/DeepSeek-Coder-V2-Lite-Instruct-GGUF/tree/8f248fa2072348f77a8bc37754e470de1f61866e",
+   "tiers": {
+    "GPU16": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:97ed204bf634646924ff9ff846888f6a46b51e45ab8b6fffba161f1c1986cb36",
+    "size_bytes": 10364418068
+   }
+  },
+  {
+   "key": "nvidia/NVIDIA-Nemotron-Nano-9B-v2",
+   "source_model": "nvidia/NVIDIA-Nemotron-Nano-9B-v2",
+   "name": "hf.co/bartowski/nvidia_NVIDIA-Nemotron-Nano-9B-v2-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 8.888,
+   "download_gb": 6.526,
+   "ram_gb": 13.47,
+   "vram_gb": 9.22,
+   "representation": "Q4_K_M",
+   "license": "nvidia-open-model-license",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/bartowski/nvidia_NVIDIA-Nemotron-Nano-9B-v2-GGUF/tree/b2daccafb3d123ea94653720a0db1f5db9c698ff",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:b1066467b580f048ef2b3f15890c78f3a1907c8a283f80c6933bc4836aa66ebe",
+    "size_bytes": 6525630088
+   }
+  },
+  {
+   "key": "Qwen/Qwen2.5-Math-7B-Instruct",
+   "source_model": "Qwen/Qwen2.5-Math-7B-Instruct",
+   "name": "hf.co/bartowski/Qwen2.5-Math-7B-Instruct-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Specialized",
+   "parameters_b": 7.616,
+   "download_gb": 4.683,
+   "ram_gb": 10.92,
+   "vram_gb": 6.67,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/bartowski/Qwen2.5-Math-7B-Instruct-GGUF/tree/22e2c9c42470193b2b643636564765c84bcb06cb",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:6556326c8f303d19bc8225bf0521ce9524798893f2ae7075c845b05fb1961808",
+    "size_bytes": 4683076323
+   }
+  },
+  {
+   "key": "defog/sqlcoder-7b-2",
+   "source_model": "defog/sqlcoder-7b-2",
+   "name": "hf.co/defog/sqlcoder-7b-2:Q5_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Coding",
+   "parameters_b": 6.739,
+   "download_gb": 4.783,
+   "ram_gb": 12.93,
+   "vram_gb": 8.68,
+   "representation": "Q5_K_M",
+   "license": "cc-by-sa-4.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/defog/sqlcoder-7b-2/tree/7e5b6f7981c0aa7d143f6bec6fa26625bdfcbe66",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:8412599a099c0921865df7fb55f970d4345ca32a8271c63ca207b06aa5dedc2c",
+    "size_bytes": 4783256692
+   }
+  },
+  {
+   "key": "ibm-granite/granite-4.0-h-tiny",
+   "source_model": "ibm-granite/granite-4.0-h-tiny",
+   "name": "hf.co/ibm-granite/granite-4.0-h-tiny-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 6.939,
+   "download_gb": 4.231,
+   "ram_gb": 10.23,
+   "vram_gb": 5.98,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/ibm-granite/granite-4.0-h-tiny-GGUF/tree/08d5a8a9741dd5c1a95d2d39e25253226aa1464e",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:bfd835fe7e6e4dbab77419e8e5ac231e67682e294f34c811c4c0b698e0886dfb",
+    "size_bytes": 4230983936
+   }
+  },
+  {
+   "key": "LiquidAI/LFM2-2.6B",
+   "source_model": "LiquidAI/LFM2-2.6B",
+   "name": "hf.co/LiquidAI/LFM2-2.6B-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 2.569,
+   "download_gb": 1.564,
+   "ram_gb": 7.63,
+   "vram_gb": 3.38,
+   "representation": "Q4_K_M",
+   "license": "lfm1.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/LiquidAI/LFM2-2.6B-GGUF/tree/a759abdc5955d4ca97763e5cb7ff3940589ba898",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:8becfb8a8aa1d658653838742225bce939760254a19d24362ef497c538c1159f",
+    "size_bytes": 1563680317
+   }
+  },
+  {
+   "key": "LiquidAI/LFM2.5-1.2B-Instruct",
+   "source_model": "LiquidAI/LFM2.5-1.2B-Instruct",
+   "name": "hf.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 1.17,
+   "download_gb": 0.731,
+   "ram_gb": 6.78,
+   "vram_gb": 2.53,
+   "representation": "Q4_K_M",
+   "license": "lfm1.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/LiquidAI/LFM2.5-1.2B-Instruct-GGUF/tree/8ed288026e23958ad9dfa92d53ed773a8eee7125",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:5791ac70d52d5f30f115beed78283c13f5715b262bd33da417f545b7259fb1e2",
+    "size_bytes": 730906680
+   }
+  },
+  {
+   "key": "mistralai/Ministral-3-14B-Instruct-2512",
+   "source_model": "mistralai/Ministral-3-14B-Instruct-2512",
+   "name": "hf.co/mistralai/Ministral-3-14B-Instruct-2512-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 13.945,
+   "download_gb": 9.119,
+   "ram_gb": 15.79,
+   "vram_gb": 12.29,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/mistralai/Ministral-3-14B-Instruct-2512-GGUF/tree/74fac473c43357d7fb2671713608183cc72496d0",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:95f9443411f11b684b40c0a091cd8d7e8f76571bc667a39b19294a5973d6a313",
+    "size_bytes": 9118852610
+   }
+  },
+  {
+   "key": "mistralai/Ministral-3-3B-Instruct-2512",
+   "source_model": "mistralai/Ministral-3-3B-Instruct-2512",
+   "name": "hf.co/mistralai/Ministral-3-3B-Instruct-2512-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 3.849,
+   "download_gb": 2.989,
+   "ram_gb": 9.42,
+   "vram_gb": 5.17,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/mistralai/Ministral-3-3B-Instruct-2512-GGUF/tree/eb599d408350ea2bb60452cb86be7c7b2fc28227",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:24f703ec82e5db4a98934b6b006771dda599bc76e7d595adec067f1822dc6864",
+    "size_bytes": 2988525666
+   }
+  },
+  {
+   "key": "mistralai/Ministral-3-8B-Instruct-2512",
+   "source_model": "mistralai/Ministral-3-8B-Instruct-2512",
+   "name": "hf.co/mistralai/Ministral-3-8B-Instruct-2512-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 8.918,
+   "download_gb": 6.057,
+   "ram_gb": 12.63,
+   "vram_gb": 8.38,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512-GGUF/tree/0102285ad796bd99af90f58de616092e5630e970",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:e8294492472089284eff74350fbd8f076baee56577a125dd6f32205feba144e8",
+    "size_bytes": 6057195873
+   }
+  },
+  {
+   "key": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+   "source_model": "nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16",
+   "name": "hf.co/nvidia/NVIDIA-Nemotron-3-Nano-4B-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 3.974,
+   "download_gb": 2.837,
+   "ram_gb": 9.54,
+   "vram_gb": 5.29,
+   "representation": "Q4_K_M",
+   "license": "nvidia-nemotron-open-model-license",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-4B-GGUF/tree/ba223d14e45525f7fae81db77ea8cabeb2fc6c25",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "NO",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:028e6cfe3511ecfd9f3357986b706afb7183c28d450263b32c5c695f9b6692ee",
+    "size_bytes": 2837073843
+   }
+  },
+  {
+   "key": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+   "source_model": "nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB",
+   "name": "hf.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 7.996,
+   "download_gb": 6.18,
+   "ram_gb": 12.93,
+   "vram_gb": 8.68,
+   "representation": "Published Q4_K_M GGUF",
+   "license": "openmdw-1.1",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/tree/1db54d5b12533ff1bcaa8e42cf4c667988a1f1be",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:139e7d57c1c319f8a244800512f359394c7a4dd6ae52c90bf4c2ae5a4d56cff1",
+    "size_bytes": 6180446974
+   }
+  },
+  {
+   "key": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+   "source_model": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+   "name": "hf.co/Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Coding",
+   "parameters_b": 1.544,
+   "download_gb": 1.117,
+   "ram_gb": 7.23,
+   "vram_gb": 2.98,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF/tree/f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:7d0404c7ddfeae3cde74941fc23f7c50a135011061c4cee6f9b59f8f2669d5ad",
+    "size_bytes": 1117334310
+   }
+  },
+  {
+   "key": "Qwen/Qwen2.5-Coder-32B-Instruct",
+   "source_model": "Qwen/Qwen2.5-Coder-32B-Instruct",
+   "name": "hf.co/Qwen/Qwen2.5-Coder-32B-Instruct-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Coding",
+   "parameters_b": 32.764,
+   "download_gb": 19.851,
+   "ram_gb": 26.93,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct-GGUF/tree/9d3053fce650fe1cdbdb75998c2a87add9d178ef",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": false,
+    "error": "HTTP Error 400: Bad Request"
+   }
+  },
+  {
+   "key": "Qwen/Qwen2.5-Coder-3B-Instruct",
+   "source_model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+   "name": "hf.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Coding",
+   "parameters_b": 3.086,
+   "download_gb": 2.105,
+   "ram_gb": 8.26,
+   "vram_gb": 4.01,
+   "representation": "Q4_K_M",
+   "license": "qwen-research",
+   "retention": "EXPERIMENTAL",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-3B-Instruct-GGUF/tree/f74adce6aa16316c625447af059dbebe4983757c",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:b03f8ef8a96cf6e968852ef5e6e733a4812ae1498ff7b04f82b7cd879555cf78",
+    "size_bytes": 2104942384
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-Coder-Next",
+   "source_model": "Qwen/Qwen3-Coder-Next",
+   "name": "hf.co/Qwen/Qwen3-Coder-Next-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Coding",
+   "parameters_b": 79.674,
+   "download_gb": 48.411,
+   "ram_gb": 54.81,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-Coder-Next-GGUF/tree/b82fb7382639d97b38fa7672e526c760c2fb358e",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   },
+   "verified": {
+    "ok": false,
+    "error": "HTTP Error 400: Bad Request"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-VL-32B-Instruct",
+   "source_model": "Qwen/Qwen3-VL-32B-Instruct",
+   "name": "hf.co/Qwen/Qwen3-VL-32B-Instruct-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Vision",
+   "parameters_b": 33.357,
+   "download_gb": 20.959,
+   "ram_gb": 28.03,
+   "vram_gb": 14.5,
+   "representation": "GGUF Q4_K_M plus projector",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct-GGUF/tree/e3e1fe0c76de7ee58ea65db420c643adfe2e457c",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:0ce23d9dbee7282fd998abcb06f0ba27a3e0cbe7d5b5b3d15d2289df10337fcf",
+    "size_bytes": 20534511527
+   }
+  },
+  {
+   "key": "deepseek-ai/DeepSeek-Prover-V2-7B",
+   "source_model": "deepseek-ai/DeepSeek-Prover-V2-7B",
+   "name": "hf.co/unsloth/DeepSeek-Prover-V2-7B-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Specialized",
+   "parameters_b": 6.91,
+   "download_gb": 4.223,
+   "ram_gb": 12.24,
+   "vram_gb": 7.99,
+   "representation": "Q4_K_M",
+   "license": "Unknown",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/DeepSeek-Prover-V2-7B-GGUF/tree/2d08f12ad68128d5000b83d794dd11d5230b9d2d",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:1553d107316bf488e069ee0ffb9260ef8cdd440933b6c08f6cd82e9aa6485703",
+    "size_bytes": 4223363275
+   }
+  },
+  {
+   "key": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
+   "source_model": "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B",
+   "name": "hf.co/unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 8.191,
+   "download_gb": 5.028,
+   "ram_gb": 11.63,
+   "vram_gb": 7.38,
+   "representation": "Q4_K_M",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/DeepSeek-R1-0528-Qwen3-8B-GGUF/tree/eb48357c179d34dbf515983f798dfb8752a0f261",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:9cbef5ba78ea1bb6bab380f721f8c10fa1d4f62e16851454572c37da0d99be56",
+    "size_bytes": 5027786589
+   }
+  },
+  {
+   "key": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+   "source_model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+   "name": "hf.co/unsloth/DeepSeek-R1-Distill-Qwen-32B-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 32.764,
+   "download_gb": 19.851,
+   "ram_gb": 26.93,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "mit",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/DeepSeek-R1-Distill-Qwen-32B-GGUF/tree/1938d05cc893a60f37be1dc16e7465038f4fca63",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:c626f371d3aa83c831d7342bd91bb5f18061713d0407d84829e7777fa53babc2",
+    "size_bytes": 19851336555
+   }
+  },
+  {
+   "key": "mistralai/Devstral-Small-2-24B-Instruct-2512",
+   "source_model": "mistralai/Devstral-Small-2-24B-Instruct-2512",
+   "name": "hf.co/unsloth/Devstral-Small-2-24B-Instruct-2512-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Coding",
+   "parameters_b": 24.011,
+   "download_gb": 15.213,
+   "ram_gb": 21.88,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/Devstral-Small-2-24B-Instruct-2512-GGUF/tree/6e458b8add42681bfd023de5eab93637694aaf82",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:32873e17995204ff476d4a19d518fbaceaca1f5765a477288f92b832b51a71d8",
+    "size_bytes": 15212501602
+   }
+  },
+  {
+   "key": "google/gemma-4-12B-it",
+   "source_model": "google/gemma-4-12B-it",
+   "name": "hf.co/unsloth/gemma-4-12B-it-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 11.96,
+   "download_gb": 7.297,
+   "ram_gb": 13.9,
+   "vram_gb": 10.4,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/gemma-4-12B-it-GGUF/tree/fc034cfff751157913579611efad8462ac1be606",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:89e70d6532d46faa1c63418a283eff7355d393909b4d16986a6820de439d3081",
+    "size_bytes": 7296978120
+   }
+  },
+  {
+   "key": "google/gemma-4-26B-A4B-it",
+   "source_model": "google/gemma-4-26B-A4B-it",
+   "name": "hf.co/unsloth/gemma-4-26B-A4B-it-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 25.806,
+   "download_gb": 18.141,
+   "ram_gb": 24.52,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF/tree/c099eb48e663fd284577b04978a94ffccb261841",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:b799fb2163479cba2868b004e783758da2d1ebc1ca745227a1ccd8c188a635af",
+    "size_bytes": 18140601352
+   }
+  },
+  {
+   "key": "google/gemma-4-31B-it",
+   "source_model": "google/gemma-4-31B-it",
+   "name": "hf.co/unsloth/gemma-4-31B-it-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 31.273,
+   "download_gb": 19.523,
+   "ram_gb": 27.03,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/gemma-4-31B-it-GGUF/tree/c1ac76e99d5513b141e8adde7288b85c3f9c32ec",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:d239cc2ce229104f90be4a79ba56070828899104de29bbad24d8dd5d732f79ee",
+    "size_bytes": 19522691304
+   }
+  },
+  {
+   "key": "google/gemma-4-E2B-it",
+   "source_model": "google/gemma-4-E2B-it",
+   "name": "hf.co/unsloth/gemma-4-E2B-it-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 5.123,
+   "download_gb": 4.092,
+   "ram_gb": 10.14,
+   "vram_gb": 5.89,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF/tree/0314792d7f1f7e229411f620751375812bb9faf2",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:2de4bc0531d26dbe2f1cd9d990cbd382a838629b4da636b9990997f491823cf0",
+    "size_bytes": 4092393192
+   }
+  },
+  {
+   "key": "google/gemma-4-E4B-it",
+   "source_model": "google/gemma-4-E4B-it",
+   "name": "hf.co/unsloth/gemma-4-E4B-it-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 7.996,
+   "download_gb": 5.968,
+   "ram_gb": 12.06,
+   "vram_gb": 7.81,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/tree/bfc15c382204943c3a8fff0c750b94ae2364d7a3",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:487eacf5e94be5463704e0069adf2f8e6da0d952e43e4232d519918efc6e384f",
+    "size_bytes": 5967545096
+   }
+  },
+  {
+   "key": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+   "source_model": "mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+   "name": "hf.co/unsloth/Mistral-Small-3.2-24B-Instruct-2506-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 24.011,
+   "download_gb": 15.212,
+   "ram_gb": 21.88,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/Mistral-Small-3.2-24B-Instruct-2506-GGUF/tree/b750ec2299225e492f1bd27cab88a0a595fa848f",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:252deb0d1c7d6b498df1e64f372d54cb507620e1d00b02f2d2925178b35dcd8f",
+    "size_bytes": 15211980278
+   }
+  },
+  {
+   "key": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+   "source_model": "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16",
+   "name": "hf.co/unsloth/Nemotron-3-Nano-30B-A3B-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 31.578,
+   "download_gb": 24.574,
+   "ram_gb": 30.79,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "nvidia-nemotron-open-model-license",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/Nemotron-3-Nano-30B-A3B-GGUF/tree/9ad8b366c308f931b2a96b9306f0b41aef9cd405",
+   "tiers": {
+    "GPU16-OPT": "YES",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:c3983b386d40fc3049a85f54b53f8395ad8abb5a7fdcb979a106e88c08d3f3c9",
+    "size_bytes": 24574377053
+   }
+  },
+  {
+   "key": "allenai/OLMo-3-7B-Instruct",
+   "source_model": "allenai/OLMo-3-7B-Instruct",
+   "name": "hf.co/unsloth/OLMo-3-7B-Instruct-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 7.298,
+   "download_gb": 4.472,
+   "ram_gb": 12.62,
+   "vram_gb": 8.37,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/OLMo-3-7B-Instruct-GGUF/tree/a2a9ae53f5a95087616b3f45ca96e9d2631344ee",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:87621b8e4bdf83b1dbed88ce2f2d2cca5f388150c7b6fb7a4fb860d69cad9d1e",
+    "size_bytes": 4471602892
+   }
+  },
+  {
+   "key": "microsoft/phi-4",
+   "source_model": "microsoft/phi-4",
+   "name": "hf.co/unsloth/phi-4-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 14.659,
+   "download_gb": 8.89,
+   "ram_gb": 15.73,
+   "vram_gb": 12.23,
+   "representation": "Q4_K_M",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/phi-4-GGUF/tree/5110b7771e8166d5530e73346a15aea096a8cb99",
+   "tiers": {
+    "GPU16": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:067b464072e6d150a3e6776486d76c6d67413eab8d5ce2f188fa5a5e924187d5",
+    "size_bytes": 8890306990
+   }
+  },
+  {
+   "key": "microsoft/Phi-4-mini-instruct",
+   "source_model": "microsoft/Phi-4-mini-instruct",
+   "name": "hf.co/unsloth/Phi-4-mini-instruct-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 3.836,
+   "download_gb": 2.492,
+   "ram_gb": 9.03,
+   "vram_gb": 4.78,
+   "representation": "Q4_K_M",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/Phi-4-mini-instruct-GGUF/tree/78eb92a46fc37e6b524df991ed9aca9bc6aa7b80",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:951584f2b2d60a922d2a7b82905b4499cdcb1676e94bc7930336b894082d1ce7",
+    "size_bytes": 2491875402
+   }
+  },
+  {
+   "key": "microsoft/Phi-4-mini-reasoning",
+   "source_model": "microsoft/Phi-4-mini-reasoning",
+   "name": "hf.co/unsloth/Phi-4-mini-reasoning-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 3.836,
+   "download_gb": 2.492,
+   "ram_gb": 9.03,
+   "vram_gb": 4.78,
+   "representation": "Q4_K_M",
+   "license": "mit",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/Phi-4-mini-reasoning-GGUF/tree/6b9cfad9419cad66996ad42ebddbff9b34446479",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:8c2c000c2bf76ea927b62564c137ba8f354945fa3c3c49b13704685f19bdbbb7",
+    "size_bytes": 2491876291
+   }
+  },
+  {
+   "key": "microsoft/Phi-4-reasoning-plus",
+   "source_model": "microsoft/Phi-4-reasoning-plus",
+   "name": "hf.co/unsloth/Phi-4-reasoning-plus-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 14.659,
+   "download_gb": 9.053,
+   "ram_gb": 15.89,
+   "vram_gb": 12.39,
+   "representation": "Q4_K_M",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/Phi-4-reasoning-plus-GGUF/tree/80fff8542dc7b88dba725b660beefd80e91e80c9",
+   "tiers": {
+    "GPU16": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:2c1e088bde54683c85a6188052d2525d4235413de9b209f9f07a9b2eb415c80e",
+    "size_bytes": 9053118131
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+   "source_model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+   "name": "hf.co/unsloth/Qwen3-30B-A3B-Instruct-2507-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 30.532,
+   "download_gb": 18.557,
+   "ram_gb": 24.96,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/unsloth/Qwen3-30B-A3B-Instruct-2507-GGUF/tree/eea7b2be5805a5f151f8847ede8e5f9a9284bf77",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:83ce46aac8250b71c9b5363b3e8d27f8abbdd1d12e90defd37be989dbb384319",
+    "size_bytes": 18556688865
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+   "source_model": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
+   "name": "hf.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Coding",
+   "parameters_b": 30.532,
+   "download_gb": 18.557,
+   "ram_gb": 24.96,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF/tree/b17cb02dd882d5b6ab62fc777ad2995f19668350",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:b54e59bb9b5a24a5bddeeeae4434e7346f21921b61c60fab74a23cf76679897f",
+    "size_bytes": 18556691789
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-VL-4B-Instruct",
+   "source_model": "Qwen/Qwen3-VL-4B-Instruct",
+   "name": "hf.co/unsloth/Qwen3-VL-4B-Instruct-GGUF:Q5_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Vision",
+   "parameters_b": 4.438,
+   "download_gb": 3.726,
+   "ram_gb": 10.33,
+   "vram_gb": 6.08,
+   "representation": "GGUF Q5_K_M plus projector",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/unsloth/Qwen3-VL-4B-Instruct-GGUF/tree/00c00da0690c4b14b5539b02c4ea5d7c9102b35e",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "NO",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:4ca6084fe39de3670fbc185d0755c0a904746b139bf2179090ec86ecef0da52c",
+    "size_bytes": 3725696807
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-VL-8B-Instruct",
+   "source_model": "Qwen/Qwen3-VL-8B-Instruct",
+   "name": "hf.co/unsloth/Qwen3-VL-8B-Instruct-GGUF:Q5_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "Vision",
+   "parameters_b": 8.767,
+   "download_gb": 7.01,
+   "ram_gb": 13.61,
+   "vram_gb": 9.36,
+   "representation": "GGUF Q5_K_M plus projector",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/unsloth/Qwen3-VL-8B-Instruct-GGUF/tree/b93a7ee713758252c555be4210c00540df954dc2",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:5f8dead1fd13e39d06d6a37ef12a4b294ba809342ec83e5061c32c0a7e291296",
+    "size_bytes": 7010145543
+   }
+  },
+  {
+   "key": "Qwen/Qwen3.5-27B",
+   "source_model": "Qwen/Qwen3.5-27B",
+   "name": "hf.co/unsloth/Qwen3.5-27B-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 27.781,
+   "download_gb": 17.668,
+   "ram_gb": 24.44,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/unsloth/Qwen3.5-27B-GGUF/tree/3221f178a6b842d04f1fb42f1c413534adcc0a6a",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:e8181bd131aa20dd8bfd18fc3353b4b5d258af08fab5df8416eeda3083433cb5",
+    "size_bytes": 17668420225
+   }
+  },
+  {
+   "key": "Qwen/Qwen3.5-35B-A3B",
+   "source_model": "Qwen/Qwen3.5-35B-A3B",
+   "name": "hf.co/unsloth/Qwen3.5-35B-A3B-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 35.952,
+   "download_gb": 22.915,
+   "ram_gb": 29.5,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/unsloth/Qwen3.5-35B-A3B-GGUF/tree/bc014a17be43adabd7066b7a86075ff935c6a4e2",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:2c318366d22ccb26d4b8b38d0033000e97195ea780e57ae6bf52e1c47520825f",
+    "size_bytes": 22915307304
+   }
+  },
+  {
+   "key": "Qwen/Qwen3.6-27B",
+   "source_model": "Qwen/Qwen3.6-27B",
+   "name": "hf.co/unsloth/Qwen3.6-27B-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 27.781,
+   "download_gb": 17.745,
+   "ram_gb": 24.51,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/unsloth/Qwen3.6-27B-GGUF/tree/82d411acf4a06cfb8d9b073a5211bf410bfc29bf",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:25cf394c8747ebab3f9eaf168868b5db3d7541681bf699a88b2bd81dae582a81",
+    "size_bytes": 17744852626
+   }
+  },
+  {
+   "key": "Qwen/Qwen3.6-35B-A3B",
+   "source_model": "Qwen/Qwen3.6-35B-A3B",
+   "name": "hf.co/unsloth/Qwen3.6-35B-A3B-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 35.952,
+   "download_gb": 23.034,
+   "ram_gb": 29.62,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF/tree/a483e9e6cbd595906af30beda3187c2663a1118c",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:9cc2194291ddc6d28f59055cad55e5ea884f614f048d4ad985b91c12acc8573e",
+    "size_bytes": 23033813563
+   }
+  },
+  {
+   "key": "Qwen/Qwen3.8-27B",
+   "source_model": "Qwen/Qwen3.8-27B",
+   "name": "hf.co/unsloth/Qwen3.8-27B-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 27.781,
+   "download_gb": 17.392,
+   "ram_gb": 24.16,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF/tree/4ca720788d1e01f1bff70c033e0d0028fd02e502",
+   "tiers": {
+    "GPU16-OPT": "NO",
+    "GPU24": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:0d730520eb19c8329549a7b1336af04b585b1a5ee22ecc66811701fb944d7546",
+    "size_bytes": 17392048818
+   }
+  },
+  {
+   "key": "HuggingFaceTB/SmolLM3-3B",
+   "source_model": "HuggingFaceTB/SmolLM3-3B",
+   "name": "hf.co/unsloth/SmolLM3-3B-GGUF:Q4_K_M",
+   "runtime": "ollama",
+   "name_source": "the plan's pinned GGUF file on Hugging Face",
+   "capability": "General",
+   "parameters_b": 3.075,
+   "download_gb": 1.915,
+   "ram_gb": 8.22,
+   "vram_gb": 3.97,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/unsloth/SmolLM3-3B-GGUF/tree/a7bc17204c8a326d6bd6e466e076959eddae2025",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:213d4fcdde22a4ee9d9ef842938cda29198596d749df878d65573fcb6853e80a",
+    "size_bytes": 1915307426
+   }
+  },
+  {
+   "key": "meta-llama/Llama-3.1-8B-Instruct",
+   "source_model": "meta-llama/Llama-3.1-8B-Instruct",
+   "name": "llama3.1:8b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 8.03,
+   "download_gb": 4.921,
+   "ram_gb": 11.67,
+   "vram_gb": 7.42,
+   "representation": "Q4_K_M",
+   "license": "llama3.1",
+   "retention": "EXPERIMENTAL",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/Llama-3.1-8B-Instruct-GGUF/tree/600b0020115fd6b17f0752848fe7b5a1be686bcd",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+    "size_bytes": 4920753328
+   }
+  },
+  {
+   "key": "meta-llama/Llama-3.2-1B-Instruct",
+   "source_model": "meta-llama/Llama-3.2-1B-Instruct",
+   "name": "llama3.2:1b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 1.236,
+   "download_gb": 0.808,
+   "ram_gb": 7.56,
+   "vram_gb": 3.31,
+   "representation": "Q4_K_M",
+   "license": "llama3.2",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/Llama-3.2-1B-Instruct-GGUF/tree/b69aef112e9f895e6f98d7ae0949f72ff09aa401",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:baf6a787fdffd633537aa2eb51cfd54cb93ff08e28040095462bb63daf552878",
+    "size_bytes": 1321098329
+   }
+  },
+  {
+   "key": "meta-llama/Llama-3.2-3B-Instruct",
+   "source_model": "meta-llama/Llama-3.2-3B-Instruct",
+   "name": "llama3.2:3b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 3.213,
+   "download_gb": 2.019,
+   "ram_gb": 8.77,
+   "vram_gb": 4.52,
+   "representation": "Q4_K_M",
+   "license": "llama3.2",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/Llama-3.2-3B-Instruct-GGUF/tree/e7d0997e49c9cb00d88b4c1a6a16aa894b0bbc31",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+    "size_bytes": 2019393189
+   }
+  },
+  {
+   "key": "mixedbread-ai/mxbai-embed-large-v1",
+   "source_model": "mixedbread-ai/mxbai-embed-large-v1",
+   "name": null,
+   "runtime": "ollama",
+   "name_source": "GGUF, but its repository or quantization is not in the row",
+   "capability": "Embeddings",
+   "parameters_b": 0.335,
+   "download_gb": 0.67,
+   "ram_gb": 7.74,
+   "vram_gb": 3.49,
+   "representation": "Published native weights; exact file list below",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/mixedbread-ai/mxbai-embed-large-v1/tree/b33106f585b9ce46904ad7443a3b52b7a63e231c",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "nomic-ai/nomic-embed-text-v1.5",
+   "source_model": "nomic-ai/nomic-embed-text-v1.5",
+   "name": "nomic-embed-text:latest",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "Embeddings",
+   "parameters_b": 0.137,
+   "download_gb": 0.549,
+   "ram_gb": 2.048,
+   "vram_gb": 2.548,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/nomic-ai/nomic-embed-text-v1.5/tree/e9b6763023c676ca8431644204f50c2b100d9aab",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+    "size_bytes": 274302450
+   }
+  },
+  {
+   "key": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
+   "source_model": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
+   "name": null,
+   "runtime": "ollama",
+   "name_source": "GGUF, but its repository or quantization is not in the row",
+   "capability": "General",
+   "parameters_b": 74.0,
+   "download_gb": 23.752,
+   "ram_gb": 30.5,
+   "vram_gb": 14.5,
+   "representation": "native 2-bit GGUF",
+   "license": "openmdw-1.1",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF/tree/e0fecb69cb3e5e4c5e8a056fa2aec98c78e91246",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "openai/gpt-oss-20b",
+   "source_model": "openai/gpt-oss-20b",
+   "name": null,
+   "runtime": "ollama",
+   "name_source": "GGUF, but its repository or quantization is not in the row",
+   "capability": "General",
+   "parameters_b": 20.915,
+   "download_gb": 12.11,
+   "ram_gb": 18.21,
+   "vram_gb": 14.71,
+   "representation": "MXFP4",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/ggml-org/gpt-oss-20b-GGUF/tree/15dcfc7e7c608c6161507211ed43c5b590801b4b",
+   "tiers": {
+    "GPU16": "YES"
+   }
+  },
+  {
+   "key": "Qwen/Qwen2.5-Coder-14B-Instruct",
+   "source_model": "Qwen/Qwen2.5-Coder-14B-Instruct",
+   "name": "qwen2.5-coder:14b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "Coding",
+   "parameters_b": 14.77,
+   "download_gb": 8.988,
+   "ram_gb": 15.79,
+   "vram_gb": 12.29,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct-GGUF/tree/d0a692ef765eefbf2fabb130b3cb2e8917e3d225",
+   "tiers": {
+    "GPU16": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:9ec8897f747e246e970bc5cfdda85d22f1123dc2e3d34978a010a75968716849",
+    "size_bytes": 8988124298
+   }
+  },
+  {
+   "key": "Qwen/Qwen2.5-Coder-7B-Instruct",
+   "source_model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+   "name": "qwen2.5-coder:7b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "Coding",
+   "parameters_b": 7.616,
+   "download_gb": 4.683,
+   "ram_gb": 10.92,
+   "vram_gb": 6.67,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/Qwen/Qwen2.5-Coder-7B-Instruct-GGUF/tree/13fb94bfda8c8cf22497dc57b78f391a9acb426a",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "NO",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+    "size_bytes": 4683087561
+   }
+  },
+  {
+   "key": "Qwen/Qwen2.5-1.5B-Instruct",
+   "source_model": "Qwen/Qwen2.5-1.5B-Instruct",
+   "name": "qwen2.5:1.5b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 1.544,
+   "download_gb": 1.117,
+   "ram_gb": 7.23,
+   "vram_gb": 2.98,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/tree/91cad51170dc346986eccefdc2dd33a9da36ead9",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+    "size_bytes": 986061892
+   }
+  },
+  {
+   "key": "Qwen/Qwen2.5-3B-Instruct",
+   "source_model": "Qwen/Qwen2.5-3B-Instruct",
+   "name": "qwen2.5:3b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 3.086,
+   "download_gb": 2.105,
+   "ram_gb": 8.26,
+   "vram_gb": 4.01,
+   "representation": "Q4_K_M",
+   "license": "qwen-research",
+   "retention": "CORE",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-GGUF/tree/7dabda4d13d513e3e842b20f0d435c732f172cbe",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+    "size_bytes": 1929912432
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-Embedding-0.6B",
+   "source_model": "Qwen/Qwen3-Embedding-0.6B",
+   "name": "qwen3-embedding:0.6b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "Embeddings",
+   "parameters_b": 0.596,
+   "download_gb": 1.207,
+   "ram_gb": 2.707,
+   "vram_gb": 3.207,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-Embedding-0.6B/tree/97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:ac6da0dfba84a81fdbfbaf330198c33cd77c4cdfc53e8bc50eb581914a15621d",
+    "size_bytes": 639150858
+   }
+  },
+  {
+   "key": "Qwen/Qwen3.5-0.8B",
+   "source_model": "Qwen/Qwen3.5-0.8B",
+   "name": "qwen3.5:0.8b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 0.873,
+   "download_gb": 0.738,
+   "ram_gb": 7.29,
+   "vram_gb": 3.04,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/Qwen3.5-0.8B-GGUF/tree/6ab461498e2023f6e3c1baea90a8f0fe38ab64d0",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:de63045f29755d4721c09d54c9b45c2dadb644f4fd7d604d4cac90d96049971c",
+    "size_bytes": 1322069277
+   }
+  },
+  {
+   "key": "Qwen/Qwen3.5-2B",
+   "source_model": "Qwen/Qwen3.5-2B",
+   "name": "qwen3.5:2b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 2.274,
+   "download_gb": 1.949,
+   "ram_gb": 8.5,
+   "vram_gb": 4.25,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/tree/f6d5376be1edb4d416d56da11e5397a961aca8ae",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:0689d44085e06d165161a8a9a1731344278cfb5aade63a3c3dbdb48ab54b130a",
+    "size_bytes": 2683396812
+   }
+  },
+  {
+   "key": "Qwen/Qwen3.5-4B",
+   "source_model": "Qwen/Qwen3.5-4B",
+   "name": "qwen3.5:4b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 4.66,
+   "download_gb": 3.413,
+   "ram_gb": 10.05,
+   "vram_gb": 5.8,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/tree/e87f176479d0855a907a41277aca2f8ee7a09523",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "size_bytes": 3324173934
+   }
+  },
+  {
+   "key": "Qwen/Qwen3.5-9B",
+   "source_model": "Qwen/Qwen3.5-9B",
+   "name": "qwen3.5:9b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 9.653,
+   "download_gb": 6.599,
+   "ram_gb": 13.23,
+   "vram_gb": 8.98,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/Qwen3.5-9B-GGUF/tree/3885219b6810b007914f3a7950a8d1b469d598a5",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:56671c2ab9385f9cfcb404638e32cd62d88e3501d44822208363c010179a3c90",
+    "size_bytes": 6550825550
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-0.6B",
+   "source_model": "Qwen/Qwen3-0.6B",
+   "name": "qwen3:0.6b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 0.752,
+   "download_gb": 0.397,
+   "ram_gb": 6.87,
+   "vram_gb": 2.62,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/Qwen3-0.6B-GGUF/tree/50968a4468ef4233ed78cd7c3de230dd1d61a56b",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "size_bytes": 522653767
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-1.7B",
+   "source_model": "Qwen/Qwen3-1.7B",
+   "name": "qwen3:1.7b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 2.032,
+   "download_gb": 1.107,
+   "ram_gb": 7.58,
+   "vram_gb": 3.33,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/Qwen3-1.7B-GGUF/tree/d7f544eead698dbd1f15126ef60b45a1e1933222",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "size_bytes": 1359293444
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-14B",
+   "source_model": "Qwen/Qwen3-14B",
+   "name": "qwen3:14b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 14.768,
+   "download_gb": 9.002,
+   "ram_gb": 15.67,
+   "vram_gb": 12.17,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-14B-GGUF/tree/530227a7d994db8eca5ab5ced2fb692b614357fd",
+   "tiers": {
+    "GPU16": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+    "size_bytes": 9276198565
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-4B",
+   "source_model": "Qwen/Qwen3-4B",
+   "name": "qwen3:4b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 4.022,
+   "download_gb": 2.497,
+   "ram_gb": 9.1,
+   "vram_gb": 4.85,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-4B-GGUF/tree/bc640142c66e1fdd12af0bd68f40445458f3869b",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+    "size_bytes": 2497293931
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-8B",
+   "source_model": "Qwen/Qwen3-8B",
+   "name": "qwen3:8b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 8.191,
+   "download_gb": 5.028,
+   "ram_gb": 11.63,
+   "vram_gb": 7.38,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-8B-GGUF/tree/7c41481f57cb95916b40956ab2f0b139b296d974",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "size_bytes": 5225388164
+   }
+  },
+  {
+   "key": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+   "source_model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+   "name": "smollm2:1.7b",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 1.711,
+   "download_gb": 1.056,
+   "ram_gb": 7.86,
+   "vram_gb": 3.61,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct-GGUF/tree/2d4a76a30b4af41ecd395c35725ac11688d4cfe4",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:cef4a1e09247f018ca0c482ad4c2ce1474aba5e87f245dacf97f07948d05d8b4",
+    "size_bytes": 1820428533
+   }
+  },
+  {
+   "key": "HuggingFaceTB/SmolLM2-135M-Instruct",
+   "source_model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+   "name": "smollm2:135m",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 0.135,
+   "download_gb": 0.105,
+   "ram_gb": 6.2,
+   "vram_gb": 1.95,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/SmolLM2-135M-Instruct-GGUF/tree/9e6855bc4be717fca1ef21360a1db4b29d5c559a",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:9077fe9d2ae1a4a41a868836b56b8163731a8fe16621397028c2c76f838c6907",
+    "size_bytes": 270898672
+   }
+  },
+  {
+   "key": "HuggingFaceTB/SmolLM2-360M-Instruct",
+   "source_model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+   "name": "smollm2:360m",
+   "runtime": "ollama",
+   "name_source": "the lab's library tag (reported installed)",
+   "capability": "General",
+   "parameters_b": 0.362,
+   "download_gb": 0.271,
+   "ram_gb": 6.44,
+   "vram_gb": 2.19,
+   "representation": "Q4_K_M",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/unsloth/SmolLM2-360M-Instruct-GGUF/tree/391ed11137586e383b1be0fab9acf01d282c2e11",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   },
+   "verified": {
+    "ok": true,
+    "digest": "sha256:297281b699fc51376006233ca400cd664c4f7b80ed88a47ef084f1e4b089803b",
+    "size_bytes": 725566512
+   }
+  },
+  {
+   "key": "ACE-Step/ACE-Step-v1-3.5B",
+   "source_model": "ACE-Step/ACE-Step-v1-3.5B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Audio model",
+   "capability": "Audio",
+   "parameters_b": null,
+   "download_gb": 8.276,
+   "ram_gb": 13.276,
+   "vram_gb": 8.0,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/ACE-Step/ACE-Step-v1-3.5B",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "ACE-Step/Ace-Step1.5",
+   "source_model": "ACE-Step/Ace-Step1.5",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Audio model",
+   "capability": "Audio",
+   "parameters_b": null,
+   "download_gb": 10.092,
+   "ram_gb": 15.092,
+   "vram_gb": 8.0,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/ACE-Step/Ace-Step1.5",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "ai-forever/Real-ESRGAN",
+   "source_model": "ai-forever/Real-ESRGAN",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": null,
+   "download_gb": 0.201,
+   "ram_gb": 4.0,
+   "vram_gb": 4.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "Unknown",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/ai-forever/Real-ESRGAN/tree/8110204ebf8d25c031b66c26c2d1098aa831157e",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "Alibaba-NLP/gte-Qwen2-1.5B-instruct",
+   "source_model": "Alibaba-NLP/gte-Qwen2-1.5B-instruct",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 1.776,
+   "download_gb": 7.117,
+   "ram_gb": 8.617,
+   "vram_gb": null,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/Alibaba-NLP/gte-Qwen2-1.5B-instruct",
+   "tiers": {
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "Alpha-VLLM/Lumina-Image-2.0",
+   "source_model": "Alpha-VLLM/Lumina-Image-2.0",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 2.61,
+   "download_gb": 21.254,
+   "ram_gb": 39.693,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/Alpha-VLLM/Lumina-Image-2.0",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "amazon/chronos-2",
+   "source_model": "amazon/chronos-2",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Chronos",
+   "capability": "Specialized",
+   "parameters_b": 0.119,
+   "download_gb": 0.478,
+   "ram_gb": 3.0,
+   "vram_gb": 3.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/amazon/chronos-2/tree/29ec3766d36d6f73f0696f85560a422f50e8498c",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "amazon/chronos-bolt-small",
+   "source_model": "amazon/chronos-bolt-small",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Chronos",
+   "capability": "Specialized",
+   "parameters_b": 0.048,
+   "download_gb": 0.191,
+   "ram_gb": 2.0,
+   "vram_gb": 2.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/amazon/chronos-bolt-small/tree/772f3d25d38aec6d914c8949dab4462e2d46f5d8",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "BAAI/bge-m3",
+   "source_model": "BAAI/bge-m3",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": null,
+   "download_gb": 2.295,
+   "ram_gb": 5.0,
+   "vram_gb": 4.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "mit",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/BAAI/bge-m3/tree/5617a9f61b028005a4858fdac845db406aefb181",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "BAAI/bge-reranker-v2-m3",
+   "source_model": "BAAI/bge-reranker-v2-m3",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 0.568,
+   "download_gb": 2.293,
+   "ram_gb": 5.0,
+   "vram_gb": 4.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/BAAI/bge-reranker-v2-m3/tree/953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "BAAI/bge-small-en-v1.5",
+   "source_model": "BAAI/bge-small-en-v1.5",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 0.033,
+   "download_gb": 0.135,
+   "ram_gb": 1.0,
+   "vram_gb": 1.0,
+   "representation": "I64 / F32 source weights; runtime dtype specified in recipe",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/BAAI/bge-small-en-v1.5/tree/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "BAAI/OmniGen2",
+   "source_model": "BAAI/OmniGen2",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 3.967,
+   "download_gb": 31.239,
+   "ram_gb": 39.239,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/BAAI/OmniGen2",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "bigcode/starcoder2-3b",
+   "source_model": "bigcode/starcoder2-3b",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Coding",
+   "parameters_b": 3.03,
+   "download_gb": 12.125,
+   "ram_gb": 20.0,
+   "vram_gb": 10.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "bigcode-openrail-m",
+   "retention": "REMOVE",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/bigcode/starcoder2-3b/tree/733247c55e3f73af49ce8e9c7949bf14af205928",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "bigcode/starcoder2-7b",
+   "source_model": "bigcode/starcoder2-7b",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Coding",
+   "parameters_b": 7.174,
+   "download_gb": 14.351,
+   "ram_gb": 25.0,
+   "vram_gb": 14.5,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "bigcode-openrail-m",
+   "retention": "EXPERIMENTAL",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/bigcode/starcoder2-7b/tree/bb9afde76d7945da5745592525db122d4d729eb1",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "black-forest-labs/FLUX.1-Canny-dev",
+   "source_model": "black-forest-labs/FLUX.1-Canny-dev",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 11.902,
+   "download_gb": 43.685,
+   "ram_gb": 51.685,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "flux-1-dev-non-commercial-license",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "black-forest-labs/FLUX.1-Depth-dev",
+   "source_model": "black-forest-labs/FLUX.1-Depth-dev",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 11.902,
+   "download_gb": 43.685,
+   "ram_gb": 51.685,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "flux-1-dev-non-commercial-license",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "black-forest-labs/FLUX.1-dev",
+   "source_model": "black-forest-labs/FLUX.1-dev",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 11.901,
+   "download_gb": 33.746,
+   "ram_gb": 50.0,
+   "vram_gb": 14.5,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "flux-1-dev-non-commercial-license",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/tree/3de623fc3c33e44ffbe2bad470d0f45bccf2eb21",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "black-forest-labs/FLUX.1-Fill-dev",
+   "source_model": "black-forest-labs/FLUX.1-Fill-dev",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 11.902,
+   "download_gb": 33.916,
+   "ram_gb": 41.916,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "flux-1-dev-non-commercial-license",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "black-forest-labs/FLUX.1-Kontext-dev",
+   "source_model": "black-forest-labs/FLUX.1-Kontext-dev",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 11.901,
+   "download_gb": 33.746,
+   "ram_gb": 41.746,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "flux-1-dev-non-commercial-license",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "black-forest-labs/FLUX.1-Redux-dev",
+   "source_model": "black-forest-labs/FLUX.1-Redux-dev",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": null,
+   "download_gb": 34.732,
+   "ram_gb": 16.0,
+   "vram_gb": 14.5,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "flux-1-dev-non-commercial-license",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "black-forest-labs/FLUX.1-schnell",
+   "source_model": "black-forest-labs/FLUX.1-schnell",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 11.891,
+   "download_gb": 33.726,
+   "ram_gb": 50.0,
+   "vram_gb": 14.5,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/black-forest-labs/FLUX.1-schnell/tree/741f7c3ce8b383c54771c7003378a50191e9efe9",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "black-forest-labs/FLUX.2-klein-4B",
+   "source_model": "black-forest-labs/FLUX.2-klein-4B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 3.876,
+   "download_gb": 15.98,
+   "ram_gb": 38.0,
+   "vram_gb": 14.5,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-4B/tree/e7b7dc27f91deacad38e78976d1f2b499d76a294",
+   "tiers": {
+    "GPU16": "YES"
+   }
+  },
+  {
+   "key": "black-forest-labs/FLUX.2-klein-9B",
+   "source_model": "black-forest-labs/FLUX.2-klein-9B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 9.079,
+   "download_gb": 34.723,
+   "ram_gb": 50.0,
+   "vram_gb": 15.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "flux-non-commercial-license",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9B/tree/92196c8e11f7b6cf2b7493e037d8c5345c559216",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "black-forest-labs/FLUX.2-klein-9b-kv",
+   "source_model": "black-forest-labs/FLUX.2-klein-9b-kv",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 9.079,
+   "download_gb": 34.723,
+   "ram_gb": 42.723,
+   "vram_gb": 23.0,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "flux-non-commercial-license",
+   "retention": "FUTURE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-9b-kv",
+   "tiers": {
+    "GPU24": "NO"
+   }
+  },
+  {
+   "key": "black-forest-labs/FLUX.2-klein-base-4B",
+   "source_model": "black-forest-labs/FLUX.2-klein-base-4B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 3.876,
+   "download_gb": 15.98,
+   "ram_gb": 23.98,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-base-4B",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "black-forest-labs/FLUX.2-klein-base-9B",
+   "source_model": "black-forest-labs/FLUX.2-klein-base-9B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 9.079,
+   "download_gb": 34.723,
+   "ram_gb": 42.723,
+   "vram_gb": 23.0,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "flux-non-commercial-license",
+   "retention": "FUTURE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/black-forest-labs/FLUX.2-klein-base-9B",
+   "tiers": {
+    "GPU24": "NO"
+   }
+  },
+  {
+   "key": "briaai/RMBG-2.0",
+   "source_model": "briaai/RMBG-2.0",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.221,
+   "download_gb": 0.885,
+   "ram_gb": 5.0,
+   "vram_gb": 5.0,
+   "representation": "I64 / F32 source weights; runtime dtype specified in recipe",
+   "license": "bria-rmbg-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/briaai/RMBG-2.0/tree/2fd7b4b0f2393ddb39a267fb62df6c010928a6c6",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "ByteDance-Seed/UI-TARS-1.5-7B",
+   "source_model": "ByteDance-Seed/UI-TARS-1.5-7B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 8.292,
+   "download_gb": 33.185,
+   "ram_gb": 39.185,
+   "vram_gb": 23.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/ByteDance-Seed/UI-TARS-1.5-7B/tree/683d002dd99d8f95104d31e70391a39348857f4e",
+   "tiers": {
+    "GPU24": "YES"
+   }
+  },
+  {
+   "key": "ByteDance/LatentSync-1.6",
+   "source_model": "ByteDance/LatentSync-1.6",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Video model",
+   "capability": "Video",
+   "parameters_b": null,
+   "download_gb": 9.992,
+   "ram_gb": 22.0,
+   "vram_gb": 13.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "openrail++",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/ByteDance/LatentSync-1.6/tree/c42c7e6c8e9c213626389fa7d9a3c444b8536353",
+   "tiers": {
+    "GPU16": "YES"
+   }
+  },
+  {
+   "key": "ByteDance/SDXL-Lightning",
+   "source_model": "ByteDance/SDXL-Lightning",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": null,
+   "download_gb": 7.335,
+   "ram_gb": 16.0,
+   "vram_gb": 14.5,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "openrail++",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/ByteDance/SDXL-Lightning",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "coqui/XTTS-v2",
+   "source_model": "coqui/XTTS-v2",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: XTTS",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 2.087,
+   "ram_gb": 8.0,
+   "vram_gb": 6.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "coqui-public-model-license",
+   "retention": "REMOVE",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/coqui/XTTS-v2/tree/6c2b0d75eae4b7047358e3b6bd9325f857d43f77",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "depth-anything/DA3-SMALL",
+   "source_model": "depth-anything/DA3-SMALL",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: DepthAnything3",
+   "capability": "Vision",
+   "parameters_b": 0.034,
+   "download_gb": 0.137,
+   "ram_gb": 5.137,
+   "vram_gb": 3.069,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/depth-anything/DA3-SMALL",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "depth-anything/Depth-Anything-V2-Small-hf",
+   "source_model": "depth-anything/Depth-Anything-V2-Small-hf",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.025,
+   "download_gb": 0.099,
+   "ram_gb": 2.0,
+   "vram_gb": 2.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/depth-anything/Depth-Anything-V2-Small-hf/tree/5426e4f0f36572d16453bbda7a8389317b1bef99",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "diffusers/controlnet-canny-sdxl-1.0",
+   "source_model": "diffusers/controlnet-canny-sdxl-1.0",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 1.251,
+   "download_gb": 11.945,
+   "ram_gb": 24.0,
+   "vram_gb": 14.5,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "openrail++",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/diffusers/controlnet-canny-sdxl-1.0/tree/eb115a19a10d14909256db740ed109532ab1483c",
+   "tiers": {
+    "GPU16": "YES"
+   }
+  },
+  {
+   "key": "diffusers/stable-diffusion-xl-1.0-inpainting-0.1",
+   "source_model": "diffusers/stable-diffusion-xl-1.0-inpainting-0.1",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 2.567,
+   "download_gb": 13.879,
+   "ram_gb": 21.879,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "openrail++",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/diffusers/stable-diffusion-xl-1.0-inpainting-0.1",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "distil-whisper/distil-large-v3",
+   "source_model": "distil-whisper/distil-large-v3",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Speech",
+   "parameters_b": 0.756,
+   "download_gb": 1.517,
+   "ram_gb": 6.517,
+   "vram_gb": 4.513,
+   "representation": "Native Safetensors: F16 (publisher metadata); runtime casting is separate",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/distil-whisper/distil-large-v3",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "distil-whisper/distil-large-v3.5",
+   "source_model": "distil-whisper/distil-large-v3.5",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Speech",
+   "parameters_b": 0.756,
+   "download_gb": 3.03,
+   "ram_gb": 8.03,
+   "vram_gb": 4.513,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/distil-whisper/distil-large-v3.5",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "ds4sd/SmolDocling-256M-preview",
+   "source_model": "ds4sd/SmolDocling-256M-preview",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.257,
+   "download_gb": 0.518,
+   "ram_gb": 4.0,
+   "vram_gb": 3.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "cdla-permissive-2.0",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/ds4sd/SmolDocling-256M-preview/tree/ce51f56c4ebe36e0b1c3a55f67b261ba22a50bf8",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "facebook/audiogen-medium",
+   "source_model": "facebook/audiogen-medium",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Audio model",
+   "capability": "Audio",
+   "parameters_b": null,
+   "download_gb": 4.808,
+   "ram_gb": 14.0,
+   "vram_gb": 9.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "cc-by-nc-4.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/facebook/audiogen-medium/tree/1277dd7dfd8fa57a205a70acc5de0ee90804502f",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "facebook/dinov2-base",
+   "source_model": "facebook/dinov2-base",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.087,
+   "download_gb": 0.346,
+   "ram_gb": 3.0,
+   "vram_gb": 3.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/facebook/dinov2-base/tree/f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "facebook/dinov3-vitb16-pretrain-lvd1689m",
+   "source_model": "facebook/dinov3-vitb16-pretrain-lvd1689m",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.086,
+   "download_gb": 0.343,
+   "ram_gb": 5.343,
+   "vram_gb": 3.171,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "dinov3-license",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/facebook/dinov3-vitb16-pretrain-lvd1689m",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "facebook/esm2_t12_35M_UR50D",
+   "source_model": "facebook/esm2_t12_35M_UR50D",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Specialized",
+   "parameters_b": 0.034,
+   "download_gb": 0.136,
+   "ram_gb": 2.0,
+   "vram_gb": 2.0,
+   "representation": "I64 / F32 source weights; runtime dtype specified in recipe",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/facebook/esm2_t12_35M_UR50D/tree/6fbf070e65b0b7291e7bbcd451118c216cff79d8",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "facebook/musicgen-medium",
+   "source_model": "facebook/musicgen-medium",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Audio model",
+   "capability": "Audio",
+   "parameters_b": null,
+   "download_gb": 8.046,
+   "ram_gb": 24.0,
+   "vram_gb": 14.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "cc-by-nc-4.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/facebook/musicgen-medium/tree/d3bd7b00761b78ad7a8a05145ee31e7832e9916c",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "facebook/musicgen-small",
+   "source_model": "facebook/musicgen-small",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Audio model",
+   "capability": "Audio",
+   "parameters_b": 0.591,
+   "download_gb": 2.368,
+   "ram_gb": 8.0,
+   "vram_gb": 6.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "cc-by-nc-4.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/facebook/musicgen-small/tree/4c8334b02c6ec4e8664a91979669a501ec497792",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "facebook/sam2.1-hiera-large",
+   "source_model": "facebook/sam2.1-hiera-large",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Video model",
+   "capability": "Video",
+   "parameters_b": 0.224,
+   "download_gb": 1.796,
+   "ram_gb": 6.0,
+   "vram_gb": 6.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/facebook/sam2.1-hiera-large/tree/665f8e2ad61cf5f53d65644ff27c8ee525124610",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "facebook/sam2.1-hiera-small",
+   "source_model": "facebook/sam2.1-hiera-small",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: SAM2",
+   "capability": "Vision",
+   "parameters_b": 0.046,
+   "download_gb": 0.369,
+   "ram_gb": 4.0,
+   "vram_gb": 4.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/facebook/sam2.1-hiera-small/tree/ee5bba1d82bb8749febdf90f45e84b687142ba03",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "facebook/sam3",
+   "source_model": "facebook/sam3",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.86,
+   "download_gb": 6.895,
+   "ram_gb": 8.445,
+   "vram_gb": 4.72,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "Unknown",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/facebook/sam3",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "facebook/seamless-m4t-v2-large",
+   "source_model": "facebook/seamless-m4t-v2-large",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Speech",
+   "parameters_b": 2.309,
+   "download_gb": 29.878,
+   "ram_gb": 34.878,
+   "vram_gb": 7.618,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "cc-by-nc-4.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/facebook/seamless-m4t-v2-large",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "facebookresearch/demucs/htdemucs::htdemucs",
+   "source_model": "facebookresearch/demucs/htdemucs — htdemucs",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Audio model",
+   "capability": "Audio",
+   "parameters_b": null,
+   "download_gb": 0.084,
+   "ram_gb": 4.0,
+   "vram_gb": 4.0,
+   "representation": "Official compressed Torch checkpoint; native runtime tensors",
+   "license": "MIT code",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://github.com/facebookresearch/demucs",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "facebookresearch/demucs/htdemucs_6s::htdemucs_6s",
+   "source_model": "facebookresearch/demucs/htdemucs_6s — htdemucs_6s",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Audio model",
+   "capability": "Audio",
+   "parameters_b": null,
+   "download_gb": 0.055,
+   "ram_gb": 4.0,
+   "vram_gb": 4.0,
+   "representation": "Official compressed Torch checkpoint; native runtime tensors",
+   "license": "MIT code",
+   "retention": "EXPERIMENTAL",
+   "quality": "Experimental with documented limitation",
+   "source_url": "https://github.com/facebookresearch/demucs",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "fishaudio/openaudio-s1-mini",
+   "source_model": "fishaudio/openaudio-s1-mini",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Fish Speech",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 3.609,
+   "ram_gb": 8.609,
+   "vram_gb": 8.0,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "cc-by-nc-sa-4.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/fishaudio/openaudio-s1-mini",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "FunAudioLLM/CosyVoice2-0.5B",
+   "source_model": "FunAudioLLM/CosyVoice2-0.5B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: CosyVoice",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 4.57,
+   "ram_gb": 9.57,
+   "vram_gb": 8.0,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/FunAudioLLM/CosyVoice2-0.5B",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "FunAudioLLM/Fun-ASR-Nano-2512",
+   "source_model": "FunAudioLLM/Fun-ASR-Nano-2512",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Speech",
+   "parameters_b": null,
+   "download_gb": 1.988,
+   "ram_gb": 3.488,
+   "vram_gb": null,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/FunAudioLLM/Fun-ASR-Nano-2512",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+   "source_model": "FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: CosyVoice",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 5.427,
+   "ram_gb": 10.427,
+   "vram_gb": 8.0,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/FunAudioLLM/Fun-CosyVoice3-0.5B-2512",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "FunAudioLLM/SenseVoiceSmall",
+   "source_model": "FunAudioLLM/SenseVoiceSmall",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Speech",
+   "parameters_b": null,
+   "download_gb": 0.937,
+   "ram_gb": 2.437,
+   "vram_gb": null,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "model-license",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/FunAudioLLM/SenseVoiceSmall",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "google/embeddinggemma-2",
+   "source_model": "google/embeddinggemma-2",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 0.744,
+   "download_gb": 1.526,
+   "ram_gb": 3.026,
+   "vram_gb": null,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/google/embeddinggemma-2",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "google/medgemma-4b-it",
+   "source_model": "google/medgemma-4b-it",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 4.3,
+   "download_gb": 8.64,
+   "ram_gb": 13.64,
+   "vram_gb": 11.6,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "health-ai-developer-foundations",
+   "retention": "EXPERIMENTAL",
+   "quality": "New / limited independent evidence",
+   "source_url": "https://huggingface.co/google/medgemma-4b-it",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "google/medsiglip-448",
+   "source_model": "google/medsiglip-448",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.878,
+   "download_gb": 3.517,
+   "ram_gb": 8.517,
+   "vram_gb": 4.757,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "health-ai-developer-foundations",
+   "retention": "EXPERIMENTAL",
+   "quality": "New / limited independent evidence",
+   "source_url": "https://huggingface.co/google/medsiglip-448",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "google/mobilenet_v2_1.0_224",
+   "source_model": "google/mobilenet_v2_1.0_224",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Specialized",
+   "parameters_b": 0.004,
+   "download_gb": 0.014,
+   "ram_gb": 0.8,
+   "vram_gb": 1.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "Custom",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/google/mobilenet_v2_1.0_224/tree/75e607b00aeae1297cc89d026a118bce012f5c5a",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "google/siglip2-base-patch16-224",
+   "source_model": "google/siglip2-base-patch16-224",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 0.375,
+   "download_gb": 1.539,
+   "ram_gb": 4.0,
+   "vram_gb": 3.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/google/siglip2-base-patch16-224/tree/75de2d55ec2d0b4efc50b3e9ad70dba96a7b2fa2",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "google/tabfm-1.1.0-pytorch",
+   "source_model": "google/tabfm-1.1.0-pytorch",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: TabFM",
+   "capability": "Specialized",
+   "parameters_b": null,
+   "download_gb": 1.645,
+   "ram_gb": 3.145,
+   "vram_gb": null,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "tabfm-non-commercial-v1.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "New / limited independent evidence",
+   "source_url": "https://huggingface.co/google/tabfm-1.1.0-pytorch",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "google/timesfm-2.5-200m-transformers",
+   "source_model": "google/timesfm-2.5-200m-transformers",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: TimesFM",
+   "capability": "Specialized",
+   "parameters_b": 0.231,
+   "download_gb": 0.925,
+   "ram_gb": 4.0,
+   "vram_gb": 3.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/google/timesfm-2.5-200m-transformers/tree/5a9806b9b291fad9233b5249d88263f1846304d3",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "google/timesfm-3.0-pytorch",
+   "source_model": "google/timesfm-3.0-pytorch",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: TimesFM",
+   "capability": "Specialized",
+   "parameters_b": 0.331,
+   "download_gb": 1.323,
+   "ram_gb": 2.823,
+   "vram_gb": null,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "timesfm-non-commercial-license-v1.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/google/timesfm-3.0-pytorch",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "h94/IP-Adapter",
+   "source_model": "h94/IP-Adapter",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": null,
+   "download_gb": 10.168,
+   "ram_gb": 24.0,
+   "vram_gb": 14.5,
+   "representation": "Published native weights; exact file list below",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/h94/IP-Adapter/tree/018e402774aeeddd60609b4ecdb7e298259dc729",
+   "tiers": {
+    "GPU16": "YES"
+   }
+  },
+  {
+   "key": "hexgrad/Kokoro-82M",
+   "source_model": "hexgrad/Kokoro-82M",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Kokoro",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 0.362,
+   "ram_gb": 1.5,
+   "vram_gb": 0.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/hexgrad/Kokoro-82M/tree/f3ff3571791e39611d31c381e3a41a3af07b4987",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "HiDream-ai/HiDream-I1-Dev",
+   "source_model": "HiDream-ai/HiDream-I1-Dev",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 17.106,
+   "download_gb": 63.255,
+   "ram_gb": 55.185,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "mit",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/HiDream-ai/HiDream-I1-Dev",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "HiDream-ai/HiDream-I1-Full",
+   "source_model": "HiDream-ai/HiDream-I1-Full",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 17.106,
+   "download_gb": 63.255,
+   "ram_gb": 55.185,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: F16 (publisher metadata); runtime casting is separate",
+   "license": "mit",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/HiDream-ai/HiDream-I1-Full",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "HuggingFaceTB/SmolVLM-256M-Instruct",
+   "source_model": "HuggingFaceTB/SmolVLM-256M-Instruct",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.256,
+   "download_gb": 0.518,
+   "ram_gb": 2.018,
+   "vram_gb": null,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/HuggingFaceTB/SmolVLM-256M-Instruct",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "HuggingFaceTB/SmolVLM-500M-Instruct",
+   "source_model": "HuggingFaceTB/SmolVLM-500M-Instruct",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.507,
+   "download_gb": 1.02,
+   "ram_gb": 2.52,
+   "vram_gb": null,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/HuggingFaceTB/SmolVLM-500M-Instruct",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+   "source_model": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 2.247,
+   "download_gb": 8.992,
+   "ram_gb": 15.0,
+   "vram_gb": 9.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-2.2B-Instruct/tree/482adb537c021c86670beed01cd58990d01e72e4",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "ibm-nasa-geospatial/Prithvi-EO-2.0-300M",
+   "source_model": "ibm-nasa-geospatial/Prithvi-EO-2.0-300M",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Prithvi",
+   "capability": "Specialized",
+   "parameters_b": null,
+   "download_gb": 1.327,
+   "ram_gb": 6.0,
+   "vram_gb": 5.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/ibm-nasa-geospatial/Prithvi-EO-2.0-300M/tree/9eb1b1102806593963daa333bcc491b1c6f8562f",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "jinaai/jina-code-embeddings-0.5b",
+   "source_model": "jinaai/jina-code-embeddings-0.5b",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 0.494,
+   "download_gb": 0.993,
+   "ram_gb": 5.0,
+   "vram_gb": 4.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "cc-by-nc-4.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/jinaai/jina-code-embeddings-0.5b/tree/4db235132dafbe56a8b9c5f59b59795ecf58a4a7",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "jinaai/jina-embeddings-v3",
+   "source_model": "jinaai/jina-embeddings-v3",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 0.572,
+   "download_gb": 1.163,
+   "ram_gb": 5.0,
+   "vram_gb": 4.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "cc-by-nc-4.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/jinaai/jina-embeddings-v3/tree/ab036b023d30b4d1138c4c3bfa9f0c445ab455d6",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "jinaai/jina-embeddings-v4",
+   "source_model": "jinaai/jina-embeddings-v4",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 3.755,
+   "download_gb": 7.886,
+   "ram_gb": 12.886,
+   "vram_gb": 10.51,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "Unknown",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/jinaai/jina-embeddings-v4",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "jinaai/jina-reranker-v3",
+   "source_model": "jinaai/jina-reranker-v3",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 0.597,
+   "download_gb": 1.21,
+   "ram_gb": 6.21,
+   "vram_gb": 4.194,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "cc-by-nc-4.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/jinaai/jina-reranker-v3",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "KlingTeam/LivePortrait",
+   "source_model": "KlingTeam/LivePortrait",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Video model",
+   "capability": "Video",
+   "parameters_b": null,
+   "download_gb": 0.659,
+   "ram_gb": 10.0,
+   "vram_gb": 7.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/KlingTeam/LivePortrait/tree/82a4fa6735ca58432b6ce39301b4b9ee066dea47",
+   "tiers": {
+    "GPU16": "YES"
+   }
+  },
+  {
+   "key": "laion/clap-htsat-unfused",
+   "source_model": "laion/clap-htsat-unfused",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Audio model",
+   "capability": "Audio",
+   "parameters_b": null,
+   "download_gb": 0.618,
+   "ram_gb": 4.0,
+   "vram_gb": 3.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/laion/clap-htsat-unfused/tree/8fa0f1c6d0433df6e97c127f64b2a1d6c0dcda8a",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "latent-consistency/lcm-lora-sdxl",
+   "source_model": "latent-consistency/lcm-lora-sdxl",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": null,
+   "download_gb": 7.335,
+   "ram_gb": 16.0,
+   "vram_gb": 14.5,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "openrail++",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/latent-consistency/lcm-lora-sdxl",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "Lightricks/LTX-2.3",
+   "source_model": "Lightricks/LTX-2.3",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Video model",
+   "capability": "Video",
+   "parameters_b": null,
+   "download_gb": 71.559,
+   "ram_gb": 54.149,
+   "vram_gb": 23.0,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "ltx-2-community-license-agreement",
+   "retention": "CATALOG ONLY",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/Lightricks/LTX-2.3",
+   "tiers": {
+    "GPU24": "NO"
+   }
+  },
+  {
+   "key": "Lightricks/LTX-Video",
+   "source_model": "Lightricks/LTX-Video",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Video model",
+   "capability": "Video",
+   "parameters_b": 1.923,
+   "download_gb": 28.421,
+   "ram_gb": 48.0,
+   "vram_gb": 14.5,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "Custom",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/Lightricks/LTX-Video/tree/8984fa25007f376c1a299016d0957a37a2f797bb",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "lllyasviel/control_v11p_sd15_openpose",
+   "source_model": "lllyasviel/control_v11p_sd15_openpose",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 0.361,
+   "download_gb": 38.093,
+   "ram_gb": 16.0,
+   "vram_gb": 10.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "openrail",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/lllyasviel/control_v11p_sd15_openpose/tree/9ae9f970358db89e211b87c915f9535c6686d5ba",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "lodestones/Chroma",
+   "source_model": "lodestones/Chroma",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": null,
+   "download_gb": 27.493,
+   "ram_gb": 35.493,
+   "vram_gb": 14.5,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/lodestones/Chroma",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+   "source_model": "meta-llama/Llama-3.2-11B-Vision-Instruct",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 10.67,
+   "download_gb": 21.35,
+   "ram_gb": 26.35,
+   "vram_gb": 24.34,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "llama3.2",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "meta-llama/Llama-Guard-3-8B",
+   "source_model": "meta-llama/Llama-Guard-3-8B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Specialized",
+   "parameters_b": 8.03,
+   "download_gb": 16.07,
+   "ram_gb": 22.07,
+   "vram_gb": 21.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "llama3.1",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/meta-llama/Llama-Guard-3-8B/tree/7327bd9f6efbbe6101dc6cc4736302b3cbb6e425",
+   "tiers": {
+    "GPU24": "NO"
+   }
+  },
+  {
+   "key": "meta-llama/Llama-Prompt-Guard-2-22M",
+   "source_model": "meta-llama/Llama-Prompt-Guard-2-22M",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Specialized",
+   "parameters_b": 0.071,
+   "download_gb": 0.292,
+   "ram_gb": 1.792,
+   "vram_gb": null,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "llama4",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-22M",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "meta-llama/Llama-Prompt-Guard-2-86M",
+   "source_model": "meta-llama/Llama-Prompt-Guard-2-86M",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Specialized",
+   "parameters_b": 0.279,
+   "download_gb": 1.132,
+   "ram_gb": 2.632,
+   "vram_gb": null,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "llama4",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/meta-llama/Llama-Prompt-Guard-2-86M",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "microsoft/CodeBERT-base",
+   "source_model": "microsoft/CodeBERT-base",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Specialized",
+   "parameters_b": null,
+   "download_gb": 0.5,
+   "ram_gb": 3.0,
+   "vram_gb": 3.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "Unknown",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/microsoft/CodeBERT-base/tree/3b0952feddeffad0063f274080e3c23d75e7eb39",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "microsoft/Florence-2-base",
+   "source_model": "microsoft/Florence-2-base",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.232,
+   "download_gb": 0.466,
+   "ram_gb": 3.0,
+   "vram_gb": 3.0,
+   "representation": "F16 source weights; runtime dtype specified in recipe",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/microsoft/Florence-2-base/tree/5ca5edf5bd017b9919c05d08aebef5e4c7ac3bac",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "microsoft/Florence-2-large",
+   "source_model": "microsoft/Florence-2-large",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.777,
+   "download_gb": 1.556,
+   "ram_gb": 3.056,
+   "vram_gb": null,
+   "representation": "Native Safetensors: F16 (publisher metadata); runtime casting is separate",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/microsoft/Florence-2-large",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "microsoft/OmniParser-v2.0",
+   "source_model": "microsoft/OmniParser-v2.0",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: OmniParser",
+   "capability": "Vision",
+   "parameters_b": null,
+   "download_gb": 1.502,
+   "ram_gb": 10.0,
+   "vram_gb": 7.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "mit",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/microsoft/OmniParser-v2.0/tree/f55d0750e5b94db2125ef0b45b0fa4a85ddc59b4",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "microsoft/Phi-4-multimodal-instruct",
+   "source_model": "microsoft/Phi-4-multimodal-instruct",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Phi4 Multimodal",
+   "capability": "Vision",
+   "parameters_b": 5.574,
+   "download_gb": 12.856,
+   "ram_gb": 26.0,
+   "vram_gb": 15.5,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "mit",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/microsoft/Phi-4-multimodal-instruct/tree/93f923e1a7727d1c4f446756212d9d3e8fcc5d81",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "microsoft/table-transformer-detection",
+   "source_model": "microsoft/table-transformer-detection",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.029,
+   "download_gb": 0.115,
+   "ram_gb": 2.0,
+   "vram_gb": 2.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/microsoft/table-transformer-detection/tree/2357cbe2b5a5d1c03e54f32764f06058933b65ab",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "microsoft/VibeVoice-ASR",
+   "source_model": "microsoft/VibeVoice-ASR",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: VibeVoice",
+   "capability": "Speech",
+   "parameters_b": 8.674,
+   "download_gb": 17.36,
+   "ram_gb": 22.348,
+   "vram_gb": 20.348,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "mit",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/microsoft/VibeVoice-ASR",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "microsoft/VibeVoice-Realtime-0.5B",
+   "source_model": "microsoft/VibeVoice-Realtime-0.5B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: VibeVoice",
+   "capability": "TTS",
+   "parameters_b": 1.018,
+   "download_gb": 2.047,
+   "ram_gb": 9.0,
+   "vram_gb": 7.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "mit",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/microsoft/VibeVoice-Realtime-0.5B/tree/6bce5f06044837fe6d2c5d7a71a84f0416bd57e4",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "minishlab/potion-base-32M",
+   "source_model": "minishlab/potion-base-32M",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 0.032,
+   "download_gb": 0.131,
+   "ram_gb": 1.631,
+   "vram_gb": null,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/minishlab/potion-base-32M",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "minishlab/potion-base-8M",
+   "source_model": "minishlab/potion-base-8M",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 0.008,
+   "download_gb": 0.031,
+   "ram_gb": 1.531,
+   "vram_gb": null,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/minishlab/potion-base-8M",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "mistralai/Timestral-209M",
+   "source_model": "mistralai/Timestral-209M",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Timestral",
+   "capability": "Specialized",
+   "parameters_b": 0.209,
+   "download_gb": 0.837,
+   "ram_gb": 4.0,
+   "vram_gb": 3.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "Custom",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/mistralai/Timestral-209M/tree/9874d252ab0aae16f7f7c999f98f98d6ad7d8365",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+   "source_model": "mistralai/Voxtral-Mini-4B-Realtime-2602",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Speech",
+   "parameters_b": 4.43,
+   "download_gb": 17.734,
+   "ram_gb": 26.0,
+   "vram_gb": 14.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/mistralai/Voxtral-Mini-4B-Realtime-2602/tree/2769294da9567371363522aac9bbcfdd19447add",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "MIT/ast-finetuned-audioset-10-10-0.4593",
+   "source_model": "MIT/ast-finetuned-audioset-10-10-0.4593",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Audio model",
+   "capability": "Audio",
+   "parameters_b": 0.087,
+   "download_gb": 0.346,
+   "ram_gb": 3.0,
+   "vram_gb": 3.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "bsd-3-clause",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/MIT/ast-finetuned-audioset-10-10-0.4593/tree/f826b80d28226b62986cc218e5cec390b1096902",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "naver/splade-cocondenser-ensembledistil",
+   "source_model": "naver/splade-cocondenser-ensembledistil",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": null,
+   "download_gb": 0.439,
+   "ram_gb": 3.0,
+   "vram_gb": 2.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "cc-by-nc-sa-4.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/naver/splade-cocondenser-ensembledistil/tree/49cf4c7b0db5b870a401ddf5e2669993ef3699c7",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "nomic-ai/nomic-embed-text-v2-moe",
+   "source_model": "nomic-ai/nomic-embed-text-v2-moe",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Nomic MoE",
+   "capability": "Embeddings",
+   "parameters_b": 0.475,
+   "download_gb": 1.924,
+   "ram_gb": 3.423,
+   "vram_gb": null,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/nomic-ai/nomic-embed-text-v2-moe",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "nomic-ai/nomic-embed-vision-v1.5",
+   "source_model": "nomic-ai/nomic-embed-vision-v1.5",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 0.093,
+   "download_gb": 0.373,
+   "ram_gb": 1.872,
+   "vram_gb": null,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/nomic-ai/nomic-embed-vision-v1.5",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "nvidia/diar_streaming_sortformer_4spk-v2.1",
+   "source_model": "nvidia/diar_streaming_sortformer_4spk-v2.1",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: NeMo",
+   "capability": "Speech",
+   "parameters_b": null,
+   "download_gb": 0.471,
+   "ram_gb": 5.471,
+   "vram_gb": 8.0,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "nvidia-open-model-license",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/nvidia/diar_streaming_sortformer_4spk-v2.1",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "nvidia/NV-Embed-v2",
+   "source_model": "nvidia/NV-Embed-v2",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: NVEmbed v2",
+   "capability": "Embeddings",
+   "parameters_b": 7.851,
+   "download_gb": 15.704,
+   "ram_gb": 20.704,
+   "vram_gb": 18.702,
+   "representation": "Native Safetensors: F16 (publisher metadata); runtime casting is separate",
+   "license": "cc-by-nc-4.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/nvidia/NV-Embed-v2",
+   "tiers": {
+    "GPU24": "NO"
+   }
+  },
+  {
+   "key": "nvidia/parakeet-tdt-0.6b-v3",
+   "source_model": "nvidia/parakeet-tdt-0.6b-v3",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Speech",
+   "parameters_b": 0.627,
+   "download_gb": 5.019,
+   "ram_gb": 9.97,
+   "vram_gb": 5.72,
+   "representation": "Published native weights; exact file list below",
+   "license": "cc-by-4.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3/tree/541d1f99c6b0c3cd0b11a95167540bb8edefd82b",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "onnx-community/silero-vad",
+   "source_model": "onnx-community/silero-vad",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: ONNX Runtime",
+   "capability": "Speech",
+   "parameters_b": null,
+   "download_gb": 0.002,
+   "ram_gb": 0.3,
+   "vram_gb": 0.0,
+   "representation": "Published ONNX file; native dtype not independently parsed",
+   "license": "mit",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/onnx-community/silero-vad/tree/e71cae966052b992a7eca6b17738916ce0eca4ec",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "openai/whisper-large-v3",
+   "source_model": "openai/whisper-large-v3",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Speech",
+   "parameters_b": 1.544,
+   "download_gb": 15.44,
+   "ram_gb": 9.0,
+   "vram_gb": 7.0,
+   "representation": "F16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/openai/whisper-large-v3/tree/06f233fe06e710322aca913c1bc4249a0d71fce1",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "openai/whisper-large-v3-turbo",
+   "source_model": "openai/whisper-large-v3-turbo",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Speech",
+   "parameters_b": 0.809,
+   "download_gb": 1.622,
+   "ram_gb": 6.0,
+   "vram_gb": 5.0,
+   "representation": "F16 source weights; runtime dtype specified in recipe",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/openai/whisper-large-v3-turbo/tree/41f01f3fe87f28c78e2fbf8b568835947dd65ed9",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "openbmb/MiniCPM-o-2_6",
+   "source_model": "openbmb/MiniCPM-o-2_6",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: MiniCPM-o 2.6",
+   "capability": "Vision",
+   "parameters_b": 8.675,
+   "download_gb": 17.417,
+   "ram_gb": 23.362,
+   "vram_gb": 23.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/openbmb/MiniCPM-o-2_6/tree/06849bfd36da94da1f5a88fa17e8ba63f08a4c4d",
+   "tiers": {
+    "GPU24": "YES"
+   }
+  },
+  {
+   "key": "PaddlePaddle/PaddleOCR-VL-1.5",
+   "source_model": "PaddlePaddle/PaddleOCR-VL-1.5",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.959,
+   "download_gb": 1.93,
+   "ram_gb": 7.0,
+   "vram_gb": 6.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.5/tree/2a4195faa5e7914c12f2fc601d72c81caf8d2da5",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "PekingU/rtdetr_r50vd",
+   "source_model": "PekingU/rtdetr_r50vd",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 0.043,
+   "download_gb": 0.172,
+   "ram_gb": 2.0,
+   "vram_gb": 2.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/PekingU/rtdetr_r50vd/tree/df939e661d8c52e80608d1ec566561aabd25a4e7",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "Prior-Labs/TabPFN-v2-clf",
+   "source_model": "Prior-Labs/TabPFN-v2-clf",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: TabPFN",
+   "capability": "Specialized",
+   "parameters_b": null,
+   "download_gb": 0.155,
+   "ram_gb": 4.0,
+   "vram_gb": 3.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "priorlabs-1-1",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/tree/275f19d2add9c2c0de38f9ebaded3856599fa2e7",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "ProsusAI/finbert",
+   "source_model": "ProsusAI/finbert",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Specialized",
+   "parameters_b": 0.11,
+   "download_gb": 0.438,
+   "ram_gb": 2.0,
+   "vram_gb": 2.0,
+   "representation": "I64 / F32 source weights; runtime dtype specified in recipe",
+   "license": "cc-by-nc-sa-4.0",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/ProsusAI/finbert/tree/0bc2ac10dda6929bcb1f77ccc43c7ec5c424f031",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "protectai/deberta-v3-base-prompt-injection-v2",
+   "source_model": "protectai/deberta-v3-base-prompt-injection-v2",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Specialized",
+   "parameters_b": 0.184,
+   "download_gb": 0.749,
+   "ram_gb": 4.0,
+   "vram_gb": 3.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/protectai/deberta-v3-base-prompt-injection-v2/tree/90c9989b1a342275dd0d1a95aad283c04e075671",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "pyannote/speaker-diarization-community-1",
+   "source_model": "pyannote/speaker-diarization-community-1 — Complete offline pipeline",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: pyannote",
+   "capability": "Speech",
+   "parameters_b": null,
+   "download_gb": 0.033,
+   "ram_gb": 1.533,
+   "vram_gb": null,
+   "representation": "Complete native segmentation + embedding + PLDA pipeline",
+   "license": "cc-by-4.0",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/pyannote/speaker-diarization-community-1",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen-Image",
+   "source_model": "Qwen/Qwen-Image",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 20.43,
+   "download_gb": 22.704,
+   "ram_gb": 30.704,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M DiT + FP8 encoder + VAE",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen-Image",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen-Image-2.1",
+   "source_model": "Qwen/Qwen-Image-2.1",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 7.115,
+   "download_gb": 17.283,
+   "ram_gb": 25.283,
+   "vram_gb": 14.5,
+   "representation": "Published INT8 ConvRot DiT + INT8 encoder + 2.1 VAE",
+   "license": "qwen-research",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen-Image-2.1",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen-Image-2.1-PE-I2I",
+   "source_model": "Qwen/Qwen-Image-2.1-PE-I2I",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 9.41,
+   "download_gb": 18.84,
+   "ram_gb": 28.0,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "qwen-research",
+   "retention": "EXPERIMENTAL",
+   "quality": "New / limited independent evidence",
+   "source_url": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen-Image-2.1-PE-T2I",
+   "source_model": "Qwen/Qwen-Image-2.1-PE-T2I",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Specialized",
+   "parameters_b": 9.41,
+   "download_gb": 18.84,
+   "ram_gb": 28.0,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "qwen-research",
+   "retention": "EXPERIMENTAL",
+   "quality": "New / limited independent evidence",
+   "source_url": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen-Image-2.1-Turbo",
+   "source_model": "Qwen/Qwen-Image-2.1-Turbo",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 7.115,
+   "download_gb": 17.283,
+   "ram_gb": 25.283,
+   "vram_gb": 14.5,
+   "representation": "Published INT8 ConvRot DiT + INT8 encoder + 2.1 VAE",
+   "license": "qwen-research",
+   "retention": "CORE",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen-Image-2512",
+   "source_model": "Qwen/Qwen-Image-2512",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 20.43,
+   "download_gb": 22.938,
+   "ram_gb": 30.938,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M DiT + published FP8 text encoder + VAE",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen-Image-2512",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen-Image-Edit-2509",
+   "source_model": "Qwen/Qwen-Image-Edit-2509",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 20.43,
+   "download_gb": 22.704,
+   "ram_gb": 30.704,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M DiT + published FP8 text encoder + VAE",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen-Image-Edit-2509",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen-Image-Edit-2511",
+   "source_model": "Qwen/Qwen-Image-Edit-2511",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 20.43,
+   "download_gb": 22.481,
+   "ram_gb": 30.481,
+   "vram_gb": 14.5,
+   "representation": "Q4_K_M DiT + FP8 encoder + VAE",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen-Image-Edit-2511",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-ASR-0.6B",
+   "source_model": "Qwen/Qwen3-ASR-0.6B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Qwen ASR",
+   "capability": "Speech",
+   "parameters_b": 0.938,
+   "download_gb": 1.881,
+   "ram_gb": 6.0,
+   "vram_gb": 5.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B/tree/5eb144179a02acc5e5ba31e748d22b0cf3e303b0",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-ASR-1.7B",
+   "source_model": "Qwen/Qwen3-ASR-1.7B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Qwen ASR",
+   "capability": "Speech",
+   "parameters_b": 2.349,
+   "download_gb": 4.703,
+   "ram_gb": 11.0,
+   "vram_gb": 9.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-ASR-1.7B/tree/7278e1e70fe206f11671096ffdd38061171dd6e5",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-Embedding-4B",
+   "source_model": "Qwen/Qwen3-Embedding-4B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 4.022,
+   "download_gb": 8.06,
+   "ram_gb": 15.0,
+   "vram_gb": 12.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-Embedding-4B/tree/5cf2132abc99cad020ac570b19d031efec650f2b",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-Embedding-8B",
+   "source_model": "Qwen/Qwen3-Embedding-8B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 7.567,
+   "download_gb": 15.151,
+   "ram_gb": 21.151,
+   "vram_gb": 21.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-Embedding-8B/tree/1d8ad4ca9b3dd8059ad90a75d4983776a23d44af",
+   "tiers": {
+    "GPU24": "YES"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-ForcedAligner-0.6B",
+   "source_model": "Qwen/Qwen3-ForcedAligner-0.6B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Qwen ASR",
+   "capability": "Speech",
+   "parameters_b": 0.918,
+   "download_gb": 1.84,
+   "ram_gb": 6.0,
+   "vram_gb": 5.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-ForcedAligner-0.6B/tree/c7cbfc2048c462b0d63a45797104fc9db3ad62b7",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-Reranker-0.6B",
+   "source_model": "Qwen/Qwen3-Reranker-0.6B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 0.596,
+   "download_gb": 1.207,
+   "ram_gb": 4.5,
+   "vram_gb": 4.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-Reranker-0.6B/tree/e61197ed45024b0ed8a2d74b80b4d909f1255473",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-Reranker-4B",
+   "source_model": "Qwen/Qwen3-Reranker-4B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 4.022,
+   "download_gb": 8.06,
+   "ram_gb": 16.0,
+   "vram_gb": 12.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-Reranker-4B/tree/22e683669bc0f0bd69640a1354a6d0aebcfeede5",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice",
+   "source_model": "Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Qwen TTS",
+   "capability": "TTS",
+   "parameters_b": 0.906,
+   "download_gb": 2.498,
+   "ram_gb": 7.0,
+   "vram_gb": 7.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice/tree/85e237c12c027371202489a0ec509ded67b5e4b5",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+   "source_model": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Qwen TTS",
+   "capability": "TTS",
+   "parameters_b": 1.929,
+   "download_gb": 4.544,
+   "ram_gb": 12.0,
+   "vram_gb": 10.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-Base/tree/fd4b254389122332181a7c3db7f27e918eec64e3",
+   "tiers": {
+    "GPU16": "YES"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+   "source_model": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Qwen TTS",
+   "capability": "TTS",
+   "parameters_b": 1.917,
+   "download_gb": 4.52,
+   "ram_gb": 9.52,
+   "vram_gb": 6.833,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+   "source_model": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Qwen TTS",
+   "capability": "TTS",
+   "parameters_b": 1.917,
+   "download_gb": 4.52,
+   "ram_gb": 12.0,
+   "vram_gb": 10.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign/tree/5ecdb67327fd37bb2e042aab12ff7391903235d3",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-VL-Embedding-2B",
+   "source_model": "Qwen/Qwen3-VL-Embedding-2B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 2.128,
+   "download_gb": 4.271,
+   "ram_gb": 9.271,
+   "vram_gb": 7.255,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "CORE",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-VL-Embedding-2B",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-VL-Embedding-8B",
+   "source_model": "Qwen/Qwen3-VL-Embedding-8B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 8.145,
+   "download_gb": 16.306,
+   "ram_gb": 21.306,
+   "vram_gb": 19.29,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "FUTURE",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-VL-Embedding-8B",
+   "tiers": {
+    "GPU24": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-VL-Reranker-2B",
+   "source_model": "Qwen/Qwen3-VL-Reranker-2B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 2.128,
+   "download_gb": 4.271,
+   "ram_gb": 9.271,
+   "vram_gb": 7.255,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-VL-Reranker-2B",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "Qwen/Qwen3-VL-Reranker-8B",
+   "source_model": "Qwen/Qwen3-VL-Reranker-8B",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Embeddings",
+   "parameters_b": 8.767,
+   "download_gb": 17.55,
+   "ram_gb": 22.55,
+   "vram_gb": 20.534,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "FUTURE",
+   "quality": "Current contender",
+   "source_url": "https://huggingface.co/Qwen/Qwen3-VL-Reranker-8B",
+   "tiers": {
+    "GPU24": "NO"
+   }
+  },
+  {
+   "key": "ResembleAI/chatterbox",
+   "source_model": "ResembleAI/chatterbox",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Chatterbox",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 3.229,
+   "ram_gb": 16.0,
+   "vram_gb": 9.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "mit",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/ResembleAI/chatterbox/tree/5bb1f6ee58e50c3b8d408bc82a6d3740c2db6e18",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "ResembleAI/chatterbox-turbo",
+   "source_model": "ResembleAI/chatterbox-turbo",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Chatterbox",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 4.082,
+   "ram_gb": 10.0,
+   "vram_gb": 7.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/ResembleAI/chatterbox-turbo/tree/749d1c1a46eb10492095d68fbcf55691ccf137cd",
+   "tiers": {
+    "GPU16": "YES"
+   }
+  },
+  {
+   "key": "rhasspy/piper-voices",
+   "source_model": "rhasspy/piper-voices",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Piper",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 0.063,
+   "ram_gb": 0.7,
+   "vram_gb": 0.0,
+   "representation": "Published ONNX file; native dtype not independently parsed",
+   "license": "mit",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/rhasspy/piper-voices/tree/e7229f7d33a10e145e109b886d661984201ac3c4",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "rhasspy/piper-voices::de/de_DE/thorsten/medium",
+   "source_model": "rhasspy/piper-voices — de/de_DE/thorsten/medium",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Piper",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 0.063,
+   "ram_gb": 1.563,
+   "vram_gb": null,
+   "representation": "One exact ONNX voice + JSON + voice card",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/rhasspy/piper-voices",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "rhasspy/piper-voices::en/en_US/amy/low",
+   "source_model": "rhasspy/piper-voices — en/en_US/amy/low",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Piper",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 0.063,
+   "ram_gb": 1.563,
+   "vram_gb": null,
+   "representation": "One exact ONNX voice + JSON + voice card",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/rhasspy/piper-voices",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "rhasspy/piper-voices::en/en_US/ryan/high",
+   "source_model": "rhasspy/piper-voices — en/en_US/ryan/high",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Piper",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 0.121,
+   "ram_gb": 1.621,
+   "vram_gb": null,
+   "representation": "One exact ONNX voice + JSON + voice card",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/rhasspy/piper-voices",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "rhasspy/piper-voices::es/es_ES/davefx/medium",
+   "source_model": "rhasspy/piper-voices — es/es_ES/davefx/medium",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Piper",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 0.063,
+   "ram_gb": 1.563,
+   "vram_gb": null,
+   "representation": "One exact ONNX voice + JSON + voice card",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/rhasspy/piper-voices",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "rhasspy/piper-voices::fr/fr_FR/siwis/medium",
+   "source_model": "rhasspy/piper-voices — fr/fr_FR/siwis/medium",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Piper",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 0.063,
+   "ram_gb": 1.563,
+   "vram_gb": null,
+   "representation": "One exact ONNX voice + JSON + voice card",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/rhasspy/piper-voices",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "rhasspy/piper-voices::zh/zh_CN/huayan/medium",
+   "source_model": "rhasspy/piper-voices — zh/zh_CN/huayan/medium",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Piper",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 0.063,
+   "ram_gb": 1.563,
+   "vram_gb": null,
+   "representation": "One exact ONNX voice + JSON + voice card",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/rhasspy/piper-voices",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "speechbrain/metricgan-plus-voicebank",
+   "source_model": "speechbrain/metricgan-plus-voicebank",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Audio model",
+   "capability": "Audio",
+   "parameters_b": null,
+   "download_gb": 0.008,
+   "ram_gb": 2.0,
+   "vram_gb": 2.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/speechbrain/metricgan-plus-voicebank/tree/a196ce26b3bdace6fa1d819017584bdbcce462a8",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "speechbrain/sepformer-whamr",
+   "source_model": "speechbrain/sepformer-whamr",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Audio model",
+   "capability": "Audio",
+   "parameters_b": null,
+   "download_gb": 0.319,
+   "ram_gb": 5.0,
+   "vram_gb": 4.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/speechbrain/sepformer-whamr/tree/9950fd8055b38679d2af5bef2366b5dba600ec66",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "stabilityai/stable-audio-open-1.0",
+   "source_model": "stabilityai/stable-audio-open-1.0",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Audio model",
+   "capability": "Audio",
+   "parameters_b": 1.213,
+   "download_gb": 16.522,
+   "ram_gb": 16.0,
+   "vram_gb": 9.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "stable-audio-community",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/stabilityai/stable-audio-open-1.0/tree/f21265c1e2710b3bd2386596943f0007f55f802e",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "stabilityai/stable-diffusion-3.5-medium",
+   "source_model": "stabilityai/stable-diffusion-3.5-medium",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 2.47,
+   "download_gb": 16.275,
+   "ram_gb": 55.0,
+   "vram_gb": 14.5,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "stabilityai-ai-community",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/stabilityai/stable-diffusion-3.5-medium/tree/b940f670f0eda2d07fbb75229e779da1ad11eb80",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "stabilityai/stable-diffusion-xl-base-1.0",
+   "source_model": "stabilityai/stable-diffusion-xl-base-1.0",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 2.567,
+   "download_gb": 6.941,
+   "ram_gb": 18.0,
+   "vram_gb": 12.0,
+   "representation": "Published SDXL single-file source; load torch.float16",
+   "license": "openrail++",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/tree/462165984030d82259a11f4367a4eed129e94a7b",
+   "tiers": {
+    "GPU16": "YES"
+   }
+  },
+  {
+   "key": "stabilityai/stable-diffusion-xl-refiner-1.0",
+   "source_model": "stabilityai/stable-diffusion-xl-refiner-1.0",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 2.26,
+   "download_gb": 12.153,
+   "ram_gb": 20.0,
+   "vram_gb": 11.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "openrail++",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/tree/5d4cfe854c9a9a87939ff3653551c2b3c99a4356",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "stabilityai/stable-video-diffusion-img2vid-xt",
+   "source_model": "stabilityai/stable-video-diffusion-img2vid-xt",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Video model",
+   "capability": "Video",
+   "parameters_b": 1.525,
+   "download_gb": 9.018,
+   "ram_gb": 17.018,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: F32 (publisher metadata); runtime casting is separate",
+   "license": "stable-video-diffusion-community",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "SWivid/F5-TTS",
+   "source_model": "SWivid/F5-TTS",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: F5-TTS",
+   "capability": "TTS",
+   "parameters_b": null,
+   "download_gb": 1.403,
+   "ram_gb": 10.0,
+   "vram_gb": 7.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "cc-by-nc-4.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/SWivid/F5-TTS/tree/84e5a410d9cead4de2f847e7c9369a6440bdfaca",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "Systran/faster-whisper-large-v3",
+   "source_model": "Systran/faster-whisper-large-v3",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Speech",
+   "parameters_b": null,
+   "download_gb": 3.091,
+   "ram_gb": 7.0,
+   "vram_gb": 5.0,
+   "representation": "Published CTranslate2 model.bin; runtime compute_type in workload column",
+   "license": "mit",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/Systran/faster-whisper-large-v3/tree/edaa852ec7e145841d8ffdb056a99866b5f0a478",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "Systran/faster-whisper-small",
+   "source_model": "Systran/faster-whisper-small",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Speech",
+   "parameters_b": null,
+   "download_gb": 0.486,
+   "ram_gb": 3.0,
+   "vram_gb": 2.0,
+   "representation": "Published CTranslate2 model.bin; runtime compute_type in workload column",
+   "license": "mit",
+   "retention": "CORE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/Systran/faster-whisper-small/tree/536b0662742c02347bc0e980a01041f333bce120",
+   "tiers": {
+    "GPU16": "NO",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "tencent/Hunyuan3D-2",
+   "source_model": "tencent/Hunyuan3D-2",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Hunyuan3D",
+   "capability": "Specialized",
+   "parameters_b": null,
+   "download_gb": 26.906,
+   "ram_gb": 24.061,
+   "vram_gb": 23.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "tencent-hunyuan-community",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/tencent/Hunyuan3D-2/tree/9cd649ba6913f7a852e3286bad86bfa9a2d83dcf",
+   "tiers": {
+    "GPU24": "YES"
+   }
+  },
+  {
+   "key": "tencent/HunyuanVideo-1.5",
+   "source_model": "tencent/HunyuanVideo-1.5",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Video model",
+   "capability": "Video",
+   "parameters_b": null,
+   "download_gb": 371.76,
+   "ram_gb": 58.0,
+   "vram_gb": 16.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "tencent-hunyuan-community",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/tencent/HunyuanVideo-1.5/tree/9b49404b3f5df2a8f0b31df27a0c7ab872e7b038",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "Tongyi-MAI/Z-Image-Turbo",
+   "source_model": "Tongyi-MAI/Z-Image-Turbo",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 6.155,
+   "download_gb": 32.848,
+   "ram_gb": 48.0,
+   "vram_gb": 14.5,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/Tongyi-MAI/Z-Image-Turbo/tree/f332072aa78be7aecdf3ee76d5c247082da564a6",
+   "tiers": {
+    "GPU16": "YES"
+   }
+  },
+  {
+   "key": "urchade/gliner_multi-v2.1",
+   "source_model": "urchade/gliner_multi-v2.1",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: GLiNER",
+   "capability": "Specialized",
+   "parameters_b": 0.289,
+   "download_gb": 1.16,
+   "ram_gb": 4.0,
+   "vram_gb": 4.0,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/urchade/gliner_multi-v2.1/tree/443d26d654e0324125a96bebd8e796c14ff2efe6",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU8": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  },
+  {
+   "key": "urchade/gliner_small-v2.1",
+   "source_model": "urchade/gliner_small-v2.1",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: GLiNER",
+   "capability": "Specialized",
+   "parameters_b": null,
+   "download_gb": 0.613,
+   "ram_gb": 2.111,
+   "vram_gb": null,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/urchade/gliner_small-v2.1",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "vidore/colqwen2.5-v0.2",
+   "source_model": "vidore/colqwen2.5-v0.2",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: ColPali",
+   "capability": "Embeddings",
+   "parameters_b": null,
+   "download_gb": 7.771,
+   "ram_gb": 18.0,
+   "vram_gb": 12.0,
+   "representation": "Published native weights; exact file list below",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/vidore/colqwen2.5-v0.2/tree/dcbe8d9cede518bce830488364ba0e40c873645b",
+   "tiers": {
+    "GPU16": "YES"
+   }
+  },
+  {
+   "key": "Wan-AI/Wan2.1-T2V-1.3B-Diffusers",
+   "source_model": "Wan-AI/Wan2.1-T2V-1.3B-Diffusers",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Video model",
+   "capability": "Video",
+   "parameters_b": 1.419,
+   "download_gb": 28.929,
+   "ram_gb": 44.0,
+   "vram_gb": 13.5,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B-Diffusers/tree/0fad780a534b6463e45facd96134c9f345acfa5b",
+   "tiers": {
+    "GPU16": "YES"
+   }
+  },
+  {
+   "key": "Wan-AI/Wan2.1-VACE-1.3B-diffusers",
+   "source_model": "Wan-AI/Wan2.1-VACE-1.3B-diffusers",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Video model",
+   "capability": "Video",
+   "parameters_b": 2.154,
+   "download_gb": 19.037,
+   "ram_gb": 27.037,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: F32 / BF16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.1-VACE-1.3B-diffusers",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+   "source_model": "Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Video model",
+   "capability": "Video",
+   "parameters_b": 16.395,
+   "download_gb": 45.948,
+   "ram_gb": 53.948,
+   "vram_gb": 23.0,
+   "representation": "Native Safetensors: BF16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "FUTURE",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.2-Animate-2-14B-Distilled-Diffusers",
+   "tiers": {
+    "GPU24": "NO"
+   }
+  },
+  {
+   "key": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+   "source_model": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Video model",
+   "capability": "Video",
+   "parameters_b": 5.0,
+   "download_gb": 34.201,
+   "ram_gb": 50.0,
+   "vram_gb": 15.5,
+   "representation": "F32 source weights; runtime dtype specified in recipe",
+   "license": "apache-2.0",
+   "retention": "EXPERIMENTAL",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/Wan-AI/Wan2.2-TI2V-5B-Diffusers/tree/b8fff7315c768468a5333511427288870b2e9635",
+   "tiers": {
+    "GPU16-OPT": "NO"
+   }
+  },
+  {
+   "key": "xinsir/controlnet-depth-sdxl-1.0",
+   "source_model": "xinsir/controlnet-depth-sdxl-1.0",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 1.251,
+   "download_gb": 9.581,
+   "ram_gb": 17.443,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: F16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/xinsir/controlnet-depth-sdxl-1.0",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "xinsir/controlnet-openpose-sdxl-1.0",
+   "source_model": "xinsir/controlnet-openpose-sdxl-1.0",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 1.251,
+   "download_gb": 9.795,
+   "ram_gb": 17.443,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: F16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/xinsir/controlnet-openpose-sdxl-1.0",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "xinsir/controlnet-union-sdxl-1.0",
+   "source_model": "xinsir/controlnet-union-sdxl-1.0",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Images model",
+   "capability": "Images",
+   "parameters_b": 1.256,
+   "download_gb": 9.453,
+   "ram_gb": 17.453,
+   "vram_gb": 14.5,
+   "representation": "Native Safetensors: F16 (publisher metadata); runtime casting is separate",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Legacy / compatibility value",
+   "source_url": "https://huggingface.co/xinsir/controlnet-union-sdxl-1.0",
+   "tiers": {
+    "GPU16": "NO"
+   }
+  },
+  {
+   "key": "yzd-v/DWPose",
+   "source_model": "yzd-v/DWPose",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: DWPose ONNX",
+   "capability": "Vision",
+   "parameters_b": null,
+   "download_gb": 0.351,
+   "ram_gb": 1.851,
+   "vram_gb": null,
+   "representation": "Native checkpoint; stored tensor dtype unverified; inspect exact artifact before conversion",
+   "license": "apache-2.0",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/yzd-v/DWPose",
+   "tiers": {
+    "CPU8": "NO",
+    "CPU16": "NO",
+    "CPU32": "NO"
+   }
+  },
+  {
+   "key": "zai-org/GLM-OCR",
+   "source_model": "zai-org/GLM-OCR",
+   "name": null,
+   "runtime": "other",
+   "name_source": "served by another runtime: Transformers",
+   "capability": "Vision",
+   "parameters_b": 1.325,
+   "download_gb": 2.657,
+   "ram_gb": 7.0,
+   "vram_gb": 6.0,
+   "representation": "BF16 source weights; runtime dtype specified in recipe",
+   "license": "mit",
+   "retention": "KEEP",
+   "quality": "Established specialist / still useful",
+   "source_url": "https://huggingface.co/zai-org/GLM-OCR/tree/2e85a62840ccac27daa451df36c736c4636b8628",
+   "tiers": {
+    "GPU16": "YES",
+    "CPU16": "YES",
+    "CPU32": "YES"
+   }
+  }
+ ],
+ "verified_at": "2026-11-07T08:51:47"
+}

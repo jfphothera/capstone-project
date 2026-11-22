@@ -1,0 +1,1977 @@
+{
+  "schema": "arena.doors.v1",
+  "items": [
+    {
+      "id": "amber-cargo",
+      "room": "loading-dock",
+      "motion": "up",
+      "theme": "Amber ochre painted steel, broad horizontal roller slats, worn black edge chevrons, charcoal inset ribs.",
+      "accent": "#c78b3f",
+      "name": "Amber Cargo",
+      "motion_label": "Slides up",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "amber-cargo/leaf.png",
+      "frame": "amber-cargo/frame.png",
+      "portal": "amber-cargo/portal.png",
+      "aperture_mask": "amber-cargo/aperture-mask.png",
+      "emission": "amber-cargo/emission.png",
+      "glow": "amber-cargo/glow.png",
+      "thumbnail": "amber-cargo/thumbnail.png",
+      "animation": {
+        "frames": [
+          "amber-cargo/frame-01.png",
+          "amber-cargo/frame-02.png",
+          "amber-cargo/frame-03.png",
+          "amber-cargo/frame-04.png",
+          "amber-cargo/frame-05.png",
+          "amber-cargo/frame-06.png",
+          "amber-cargo/frame-07.png",
+          "amber-cargo/frame-08.png",
+          "amber-cargo/frame-09.png"
+        ],
+        "panel_frames": [
+          "amber-cargo/panels-01.png",
+          "amber-cargo/panels-02.png",
+          "amber-cargo/panels-03.png",
+          "amber-cargo/panels-04.png",
+          "amber-cargo/panels-05.png",
+          "amber-cargo/panels-06.png",
+          "amber-cargo/panels-07.png",
+          "amber-cargo/panels-08.png",
+          "amber-cargo/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            0,
+            -1
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Worn amber cargo slats, black chevrons and charcoal ribs."
+    },
+    {
+      "id": "copper-pressure",
+      "room": "copper-foundry",
+      "motion": "split-horizontal",
+      "theme": "Burnished copper diamond plate and dark bronze reinforcing bars, paired leaves divided by a straight CENTRAL VERTICAL seam.",
+      "accent": "#ad7652",
+      "name": "Copper Pressure",
+      "motion_label": "Parts left + right",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "copper-pressure/leaf.png",
+      "frame": "copper-pressure/frame.png",
+      "portal": "copper-pressure/portal.png",
+      "aperture_mask": "copper-pressure/aperture-mask.png",
+      "emission": "copper-pressure/emission.png",
+      "glow": "copper-pressure/glow.png",
+      "thumbnail": "copper-pressure/thumbnail.png",
+      "animation": {
+        "frames": [
+          "copper-pressure/frame-01.png",
+          "copper-pressure/frame-02.png",
+          "copper-pressure/frame-03.png",
+          "copper-pressure/frame-04.png",
+          "copper-pressure/frame-05.png",
+          "copper-pressure/frame-06.png",
+          "copper-pressure/frame-07.png",
+          "copper-pressure/frame-08.png",
+          "copper-pressure/frame-09.png"
+        ],
+        "panel_frames": [
+          "copper-pressure/panels-01.png",
+          "copper-pressure/panels-02.png",
+          "copper-pressure/panels-03.png",
+          "copper-pressure/panels-04.png",
+          "copper-pressure/panels-05.png",
+          "copper-pressure/panels-06.png",
+          "copper-pressure/panels-07.png",
+          "copper-pressure/panels-08.png",
+          "copper-pressure/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            -1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Burnished copper diamond plate with bronze reinforcing bars."
+    },
+    {
+      "id": "cobalt-relay",
+      "room": "relay-workshop",
+      "motion": "left",
+      "theme": "Deep cobalt blue enamel, vertical stepped ribs, brushed nickel narrow inset maintenance plates, amber edge accent.",
+      "accent": "#587fa7",
+      "name": "Cobalt Relay",
+      "motion_label": "Slides left",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "cobalt-relay/leaf.png",
+      "frame": "cobalt-relay/frame.png",
+      "portal": "cobalt-relay/portal.png",
+      "aperture_mask": "cobalt-relay/aperture-mask.png",
+      "emission": "cobalt-relay/emission.png",
+      "glow": "cobalt-relay/glow.png",
+      "thumbnail": "cobalt-relay/thumbnail.png",
+      "animation": {
+        "frames": [
+          "cobalt-relay/frame-01.png",
+          "cobalt-relay/frame-02.png",
+          "cobalt-relay/frame-03.png",
+          "cobalt-relay/frame-04.png",
+          "cobalt-relay/frame-05.png",
+          "cobalt-relay/frame-06.png",
+          "cobalt-relay/frame-07.png",
+          "cobalt-relay/frame-08.png",
+          "cobalt-relay/frame-09.png"
+        ],
+        "panel_frames": [
+          "cobalt-relay/panels-01.png",
+          "cobalt-relay/panels-02.png",
+          "cobalt-relay/panels-03.png",
+          "cobalt-relay/panels-04.png",
+          "cobalt-relay/panels-05.png",
+          "cobalt-relay/panels-06.png",
+          "cobalt-relay/panels-07.png",
+          "cobalt-relay/panels-08.png",
+          "cobalt-relay/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            -1,
+            0
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Cobalt enamel with brushed nickel ribs and amber edge details."
+    },
+    {
+      "id": "teal-cryo",
+      "room": "cooling-bay",
+      "motion": "split-vertical",
+      "theme": "Frosted teal ceramic-coated metal, ribbed cooling panels, a straight CENTRAL HORIZONTAL seam separates upper and lower leaves.",
+      "accent": "#7bbab3",
+      "name": "Teal Cryo",
+      "motion_label": "Parts up + down",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "teal-cryo/leaf.png",
+      "frame": "teal-cryo/frame.png",
+      "portal": "teal-cryo/portal.png",
+      "aperture_mask": "teal-cryo/aperture-mask.png",
+      "emission": "teal-cryo/emission.png",
+      "glow": "teal-cryo/glow.png",
+      "thumbnail": "teal-cryo/thumbnail.png",
+      "animation": {
+        "frames": [
+          "teal-cryo/frame-01.png",
+          "teal-cryo/frame-02.png",
+          "teal-cryo/frame-03.png",
+          "teal-cryo/frame-04.png",
+          "teal-cryo/frame-05.png",
+          "teal-cryo/frame-06.png",
+          "teal-cryo/frame-07.png",
+          "teal-cryo/frame-08.png",
+          "teal-cryo/frame-09.png"
+        ],
+        "panel_frames": [
+          "teal-cryo/panels-01.png",
+          "teal-cryo/panels-02.png",
+          "teal-cryo/panels-03.png",
+          "teal-cryo/panels-04.png",
+          "teal-cryo/panels-05.png",
+          "teal-cryo/panels-06.png",
+          "teal-cryo/panels-07.png",
+          "teal-cryo/panels-08.png",
+          "teal-cryo/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Frosted teal panels with cooling ribs and dark seals."
+    },
+    {
+      "id": "sage-bioseal",
+      "room": "botanical-lab",
+      "motion": "split-horizontal",
+      "theme": "Sage green and cream laboratory laminate, small dark smoked-glass inset rectangles, straight CENTRAL VERTICAL dividing seam.",
+      "accent": "#94ad89",
+      "name": "Sage Bioseal",
+      "motion_label": "Parts left + right",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "sage-bioseal/leaf.png",
+      "frame": "sage-bioseal/frame.png",
+      "portal": "sage-bioseal/portal.png",
+      "aperture_mask": "sage-bioseal/aperture-mask.png",
+      "emission": "sage-bioseal/emission.png",
+      "glow": "sage-bioseal/glow.png",
+      "thumbnail": "sage-bioseal/thumbnail.png",
+      "animation": {
+        "frames": [
+          "sage-bioseal/frame-01.png",
+          "sage-bioseal/frame-02.png",
+          "sage-bioseal/frame-03.png",
+          "sage-bioseal/frame-04.png",
+          "sage-bioseal/frame-05.png",
+          "sage-bioseal/frame-06.png",
+          "sage-bioseal/frame-07.png",
+          "sage-bioseal/frame-08.png",
+          "sage-bioseal/frame-09.png"
+        ],
+        "panel_frames": [
+          "sage-bioseal/panels-01.png",
+          "sage-bioseal/panels-02.png",
+          "sage-bioseal/panels-03.png",
+          "sage-bioseal/panels-04.png",
+          "sage-bioseal/panels-05.png",
+          "sage-bioseal/panels-06.png",
+          "sage-bioseal/panels-07.png",
+          "sage-bioseal/panels-08.png",
+          "sage-bioseal/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            -1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Sage and cream laminate with smoked-glass insets."
+    },
+    {
+      "id": "pearl-lab",
+      "room": "analysis-lab",
+      "motion": "up",
+      "theme": "Pearl white enamel, pale gray recessed horizontal panels, navy seals and fine teal accent strips.",
+      "accent": "#b5c8d0",
+      "name": "Pearl Lab",
+      "motion_label": "Slides up",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "pearl-lab/leaf.png",
+      "frame": "pearl-lab/frame.png",
+      "portal": "pearl-lab/portal.png",
+      "aperture_mask": "pearl-lab/aperture-mask.png",
+      "emission": "pearl-lab/emission.png",
+      "glow": "pearl-lab/glow.png",
+      "thumbnail": "pearl-lab/thumbnail.png",
+      "animation": {
+        "frames": [
+          "pearl-lab/frame-01.png",
+          "pearl-lab/frame-02.png",
+          "pearl-lab/frame-03.png",
+          "pearl-lab/frame-04.png",
+          "pearl-lab/frame-05.png",
+          "pearl-lab/frame-06.png",
+          "pearl-lab/frame-07.png",
+          "pearl-lab/frame-08.png",
+          "pearl-lab/frame-09.png"
+        ],
+        "panel_frames": [
+          "pearl-lab/panels-01.png",
+          "pearl-lab/panels-02.png",
+          "pearl-lab/panels-03.png",
+          "pearl-lab/panels-04.png",
+          "pearl-lab/panels-05.png",
+          "pearl-lab/panels-06.png",
+          "pearl-lab/panels-07.png",
+          "pearl-lab/panels-08.png",
+          "pearl-lab/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            0,
+            -1
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Pearl enamel with gray recessed panels and teal accents."
+    },
+    {
+      "id": "olive-turbine",
+      "room": "turbine-hall",
+      "motion": "down",
+      "theme": "Military olive pressed steel, broad horizontal louvers, black rubber weather seals and nickel reinforcing braces.",
+      "accent": "#8d9562",
+      "name": "Olive Turbine",
+      "motion_label": "Slides down",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "olive-turbine/leaf.png",
+      "frame": "olive-turbine/frame.png",
+      "portal": "olive-turbine/portal.png",
+      "aperture_mask": "olive-turbine/aperture-mask.png",
+      "emission": "olive-turbine/emission.png",
+      "glow": "olive-turbine/glow.png",
+      "thumbnail": "olive-turbine/thumbnail.png",
+      "animation": {
+        "frames": [
+          "olive-turbine/frame-01.png",
+          "olive-turbine/frame-02.png",
+          "olive-turbine/frame-03.png",
+          "olive-turbine/frame-04.png",
+          "olive-turbine/frame-05.png",
+          "olive-turbine/frame-06.png",
+          "olive-turbine/frame-07.png",
+          "olive-turbine/frame-08.png",
+          "olive-turbine/frame-09.png"
+        ],
+        "panel_frames": [
+          "olive-turbine/panels-01.png",
+          "olive-turbine/panels-02.png",
+          "olive-turbine/panels-03.png",
+          "olive-turbine/panels-04.png",
+          "olive-turbine/panels-05.png",
+          "olive-turbine/panels-06.png",
+          "olive-turbine/panels-07.png",
+          "olive-turbine/panels-08.png",
+          "olive-turbine/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            0,
+            1
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Olive pressed steel, broad louvers and nickel braces."
+    },
+    {
+      "id": "terracotta-kiln",
+      "room": "ceramic-works",
+      "motion": "right",
+      "theme": "Terracotta glazed tile armor, cream ceramic insets, dark iron vertical reinforcements, subtle irregular glaze texture.",
+      "accent": "#b67b62",
+      "name": "Terracotta Kiln",
+      "motion_label": "Slides right",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "terracotta-kiln/leaf.png",
+      "frame": "terracotta-kiln/frame.png",
+      "portal": "terracotta-kiln/portal.png",
+      "aperture_mask": "terracotta-kiln/aperture-mask.png",
+      "emission": "terracotta-kiln/emission.png",
+      "glow": "terracotta-kiln/glow.png",
+      "thumbnail": "terracotta-kiln/thumbnail.png",
+      "animation": {
+        "frames": [
+          "terracotta-kiln/frame-01.png",
+          "terracotta-kiln/frame-02.png",
+          "terracotta-kiln/frame-03.png",
+          "terracotta-kiln/frame-04.png",
+          "terracotta-kiln/frame-05.png",
+          "terracotta-kiln/frame-06.png",
+          "terracotta-kiln/frame-07.png",
+          "terracotta-kiln/frame-08.png",
+          "terracotta-kiln/frame-09.png"
+        ],
+        "panel_frames": [
+          "terracotta-kiln/panels-01.png",
+          "terracotta-kiln/panels-02.png",
+          "terracotta-kiln/panels-03.png",
+          "terracotta-kiln/panels-04.png",
+          "terracotta-kiln/panels-05.png",
+          "terracotta-kiln/panels-06.png",
+          "terracotta-kiln/panels-07.png",
+          "terracotta-kiln/panels-08.png",
+          "terracotta-kiln/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            1,
+            0
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Terracotta ceramic armor, cream insets and black iron trim."
+    },
+    {
+      "id": "ivory-airlock",
+      "room": "orbital-hangar",
+      "motion": "split-horizontal",
+      "theme": "Ivory spacecraft bulkhead panels with burgundy narrow recesses and dark titanium seals, straight CENTRAL VERTICAL dividing seam.",
+      "accent": "#c8c6b1",
+      "name": "Ivory Airlock",
+      "motion_label": "Parts left + right",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "ivory-airlock/leaf.png",
+      "frame": "ivory-airlock/frame.png",
+      "portal": "ivory-airlock/portal.png",
+      "aperture_mask": "ivory-airlock/aperture-mask.png",
+      "emission": "ivory-airlock/emission.png",
+      "glow": "ivory-airlock/glow.png",
+      "thumbnail": "ivory-airlock/thumbnail.png",
+      "animation": {
+        "frames": [
+          "ivory-airlock/frame-01.png",
+          "ivory-airlock/frame-02.png",
+          "ivory-airlock/frame-03.png",
+          "ivory-airlock/frame-04.png",
+          "ivory-airlock/frame-05.png",
+          "ivory-airlock/frame-06.png",
+          "ivory-airlock/frame-07.png",
+          "ivory-airlock/frame-08.png",
+          "ivory-airlock/frame-09.png"
+        ],
+        "panel_frames": [
+          "ivory-airlock/panels-01.png",
+          "ivory-airlock/panels-02.png",
+          "ivory-airlock/panels-03.png",
+          "ivory-airlock/panels-04.png",
+          "ivory-airlock/panels-05.png",
+          "ivory-airlock/panels-06.png",
+          "ivory-airlock/panels-07.png",
+          "ivory-airlock/panels-08.png",
+          "ivory-airlock/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            -1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Ivory bulkhead panels with burgundy recesses and titanium seals."
+    },
+    {
+      "id": "petrol-pressure",
+      "room": "subsea-station",
+      "motion": "split-vertical",
+      "theme": "Petrol blue pressure steel, brass bands and copper rivets, upper/lower halves with straight CENTRAL HORIZONTAL seam.",
+      "accent": "#578f95",
+      "name": "Petrol Pressure",
+      "motion_label": "Parts up + down",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "petrol-pressure/leaf.png",
+      "frame": "petrol-pressure/frame.png",
+      "portal": "petrol-pressure/portal.png",
+      "aperture_mask": "petrol-pressure/aperture-mask.png",
+      "emission": "petrol-pressure/emission.png",
+      "glow": "petrol-pressure/glow.png",
+      "thumbnail": "petrol-pressure/thumbnail.png",
+      "animation": {
+        "frames": [
+          "petrol-pressure/frame-01.png",
+          "petrol-pressure/frame-02.png",
+          "petrol-pressure/frame-03.png",
+          "petrol-pressure/frame-04.png",
+          "petrol-pressure/frame-05.png",
+          "petrol-pressure/frame-06.png",
+          "petrol-pressure/frame-07.png",
+          "petrol-pressure/frame-08.png",
+          "petrol-pressure/frame-09.png"
+        ],
+        "panel_frames": [
+          "petrol-pressure/panels-01.png",
+          "petrol-pressure/panels-02.png",
+          "petrol-pressure/panels-03.png",
+          "petrol-pressure/panels-04.png",
+          "petrol-pressure/panels-05.png",
+          "petrol-pressure/panels-06.png",
+          "petrol-pressure/panels-07.png",
+          "petrol-pressure/panels-08.png",
+          "petrol-pressure/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Petrol-blue pressure steel, brass bands and copper rivets."
+    },
+    {
+      "id": "solar-shutter",
+      "room": "solar-workshop",
+      "motion": "up",
+      "theme": "Sand ochre sun-bleached metal with broad horizontal shutter slats, warm gray insets, fine blue edge accents.",
+      "accent": "#c29b62",
+      "name": "Solar Shutter",
+      "motion_label": "Slides up",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "solar-shutter/leaf.png",
+      "frame": "solar-shutter/frame.png",
+      "portal": "solar-shutter/portal.png",
+      "aperture_mask": "solar-shutter/aperture-mask.png",
+      "emission": "solar-shutter/emission.png",
+      "glow": "solar-shutter/glow.png",
+      "thumbnail": "solar-shutter/thumbnail.png",
+      "animation": {
+        "frames": [
+          "solar-shutter/frame-01.png",
+          "solar-shutter/frame-02.png",
+          "solar-shutter/frame-03.png",
+          "solar-shutter/frame-04.png",
+          "solar-shutter/frame-05.png",
+          "solar-shutter/frame-06.png",
+          "solar-shutter/frame-07.png",
+          "solar-shutter/frame-08.png",
+          "solar-shutter/frame-09.png"
+        ],
+        "panel_frames": [
+          "solar-shutter/panels-01.png",
+          "solar-shutter/panels-02.png",
+          "solar-shutter/panels-03.png",
+          "solar-shutter/panels-04.png",
+          "solar-shutter/panels-05.png",
+          "solar-shutter/panels-06.png",
+          "solar-shutter/panels-07.png",
+          "solar-shutter/panels-08.png",
+          "solar-shutter/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            0,
+            -1
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Sun-worn ochre shutter slats with warm gray insets."
+    },
+    {
+      "id": "oxblood-freight",
+      "room": "rail-depot",
+      "motion": "left",
+      "theme": "Oxblood red corrugated freight steel, chipped cream edge stripe, dark gunmetal vertical ribs and heavy worn scuffs.",
+      "accent": "#985b54",
+      "name": "Oxblood Freight",
+      "motion_label": "Slides left",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "oxblood-freight/leaf.png",
+      "frame": "oxblood-freight/frame.png",
+      "portal": "oxblood-freight/portal.png",
+      "aperture_mask": "oxblood-freight/aperture-mask.png",
+      "emission": "oxblood-freight/emission.png",
+      "glow": "oxblood-freight/glow.png",
+      "thumbnail": "oxblood-freight/thumbnail.png",
+      "animation": {
+        "frames": [
+          "oxblood-freight/frame-01.png",
+          "oxblood-freight/frame-02.png",
+          "oxblood-freight/frame-03.png",
+          "oxblood-freight/frame-04.png",
+          "oxblood-freight/frame-05.png",
+          "oxblood-freight/frame-06.png",
+          "oxblood-freight/frame-07.png",
+          "oxblood-freight/frame-08.png",
+          "oxblood-freight/frame-09.png"
+        ],
+        "panel_frames": [
+          "oxblood-freight/panels-01.png",
+          "oxblood-freight/panels-02.png",
+          "oxblood-freight/panels-03.png",
+          "oxblood-freight/panels-04.png",
+          "oxblood-freight/panels-05.png",
+          "oxblood-freight/panels-06.png",
+          "oxblood-freight/panels-07.png",
+          "oxblood-freight/panels-08.png",
+          "oxblood-freight/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            -1,
+            0
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Oxblood freight steel, a chipped cream stripe and gunmetal ribs."
+    },
+    {
+      "id": "plum-acoustic",
+      "room": "signal-room",
+      "motion": "right",
+      "theme": "Muted plum acoustic honeycomb panels, black rubber vertical seals, bronze mesh insets and restrained pale violet trim.",
+      "accent": "#957ba8",
+      "name": "Plum Acoustic",
+      "motion_label": "Slides right",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "plum-acoustic/leaf.png",
+      "frame": "plum-acoustic/frame.png",
+      "portal": "plum-acoustic/portal.png",
+      "aperture_mask": "plum-acoustic/aperture-mask.png",
+      "emission": "plum-acoustic/emission.png",
+      "glow": "plum-acoustic/glow.png",
+      "thumbnail": "plum-acoustic/thumbnail.png",
+      "animation": {
+        "frames": [
+          "plum-acoustic/frame-01.png",
+          "plum-acoustic/frame-02.png",
+          "plum-acoustic/frame-03.png",
+          "plum-acoustic/frame-04.png",
+          "plum-acoustic/frame-05.png",
+          "plum-acoustic/frame-06.png",
+          "plum-acoustic/frame-07.png",
+          "plum-acoustic/frame-08.png",
+          "plum-acoustic/frame-09.png"
+        ],
+        "panel_frames": [
+          "plum-acoustic/panels-01.png",
+          "plum-acoustic/panels-02.png",
+          "plum-acoustic/panels-03.png",
+          "plum-acoustic/panels-04.png",
+          "plum-acoustic/panels-05.png",
+          "plum-acoustic/panels-06.png",
+          "plum-acoustic/panels-07.png",
+          "plum-acoustic/panels-08.png",
+          "plum-acoustic/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            1,
+            0
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Muted plum panels with bronze mesh and pale violet trim."
+    },
+    {
+      "id": "polar-insulated",
+      "room": "polar-outpost",
+      "motion": "down",
+      "theme": "Ice blue insulated horizontal composite panels, snow white raised bars, deep navy seals and lightly frosted surface wear.",
+      "accent": "#a1bdcf",
+      "name": "Polar Insulated",
+      "motion_label": "Slides down",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "polar-insulated/leaf.png",
+      "frame": "polar-insulated/frame.png",
+      "portal": "polar-insulated/portal.png",
+      "aperture_mask": "polar-insulated/aperture-mask.png",
+      "emission": "polar-insulated/emission.png",
+      "glow": "polar-insulated/glow.png",
+      "thumbnail": "polar-insulated/thumbnail.png",
+      "animation": {
+        "frames": [
+          "polar-insulated/frame-01.png",
+          "polar-insulated/frame-02.png",
+          "polar-insulated/frame-03.png",
+          "polar-insulated/frame-04.png",
+          "polar-insulated/frame-05.png",
+          "polar-insulated/frame-06.png",
+          "polar-insulated/frame-07.png",
+          "polar-insulated/frame-08.png",
+          "polar-insulated/frame-09.png"
+        ],
+        "panel_frames": [
+          "polar-insulated/panels-01.png",
+          "polar-insulated/panels-02.png",
+          "polar-insulated/panels-03.png",
+          "polar-insulated/panels-04.png",
+          "polar-insulated/panels-05.png",
+          "polar-insulated/panels-06.png",
+          "polar-insulated/panels-07.png",
+          "polar-insulated/panels-08.png",
+          "polar-insulated/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            0,
+            1
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Ice-blue insulation, white raised bars and navy seals."
+    },
+    {
+      "id": "graphite-forge",
+      "room": "basalt-forge",
+      "motion": "up",
+      "theme": "Graphite black heat-resistant horizontal armored tiles, worn copper edges and narrow reddish brown ceramic inserts; no fire or lava.",
+      "accent": "#8d7060",
+      "name": "Graphite Forge",
+      "motion_label": "Slides up",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "graphite-forge/leaf.png",
+      "frame": "graphite-forge/frame.png",
+      "portal": "graphite-forge/portal.png",
+      "aperture_mask": "graphite-forge/aperture-mask.png",
+      "emission": "graphite-forge/emission.png",
+      "glow": "graphite-forge/glow.png",
+      "thumbnail": "graphite-forge/thumbnail.png",
+      "animation": {
+        "frames": [
+          "graphite-forge/frame-01.png",
+          "graphite-forge/frame-02.png",
+          "graphite-forge/frame-03.png",
+          "graphite-forge/frame-04.png",
+          "graphite-forge/frame-05.png",
+          "graphite-forge/frame-06.png",
+          "graphite-forge/frame-07.png",
+          "graphite-forge/frame-08.png",
+          "graphite-forge/frame-09.png"
+        ],
+        "panel_frames": [
+          "graphite-forge/panels-01.png",
+          "graphite-forge/panels-02.png",
+          "graphite-forge/panels-03.png",
+          "graphite-forge/panels-04.png",
+          "graphite-forge/panels-05.png",
+          "graphite-forge/panels-06.png",
+          "graphite-forge/panels-07.png",
+          "graphite-forge/panels-08.png",
+          "graphite-forge/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            0,
+            -1
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Graphite heat tiles, worn copper edges and ceramic insets."
+    },
+    {
+      "id": "mustard-salvage",
+      "room": "salvage-workshop",
+      "motion": "right",
+      "theme": "Mustard yellow patched steel with mismatched oxblood repair plates and slate riveted vertical braces, carefully designed welded seams.",
+      "accent": "#b6a04d",
+      "name": "Mustard Salvage",
+      "motion_label": "Slides right",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "mustard-salvage/leaf.png",
+      "frame": "mustard-salvage/frame.png",
+      "portal": "mustard-salvage/portal.png",
+      "aperture_mask": "mustard-salvage/aperture-mask.png",
+      "emission": "mustard-salvage/emission.png",
+      "glow": "mustard-salvage/glow.png",
+      "thumbnail": "mustard-salvage/thumbnail.png",
+      "animation": {
+        "frames": [
+          "mustard-salvage/frame-01.png",
+          "mustard-salvage/frame-02.png",
+          "mustard-salvage/frame-03.png",
+          "mustard-salvage/frame-04.png",
+          "mustard-salvage/frame-05.png",
+          "mustard-salvage/frame-06.png",
+          "mustard-salvage/frame-07.png",
+          "mustard-salvage/frame-08.png",
+          "mustard-salvage/frame-09.png"
+        ],
+        "panel_frames": [
+          "mustard-salvage/panels-01.png",
+          "mustard-salvage/panels-02.png",
+          "mustard-salvage/panels-03.png",
+          "mustard-salvage/panels-04.png",
+          "mustard-salvage/panels-05.png",
+          "mustard-salvage/panels-06.png",
+          "mustard-salvage/panels-07.png",
+          "mustard-salvage/panels-08.png",
+          "mustard-salvage/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            1,
+            0
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Mustard steel with red repair plates and slate braces."
+    },
+    {
+      "id": "midnight-observatory",
+      "room": "astronomy-lab",
+      "motion": "split-horizontal",
+      "theme": "Midnight blue fine stippled steel, ivory narrow rim details and brass inset panels, central straight VERTICAL seam; no actual stars or symbols.",
+      "accent": "#7789ac",
+      "name": "Midnight Observatory",
+      "motion_label": "Parts left + right",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "midnight-observatory/leaf.png",
+      "frame": "midnight-observatory/frame.png",
+      "portal": "midnight-observatory/portal.png",
+      "aperture_mask": "midnight-observatory/aperture-mask.png",
+      "emission": "midnight-observatory/emission.png",
+      "glow": "midnight-observatory/glow.png",
+      "thumbnail": "midnight-observatory/thumbnail.png",
+      "animation": {
+        "frames": [
+          "midnight-observatory/frame-01.png",
+          "midnight-observatory/frame-02.png",
+          "midnight-observatory/frame-03.png",
+          "midnight-observatory/frame-04.png",
+          "midnight-observatory/frame-05.png",
+          "midnight-observatory/frame-06.png",
+          "midnight-observatory/frame-07.png",
+          "midnight-observatory/frame-08.png",
+          "midnight-observatory/frame-09.png"
+        ],
+        "panel_frames": [
+          "midnight-observatory/panels-01.png",
+          "midnight-observatory/panels-02.png",
+          "midnight-observatory/panels-03.png",
+          "midnight-observatory/panels-04.png",
+          "midnight-observatory/panels-05.png",
+          "midnight-observatory/panels-06.png",
+          "midnight-observatory/panels-07.png",
+          "midnight-observatory/panels-08.png",
+          "midnight-observatory/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            -1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Midnight steel with ivory details and brass inset panels."
+    },
+    {
+      "id": "amethyst-vault",
+      "room": "crystal-lab",
+      "motion": "split-vertical",
+      "theme": "Muted lavender and amethyst ceramic polygon armor, silver seals, upper/lower leaves with straight CENTRAL HORIZONTAL seam.",
+      "accent": "#aa96bd",
+      "name": "Amethyst Vault",
+      "motion_label": "Parts up + down",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "amethyst-vault/leaf.png",
+      "frame": "amethyst-vault/frame.png",
+      "portal": "amethyst-vault/portal.png",
+      "aperture_mask": "amethyst-vault/aperture-mask.png",
+      "emission": "amethyst-vault/emission.png",
+      "glow": "amethyst-vault/glow.png",
+      "thumbnail": "amethyst-vault/thumbnail.png",
+      "animation": {
+        "frames": [
+          "amethyst-vault/frame-01.png",
+          "amethyst-vault/frame-02.png",
+          "amethyst-vault/frame-03.png",
+          "amethyst-vault/frame-04.png",
+          "amethyst-vault/frame-05.png",
+          "amethyst-vault/frame-06.png",
+          "amethyst-vault/frame-07.png",
+          "amethyst-vault/frame-08.png",
+          "amethyst-vault/frame-09.png"
+        ],
+        "panel_frames": [
+          "amethyst-vault/panels-01.png",
+          "amethyst-vault/panels-02.png",
+          "amethyst-vault/panels-03.png",
+          "amethyst-vault/panels-04.png",
+          "amethyst-vault/panels-05.png",
+          "amethyst-vault/panels-06.png",
+          "amethyst-vault/panels-07.png",
+          "amethyst-vault/panels-08.png",
+          "amethyst-vault/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            0,
+            -1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Lavender ceramic armor with silver seals."
+    },
+    {
+      "id": "seaglass-seal",
+      "room": "oceanography-lab",
+      "motion": "left",
+      "theme": "Sea-glass green coated metal, ivory vertical reinforcing strips, brushed steel insets and muted turquoise panel grooves.",
+      "accent": "#89b9ad",
+      "name": "Seaglass Seal",
+      "motion_label": "Slides left",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "seaglass-seal/leaf.png",
+      "frame": "seaglass-seal/frame.png",
+      "portal": "seaglass-seal/portal.png",
+      "aperture_mask": "seaglass-seal/aperture-mask.png",
+      "emission": "seaglass-seal/emission.png",
+      "glow": "seaglass-seal/glow.png",
+      "thumbnail": "seaglass-seal/thumbnail.png",
+      "animation": {
+        "frames": [
+          "seaglass-seal/frame-01.png",
+          "seaglass-seal/frame-02.png",
+          "seaglass-seal/frame-03.png",
+          "seaglass-seal/frame-04.png",
+          "seaglass-seal/frame-05.png",
+          "seaglass-seal/frame-06.png",
+          "seaglass-seal/frame-07.png",
+          "seaglass-seal/frame-08.png",
+          "seaglass-seal/frame-09.png"
+        ],
+        "panel_frames": [
+          "seaglass-seal/panels-01.png",
+          "seaglass-seal/panels-02.png",
+          "seaglass-seal/panels-03.png",
+          "seaglass-seal/panels-04.png",
+          "seaglass-seal/panels-05.png",
+          "seaglass-seal/panels-06.png",
+          "seaglass-seal/panels-07.png",
+          "seaglass-seal/panels-08.png",
+          "seaglass-seal/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            -1,
+            0
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Sea-glass green coating, ivory ribs and brushed steel insets."
+    },
+    {
+      "id": "coral-materials",
+      "room": "materials-lab",
+      "motion": "down",
+      "theme": "Cream and coral red composite panels, sandstone fine-grain inserts, broad horizontal slats and dark graphite seals.",
+      "accent": "#c99580",
+      "name": "Coral Materials",
+      "motion_label": "Slides down",
+      "size": [
+        192,
+        200
+      ],
+      "anchor_px": [
+        96,
+        188
+      ],
+      "aperture_px": [
+        32,
+        30,
+        128,
+        152
+      ],
+      "leaf_size_px": [
+        128,
+        152
+      ],
+      "leaf": "coral-materials/leaf.png",
+      "frame": "coral-materials/frame.png",
+      "portal": "coral-materials/portal.png",
+      "aperture_mask": "coral-materials/aperture-mask.png",
+      "emission": "coral-materials/emission.png",
+      "glow": "coral-materials/glow.png",
+      "thumbnail": "coral-materials/thumbnail.png",
+      "animation": {
+        "frames": [
+          "coral-materials/frame-01.png",
+          "coral-materials/frame-02.png",
+          "coral-materials/frame-03.png",
+          "coral-materials/frame-04.png",
+          "coral-materials/frame-05.png",
+          "coral-materials/frame-06.png",
+          "coral-materials/frame-07.png",
+          "coral-materials/frame-08.png",
+          "coral-materials/frame-09.png"
+        ],
+        "panel_frames": [
+          "coral-materials/panels-01.png",
+          "coral-materials/panels-02.png",
+          "coral-materials/panels-03.png",
+          "coral-materials/panels-04.png",
+          "coral-materials/panels-05.png",
+          "coral-materials/panels-06.png",
+          "coral-materials/panels-07.png",
+          "coral-materials/panels-08.png",
+          "coral-materials/panels-09.png"
+        ],
+        "open_fractions": [
+          0.0,
+          0.125,
+          0.25,
+          0.375,
+          0.5,
+          0.625,
+          0.75,
+          0.875,
+          1.0
+        ],
+        "frame_ms": 85,
+        "opening_duration_ms": 680,
+        "close": "reverse the frame sequence",
+        "leaf_directions": [
+          [
+            0,
+            1
+          ]
+        ],
+        "leaf_transform": "rigid translation clipped to aperture; never scale leaves"
+      },
+      "agent_passage": {
+        "minimum_open_fraction": 1,
+        "hold_open_until_agent_clear": true,
+        "navigation": "use the original scene door threshold, approach and entry"
+      },
+      "lighting": {
+        "blend": "screen",
+        "maximum_opacity": 0.4
+      },
+      "occlusion_order": [
+        "portal",
+        "agent behind aperture mask when crossing",
+        "panels",
+        "frame",
+        "optional glow"
+      ],
+      "description": "Cream and coral composite, sandstone insets and graphite seals."
+    }
+  ],
+  "render_contract": {
+    "canvas": [
+      1536,
+      1024
+    ],
+    "tile_size": [
+      192,
+      200
+    ],
+    "anchor_px": [
+      96,
+      188
+    ],
+    "aperture_px": [
+      32,
+      30,
+      128,
+      152
+    ],
+    "placement": "origin from room profile, no scaling",
+    "floor_geometry": "arena-shared-floor-v1",
+    "reduced_motion": "snap between closed and open according to real state, preserve passage and hold-open rules",
+    "asset_scope": "optional art kit; no production integration or deployment"
+  }
+}

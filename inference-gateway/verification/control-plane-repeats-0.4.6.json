@@ -1,0 +1,512 @@
+{
+  "harness": "scripts/control_plane_load.py (same seeded workload for both trees; defaults: 20,000-request history, 24 launches, 24 workers x 45 s, health cycle every 2 s)",
+  "machine": "development laptop (CPython 3.12, fake heads in process); absolute times are this laptop, not the hub",
+  "trees": {
+    "0.4.5": "pre-change snapshot of src (identical to the deployed 0.4.5 source in Capstone c922 evidence)",
+    "0.4.6": "src"
+  },
+  "runs": {
+    "0.4.5": [
+      {
+        "file": "control-plane-0.4.5.json",
+        "launch_rc24": {
+          "calls_per_launch": 9.0,
+          "wall_ms": 7722,
+          "policy_ms": {
+            "n": 24,
+            "p50": 5199.69,
+            "p95": 5820.91,
+            "max": 6044.13
+          },
+          "models_ms": {
+            "n": 24,
+            "p50": 1118.79,
+            "p95": 1188.61,
+            "max": 1190.49
+          },
+          "availability_ms": {
+            "n": 168,
+            "p50": 93.87,
+            "p95": 165.36,
+            "max": 424.25
+          }
+        },
+        "admission": {
+          "completed_45s": 511,
+          "failed": {},
+          "admission_s": {
+            "n": 511,
+            "p50": 0.35,
+            "p95": 1.15,
+            "max": 1.93
+          },
+          "execution_s": {
+            "n": 511,
+            "p50": 0.84,
+            "p95": 1.25,
+            "max": 1.37
+          },
+          "health_cycle_ms": {
+            "n": 15,
+            "p50": 907.59,
+            "p95": 1647.99,
+            "max": 1647.99
+          },
+          "place_transactions": 409,
+          "place_hold_ms": {
+            "n": 409,
+            "p50": 9.26,
+            "p95": 56.61,
+            "max": 220.72
+          },
+          "place_hold_ms_total": 7166,
+          "health_write_transactions": 405,
+          "ledger_hold_ms_total": 26765,
+          "submit_wait_ms": {
+            "n": 511,
+            "p50": 57.76,
+            "p95": 176.55,
+            "max": 242.8
+          },
+          "complete_wait_ms": {
+            "n": 511,
+            "p50": 45.54,
+            "p95": 175.52,
+            "max": 246.63
+          },
+          "placement_passes": null
+        }
+      },
+      {
+        "file": "cp-0.4.5-r2.json",
+        "launch_rc24": {
+          "calls_per_launch": 9.0,
+          "wall_ms": 6884,
+          "policy_ms": {
+            "n": 24,
+            "p50": 4820.26,
+            "p95": 5516.46,
+            "max": 5644.23
+          },
+          "models_ms": {
+            "n": 24,
+            "p50": 903.22,
+            "p95": 985.9,
+            "max": 1021.09
+          },
+          "availability_ms": {
+            "n": 168,
+            "p50": 119.26,
+            "p95": 169.3,
+            "max": 311.99
+          }
+        },
+        "admission": {
+          "completed_45s": 576,
+          "failed": {},
+          "admission_s": {
+            "n": 576,
+            "p50": 0.25,
+            "p95": 0.93,
+            "max": 1.32
+          },
+          "execution_s": {
+            "n": 576,
+            "p50": 0.8,
+            "p95": 1.23,
+            "max": 1.36
+          },
+          "health_cycle_ms": {
+            "n": 15,
+            "p50": 1078.09,
+            "p95": 1993.33,
+            "max": 1993.33
+          },
+          "place_transactions": 479,
+          "place_hold_ms": {
+            "n": 479,
+            "p50": 6.41,
+            "p95": 42.79,
+            "max": 256.03
+          },
+          "place_hold_ms_total": 6146,
+          "health_write_transactions": 405,
+          "ledger_hold_ms_total": 25271,
+          "submit_wait_ms": {
+            "n": 576,
+            "p50": 39.17,
+            "p95": 146.9,
+            "max": 267.27
+          },
+          "complete_wait_ms": {
+            "n": 576,
+            "p50": 28.35,
+            "p95": 126.98,
+            "max": 252.91
+          },
+          "placement_passes": null
+        }
+      },
+      {
+        "file": "cp-0.4.5-r3.json",
+        "launch_rc24": {
+          "calls_per_launch": 9.0,
+          "wall_ms": 12515,
+          "policy_ms": {
+            "n": 24,
+            "p50": 9225.83,
+            "p95": 9706.52,
+            "max": 10461.74
+          },
+          "models_ms": {
+            "n": 24,
+            "p50": 1247.93,
+            "p95": 1393.25,
+            "max": 1442.38
+          },
+          "availability_ms": {
+            "n": 168,
+            "p50": 251.07,
+            "p95": 336.41,
+            "max": 404.71
+          }
+        },
+        "admission": {
+          "completed_45s": 444,
+          "failed": {},
+          "admission_s": {
+            "n": 444,
+            "p50": 0.44,
+            "p95": 2.05,
+            "max": 2.52
+          },
+          "execution_s": {
+            "n": 444,
+            "p50": 0.85,
+            "p95": 1.32,
+            "max": 1.5
+          },
+          "health_cycle_ms": {
+            "n": 12,
+            "p50": 1718.78,
+            "p95": 3400.55,
+            "max": 3400.55
+          },
+          "place_transactions": 341,
+          "place_hold_ms": {
+            "n": 341,
+            "p50": 11.69,
+            "p95": 87.43,
+            "max": 567.75
+          },
+          "place_hold_ms_total": 8152,
+          "health_write_transactions": 324,
+          "ledger_hold_ms_total": 28960,
+          "submit_wait_ms": {
+            "n": 444,
+            "p50": 74.41,
+            "p95": 218.78,
+            "max": 295.92
+          },
+          "complete_wait_ms": {
+            "n": 444,
+            "p50": 57.96,
+            "p95": 204.72,
+            "max": 329.39
+          },
+          "placement_passes": null
+        }
+      }
+    ],
+    "0.4.6": [
+      {
+        "file": "control-plane-0.4.6.json",
+        "launch_rc24": {
+          "calls_per_launch": 9.0,
+          "wall_ms": 927,
+          "policy_ms": {
+            "n": 24,
+            "p50": 130.62,
+            "p95": 159.84,
+            "max": 159.85
+          },
+          "models_ms": {
+            "n": 24,
+            "p50": 235.2,
+            "p95": 275.1,
+            "max": 280.13
+          },
+          "availability_ms": {
+            "n": 168,
+            "p50": 74.81,
+            "p95": 113.96,
+            "max": 155.41
+          }
+        },
+        "admission": {
+          "completed_45s": 522,
+          "failed": {},
+          "admission_s": {
+            "n": 522,
+            "p50": 0.28,
+            "p95": 0.92,
+            "max": 2.01
+          },
+          "execution_s": {
+            "n": 522,
+            "p50": 0.84,
+            "p95": 1.28,
+            "max": 1.5
+          },
+          "health_cycle_ms": {
+            "n": 17,
+            "p50": 449.9,
+            "p95": 2389.69,
+            "max": 2389.69
+          },
+          "place_transactions": 201,
+          "place_hold_ms": {
+            "n": 201,
+            "p50": 6.82,
+            "p95": 34.47,
+            "max": 75.78
+          },
+          "place_hold_ms_total": 2168,
+          "health_write_transactions": 153,
+          "ledger_hold_ms_total": 24004,
+          "submit_wait_ms": {
+            "n": 522,
+            "p50": 50.14,
+            "p95": 237.74,
+            "max": 409.32
+          },
+          "complete_wait_ms": {
+            "n": 522,
+            "p50": 45.42,
+            "p95": 207.11,
+            "max": 392.29
+          },
+          "placement_passes": {
+            "passes": 308,
+            "read_only_passes": 107,
+            "write_passes": 201,
+            "granted": 522,
+            "choices": 1522,
+            "memo_skips": 704
+          }
+        },
+        "launch_scoped": {
+          "calls_per_launch": 2.0,
+          "wall_ms": 171,
+          "per_call_ms": {
+            "/v1/fleet": {
+              "n": 24,
+              "p50": 55.98,
+              "p95": 109.49,
+              "max": 115.55
+            },
+            "/v1/policy?availability=0": {
+              "n": 24,
+              "p50": 53.77,
+              "p95": 103.0,
+              "max": 116.69
+            }
+          },
+          "internal_calculations_per_launch": 1.5
+        }
+      },
+      {
+        "file": "cp-0.4.6-r2.json",
+        "launch_rc24": {
+          "calls_per_launch": 9.0,
+          "wall_ms": 932,
+          "policy_ms": {
+            "n": 24,
+            "p50": 104.07,
+            "p95": 148.93,
+            "max": 164.86
+          },
+          "models_ms": {
+            "n": 24,
+            "p50": 218.66,
+            "p95": 255.61,
+            "max": 271.2
+          },
+          "availability_ms": {
+            "n": 168,
+            "p50": 77.81,
+            "p95": 124.88,
+            "max": 159.97
+          }
+        },
+        "admission": {
+          "completed_45s": 700,
+          "failed": {},
+          "admission_s": {
+            "n": 700,
+            "p50": 0.13,
+            "p95": 0.52,
+            "max": 1.45
+          },
+          "execution_s": {
+            "n": 700,
+            "p50": 0.77,
+            "p95": 1.2,
+            "max": 1.36
+          },
+          "health_cycle_ms": {
+            "n": 21,
+            "p50": 181.01,
+            "p95": 325.97,
+            "max": 733.24
+          },
+          "place_transactions": 323,
+          "place_hold_ms": {
+            "n": 323,
+            "p50": 3.57,
+            "p95": 18.33,
+            "max": 39.62
+          },
+          "place_hold_ms_total": 1761,
+          "health_write_transactions": 189,
+          "ledger_hold_ms_total": 18916,
+          "submit_wait_ms": {
+            "n": 700,
+            "p50": 16.0,
+            "p95": 92.23,
+            "max": 187.19
+          },
+          "complete_wait_ms": {
+            "n": 700,
+            "p50": 8.17,
+            "p95": 76.77,
+            "max": 167.54
+          },
+          "placement_passes": {
+            "passes": 502,
+            "read_only_passes": 179,
+            "write_passes": 323,
+            "granted": 700,
+            "choices": 2090,
+            "memo_skips": 706
+          }
+        },
+        "launch_scoped": {
+          "calls_per_launch": 2.0,
+          "wall_ms": 179,
+          "per_call_ms": {
+            "/v1/fleet": {
+              "n": 24,
+              "p50": 49.46,
+              "p95": 80.25,
+              "max": 93.4
+            },
+            "/v1/policy?availability=0": {
+              "n": 24,
+              "p50": 56.56,
+              "p95": 86.08,
+              "max": 87.21
+            }
+          },
+          "internal_calculations_per_launch": 1.5
+        }
+      },
+      {
+        "file": "cp-0.4.6-r3.json",
+        "launch_rc24": {
+          "calls_per_launch": 9.0,
+          "wall_ms": 1359,
+          "policy_ms": {
+            "n": 24,
+            "p50": 167.34,
+            "p95": 218.17,
+            "max": 241.9
+          },
+          "models_ms": {
+            "n": 24,
+            "p50": 435.0,
+            "p95": 477.6,
+            "max": 477.63
+          },
+          "availability_ms": {
+            "n": 168,
+            "p50": 97.84,
+            "p95": 151.97,
+            "max": 167.32
+          }
+        },
+        "admission": {
+          "completed_45s": 537,
+          "failed": {},
+          "admission_s": {
+            "n": 537,
+            "p50": 0.3,
+            "p95": 0.81,
+            "max": 1.74
+          },
+          "execution_s": {
+            "n": 537,
+            "p50": 0.82,
+            "p95": 1.24,
+            "max": 1.41
+          },
+          "health_cycle_ms": {
+            "n": 17,
+            "p50": 682.74,
+            "p95": 1350.87,
+            "max": 1350.87
+          },
+          "place_transactions": 203,
+          "place_hold_ms": {
+            "n": 203,
+            "p50": 7.71,
+            "p95": 33.44,
+            "max": 52.62
+          },
+          "place_hold_ms_total": 2195,
+          "health_write_transactions": 153,
+          "ledger_hold_ms_total": 23525,
+          "submit_wait_ms": {
+            "n": 537,
+            "p50": 46.61,
+            "p95": 155.36,
+            "max": 323.39
+          },
+          "complete_wait_ms": {
+            "n": 537,
+            "p50": 47.04,
+            "p95": 205.68,
+            "max": 318.81
+          },
+          "placement_passes": {
+            "passes": 325,
+            "read_only_passes": 122,
+            "write_passes": 203,
+            "granted": 537,
+            "choices": 1609,
+            "memo_skips": 787
+          }
+        },
+        "launch_scoped": {
+          "calls_per_launch": 2.0,
+          "wall_ms": 210,
+          "per_call_ms": {
+            "/v1/fleet": {
+              "n": 24,
+              "p50": 48.4,
+              "p95": 125.76,
+              "max": 140.83
+            },
+            "/v1/policy?availability=0": {
+              "n": 24,
+              "p50": 43.18,
+              "p95": 108.67,
+              "max": 188.97
+            }
+          },
+          "internal_calculations_per_launch": 1.5
+        }
+      }
+    ]
+  }
+}

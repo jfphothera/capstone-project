@@ -1,0 +1,1186 @@
+{
+    "schema":  "agent-arena.lab-report/1",
+    "provisioner":  "Agent Arena Lab Provisioner 1.3.0",
+    "run":  "20261105-110826-DESKTOP-REDACT10-hub",
+    "role":  "hub",
+    "computer":  "DESKTOP-REDACT10",
+    "started":  "2026-11-05T11:08:26.8165484-05:00",
+    "finished":  "2026-11-05T11:10:34.5213005-05:00",
+    "final_status":  "failed",
+    "identity":  {
+                     "detected":  {
+                                      "Role":  "hub",
+                                      "Address":  "192.0.2.254",
+                                      "Reason":  "holds the hub address 192.0.2.254"
+                                  },
+                     "os":  {
+                                "Caption":  "Microsoft Windows 11 Pro",
+                                "Edition":  "Professional",
+                                "Version":  "10.0.26200",
+                                "Build":  "26200",
+                                "Arch":  "64-bit",
+                                "LastBoot":  "2026-11-05T07:03:00.5000000-05:00",
+                                "TimeZone":  "Eastern Standard Time",
+                                "Domain":  "WORKGROUP",
+                                "PartOfDomain":  false
+                            },
+                     "user":  "Desktop-Redact10\\LabOperator1",
+                     "elevated":  true
+                 },
+    "inventory":  [
+                      {
+                          "area":  "identity",
+                          "name":  "computer",
+                          "value":  "DESKTOP-REDACT10",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "signed-in user",
+                          "value":  "Desktop-Redact10\\LabOperator1",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "running as administrator",
+                          "value":  "True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "os",
+                          "name":  "Windows",
+                          "value":  "Microsoft Windows 11 Pro (Professional) 10.0.26200 build 26200 64-bit",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "os",
+                          "name":  "last boot",
+                          "value":  "2026-11-05T07:03:00.5000000-05:00",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "os",
+                          "name":  "domain or workgroup",
+                          "value":  "WORKGROUP (domain joined: False)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "CPU",
+                          "value":  "Intel(R) Core(TM) i5-10310U CPU @ 1.70GHz (4 cores, 8 threads)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "RAM",
+                          "value":  "23.8 GB",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "GPU",
+                          "value":  "Intel(R) UHD Graphics",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "NVIDIA VRAM",
+                          "value":  "no NVIDIA GPU",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "storage",
+                          "name":  "volume C:",
+                          "value":  "423.04 GB free of 475.61 GB",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Wi-Fi",
+                          "value":  "Intel(R) Wi-Fi 6 AX201 160MHz; Disconnected; MAC 02-00-00-00-00-03; IPv4 169.254.132.206/16; gateway ; DHCP Enabled; profile none",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Ethernet",
+                          "value":  "Intel(R) Ethernet Connection (10) I219-LM; Up; MAC 02-00-00-00-00-04; IPv4 192.0.2.254/24; gateway ; DHCP Disabled; profile Public",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Bluetooth Network Connection",
+                          "value":  "Bluetooth Device (Personal Area Network); Disconnected; MAC 02-00-00-00-00-05; IPv4 169.254.2.181/16; gateway ; DHCP Enabled; profile none",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "lab address",
+                          "value":  "192.0.2.254/24 on Ethernet",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "installed",
+                          "value":  "ollama.exe not found",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "API http://127.0.0.1:11434",
+                          "value":  "no answer",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "API http://192.0.2.254:11434",
+                          "value":  "no answer",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "listeners on 11434",
+                          "value":  "none",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "models",
+                          "name":  "installed models",
+                          "value":  "no Ollama API answers, so the inventory cannot be read",
+                          "status":  "inaccessible",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "OLLAMA_HOST",
+                          "value":  "machine \"\", user \"\"",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "OLLAMA_MODELS",
+                          "value":  "machine \"\", user \"\"",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "boot task",
+                          "value":  "\"Capstone Ollama Server\" not present",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "profile Domain",
+                          "value":  "enabled True; default inbound Block; local rules allowed True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "profile Private",
+                          "value":  "enabled True; default inbound Block; local rules allowed True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "profile Public",
+                          "value":  "enabled True; default inbound Block; local rules allowed True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "active profile on the lab adapter",
+                          "value":  "Public",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.254",
+                          "value":  "ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.1",
+                          "value":  "ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.201",
+                          "value":  "ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.202",
+                          "value":  "ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.50",
+                          "value":  "ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "rule Desktop App Web Viewer",
+                          "value":  "BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "rule Windows Feature Experience Pack",
+                          "value":  "BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "rule Windows Feature Experience Pack",
+                          "value":  "BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "rule Microsoft 365 Copilot",
+                          "value":  "BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "rule Mail and Calendar",
+                          "value":  "BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "rule Microsoft Teams",
+                          "value":  "BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "rule Game Bar",
+                          "value":  "BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "rule Microsoft Store",
+                          "value":  "BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "time",
+                          "name":  "time zone",
+                          "value":  "Eastern Standard Time",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "time",
+                          "name":  "Windows Time",
+                          "value":  "Running, start Auto, source \"time.windows.com,0x8\" (NTP)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "power",
+                          "name":  "sleep on AC",
+                          "value":  "standby 0 s, hibernate 0 s",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "power",
+                          "name":  "adapter Ethernet",
+                          "value":  "may be turned off: Unsupported; EEE Energy Efficient Ethernet=Off",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "tasks",
+                          "name":  "relevant scheduled tasks",
+                          "value":  "none",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "services",
+                          "name":  "relevant Windows services",
+                          "value":  "none",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "event service",
+                          "value":  "http://192.0.2.254:8790: ok aes-a1e79a8b3902 2.2.0",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "head viewer",
+                          "value":  "not installed for LabOperator1",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "admin hub",
+                          "value":  "program True; data True; local health unreachable ; firewall rule True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "Python 3.12+ for the Arena installers",
+                          "value":  "not found on PATH",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "observation file",
+                          "value":  "not published on this machine",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "publisher task",
+                          "value":  "not registered",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "service port",
+                          "value":  "port 8443",
+                          "status":  "inferred",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "default outbound action",
+                          "value":  "Public profile: Allow",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.2",
+                          "value":  "UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.3",
+                          "value":  "UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.4",
+                          "value":  "UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.5",
+                          "value":  "UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.6",
+                          "value":  "UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.7",
+                          "value":  "UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.8",
+                          "value":  "UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.9",
+                          "value":  "UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "outbound",
+                          "name":  "TCP 11434 to 192.0.2.10",
+                          "value":  "UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.2",
+                          "value":  "no connection from this host",
+                          "status":  "missing",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.3",
+                          "value":  "answers, version 0.40.13, 21 model(s)",
+                          "status":  "observed",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.4",
+                          "value":  "answers, version 0.40.13, 21 model(s)",
+                          "status":  "observed",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.5",
+                          "value":  "answers, version 0.40.13, 21 model(s)",
+                          "status":  "observed",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.6",
+                          "value":  "no connection from this host",
+                          "status":  "missing",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.7",
+                          "value":  "no connection from this host",
+                          "status":  "missing",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.8",
+                          "value":  "no connection from this host",
+                          "status":  "missing",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.9",
+                          "value":  "no connection from this host",
+                          "status":  "missing",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "reach",
+                          "name":  "Ollama on 192.0.2.10",
+                          "value":  "no connection from this host",
+                          "status":  "missing",
+                          "source":  "real connection"
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "Arena hub installed for",
+                          "value":  "Desktop-Redact10\\LabOperator1",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "Arena running as",
+                          "value":  "event service: Desktop-Redact10\\LabOperator1; event service: Desktop-Redact10\\LabOperator1",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "Administrators (direct members)",
+                          "value":  "Desktop-Redact10\\Administrator; Desktop-Redact10\\LabOperator1",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "Gateway account prerequisites",
+                          "value":  "BLOCKED: the Arena account Desktop-Redact10\\LabOperator1 is a member of Administrators (directly or through a nested group): the Gateway refuses this, since no ACL protects the ledger from it",
+                          "status":  "inferred",
+                          "source":  "rules of the Gateway\u0027s Set-ObservationPublicationAcl.ps1"
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "ledger folder",
+                          "value":  "not present: C:\\ProgramData\\InferenceGateway\\state",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "state folder",
+                          "value":  "not present: C:\\ProgramData\\InferenceGateway\\observation-state",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "logs folder",
+                          "value":  "not present: C:\\ProgramData\\InferenceGateway\\logs",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "publication folder",
+                          "value":  "not present: C:\\ProgramData\\InferenceGateway\\observation",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "observation",
+                          "value":  "PENDING GATEWAY INSTALLATION: nothing is published yet (Arena is not configured yet) (configured False, file False, access publication folder not present, fresh False, service False)",
+                          "status":  "inferred",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "InferenceGateway service",
+                          "value":  "not installed",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "account svc-inference-gw",
+                          "value":  "does not exist yet",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "Arena account Desktop-Redact10\\LabOperator1",
+                          "value":  "privileged: Administrators (transitive)",
+                          "status":  "inferred",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "machine-wide Python",
+                          "value":  "missing: C:\\Program Files\\Python312\\python.exe",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "gateway",
+                          "name":  "machine-wide PowerShell 7",
+                          "value":  "missing: C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "backups",
+                          "name":  "lab provisioner runs with changes",
+                          "value":  "none",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "appears to be",
+                          "value":  "hub (holds the hub address 192.0.2.254)",
+                          "status":  "inferred",
+                          "source":  ""
+                      }
+                  ],
+    "plan":  {
+                 "address":  "192.0.2.254",
+                 "address_verdict":  {
+                                         "Allowed":  true,
+                                         "Reasons":  [
+
+                                                     ],
+                                         "Warnings":  [
+
+                                                      ],
+                                         "HeldHere":  true
+                                     },
+                 "conflict":  null,
+                 "hardware":  null,
+                 "profile":  null,
+                 "models":  [
+
+                            ],
+                 "client_mode":  "cutover",
+                 "clients":  [
+                                 "192.0.2.254",
+                                 "192.0.2.1"
+                             ],
+                 "denied":  [
+                                "192.0.2.201",
+                                "192.0.2.202",
+                                "192.0.2.50"
+                            ],
+                 "steps":  [
+                               {
+                                   "id":  "hub-network",
+                                   "stage":  "C",
+                                   "title":  "Keep 192.0.2.254/24 (already set)",
+                                   "kind":  "read",
+                                   "detail":  "adapter choice, conflict probes, backup and verified apply (as for heads)",
+                                   "rollback":  "network backup JSON; undo restores DHCP or the earlier static address",
+                                   "preserves":  "",
+                                   "approval":  false,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "hub-profile",
+                                   "stage":  "C",
+                                   "title":  "Lab adapter network profile: Private",
+                                   "kind":  "privileged",
+                                   "detail":  "",
+                                   "rollback":  "earlier profile restored",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "hub-power",
+                                   "stage":  "C",
+                                   "title":  "Stay awake: no sleep or hibernate on AC, screen on, lid does nothing, Ethernet power saving and EEE off",
+                                   "kind":  "privileged",
+                                   "detail":  "",
+                                   "rollback":  "earlier power values restored",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "hub-time",
+                                   "stage":  "C",
+                                   "title":  "Time zone Eastern Standard Time; this computer serves time to the lab (syncs from time.windows.com when it has internet)",
+                                   "kind":  "privileged",
+                                   "detail":  "",
+                                   "rollback":  "earlier time service settings restored",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "hub-firewall",
+                                   "stage":  "C",
+                                   "title":  "Inbound from 192.0.2.0/24: time (UDP 123) and ping; Remote Desktop from 192.0.2.1 only",
+                                   "kind":  "privileged",
+                                   "detail":  "rules that already exist are left alone",
+                                   "rollback":  "added rules removed; Remote Desktop scope and setting restored",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "hub-python",
+                                   "stage":  "C",
+                                   "title":  "Python 3.12+ for the Arena installer (winget for this user, if missing)",
+                                   "kind":  "change",
+                                   "detail":  "",
+                                   "rollback":  "winget uninstall Python.Python.3.12",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "hub-install",
+                                   "stage":  "C",
+                                   "title":  "Update the Arena event service and admin window in place (data kept)",
+                                   "kind":  "change",
+                                   "detail":  "the existing AGENT-ARENA-HUB installer, unchanged: checks first, keeps the service identity and data",
+                                   "rollback":  "UNINSTALL-ADMIN-HUB.cmd (keeps data); data backups in the service folder",
+                                   "preserves":  "Arena data, registrations, credentials and history",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "arena-gateway-config",
+                                   "stage":  "C",
+                                   "title":  "Arena reads the Gateway observation file (C:\\ProgramData\\InferenceGateway\\observation\\shared-inference-observation.json, gateway_id gateway-254)",
+                                   "kind":  "change",
+                                   "detail":  "only the \"gateway\" block of aes.config.json; every other setting is proven unchanged",
+                                   "rollback":  "aes.config.json restored from the backup",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "gateway",
+                                   "stage":  "C",
+                                   "title":  "Inference Gateway installation and registration",
+                                   "kind":  "read",
+                                   "detail":  "PENDING: the Gateway project has no Windows installer or deployment contract yet (no assigned port, TLS certificate, service account or supervisor). Nothing is installed. When it arrives it would be BLOCKED: the Arena account Desktop-Redact10\\LabOperator1 is a member of Administrators (directly or through a nested group): the Gateway refuses this, since no ACL protects the ledger from it",
+                                   "rollback":  "",
+                                   "preserves":  "",
+                                   "approval":  false,
+                                   "state":  "pending"
+                               }
+                           ],
+                 "external":  [
+                                  "Inference Gateway release with its installer, port, TLS certificate and client tokens (Gateway project)"
+                              ],
+                 "warnings":  [
+                                  "Gateway prerequisite not met: the Arena account Desktop-Redact10\\LabOperator1 is a member of Administrators (directly or through a nested group): the Gateway refuses this, since no ACL protects the ledger from it. No account is changed by this provisioner; this needs a decision."
+                              ],
+                 "blocked":  [
+
+                             ],
+                 "preserves":  [
+                                   "Arena data and history; Gateway storage, credentials and lifecycle stay separate"
+                               ]
+             },
+    "actual":  [
+
+               ],
+    "software":  {
+                     "ollama":  "not installed",
+                     "arena_viewer":  "not installed",
+                     "arena_hub":  "installed (service )"
+                 },
+    "models":  null,
+    "registration":  [
+
+                     ],
+    "verification":  [
+                         {
+                             "check":  "Arena event service answers locally with the fleet identity",
+                             "status":  "FAIL",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "unreachable  "
+                         },
+                         {
+                             "check":  "Arena event service answers on 192.0.2.254:8790",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "ok "
+                         },
+                         {
+                             "check":  "event service firewall rule (TCP 8790 from the lab)",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  ""
+                         },
+                         {
+                             "check":  "this computer serves time to the lab",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "Eastern Standard Time; source time.windows.com,0x8; announce 5; server provider 1; service Running"
+                         },
+                         {
+                             "check":  "outbound policy lets this host open TCP 11434 to the heads (rule analysis)",
+                             "status":  "FAIL",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "192.0.2.2 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.3 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.4 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.5 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.6 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.7 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.8 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.9 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.10 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams"
+                         },
+                         {
+                             "check":  "Gateway host reaches head 192.0.2.2 Ollama",
+                             "status":  "PENDING",
+                             "scope":  "lan",
+                             "required":  false,
+                             "detail":  "no answer (head off or not on this LAN)"
+                         },
+                         {
+                             "check":  "Gateway host reaches head 192.0.2.3 Ollama",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  false,
+                             "detail":  "Ollama 0.40.13, 21 model(s)"
+                         },
+                         {
+                             "check":  "Gateway host reaches head 192.0.2.4 Ollama",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  false,
+                             "detail":  "Ollama 0.40.13, 21 model(s)"
+                         },
+                         {
+                             "check":  "Gateway host reaches head 192.0.2.5 Ollama",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  false,
+                             "detail":  "Ollama 0.40.13, 21 model(s)"
+                         },
+                         {
+                             "check":  "Gateway host reaches head 192.0.2.6 Ollama",
+                             "status":  "PENDING",
+                             "scope":  "lan",
+                             "required":  false,
+                             "detail":  "no answer (head off or not on this LAN)"
+                         },
+                         {
+                             "check":  "Gateway host reaches head 192.0.2.7 Ollama",
+                             "status":  "PENDING",
+                             "scope":  "lan",
+                             "required":  false,
+                             "detail":  "no answer (head off or not on this LAN)"
+                         },
+                         {
+                             "check":  "Gateway host reaches head 192.0.2.8 Ollama",
+                             "status":  "PENDING",
+                             "scope":  "lan",
+                             "required":  false,
+                             "detail":  "no answer (head off or not on this LAN)"
+                         },
+                         {
+                             "check":  "Gateway host reaches head 192.0.2.9 Ollama",
+                             "status":  "PENDING",
+                             "scope":  "lan",
+                             "required":  false,
+                             "detail":  "no answer (head off or not on this LAN)"
+                         },
+                         {
+                             "check":  "Gateway host reaches head 192.0.2.10 Ollama",
+                             "status":  "PENDING",
+                             "scope":  "lan",
+                             "required":  false,
+                             "detail":  "no answer (head off or not on this LAN)"
+                         },
+                         {
+                             "check":  "verified head inventory exported for the Gateway operator",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  false,
+                             "detail":  "3 verified, 6 excluded: C:\\ProgramData\\AgentArenaLab\\reports\\verified-head-inventory-20261105-111029.json (provisional format; nothing enrolled)"
+                         },
+                         {
+                             "check":  "Arena configured to read the Gateway observation",
+                             "status":  "FAIL",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "C:\\ProgramData\\InferenceGateway\\observation\\shared-inference-observation.json (restart the admin console after a change)"
+                         },
+                         {
+                             "check":  "Gateway observation: file present",
+                             "status":  "PENDING",
+                             "scope":  "external",
+                             "required":  true,
+                             "detail":  "pending Gateway installation"
+                         },
+                         {
+                             "check":  "Gateway observation: Arena can read it and nothing private (ACL analysis)",
+                             "status":  "PENDING",
+                             "scope":  "external",
+                             "required":  true,
+                             "detail":  "publication folder not present"
+                         },
+                         {
+                             "check":  "Gateway observation: fresh, right contract, publisher running",
+                             "status":  "PENDING",
+                             "scope":  "external",
+                             "required":  true,
+                             "detail":  "PENDING GATEWAY INSTALLATION: nothing is published yet (Arena is not configured yet)"
+                         },
+                         {
+                             "check":  "Gateway account prerequisites (separate accounts; Arena not in Administrators or Backup Operators, transitively; no Arena access to ledger/state/logs)",
+                             "status":  "FAIL",
+                             "scope":  "local",
+                             "required":  false,
+                             "detail":  "the Arena account Desktop-Redact10\\LabOperator1 is a member of Administrators (directly or through a nested group): the Gateway refuses this, since no ACL protects the ledger from it; the Gateway service account does not exist yet; ledger folder not present yet; state folder not present yet; logs folder not present yet"
+                         },
+                         {
+                             "check":  "machine-wide Python 3.12.10 and PowerShell 7.4+ for the Gateway",
+                             "status":  "PENDING",
+                             "scope":  "local",
+                             "required":  false,
+                             "detail":  "python missing (base False); pwsh missing"
+                         },
+                         {
+                             "check":  "InferenceGateway service runs (delayed automatic, as the service account)",
+                             "status":  "PENDING",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "not installed"
+                         },
+                         {
+                             "check":  "Gateway listener rule",
+                             "status":  "PENDING",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "not created yet (it is created after the Gateway verify)"
+                         },
+                         {
+                             "check":  "Arena observation (separate from the Gateway\u0027s own health)",
+                             "status":  "PENDING",
+                             "scope":  "external",
+                             "required":  true,
+                             "detail":  "PENDING GATEWAY INSTALLATION: nothing is published yet (Arena is not configured yet) (configured False, file False, access publication folder not present, fresh False, service False, ledger unknown)"
+                         },
+                         {
+                             "check":  "Arena accounts meet the Gateway account rule (transitive)",
+                             "status":  "FAIL",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "the Arena account Desktop-Redact10\\LabOperator1 is a member of Administrators (directly or through a nested group): the Gateway refuses this, since no ACL protects the ledger from it"
+                         }
+                     ],
+    "security":  {
+                     "HeadIp":  "192.0.2.254",
+                     "ActiveProfile":  "Public",
+                     "ProfileEnabled":  true,
+                     "DefaultInbound":  "Block",
+                     "PolicyNote":  "",
+                     "Sources":  [
+                                     {
+                                         "Source":  "192.0.2.254",
+                                         "Verdict":  "ADMITTED",
+                                         "Reason":  "allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store",
+                                         "AllowedBy":  [
+                                                           "Desktop App Web Viewer",
+                                                           "Windows Feature Experience Pack",
+                                                           "Windows Feature Experience Pack",
+                                                           "Microsoft 365 Copilot",
+                                                           "Mail and Calendar",
+                                                           "Microsoft Teams",
+                                                           "Game Bar",
+                                                           "Microsoft Store"
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.1",
+                                         "Verdict":  "ADMITTED",
+                                         "Reason":  "allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store",
+                                         "AllowedBy":  [
+                                                           "Desktop App Web Viewer",
+                                                           "Windows Feature Experience Pack",
+                                                           "Windows Feature Experience Pack",
+                                                           "Microsoft 365 Copilot",
+                                                           "Mail and Calendar",
+                                                           "Microsoft Teams",
+                                                           "Game Bar",
+                                                           "Microsoft Store"
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.201",
+                                         "Verdict":  "ADMITTED",
+                                         "Reason":  "allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store",
+                                         "AllowedBy":  [
+                                                           "Desktop App Web Viewer",
+                                                           "Windows Feature Experience Pack",
+                                                           "Windows Feature Experience Pack",
+                                                           "Microsoft 365 Copilot",
+                                                           "Mail and Calendar",
+                                                           "Microsoft Teams",
+                                                           "Game Bar",
+                                                           "Microsoft Store"
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.202",
+                                         "Verdict":  "ADMITTED",
+                                         "Reason":  "allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store",
+                                         "AllowedBy":  [
+                                                           "Desktop App Web Viewer",
+                                                           "Windows Feature Experience Pack",
+                                                           "Windows Feature Experience Pack",
+                                                           "Microsoft 365 Copilot",
+                                                           "Mail and Calendar",
+                                                           "Microsoft Teams",
+                                                           "Game Bar",
+                                                           "Microsoft Store"
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.50",
+                                         "Verdict":  "ADMITTED",
+                                         "Reason":  "allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store",
+                                         "AllowedBy":  [
+                                                           "Desktop App Web Viewer",
+                                                           "Windows Feature Experience Pack",
+                                                           "Windows Feature Experience Pack",
+                                                           "Microsoft 365 Copilot",
+                                                           "Mail and Calendar",
+                                                           "Microsoft Teams",
+                                                           "Game Bar",
+                                                           "Microsoft Store"
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     }
+                                 ],
+                     "RelevantRules":  [
+                                           {
+                                               "Name":  "Microsoft.Win32WebViewHost_cw5n1h2txyewyS-1-5-18-In-Allow-ServerCapability",
+                                               "DisplayName":  "Desktop App Web Viewer",
+                                               "Class":  "BROAD",
+                                               "Action":  "Allow",
+                                               "Profiles":  "Domain,Private,Public",
+                                               "Program":  "Any",
+                                               "LocalPorts":  "Any",
+                                               "RemoteAddresses":  "Any",
+                                               "PolicySource":  "Local"
+                                           },
+                                           {
+                                               "Name":  "MicrosoftWindows.Client.CBS_cw5n1h2txyewyS-1-5-18-In-Allow-ServerCapability",
+                                               "DisplayName":  "Windows Feature Experience Pack",
+                                               "Class":  "BROAD",
+                                               "Action":  "Allow",
+                                               "Profiles":  "Domain,Private,Public",
+                                               "Program":  "Any",
+                                               "LocalPorts":  "Any",
+                                               "RemoteAddresses":  "Any",
+                                               "PolicySource":  "Local"
+                                           },
+                                           {
+                                               "Name":  "MicrosoftWindows.Client.OOBE_cw5n1h2txyewyS-1-5-18-In-Allow-ServerCapability",
+                                               "DisplayName":  "Windows Feature Experience Pack",
+                                               "Class":  "BROAD",
+                                               "Action":  "Allow",
+                                               "Profiles":  "Domain,Private,Public",
+                                               "Program":  "Any",
+                                               "LocalPorts":  "Any",
+                                               "RemoteAddresses":  "Any",
+                                               "PolicySource":  "Local"
+                                           },
+                                           {
+                                               "Name":  "Microsoft.MicrosoftOfficeHub_8wekyb3d8bbweS-1-5-21-1000000001-1000000002-1000000003-1001-In-Allow-ServerCapability",
+                                               "DisplayName":  "Microsoft 365 Copilot",
+                                               "Class":  "BROAD",
+                                               "Action":  "Allow",
+                                               "Profiles":  "Domain,Private,Public",
+                                               "Program":  "Any",
+                                               "LocalPorts":  "Any",
+                                               "RemoteAddresses":  "Any",
+                                               "PolicySource":  "Local"
+                                           },
+                                           {
+                                               "Name":  "microsoft.windowscommunicationsapps_8wekyb3d8bbweS-1-5-21-1000000001-1000000002-1000000003-1001-In-Allow-ServerCapability",
+                                               "DisplayName":  "Mail and Calendar",
+                                               "Class":  "BROAD",
+                                               "Action":  "Allow",
+                                               "Profiles":  "Domain,Private,Public",
+                                               "Program":  "Any",
+                                               "LocalPorts":  "Any",
+                                               "RemoteAddresses":  "Any",
+                                               "PolicySource":  "Local"
+                                           },
+                                           {
+                                               "Name":  "MSTeams_8wekyb3d8bbweS-1-5-21-1000000001-1000000002-1000000003-1001-In-Allow-ServerCapability",
+                                               "DisplayName":  "Microsoft Teams",
+                                               "Class":  "BROAD",
+                                               "Action":  "Allow",
+                                               "Profiles":  "Domain,Private,Public",
+                                               "Program":  "Any",
+                                               "LocalPorts":  "Any",
+                                               "RemoteAddresses":  "Any",
+                                               "PolicySource":  "Local"
+                                           },
+                                           {
+                                               "Name":  "Microsoft.XboxGamingOverlay_8wekyb3d8bbweS-1-5-21-1000000001-1000000002-1000000003-1001-In-Allow-ServerCapability",
+                                               "DisplayName":  "Game Bar",
+                                               "Class":  "BROAD",
+                                               "Action":  "Allow",
+                                               "Profiles":  "Domain,Private,Public",
+                                               "Program":  "Any",
+                                               "LocalPorts":  "Any",
+                                               "RemoteAddresses":  "Any",
+                                               "PolicySource":  "Local"
+                                           },
+                                           {
+                                               "Name":  "Microsoft.WindowsStore_8wekyb3d8bbweS-1-5-21-1000000001-1000000002-1000000003-1001-In-Allow-ServerCapability",
+                                               "DisplayName":  "Microsoft Store",
+                                               "Class":  "BROAD",
+                                               "Action":  "Allow",
+                                               "Profiles":  "Domain,Private,Public",
+                                               "Program":  "Any",
+                                               "LocalPorts":  "Any",
+                                               "RemoteAddresses":  "Any",
+                                               "PolicySource":  "Local"
+                                           }
+                                       ],
+                     "Analysis":  "rule analysis (inferred); a real connection from each address is the field proof"
+                 },
+    "changes":  [
+
+                ],
+    "rollback":  {
+                     "change_record":  "C:\\ProgramData\\AgentArenaLab\\runs\\20261105-110826-DESKTOP-REDACT10-hub\\changes.json",
+                     "backups":  "C:\\ProgramData\\AgentArenaLab\\runs\\20261105-110826-DESKTOP-REDACT10-hub\\backups",
+                     "how":  "START-LAB-PROVISIONER.cmd \u003e Existing machine \u003e Roll back a previous run"
+                 },
+    "warnings":  [
+
+                 ],
+    "pending":  [
+
+                ],
+    "stop_reason":  "",
+    "extra":  null,
+    "scope_note":  "Checks marked scope=lan used real connections over the LAN; scope=local are on this machine only; scope=external need another project or machine."
+}

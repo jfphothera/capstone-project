@@ -1,0 +1,217 @@
+===============================================================================
+ CAPSTONE HEAD PROVISIONER 1.0.0 - FIELD CARD
+ Nodes 3, 5 and 6.  Print this or keep it open on your phone.
+===============================================================================
+
+ Do PART A on every machine.
+ Then do PART B (node 3), PART C (node 5), PART D (node 6).
+ Then PART E back at the coordinator.
+
+
+===============================================================================
+ PART A - ON EACH MACHINE, BEFORE ANYTHING ELSE
+===============================================================================
+
+ A1. Check the Ethernet cable runs to the isolated Capstone switch.
+
+ A2. Check Wi-Fi is connected and has internet.
+     (Needed to download Ollama and the models. Leave it connected.)
+
+ A3. Copy Capstone-Head-Provisioner-v1.0.0.zip to the machine, into C:\
+
+ A4. Right-click the ZIP  ->  Extract All...
+     Change the destination to exactly:   C:\Capstone-Setup
+     Click Extract.
+
+ A5. You should now have this folder:
+         C:\Capstone-Setup\Capstone-Head-Provisioner\
+     Open it. Leave the window open.
+
+     IMPORTANT: do not run anything from inside the ZIP preview window.
+     You must extract first.
+
+ A6. Double-click:   DIAGNOSTICS-READ-ONLY.cmd
+     Click Yes on the Windows prompt.
+     Wait about one minute. THIS CHANGES NOTHING.
+
+ A7. Write down these two lines from the output:
+
+         Installed RAM : ____ GB
+         Ollama        : ____________________
+
+ A8. Pick your launcher from the RAM figure:
+
+         about  8 GB  ->  CPU8
+         about 16 GB  ->  CPU16
+         about 32 GB  ->  CPU32
+
+     Ignore the node number when choosing this. Node number and model
+     profile are unrelated.
+
+ A9. Press a key to close the diagnostics window.
+
+
+===============================================================================
+ PART B - NODE 3   (the one that stopped connecting after the reboot)
+===============================================================================
+
+ B1. Do PART A on node 3 first.
+
+ B2. Open the  launchers  folder.
+
+ B3. Double-click the file for node 3 and the RAM you wrote down:
+
+         SETUP-NODE-3-CPU8.cmd
+         SETUP-NODE-3-CPU16.cmd     <- most likely
+         SETUP-NODE-3-CPU32.cmd
+
+ B4. Click Yes on the Windows prompt.
+
+ B5. Walk away. It asks nothing else.
+     This should be a SHORT run - most of node 3 is already in place.
+     It keeps every model already downloaded.
+
+ B6. Come back and read the last screen. Then open:
+
+         C:\ProgramData\CapstoneProvisioner\reports\LATEST-STATUS.txt
+
+     Read only the section headed:   WHAT STILL NEEDS ATTENTION
+
+ B7. Save a copy of that file. Name it  node3-status.txt
+
+ EXPECTED RESULT ON NODE 3
+     RESULT: FULL_SUCCESS  or  PARTIAL_SUCCESS.
+     "Coordinator verification is still pending" is NORMAL at this point.
+     PART E clears it.
+
+ IF NODE 3 SAYS  LOCAL_API_UNAVAILABLE
+     Stop. Do not uninstall anything. Send me node3-status.txt.
+     That is the one fault this version reports instead of fixing.
+
+
+===============================================================================
+ PART C - NODE 5   (first full build)
+===============================================================================
+
+ C1. Do PART A on node 5.
+
+ C2. Open the  launchers  folder.
+
+ C3. Double-click the file for node 5 and the RAM you wrote down:
+
+         SETUP-NODE-5-CPU8.cmd
+         SETUP-NODE-5-CPU16.cmd
+         SETUP-NODE-5-CPU32.cmd
+
+ C4. Click Yes on the Windows prompt.
+
+ C5. STAY FOR THE FIRST 5 MINUTES ON THIS ONE. Watch for:
+
+         "Private-LAN address verified"        <- network worked
+         "Ollama ... installed at ..."          <- installer worked
+
+     Those two lines are the parts that have never run on real hardware
+     before. If you see both, the rest is just downloading.
+
+ C6. Once you see both lines, walk away.
+     Ollama install is about 1.6 GB, 5 to 15 minutes.
+     Models are 10 to 55 GB depending on profile. Allow 1 to 4 hours.
+
+ C7. Come back, read LATEST-STATUS.txt, save it as  node5-status.txt
+
+ IF NODE 5 STOPS EARLY, the report will name one of these. Send it to me:
+     AMBIGUOUS_NETWORK_ADAPTER        - machine has two wired ports
+     ETHERNET_IS_SOLE_INTERNET_PATH   - Wi-Fi is not connected
+     DUPLICATE_IP_OR_NETWORK_CONFLICT - something else already has .5
+     NETWORK_CONFIGURATION_FAILURE    - run RECOVER-NETWORK-ROLLBACK.cmd
+
+
+===============================================================================
+ PART D - NODE 6   (second full build)
+===============================================================================
+
+ D1. Do PART A on node 6.
+
+ D2. Open the  launchers  folder.
+
+ D3. Double-click the file for node 6 and the RAM you wrote down:
+
+         SETUP-NODE-6-CPU8.cmd
+         SETUP-NODE-6-CPU16.cmd
+         SETUP-NODE-6-CPU32.cmd     <- if this is the 32 GB machine
+
+ D4. Click Yes on the Windows prompt.
+
+ D5. Walk away. By now node 5 has proved the risky parts.
+
+ D6. Come back, read LATEST-STATUS.txt, save it as  node6-status.txt
+
+ NOTE: node 5 and node 6 can run AT THE SAME TIME. Start node 5, confirm
+ its two lines from C5, then go start node 6 while node 5 downloads.
+
+
+===============================================================================
+ PART E - BACK AT THE COORDINATOR (this machine, 192.0.2.1)
+===============================================================================
+
+ E1. On the coordinator, open the same extracted folder.
+
+ E2. Double-click:   COORDINATOR-CHECK-ALL-HEADS.cmd
+     No administrator prompt. Changes nothing.
+
+ E3. Read the table. You want this for 3, 5 and 6:
+
+         Node  Address      API    Models  Remote inference
+         3     192.0.2.3    up     21      PROVEN (...)
+         5     192.0.2.5    up     21      PROVEN (...)
+         6     192.0.2.6    up     26      PROVEN (...)
+
+ E4. Save the report:
+
+         C:\ProgramData\CapstoneProvisioner\reports\COORDINATOR-HEAD-REPORT.txt
+
+ THIS IS THE REAL PROOF. A head's own report says "pending" because a head
+ cannot see whether the coordinator reached it. This table is the authority.
+
+
+===============================================================================
+ PART F - THE REBOOT TEST  (do this on node 3 only)
+===============================================================================
+
+ Node 3 failed before because the setting did not survive a power cycle.
+ This proves it is actually fixed.
+
+ F1. After node 3 finishes, restart node 3. Wait 3 minutes.
+
+ F2. On the coordinator, run COORDINATOR-CHECK-ALL-HEADS.cmd again.
+
+ F3. Node 3 must still say  up  and  PROVEN.
+     If it does, the reboot problem is genuinely gone.
+
+
+===============================================================================
+ WHAT TO SEND ME
+===============================================================================
+
+     node3-status.txt
+     node5-status.txt
+     node6-status.txt
+     COORDINATOR-HEAD-REPORT.txt
+
+ If a machine fails hard, also send the newest file from:
+     C:\ProgramData\CapstoneProvisioner\logs\
+
+
+===============================================================================
+ IF SOMETHING GOES WRONG
+===============================================================================
+
+ Re-run the same launcher.       Safe. It keeps everything already done.
+ Want to check, not change?      VERIFY-ONLY.cmd
+ Need the network put back?      RECOVER-NETWORK-ROLLBACK.cmd
+ Window closed too fast?         C:\ProgramData\CapstoneProvisioner\reports\
+
+ Re-running NEVER undoes a successful run, never deletes a model, and
+ never reinstalls a working Ollama.
+
+===============================================================================

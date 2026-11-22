@@ -1,0 +1,2 @@
+param([string]$InstallRoot='C:\Program Files\{{SERVICE}}',[string]$TaskName='{{SERVICE}} Service')
+$ErrorActionPreference='Stop';$current=Get-Content -Raw "$InstallRoot\current.json"|ConvertFrom-Json;if(!$current.previous){throw 'No previous release is recorded'};Stop-ScheduledTask $TaskName -ErrorAction SilentlyContinue;[ordered]@{version=$current.previous;previous=$current.version}|ConvertTo-Json|Set-Content "$InstallRoot\current.json" -Encoding utf8;Start-ScheduledTask $TaskName;[ordered]@{rolled_back=$true;from=$current.version;to=$current.previous}|ConvertTo-Json

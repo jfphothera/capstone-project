@@ -1,0 +1,492 @@
+{
+  "schema": "arena.sprites.v1",
+  "staff": {
+    "mechanic": {
+      "size": [
+        96,
+        112
+      ],
+      "anchor": [
+        0.5,
+        0.9285714285714286
+      ],
+      "ground_anchor_px": [
+        48,
+        104
+      ],
+      "nominal_body_height_px": 84,
+      "mirror_safe": true,
+      "animations": {
+        "walk": {
+          "frames": [
+            "mechanic-walk-1.png",
+            "mechanic-walk-2.png",
+            "mechanic-walk-3.png",
+            "mechanic-walk-4.png"
+          ],
+          "frame_ms": 180,
+          "loop": true
+        },
+        "carry": {
+          "frames": [
+            "mechanic-carry-1.png",
+            "mechanic-carry-2.png",
+            "mechanic-carry-3.png",
+            "mechanic-carry-4.png"
+          ],
+          "frame_ms": 220,
+          "loop": true
+        },
+        "set-down": {
+          "frames": [
+            "mechanic-set-down-1.png",
+            "mechanic-set-down-2.png",
+            "mechanic-set-down-3.png"
+          ],
+          "frame_ms": 220,
+          "loop": false
+        },
+        "idle": {
+          "frames": [
+            "mechanic-idle-1.png"
+          ],
+          "frame_ms": 220,
+          "loop": false
+        }
+      }
+    },
+    "inspector": {
+      "size": [
+        96,
+        112
+      ],
+      "anchor": [
+        0.5,
+        0.9285714285714286
+      ],
+      "ground_anchor_px": [
+        48,
+        104
+      ],
+      "nominal_body_height_px": 84,
+      "mirror_safe": true,
+      "animations": {
+        "walk": {
+          "frames": [
+            "inspector-walk-1.png",
+            "inspector-walk-2.png",
+            "inspector-walk-3.png",
+            "inspector-walk-4.png"
+          ],
+          "frame_ms": 180,
+          "loop": true
+        },
+        "press": {
+          "frames": [
+            "inspector-press-1.png",
+            "inspector-press-2.png",
+            "inspector-press-3.png"
+          ],
+          "frame_ms": 220,
+          "loop": false
+        },
+        "tap": {
+          "frames": [
+            "inspector-tap-1.png",
+            "inspector-tap-2.png",
+            "inspector-tap-3.png"
+          ],
+          "frame_ms": 220,
+          "loop": false
+        },
+        "idle": {
+          "frames": [
+            "inspector-idle-1.png"
+          ],
+          "frame_ms": 220,
+          "loop": false
+        }
+      }
+    },
+    "drone": {
+      "size": [
+        96,
+        112
+      ],
+      "anchor": [
+        0.5,
+        0.9285714285714286
+      ],
+      "ground_anchor_px": [
+        48,
+        104
+      ],
+      "nominal_body_height_px": 84,
+      "mirror_safe": true,
+      "animations": {
+        "hover": {
+          "frames": [
+            "drone-hover-1.png",
+            "drone-hover-2.png",
+            "drone-hover-3.png",
+            "drone-hover-4.png"
+          ],
+          "frame_ms": 180,
+          "loop": true
+        },
+        "carry": {
+          "frames": [
+            "drone-carry-1.png",
+            "drone-carry-2.png",
+            "drone-carry-3.png",
+            "drone-carry-4.png"
+          ],
+          "frame_ms": 220,
+          "loop": true
+        },
+        "sweep": {
+          "frames": [
+            "drone-sweep-1.png",
+            "drone-sweep-2.png",
+            "drone-sweep-3.png",
+            "drone-sweep-4.png"
+          ],
+          "frame_ms": 220,
+          "loop": true
+        }
+      }
+    }
+  },
+  "props": {
+    "bulbs": {
+      "off": {
+        "file": "bulb-off.png",
+        "size": [
+          32,
+          32
+        ],
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          5,
+          5,
+          28,
+          28
+        ]
+      },
+      "off-flash": {
+        "file": "bulb-off-flash.png",
+        "size": [
+          32,
+          32
+        ],
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          1,
+          1,
+          31,
+          31
+        ]
+      },
+      "pass": {
+        "file": "bulb-pass.png",
+        "size": [
+          32,
+          32
+        ],
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          5,
+          5,
+          28,
+          28
+        ]
+      },
+      "pass-flash": {
+        "file": "bulb-pass-flash.png",
+        "size": [
+          32,
+          32
+        ],
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          1,
+          1,
+          31,
+          31
+        ]
+      },
+      "fail": {
+        "file": "bulb-fail.png",
+        "size": [
+          32,
+          32
+        ],
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          5,
+          5,
+          28,
+          28
+        ]
+      },
+      "fail-flash": {
+        "file": "bulb-fail-flash.png",
+        "size": [
+          32,
+          32
+        ],
+        "anchor": [
+          0.5,
+          0.5
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          1,
+          1,
+          31,
+          31
+        ]
+      }
+    },
+    "crates": [
+      {
+        "file": "crate-1.png",
+        "size": [
+          64,
+          64
+        ],
+        "anchor": [
+          0.5,
+          0.90625
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          6,
+          10,
+          58,
+          58
+        ]
+      },
+      {
+        "file": "crate-2.png",
+        "size": [
+          64,
+          64
+        ],
+        "anchor": [
+          0.5,
+          0.90625
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          6,
+          10,
+          58,
+          58
+        ]
+      },
+      {
+        "file": "crate-3.png",
+        "size": [
+          64,
+          64
+        ],
+        "anchor": [
+          0.5,
+          0.90625
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          6,
+          10,
+          58,
+          58
+        ]
+      },
+      {
+        "file": "crate-4.png",
+        "size": [
+          64,
+          64
+        ],
+        "anchor": [
+          0.5,
+          0.90625
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          6,
+          10,
+          58,
+          58
+        ]
+      },
+      {
+        "file": "crate-5.png",
+        "size": [
+          64,
+          64
+        ],
+        "anchor": [
+          0.5,
+          0.90625
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          6,
+          10,
+          58,
+          58
+        ]
+      }
+    ],
+    "debris": [
+      {
+        "file": "debris-1.png",
+        "size": [
+          64,
+          48
+        ],
+        "anchor": [
+          0.5,
+          0.875
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          23,
+          14,
+          63,
+          43
+        ]
+      },
+      {
+        "file": "debris-2.png",
+        "size": [
+          64,
+          48
+        ],
+        "anchor": [
+          0.5,
+          0.875
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          30,
+          14,
+          63,
+          43
+        ]
+      },
+      {
+        "file": "debris-3.png",
+        "size": [
+          64,
+          48
+        ],
+        "anchor": [
+          0.5,
+          0.875
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          15,
+          17,
+          60,
+          43
+        ]
+      },
+      {
+        "file": "debris-4.png",
+        "size": [
+          64,
+          48
+        ],
+        "anchor": [
+          0.5,
+          0.875
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          14,
+          10,
+          60,
+          43
+        ]
+      },
+      {
+        "file": "debris-5.png",
+        "size": [
+          64,
+          48
+        ],
+        "anchor": [
+          0.5,
+          0.875
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          6,
+          16,
+          49,
+          43
+        ]
+      },
+      {
+        "file": "debris-6.png",
+        "size": [
+          64,
+          48
+        ],
+        "anchor": [
+          0.5,
+          0.875
+        ],
+        "anchor_units": "fraction of sprite canvas",
+        "alpha_bounds_px": [
+          12,
+          12,
+          58,
+          43
+        ]
+      }
+    ],
+    "bundle": {
+      "file": "crate-bundle.png",
+      "size": [
+        96,
+        96
+      ],
+      "anchor": [
+        0.5,
+        0.9375
+      ],
+      "anchor_units": "fraction of sprite canvas",
+      "alpha_bounds_px": [
+        10,
+        13,
+        86,
+        92
+      ]
+    }
+  }
+}

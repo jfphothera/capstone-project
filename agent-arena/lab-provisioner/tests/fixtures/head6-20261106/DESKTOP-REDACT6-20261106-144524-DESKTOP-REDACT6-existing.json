@@ -1,0 +1,698 @@
+{
+    "schema":  "agent-arena.lab-report/1",
+    "provisioner":  "Agent Arena Lab Provisioner 1.4.2",
+    "run":  "20261106-144524-DESKTOP-REDACT6-existing",
+    "role":  "existing",
+    "computer":  "DESKTOP-REDACT6",
+    "started":  "2026-11-06T14:45:24.5586403-08:00",
+    "finished":  "2026-11-06T14:49:52.1800866-08:00",
+    "final_status":  "partially verified",
+    "identity":  {
+                     "detected":  {
+                                      "Role":  "head",
+                                      "Address":  "192.0.2.6",
+                                      "Reason":  "holds head address 192.0.2.6"
+                                  },
+                     "os":  {
+                                "Caption":  "Microsoft Windows 11 Pro",
+                                "Edition":  "Professional",
+                                "Version":  "10.0.26300",
+                                "Build":  "26300",
+                                "Arch":  "64-bit",
+                                "LastBoot":  "2026-10-30T19:59:53.5000000-07:00",
+                                "TimeZone":  "Pacific Standard Time",
+                                "Domain":  "WORKGROUP",
+                                "PartOfDomain":  false
+                            },
+                     "user":  "DESKTOP-REDACT6\\LabOperator1",
+                     "elevated":  true
+                 },
+    "inventory":  [
+                      {
+                          "area":  "identity",
+                          "name":  "computer",
+                          "value":  "DESKTOP-REDACT6",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "signed-in user",
+                          "value":  "DESKTOP-REDACT6\\LabOperator1",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "running as administrator",
+                          "value":  "True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "os",
+                          "name":  "Windows",
+                          "value":  "Microsoft Windows 11 Pro (Professional) 10.0.26300 build 26300 64-bit",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "os",
+                          "name":  "last boot",
+                          "value":  "2026-10-30T19:59:53.5000000-07:00",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "os",
+                          "name":  "domain or workgroup",
+                          "value":  "WORKGROUP (domain joined: False)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "CPU",
+                          "value":  "Intel(R) Core(TM) Ultra 5 235 (14 cores, 14 threads)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "RAM",
+                          "value":  "7.4 GB",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "GPU",
+                          "value":  "Intel(R) Graphics",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "NVIDIA VRAM",
+                          "value":  "no NVIDIA GPU",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "storage",
+                          "name":  "volume C:",
+                          "value":  "135.60 GB free of 237.45 GB",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Wi-Fi 2",
+                          "value":  "MediaTek Wi-Fi 7 MT7925 Wireless LAN Card; Not Present; MAC ; IPv4 ; gateway ; DHCP Unknown; profile none",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Wi-Fi 5",
+                          "value":  "MediaTek Wi-Fi 7 MT7925 Wireless LAN Card; Not Present; MAC ; IPv4 ; gateway ; DHCP Unknown; profile none",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Wi-Fi",
+                          "value":  "MediaTek Wi-Fi 7 MT7925 Wireless LAN Card; Disconnected; MAC 02-00-00-00-00-01; IPv4 169.254.73.16/16; gateway ; DHCP Enabled; profile none",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Ethernet",
+                          "value":  "Intel(R) Ethernet Controller I226-V; Up; MAC 02-00-00-00-00-02; IPv4 192.0.2.6/24; gateway ; DHCP Disabled; profile Public",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "lab address",
+                          "value":  "192.0.2.6/24 on Ethernet",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "installed",
+                          "value":  "C:\\Users\\LabOperator1\\AppData\\Local\\Programs\\Ollama\\ollama.exe (version 0.40.13)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "API http://127.0.0.1:11434",
+                          "value":  "answers, version 0.40.13",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "API http://192.0.2.6:11434",
+                          "value":  "answers, version 0.40.13",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "listeners on 11434",
+                          "value":  ":: (ollama)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "models",
+                          "name":  "installed models",
+                          "value":  "12: all-minilm:latest, gemma3:1b, gemma3:270m, granite4:350m, granite-embedding:30m, llama3.2:1b, qwen2.5:1.5b, qwen3.5:0.8b, qwen3.5:2b, qwen3:0.6b, qwen3:1.7b, smollm2:360m",
+                          "status":  "observed",
+                          "source":  "/api/tags"
+                      },
+                      {
+                          "area":  "models",
+                          "name":  "loaded now",
+                          "value":  "none",
+                          "status":  "observed",
+                          "source":  "/api/ps"
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "OLLAMA_HOST",
+                          "value":  "machine \"0.0.0.0:11434\", user \"\"",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "OLLAMA_MODELS",
+                          "value":  "machine \"\", user \"\"",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "models",
+                          "name":  "model directory C:\\Users\\LabOperator1\\.ollama\\models",
+                          "value":  "12 manifests (user profile LabOperator1)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "models",
+                          "name":  "model directory C:\\WINDOWS\\System32\\config\\systemprofile\\.ollama\\models",
+                          "value":  "12 manifests (SYSTEM profile)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "boot task",
+                          "value":  "Capstone Ollama Server: C:\\Users\\LabOperator1\\AppData\\Local\\Programs\\Ollama\\ollama.exe serve as SYSTEM; last run 10/30/2026 8:00:00 PM, result 267009",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "boot task model directory",
+                          "value":  "the task does not set OLLAMA_MODELS; as SYSTEM it uses C:\\WINDOWS\\System32\\config\\systemprofile\\.ollama\\models unless the machine variable is set (machine OLLAMA_MODELS \"\")",
+                          "status":  "inferred",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "profile Domain",
+                          "value":  "enabled True; default inbound Block; local rules allowed True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "profile Private",
+                          "value":  "enabled True; default inbound Block; local rules allowed True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "profile Public",
+                          "value":  "enabled True; default inbound Block; local rules allowed True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "active profile on the lab adapter",
+                          "value":  "Public",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.254",
+                          "value":  "ADMITTED: allowed by Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.1",
+                          "value":  "ADMITTED: allowed by Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.201",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.202",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.50",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "rule Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1",
+                          "value":  "MANAGED, Allow, profiles Domain,Private,Public, program Any, ports 11434, remote 192.0.2.254,192.0.2.1, source Local",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "time",
+                          "name":  "time zone",
+                          "value":  "Pacific Standard Time",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "time",
+                          "name":  "Windows Time",
+                          "value":  "Running, start Manual, source \"time.windows.com,0x9\" (NTP)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "power",
+                          "name":  "sleep on AC",
+                          "value":  "standby 0 s, hibernate 0 s",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "power",
+                          "name":  "adapter Ethernet",
+                          "value":  "may be turned off: Enabled; EEE Energy Efficient Ethernet=On (when system is in S0, S0ix and Sx)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "tasks",
+                          "name":  "relevant scheduled tasks",
+                          "value":  "Capstone Ollama Server (Running, SYSTEM)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "services",
+                          "name":  "relevant Windows services",
+                          "value":  "none",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "event service",
+                          "value":  "http://192.0.2.254:8790: ok aes-a1e79a8b3902 2.2.0",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "head viewer",
+                          "value":  "version 2.1.1; credential present True; starts at sign-in True; endpoints ",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "Python 3.12+ for the Arena installers",
+                          "value":  "no Python 3.12+ found for DESKTOP-REDACT6\\LabOperator1 (elevated True): py -3 -\u003e not on PATH for this window; python [C:\\Users\\LabOperator1\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe] -\u003e version check failed (exit 9009): Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings \u003e Apps \u003e Advanced app settings \u003e App execution aliases.",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "backups",
+                          "name":  "provisioner 1.0.3 records",
+                          "value":  "C:\\ProgramData\\CapstoneProvisioner: 2 network backup(s); last outcome ",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "backups",
+                          "name":  "lab provisioner runs with changes",
+                          "value":  "20261106-141050-DESKTOP-REDACT6-existing",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "appears to be",
+                          "value":  "head (holds head address 192.0.2.6)",
+                          "status":  "inferred",
+                          "source":  ""
+                      }
+                  ],
+    "plan":  {
+                 "address":  "192.0.2.6",
+                 "address_verdict":  null,
+                 "conflict":  null,
+                 "hardware":  null,
+                 "profile":  null,
+                 "models":  [
+
+                            ],
+                 "client_mode":  "cutover",
+                 "clients":  [
+                                 "192.0.2.254",
+                                 "192.0.2.1"
+                             ],
+                 "denied":  [
+                                "192.0.2.201",
+                                "192.0.2.202",
+                                "192.0.2.50"
+                            ],
+                 "steps":  [
+                               {
+                                   "id":  "ollama-service",
+                                   "stage":  "C",
+                                   "title":  "Boot task with OLLAMA_MODELS=C:\\WINDOWS\\System32\\config\\systemprofile\\.ollama\\models",
+                                   "kind":  "privileged",
+                                   "detail":  "Adopt: the running Ollama serves all 12 of its models from C:\\WINDOWS\\System32\\config\\systemprofile\\.ollama\\models; kept, so nothing served changes",
+                                   "rollback":  "earlier task XML and variables restored",
+                                   "preserves":  "installed models",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "ollama-start",
+                                   "stage":  "C",
+                                   "title":  "Restart Ollama through the boot task and compare the models before and after",
+                                   "kind":  "disruptive",
+                                   "detail":  "refused while a model is loaded unless approved",
+                                   "rollback":  "n/a",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               }
+                           ],
+                 "external":  [
+
+                              ],
+                 "warnings":  [
+
+                              ],
+                 "blocked":  [
+
+                             ],
+                 "preserves":  [
+                                   "installed models, local configuration and the Arena enrollment"
+                               ],
+                 "hub_mode":  null
+             },
+    "approvals":  [
+                      {
+                          "at":  "2026-11-06T14:49:38.8292569-08:00",
+                          "kind":  "privileged",
+                          "word":  "APPROVE",
+                          "prompt":  "Carry out this plan on DESKTOP-REDACT6? 2 step(s) change this machine; each change is recorded with its undo.",
+                          "result":  "approved"
+                      }
+                  ],
+    "actual":  [
+                   {
+                       "id":  "ollama-service",
+                       "title":  "Ollama boot task and model directory",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T14:49:38.8292569-08:00",
+                       "finished":  "2026-11-06T14:49:39.4596351-08:00",
+                       "detail":  "boot task runs C:\\ProgramData\\AgentArenaLab\\ollama\\ollama-serve.cmd with OLLAMA_MODELS=C:\\WINDOWS\\System32\\config\\systemprofile\\.ollama\\models; takes effect at the next server start"
+                   },
+                   {
+                       "id":  "ollama-start",
+                       "title":  "Restart Ollama from the boot task",
+                       "status":  "DONE",
+                       "started":  "2026-11-06T14:49:39.4596351-08:00",
+                       "finished":  "2026-11-06T14:49:50.8208418-08:00",
+                       "detail":  "stopped ollama (2684); the boot task\u0027s server answers on http://192.0.2.6:11434 (Ollama 0.40.13); 12 model(s) visible after the restart (was 12); reboot checkpoint C:\\ProgramData\\AgentArenaLab\\state\\reboot-check.json"
+                   }
+               ],
+    "software":  {
+                     "ollama":  "0.40.13",
+                     "arena_viewer":  "2.1.1"
+                 },
+    "models":  null,
+    "registration":  [
+                         {
+                             "item":  "Arena registration",
+                             "status":  "ALREADY_REGISTERED",
+                             "detail":  "head-192-0-2-6"
+                         }
+                     ],
+    "verification":  [
+                         {
+                             "check":  "Ollama answers on 192.0.2.6:11434",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "version 0.40.13"
+                         },
+                         {
+                             "check":  "boot task runs the server as SYSTEM with an explicit model directory",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "C:\\WINDOWS\\System32\\cmd.exe /c \"C:\\ProgramData\\AgentArenaLab\\ollama\\ollama-serve.cmd\" as SYSTEM"
+                         },
+                         {
+                             "check":  "the served models are the ones on disk",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "12 served from OLLAMA_MODELS=C:\\WINDOWS\\System32\\config\\systemprofile\\.ollama\\models; a spare copy of the same models (not used; can be deleted later to free space): C:\\Users\\LabOperator1\\.ollama\\models"
+                         },
+                         {
+                             "check":  "firewall rules: Ollama from 192.0.2.254 is ADMITTED",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "ADMITTED - allowed by Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1 (rule analysis)"
+                         },
+                         {
+                             "check":  "firewall rules: Ollama from 192.0.2.1 is ADMITTED",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "ADMITTED - allowed by Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1 (rule analysis)"
+                         },
+                         {
+                             "check":  "firewall rules: Ollama from 192.0.2.201 is DENIED",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "DENIED - no allow rule matches; the profile blocks inbound connections by default (rule analysis)"
+                         },
+                         {
+                             "check":  "firewall rules: Ollama from 192.0.2.202 is DENIED",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "DENIED - no allow rule matches; the profile blocks inbound connections by default (rule analysis)"
+                         },
+                         {
+                             "check":  "firewall rules: Ollama from 192.0.2.50 is DENIED",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "DENIED - no allow rule matches; the profile blocks inbound connections by default (rule analysis)"
+                         },
+                         {
+                             "check":  "Gateway on the hub reaches this head\u0027s Ollama",
+                             "status":  "PENDING",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "real connection from 192.0.2.254: run the provisioner there (Administration hub \u003e verify), or Test-NetConnection 192.0.2.6 -Port 11434 on the hub"
+                         },
+                         {
+                             "check":  "Application laptops cannot reach this head\u0027s Ollama",
+                             "status":  "PENDING",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "real connections from 192.0.2.201, 192.0.2.202, 192.0.2.50: their Verify stage tests every head"
+                         },
+                         {
+                             "check":  "clock against the hub (Arena allows 120 s)",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "offset 4.691 s"
+                         },
+                         {
+                             "check":  "Arena event service reachable and genuine",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "ok aes-a1e79a8b3902 2.2.0"
+                         },
+                         {
+                             "check":  "Arena registry knows this head",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "head-192-0-2-6"
+                         },
+                         {
+                             "check":  "Arena head viewer installed and enrolled",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "version 2.1.1, credential True, starts at sign-in True"
+                         },
+                         {
+                             "check":  "Ollama serves the same models after a reboot",
+                             "status":  "PENDING",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "not rebooted since the checkpoint of 2026-11-06T14:49:50.7680279-08:00. Reboot, sign in, then START-LAB-PROVISIONER \u003e Existing machine \u003e Post-reboot verification"
+                         }
+                     ],
+    "security":  {
+                     "HeadIp":  "192.0.2.6",
+                     "ActiveProfile":  "Public",
+                     "ProfileEnabled":  true,
+                     "DefaultInbound":  "Block",
+                     "PolicyNote":  "",
+                     "Sources":  [
+                                     {
+                                         "Source":  "192.0.2.254",
+                                         "Verdict":  "ADMITTED",
+                                         "Reason":  "allowed by Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1",
+                                         "AllowedBy":  [
+                                                           "Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1"
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.1",
+                                         "Verdict":  "ADMITTED",
+                                         "Reason":  "allowed by Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1",
+                                         "AllowedBy":  [
+                                                           "Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1"
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.201",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.202",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.50",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     }
+                                 ],
+                     "RelevantRules":  [
+                                           {
+                                               "Name":  "AgentArenaLab-Ollama-11434",
+                                               "DisplayName":  "Agent Arena Lab - Ollama 192.0.2.6:11434 from 192.0.2.254, 192.0.2.1",
+                                               "Class":  "MANAGED",
+                                               "Action":  "Allow",
+                                               "Profiles":  "Domain,Private,Public",
+                                               "Program":  "Any",
+                                               "LocalPorts":  "11434",
+                                               "RemoteAddresses":  "192.0.2.254,192.0.2.1",
+                                               "PolicySource":  "Local"
+                                           }
+                                       ],
+                     "Analysis":  "after this run\u0027s changes; rule analysis (inferred); a real connection from each address is the field proof"
+                 },
+    "changes":  [
+                    {
+                        "at":  "2026-11-06T14:49:39.4481256-08:00",
+                        "kind":  "ollama-service",
+                        "description":  "boot task \u0027Capstone Ollama Server\u0027 runs C:\\ProgramData\\AgentArenaLab\\ollama\\ollama-serve.cmd; OLLAMA_HOST=0.0.0.0:11434 and OLLAMA_MODELS=C:\\WINDOWS\\System32\\config\\systemprofile\\.ollama\\models for the machine (were \u00270.0.0.0:11434\u0027, \u0027\u0027)",
+                        "backup":  "C:\\ProgramData\\AgentArenaLab\\runs\\20261106-144524-DESKTOP-REDACT6-existing\\backups\\ollama-task-before.xml",
+                        "undo":  {
+                                     "type":  "ollama-service",
+                                     "task":  "Capstone Ollama Server",
+                                     "task_xml":  "C:\\ProgramData\\AgentArenaLab\\runs\\20261106-144524-DESKTOP-REDACT6-existing\\backups\\ollama-task-before.xml",
+                                     "env":  {
+                                                 "OLLAMA_HOST":  "0.0.0.0:11434",
+                                                 "OLLAMA_MODELS":  null
+                                             },
+                                     "wrapper":  "C:\\ProgramData\\AgentArenaLab\\ollama\\ollama-serve.cmd",
+                                     "wrapper_before":  null,
+                                     "tray":  null
+                                 },
+                        "undone":  false
+                    }
+                ],
+    "rollback":  {
+                     "change_record":  "C:\\ProgramData\\AgentArenaLab\\runs\\20261106-144524-DESKTOP-REDACT6-existing\\changes.json",
+                     "backups":  "C:\\ProgramData\\AgentArenaLab\\runs\\20261106-144524-DESKTOP-REDACT6-existing\\backups",
+                     "how":  "START-LAB-PROVISIONER.cmd \u003e Existing machine \u003e Roll back a previous run"
+                 },
+    "warnings":  [
+
+                 ],
+    "pending":  [
+
+                ],
+    "stop_reason":  "",
+    "extra":  null,
+    "scope_note":  "Checks marked scope=lan used real connections over the LAN; scope=local are on this machine only; scope=external need another project or machine."
+}

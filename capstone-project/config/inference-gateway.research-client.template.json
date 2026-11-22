@@ -1,0 +1,9 @@
+{
+  "configuration_version": 1,
+  "contract": "shared.inference/1",
+  "service_id": "shared-inference",
+  "url": "https://192.0.2.254:8443",
+  "application_id": "capstone-research",
+  "token_file": "C:\\ProgramData\\Capstone\\gateway\\capstone-research.token",
+  "ca_file": "C:\\ProgramData\\Capstone\\gateway\\inference-gateway-ca.pem"
+}

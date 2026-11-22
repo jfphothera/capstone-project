@@ -1,0 +1,164 @@
+{
+  "schema": "arena.admin-hub.room.v1",
+  "installed_from": "assets/deliveries/2026-11-02-admin-dispatch-expansion/admin",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "rooms": {
+    "dark": "room-dark.png",
+    "lit": "room-lit.png"
+  },
+  "workstation": {
+    "origin_px": [
+      448,
+      250
+    ],
+    "size": [
+      640,
+      640
+    ],
+    "ground_anchor_px": [
+      320,
+      608
+    ],
+    "desk": "desk-empty.png",
+    "screen_rect_px": [
+      194,
+      66,
+      277,
+      130
+    ]
+  },
+  "poses": {
+    "typing-a": {
+      "person": "person/typing-a.png",
+      "lamp": "pose-lighting/typing-a-lamp.png",
+      "monitor": "pose-lighting/typing-a-monitor.png"
+    },
+    "typing-b": {
+      "person": "person/typing-b.png",
+      "lamp": "pose-lighting/typing-b-lamp.png",
+      "monitor": "pose-lighting/typing-b-monitor.png"
+    },
+    "lean-back": {
+      "person": "person/lean-back.png",
+      "lamp": "pose-lighting/lean-back-lamp.png",
+      "monitor": "pose-lighting/lean-back-monitor.png"
+    },
+    "stretch": {
+      "person": "person/stretch.png",
+      "lamp": "pose-lighting/stretch-lamp.png",
+      "monitor": "pose-lighting/stretch-monitor.png"
+    },
+    "coffee-hold": {
+      "person": "person/coffee-hold.png",
+      "lamp": "pose-lighting/coffee-hold-lamp.png",
+      "monitor": "pose-lighting/coffee-hold-monitor.png"
+    },
+    "coffee-sip": {
+      "person": "person/coffee-sip.png",
+      "lamp": "pose-lighting/coffee-sip-lamp.png",
+      "monitor": "pose-lighting/coffee-sip-monitor.png"
+    },
+    "look-back": {
+      "person": "person/look-back.png",
+      "lamp": "pose-lighting/look-back-lamp.png",
+      "monitor": "pose-lighting/look-back-monitor.png"
+    },
+    "turn-around": {
+      "person": "person/turn-around.png",
+      "lamp": "pose-lighting/turn-around-lamp.png",
+      "monitor": "pose-lighting/turn-around-monitor.png"
+    }
+  },
+  "pose_order": [
+    "typing-a",
+    "typing-b",
+    "lean-back",
+    "stretch",
+    "coffee-hold",
+    "coffee-sip",
+    "look-back",
+    "turn-around"
+  ],
+  "actions": {
+    "typing": {
+      "frames": [
+        0,
+        1
+      ],
+      "frame_ms": 180,
+      "loop": true
+    },
+    "lean-back": {
+      "frames": [
+        0,
+        2,
+        3,
+        2,
+        0
+      ],
+      "frame_ms": 400,
+      "loop": false
+    },
+    "coffee": {
+      "frames": [
+        0,
+        4,
+        5,
+        5,
+        4,
+        0
+      ],
+      "frame_ms": 450,
+      "loop": false
+    },
+    "lights-on-reaction": {
+      "frames": [
+        0,
+        6,
+        7
+      ],
+      "frame_ms": 400,
+      "loop": false
+    }
+  },
+  "lighting": {
+    "floor_pool": {
+      "file": "lighting/floor-pool-mask.png",
+      "origin_px": [
+        448,
+        730
+      ]
+    },
+    "contact_shadow": {
+      "file": "lighting/contact-shadow.png",
+      "origin_px": [
+        448,
+        790
+      ]
+    },
+    "lamp_glow": "lighting/lamp-glow-mask.png",
+    "lamp_emission": "lighting/lamp-emission-mask.png",
+    "lamp_color": "#ffcd91",
+    "screen_color": "#8bdde4",
+    "lamp_relight_opacity": 0.88,
+    "screen_relight_opacity": 0.55
+  },
+  "switch": {
+    "states": {
+      "off": "switch/off.png",
+      "transition": "switch/transition.png",
+      "on": "switch/on.png"
+    },
+    "origin_px": [
+      477,
+      160
+    ],
+    "size": [
+      36,
+      60
+    ]
+  }
+}

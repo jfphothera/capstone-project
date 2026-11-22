@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'">
+  <title>Gateway Models · Admin hub</title>
+  <!-- Served by gateway_models.py on the hub itself, as an administrator. Which models each
+       orchestrator may use, every head and its models, and Do not use per head. -->
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="bar">
+    <strong>GATEWAY MODELS</strong><span id="hub">admin hub</span>
+    <span id="gw" class="pill">Reading the Gateway…</span>
+    <nav class="actions">
+      <button id="audit" title="Ask every head address 192.0.2.2-199 for its models, now">Audit heads</button>
+      <button id="install-open" title="Make the note for installing a model on heads">Install on heads…</button>
+      <button id="check-installs" title="Look again at the heads for the models you asked to install">Check installs</button>
+    </nav>
+    <span id="updated"></span>
+    <button id="close" class="quiet" title="Stop this screen">Close</button>
+  </header>
+
+  <main>
+    <p id="banner" class="notice error" hidden></p>
+    <section class="health" aria-label="System health">
+      <h2>System health</h2>
+      <div id="health" class="tiles"></div>
+      <p class="hint">Models and heads are now changed in the <b>admin hub</b> (ArenaSvcUser's screen): <b>Fleet</b> menu, then <b>Commit</b> (one administrator password).
+        The controls below stay as a fallback.</p>
+    </section>
+    <div class="toolbar">
+      <div class="legend">
+        <span><i class="c usable">✓</i> usable</span>
+        <span><i class="c usable unused">✓</i> passed, no orchestrator uses it</span>
+        <span><i class="c offline">✓</i> passed, head offline</span>
+        <span><i class="c untested">○</i> installed, not tested yet</span>
+        <span><i class="c failed">✗</i> failed the Gateway's test</span>
+        <span><i class="c lapsed">↻</i> needs a new test</span>
+        <span><i class="c blocked">⛔</i> Do not use</span>
+        <span><i class="c absent">–</i> not installed</span>
+      </div>
+      <label class="opt"><input type="checkbox" id="show-embed"> show embedding models</label>
+      <label class="opt"><input type="checkbox" id="only-relevant" checked> hide models no head has and nobody uses</label>
+    </div>
+    <p class="hint">Tick a box to let an orchestrator use a model. <b>All</b> makes a model available to every orchestrator, including ones added later.
+      Click a head's square to mark that model <b>Do not use</b> on that head (click again to allow it there again). Nothing changes until <b>Apply</b>.</p>
+    <div class="table-wrap"><table id="grid" class="grid"></table></div>
+  </main>
+
+  <footer class="applybar">
+    <span id="changes">No changes.</span>
+    <button id="undo" class="quiet" disabled>Undo my changes</button>
+    <button id="review" class="primary" disabled>Review and apply…</button>
+  </footer>
+
+  <dialog id="plan-dlg" class="window wide">
+    <header><strong>Apply these changes?</strong><button class="close" data-close>×</button></header>
+    <div id="plan-body"></div>
+    <div class="row end">
+      <button data-close class="quiet" id="plan-cancel">Cancel</button>
+      <button id="plan-apply" class="primary">Apply now</button>
+    </div>
+  </dialog>
+
+  <dialog id="heads-dlg" class="window wide">
+    <header><strong>Heads</strong><button class="close" data-close>×</button></header>
+    <div id="heads-body"></div>
+  </dialog>
+
+  <dialog id="install-dlg" class="window wide">
+    <header><strong>Install a model on heads</strong><button class="close" data-close>×</button></header>
+    <p class="hint">The heads have no internet on the lab cable. This makes the note to follow at each head: put it on Wi-Fi, paste one line into PowerShell, put it back on the cable. Then click <b>Check installs</b> here.</p>
+    <div class="row"><label>Model <input id="inst-model" class="wide" placeholder="for example llama3.2:3b" autocomplete="off" spellcheck="false"></label></div>
+    <h2>On these heads</h2>
+    <div id="inst-heads" class="row"></div>
+    <div class="row end"><button id="inst-make" class="primary">Make the install note</button></div>
+    <div id="inst-result" hidden>
+      <h2>At each head, paste this into PowerShell</h2>
+      <div class="cmd"><code id="inst-cmd"></code><button id="inst-copy" class="small">Copy</button></div>
+      <pre id="inst-note" class="log"></pre>
+      <p class="hint" id="inst-file"></p>
+    </div>
+    <h2>Asked for</h2>
+    <div id="inst-list"></div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

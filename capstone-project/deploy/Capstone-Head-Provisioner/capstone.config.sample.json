@@ -1,0 +1,18 @@
+{
+  "_comment": "Optional. Copy this file to capstone.config.json in the same folder as START-CAPSTONE-SETUP.cmd to make a run completely unattended with no setup question at all. The engine also writes its own copy to C:\\ProgramData\\CapstoneProvisioner\\config\\capstone.config.json after the first run, so a selection made once is reused on every later run.",
+
+  "node_number": 4,
+  "_node_number": "3 to 15. Determines the private Ethernet address 192.0.2.N and nothing else. It does NOT imply anything about this machine's RAM. 1 is the coordinator and 2 is the GPU workstation; both are refused as provisioning targets.",
+
+  "model_profile": "CPU16",
+  "_model_profile": "CPU8, CPU16, CPU32, GPU or EMBEDDINGS. Independent of node_number: any profile may be used on any node. Choose it from this machine's actual installed RAM.",
+
+  "bind_mode": "PrivateLan",
+  "_bind_mode": "PrivateLan binds 0.0.0.0:11434 and restricts inbound access to the coordinator with a scoped firewall rule; loopback keeps working. PrivateOnly binds only 192.0.2.N:11434, which is tighter but gives up loopback access on the head. See docs/SECURITY-NOTES.md.",
+
+  "ethernet_mac": "",
+  "_ethernet_mac": "Leave empty for automatic adapter selection. Set it only if this machine has two or more wired network ports and the provisioner reports AMBIGUOUS_NETWORK_ADAPTER. Any format works, for example '02-00-00-00-00-01' or 'c853 09a7414b'.",
+
+  "ethernet_name": "",
+  "_ethernet_name": "Alternative to ethernet_mac: the exact Windows adapter name, for example 'Ethernet 2'. ethernet_mac is preferred because an adapter name can be renamed."
+}

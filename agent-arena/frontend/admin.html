@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'; frame-src 'self'">
+  <title>Agent Arena · Admin hub</title>
+  <!-- The admin hub's screen, served by arena_service.admin_console on the hub itself. The room
+       on the left shows the hub's real status on the admin's monitor; the traffic board on the
+       right shows work out at the heads and work coming back. The registry, enrollment codes,
+       endpoints, backups and warnings open from the menus as dialogs. -->
+  <link rel="stylesheet" href="css/admin_console.css">
+</head>
+<body>
+  <header class="bar">
+    <strong>ADMIN HUB</strong><span id="hub-name">192.0.2.254</span>
+    <nav class="menus" id="menus">
+      <div class="menu"><button class="top" aria-haspopup="true" aria-expanded="false">Machines</button>
+        <div class="drop" role="menu" hidden>
+          <button role="menuitem" data-open="machines">Machines and codes…</button>
+          <button role="menuitem" data-open="machines" data-focus="add-address">Add a machine…</button>
+        </div></div>
+      <div class="menu"><button class="top" aria-haspopup="true" aria-expanded="false">Service</button>
+        <div class="drop" role="menu" hidden>
+          <button role="menuitem" data-open="service" data-focus="endpoints-input">Display addresses…</button>
+          <button role="menuitem" data-open="service" data-focus="backup">Back up data…</button>
+        </div></div>
+      <div class="menu"><button class="top" aria-haspopup="true" aria-expanded="false">Fleet</button>
+        <div class="drop" role="menu" hidden>
+          <button role="menuitem" data-fleet="heads">Heads and models…</button>
+          <button role="menuitem" data-fleet="projects">Projects…</button>
+          <button role="menuitem" data-fleet="catalog">Model catalog…</button>
+          <button role="menuitem" data-fleet="changes">Changes and Commit…</button>
+        </div></div>
+      <div class="menu"><button class="top" aria-haspopup="true" aria-expanded="false">Gateway</button>
+        <div class="drop" role="menu" hidden>
+          <button role="menuitem" data-open="gateway">Heads, models and queue…</button>
+          <button role="menuitem" data-open="gateway" data-focus="gw-reservations">Reservations and failures…</button>
+        </div></div>
+      <div class="menu"><button class="top" aria-haspopup="true" aria-expanded="false">View</button>
+        <div class="drop" role="menu" hidden>
+          <button role="menuitem" id="fullscreen">Full screen (F11)</button>
+          <label role="menuitemcheckbox"><input type="checkbox" id="still"> Still board (no motion)</label>
+        </div></div>
+      <button class="top" id="warnings-open" data-open="warnings">Warnings <span id="warn-count" class="badge" hidden></span></button>
+    </nav>
+    <button id="fleet-pill" class="pill fleet-pill" data-fleet="heads" title="Fleet: heads answering, Gateway, changes waiting for a Commit">Fleet…</button>
+    <span id="service" class="pill">Checking the service…</span>
+    <span id="updated"></span>
+  </header>
+  <p id="no-token" class="notice banner" hidden>Open the console from the hub's launcher (OPEN-ADMIN-CONSOLE.cmd). It only works on the hub itself.</p>
+  <p id="error" class="notice banner error" hidden></p>
+  <main class="admin">
+    <section class="room"><iframe id="room" src="admin-room.html?live=1" title="Admin hub room"></iframe></section>
+    <section class="board"><canvas id="board" role="img" aria-label="Traffic board"></canvas></section>
+  </main>
+
+  <dialog id="dlg-machines" class="window">
+    <header><h2>Machines <span class="count" id="machine-count"></span></h2><button class="close" aria-label="Close">×</button></header>
+    <section id="code-box" class="code-box" hidden>
+      <h2>New enrollment code</h2>
+      <p class="code-for" id="code-for"></p>
+      <p class="code" id="code"></p>
+      <p class="hint" id="code-hint"></p>
+      <div class="row"><button id="code-copy">Copy</button><button id="code-done">Done, hide it</button></div>
+    </section>
+    <div class="scroll"><table class="machines"><thead><tr><th>Address</th><th>Name</th><th>State</th><th></th></tr></thead><tbody id="machines"></tbody></table></div>
+    <h2>Add a machine</h2>
+    <form id="add" class="row">
+      <input id="add-address" placeholder="192.0.2.11" autocomplete="off" spellcheck="false" aria-label="Address">
+      <select id="add-orch" aria-label="Orchestrator" hidden></select>
+      <button type="submit">Add</button>
+    </form>
+    <p class="hint" id="add-hint">Heads .2–.199 · orchestrator displays .200–.249 · admin machines .250–.254</p>
+    <h2>Codes last</h2>
+    <div class="row"><select id="code-hours" aria-label="Code lifetime"><option value="4">4 hours</option><option value="24" selected>24 hours</option><option value="72">72 hours</option></select>
+      <span class="hint">Each code works once, only from its display's address.</span></div>
+
+    <h2>Addresses <span class="count" id="address-count"></span></h2>
+    <p class="hint">Reserve an address before provisioning a machine. The provisioner claims it with the one-time code, from that address, and the hub then knows which machine holds it.</p>
+    <div class="scroll"><table class="grid" id="addresses"></table></div>
+    <form id="reserve" class="row">
+      <select id="reserve-role" aria-label="Role"><option value="head">Inference head</option><option value="app">Application laptop</option></select>
+      <input id="reserve-address" autocomplete="off" spellcheck="false" aria-label="Address">
+      <select id="reserve-app" aria-label="Application" hidden></select>
+      <input id="reserve-label" class="label" placeholder="Label (optional)" autocomplete="off" aria-label="Label">
+      <button type="submit">Reserve and get code</button>
+    </form>
+
+    <h2>Applications</h2>
+    <p class="hint">An app code gives an application's adapter or publisher its credential. It works once, and from the application's claimed address if it has one; the old credential stops working.</p>
+    <div class="scroll"><table class="grid" id="apps"></table></div>
+    <form id="add-app" class="row">
+      <input id="app-id" placeholder="coder" autocomplete="off" spellcheck="false" aria-label="Application ID">
+      <input id="app-name" class="label" placeholder="Coder" autocomplete="off" aria-label="Display name">
+      <button type="submit">Add application</button>
+    </form>
+  </dialog>
+
+  <dialog id="dlg-service" class="window">
+    <header><h2>Service</h2><button class="close" aria-label="Close">×</button></header>
+    <dl class="facts">
+      <dt>Displays use</dt><dd id="endpoints"></dd>
+      <dt>Last hour</dt><dd id="hour"></dd>
+    </dl>
+    <h2>Display addresses</h2>
+    <form id="endpoints-form" class="row">
+      <input id="endpoints-input" class="wide" autocomplete="off" spellcheck="false" aria-label="Event service addresses, comma separated">
+      <button type="submit">Change…</button>
+    </form>
+    <p class="hint">Event service addresses the displays should use, comma separated. Displays switch on their next check-in.</p>
+    <h2>Backup</h2>
+    <div class="row"><button id="backup">Back up data</button></div>
+    <p class="hint" id="backup-result"></p>
+  </dialog>
+
+  <dialog id="dlg-gateway" class="window wide">
+    <header><h2>Inference Gateway <span class="count" id="gw-state"></span></h2><button class="close" aria-label="Close">×</button></header>
+    <p class="hint">Read only, from the observation the gateway's operator publishes (shared.inference.observation/1). Arena never reads or changes the gateway's ledger. Applications' own workflow activity is on the traffic board, not here.</p>
+    <p id="gw-none" class="notice" hidden></p>
+    <div id="gw-body">
+      <dl class="facts" id="gw-facts"></dl>
+      <h2>Applications</h2><div class="scroll"><table class="grid" id="gw-apps"></table></div>
+      <h2>Inference heads</h2><div class="scroll"><table class="grid" id="gw-heads"></table></div>
+      <h2>Models</h2><div class="scroll"><table class="grid" id="gw-models"></table></div>
+      <h2 id="gw-reservations" tabindex="-1">Reservations</h2><div class="scroll"><table class="grid" id="gw-leases"></table></div>
+      <h2>Qualification</h2><div class="scroll"><table class="grid" id="gw-quals"></table></div>
+      <h2>Requests and invocations</h2><dl class="facts" id="gw-counts"></dl>
+      <h2>Other resources</h2><div class="scroll"><table class="grid" id="gw-others"></table></div>
+      <h2>Recent gateway events</h2><div class="scroll"><table class="grid" id="gw-events"></table></div>
+    </div>
+  </dialog>
+
+  <dialog id="dlg-fleet" class="window fleet">
+    <header><h2>Fleet <span class="count" id="fl-summary"></span></h2>
+      <nav class="tabs" role="tablist">
+        <button role="tab" data-tab="heads" aria-selected="true">Heads</button>
+        <button role="tab" data-tab="projects">Projects</button>
+        <button role="tab" data-tab="catalog">Catalog</button>
+        <button role="tab" data-tab="changes">Changes <span id="fl-pending" class="badge" hidden></span></button>
+      </nav>
+      <button class="close" aria-label="Close">×</button></header>
+    <div class="fl-strip" id="fl-strip"></div>
+    <p id="fl-error" class="notice error" hidden></p>
+    <section data-panel="heads">
+      <div class="row fl-tools">
+        <button id="fl-scan">Scan the heads now</button>
+        <label><input type="checkbox" id="fl-embed"> Show embedding models</label>
+        <span class="hint" id="fl-scan-at"></span>
+      </div>
+      <div id="fl-heads"></div>
+    </section>
+    <section data-panel="projects" hidden>
+      <p class="hint">Which models each project may use, and which heads serve it. Changes wait in Changes until you Commit them.</p>
+      <div id="fl-projects"></div>
+    </section>
+    <section data-panel="catalog" hidden>
+      <div class="row fl-tools"><input id="fl-cat-filter" class="wide" placeholder="Filter: name or capability" autocomplete="off" spellcheck="false" aria-label="Filter the catalog">
+        <span class="hint" id="fl-cat-note"></span></div>
+      <div class="scroll tall"><table class="grid" id="fl-catalog"></table></div>
+    </section>
+    <section data-panel="changes" hidden>
+      <p class="hint">Nothing changes until you Commit. Commit asks Windows for an administrator's password (LabOperator1) once, then a window lists these changes and asks you to type APPROVE. The admin hub itself never holds administrator rights.</p>
+      <div class="scroll"><table class="grid" id="fl-changes"></table></div>
+      <div class="row fl-commit"><button id="fl-commit" class="primary">Commit…</button><button id="fl-clear" class="danger">Discard all</button><button id="fl-test-missing" title="Adds one change: the Gateway tests every allowed model, on every Gateway head that has it, that is not usable yet (each is loaded on its head first). Tests that only ran out of time before are done again.">Test models not usable yet</button><span class="hint" id="fl-commit-note"></span></div>
+      <div id="fl-run" hidden><h2>Last Commit <span class="count" id="fl-run-state"></span></h2><table class="grid" id="fl-results"></table><pre class="log" id="fl-lines"></pre></div>
+    </section>
+  </dialog>
+
+  <dialog id="dlg-warnings" class="window">
+    <header><h2>Warnings</h2><button class="close" aria-label="Close">×</button></header>
+    <ul id="issues" class="issues"></ul>
+    <h2>Service log</h2>
+    <pre id="warnings" class="log"></pre>
+  </dialog>
+  <script type="module" src="js/admin_console.mjs"></script>
+  <script type="module" src="js/fleet.mjs"></script>
+</body>
+</html>

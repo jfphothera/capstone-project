@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.idea/workspace.xml
+.idea/shelf/
+# One-time enrollment codes must never be committed.
+*.code.txt
+enroll/
+# Large or regenerated artefacts: the official NuGet package is re-downloadable;
+# the three signed DLLs and the license are kept.
+desktop/third_party/**/*.nupkg
+dist/**/evidence/
+
+# lab provisioner release builds: reproducible from lab-provisioner/ and carry Capstone's own release zip
+dist/lab-provisioner-*/
+dist/_runtime-cache/

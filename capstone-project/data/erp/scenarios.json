@@ -1,0 +1,110 @@
+[
+  {
+    "scenario_id": "SCN-01",
+    "name": "Successful grounded retrieval",
+    "expected_behaviour": "validation PASS, grounded on an approved Rev A procedure",
+    "customer_name": "Ivan Nowak",
+    "account_id": "ACC-00010",
+    "device_serial_number": "98148469",
+    "device_model": "P4800",
+    "device_revision": "A",
+    "subject": "P4800 stopped working during treatment",
+    "customer_message": "Hi there,\n\nDuring my last session, the lamp isn't lighting up at all. This has happened more than once. Let me know what you need from me, thanks! The unit is completely dead now - no lights at all, no fan noise, and the screen stays black when I flip the power switch.\n\nSerial number: 98148469",
+    "provenance": {
+      "source_ticket_id": 9000004,
+      "source_archetype": "device_failed",
+      "source_file": "PhotheraOnPremStack/ticket-generator/output/tickets_synthetic_1000.jsonl",
+      "adapted": "product-name slot retargeted to the cast device's ERP model; capstone-authored symptom sentence appended; serial number appended"
+    }
+  },
+  {
+    "scenario_id": "SCN-02",
+    "name": "Wrong revision",
+    "expected_behaviour": "validation FAIL on revision; must not serve Rev A or Rev C steps",
+    "customer_name": "Mary Cohen",
+    "account_id": "ACC-00022",
+    "device_serial_number": "68177-DV5",
+    "device_model": "P4800",
+    "device_revision": "B",
+    "subject": "P4800 stopped working during treatment",
+    "customer_message": "Hi there,\n\nDuring my last session, the lamp isn't lighting up at all. This has happened more than once. Let me know what you need from me, thanks! The unit is completely dead now - no lights at all, no fan noise, and the screen stays black when I flip the power switch.\n\nSerial number: 68177-DV5",
+    "provenance": {
+      "source_ticket_id": 9000004,
+      "source_archetype": "device_failed",
+      "source_file": "PhotheraOnPremStack/ticket-generator/output/tickets_synthetic_1000.jsonl",
+      "adapted": "product-name slot retargeted to the cast device's ERP model; capstone-authored symptom sentence appended; serial number appended"
+    }
+  },
+  {
+    "scenario_id": "SCN-03",
+    "name": "No applicable source",
+    "expected_behaviour": "abstain; no procedure exists for this model at any revision",
+    "customer_name": "Ivan Nowak",
+    "account_id": "ACC-00010",
+    "device_serial_number": "66383977",
+    "device_model": "Home-NB",
+    "device_revision": "C",
+    "subject": "General question",
+    "customer_message": "Hi,\n\nJust had a general question about using my Home-NB -- is there a guide I can reference? Let me know next steps. It has started making a rattling noise and the session stops early. What should I be checking?\n\nSerial number: 66383977",
+    "provenance": {
+      "source_ticket_id": 9000001,
+      "source_archetype": "general_question",
+      "source_file": "PhotheraOnPremStack/ticket-generator/output/tickets_synthetic_1000.jsonl",
+      "adapted": "product-name slot retargeted to the cast device's ERP model; capstone-authored symptom sentence appended; serial number appended"
+    }
+  },
+  {
+    "scenario_id": "SCN-04",
+    "name": "Missing serial number",
+    "expected_behaviour": "device identity unconfirmed; ask for the serial, do not guess",
+    "customer_name": "Mary Cohen",
+    "account_id": "ACC-00022",
+    "device_serial_number": null,
+    "device_model": "P4800",
+    "device_revision": "B",
+    "subject": "Broken Lamp - need replacement",
+    "customer_message": "Good morning,\n\nThe lamp on my P4800 needs to be replaced. RMA RMA-2025-163556 was mentioned to me previously. Please advise at your earliest convenience. Thank you for your time.",
+    "provenance": {
+      "source_ticket_id": 9000006,
+      "source_archetype": "rma_broken_lamp",
+      "source_file": "PhotheraOnPremStack/ticket-generator/output/tickets_synthetic_1000.jsonl",
+      "adapted": "product-name slot retargeted to the cast device's ERP model; serial number deliberately withheld"
+    }
+  },
+  {
+    "scenario_id": "SCN-05",
+    "name": "Potential safety complaint",
+    "expected_behaviour": "safety gate fires before retrieval; escalate to a human",
+    "customer_name": "Peter Thomas",
+    "account_id": "ACC-00026",
+    "device_serial_number": "38180-BM2",
+    "device_model": "Series-M",
+    "device_revision": "C",
+    "subject": "Report of Erythema",
+    "customer_message": "Hi there,\n\nFollowing my scheduled session, I experienced mild skin redness in the treated area. Reporting as instructed. Let me know what you need from me, thanks! There was also a burning smell coming from the unit and the casing was too hot to touch.\n\nSerial number: 38180-BM2",
+    "provenance": {
+      "source_ticket_id": 9000573,
+      "source_archetype": "report_of_erythema",
+      "source_file": "PhotheraOnPremStack/ticket-generator/output/tickets_synthetic_1000.jsonl",
+      "adapted": "product-name slot retargeted to the cast device's ERP model; capstone-authored symptom sentence appended; serial number appended"
+    }
+  },
+  {
+    "scenario_id": "SCN-06",
+    "name": "Order and shipment status",
+    "expected_behaviour": "answered from ERP order and shipment tools; the QMS corpus is not relevant and must not be searched",
+    "customer_name": "Mary Cohen",
+    "account_id": "ACC-00022",
+    "device_serial_number": "52385502",
+    "device_model": "P4800",
+    "device_revision": "C",
+    "subject": "Shipping question",
+    "customer_message": "Hi,\n\nCan you confirm the shipping status for order SO-359947? Let me know next steps.\n\nSerial number: 52385502",
+    "provenance": {
+      "source_ticket_id": 9000005,
+      "source_archetype": "order_status_shipping",
+      "source_file": "PhotheraOnPremStack/ticket-generator/output/tickets_synthetic_1000.jsonl",
+      "adapted": "product-name slot retargeted to the cast device's ERP model; serial number appended"
+    }
+  }
+]

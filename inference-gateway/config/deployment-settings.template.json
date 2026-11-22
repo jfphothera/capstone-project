@@ -1,0 +1,12 @@
+{
+  "schema": "inference-gateway.deployment-settings/1",
+  "python": "C:\\Program Files\\Python312\\python.exe",
+  "install_root": "C:\\Program Files\\InferenceGateway",
+  "data_root": "C:\\ProgramData\\InferenceGateway",
+  "service_name": "InferenceGateway",
+  "service_id": "shared-inference",
+  "service_account": ".\\svc-inference-gw",
+  "arena_accounts": [".\\REPLACE_WITH_ARENA_STANDARD_ACCOUNT"],
+  "listen": {"host": "192.0.2.254", "port": 8443},
+  "drain_seconds": 90
+}

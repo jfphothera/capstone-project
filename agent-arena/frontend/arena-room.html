@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; connect-src 'self'">
+  <title>Agent Arena · Room</title>
+  <!-- One live room, embedded in the Arena viewer and driven by it (?live=1). Same engine and
+       agent rig as the scene composer; the composer's review controls are present but hidden. -->
+  <link rel="stylesheet" href="css/agent_arena.css">
+  <link rel="stylesheet" href="css/agent_arena_motion.css">
+  <link rel="stylesheet" href="css/agent_arena_arcade.css">
+  <link rel="stylesheet" href="css/scene_composer.css">
+</head>
+<body class="embed live">
+  <header class="bar"><select id="room" aria-label="Room"></select><span id="room-name"></span><span id="status">Loading…</span></header>
+  <main class="composer">
+    <div id="viewport">
+      <div id="stage">
+        <canvas id="back" width="1536" height="1024"></canvas>
+        <div id="actors"></div>
+        <canvas id="dark" width="1536" height="1024"></canvas>
+        <canvas id="glow" width="1536" height="1024"></canvas>
+        <canvas id="front" width="1536" height="1024"></canvas>
+      </div>
+    </div>
+    <aside class="composer-controls" hidden>
+      <input type="checkbox" id="auto"><select id="speed"><option value="1" selected>1×</option></select>
+      <button id="arrive"></button><button id="succeed"></button><button id="fail"></button><button id="empty"></button>
+      <select id="bulb-design"></select><input type="color" id="pass-color" value="#4dff8a"><input type="color" id="fail-color" value="#ff4f4f">
+      <button id="reshuffle"></button><span id="seed"></span>
+      <input type="checkbox" id="overlay"><input type="checkbox" id="still"><input type="checkbox" id="offline">
+      <dl id="hud"></dl>
+    </aside>
+  </main>
+  <script type="module" src="js/scene_composer.mjs"></script>
+</body>
+</html>

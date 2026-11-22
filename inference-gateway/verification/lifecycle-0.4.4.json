@@ -1,0 +1,795 @@
+{
+  "gateway_release": "0.4.4",
+  "runs": [
+    {
+      "workflows": 12,
+      "calls_per_workflow": 8,
+      "calls_total": 96,
+      "wall_seconds": 9.6,
+      "throughput_calls_per_second": 9.74,
+      "statuses": {
+        "completed": 93,
+        "cancelled": 3
+      },
+      "latency_ms": {
+        "p50": 835.3,
+        "p95": 2129.7,
+        "max": 2786.7
+      },
+      "queue_ms": {
+        "p50": 92.1,
+        "p95": 518.3,
+        "max": 1235.4
+      },
+      "errors": [],
+      "duplicate_dispatch": [],
+      "lost_results": [],
+      "over_model_limit": {},
+      "lease_expired": 0,
+      "resource_held": 0,
+      "lease_extended_late": 0,
+      "replies_from_heads": 95,
+      "cancelled_by_client": 4,
+      "injected_external_locks": 5,
+      "ledger_busy_retries": 0,
+      "database_locked_logged": 0,
+      "renewal_failures": 0,
+      "ledger_wait_timeouts": 0,
+      "ledger": {
+        "labels": {
+          "authorize_resource": {
+            "count": 6,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 2,
+            "hold_ms_max": 5
+          },
+          "cancel": {
+            "count": 6,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1079,
+            "hold_ms_max": 10
+          },
+          "complete": {
+            "count": 95,
+            "timeouts": 0,
+            "external_busy": 2,
+            "wait_ms_max": 1157,
+            "hold_ms_max": 35
+          },
+          "executing": {
+            "count": 96,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 982,
+            "hold_ms_max": 27
+          },
+          "expire": {
+            "count": 24,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 703,
+            "hold_ms_max": 22
+          },
+          "health": {
+            "count": 36,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 981,
+            "hold_ms_max": 21
+          },
+          "invocation": {
+            "count": 96,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 91,
+            "hold_ms_max": 35
+          },
+          "mark_loaded": {
+            "count": 43,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 316,
+            "hold_ms_max": 32
+          },
+          "nodes": {
+            "count": 96,
+            "timeouts": 0,
+            "external_busy": 2,
+            "wait_ms_max": 962,
+            "hold_ms_max": 23
+          },
+          "place": {
+            "count": 78,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1153,
+            "hold_ms_max": 31
+          },
+          "publish_counters": {
+            "count": 5,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 32,
+            "hold_ms_max": 4
+          },
+          "qualify_lease": {
+            "count": 12,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1,
+            "hold_ms_max": 5
+          },
+          "qualify_record": {
+            "count": 12,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1,
+            "hold_ms_max": 6
+          },
+          "record_inventory": {
+            "count": 48,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 107,
+            "hold_ms_max": 4
+          },
+          "record_runtime": {
+            "count": 36,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 102,
+            "hold_ms_max": 30
+          },
+          "register_client": {
+            "count": 1,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1,
+            "hold_ms_max": 4
+          },
+          "renew": {
+            "count": 42,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1101,
+            "hold_ms_max": 32
+          },
+          "settle": {
+            "count": 3,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 53,
+            "hold_ms_max": 33
+          },
+          "settle_record": {
+            "count": 3,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 29,
+            "hold_ms_max": 3
+          },
+          "started": {
+            "count": 95,
+            "timeouts": 0,
+            "external_busy": 1,
+            "wait_ms_max": 996,
+            "hold_ms_max": 30
+          },
+          "startup": {
+            "count": 1,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1,
+            "hold_ms_max": 1
+          },
+          "status_settle": {
+            "count": 1,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 57,
+            "hold_ms_max": 2
+          },
+          "submit": {
+            "count": 96,
+            "timeouts": 0,
+            "external_busy": 2,
+            "wait_ms_max": 1159,
+            "hold_ms_max": 32
+          }
+        }
+      },
+      "model_limits": {
+        "head-192-0-2-2 gemma3:4b": {
+          "limit": 4,
+          "source": "slots"
+        },
+        "head-192-0-2-2 qwen3.5:4b": {
+          "limit": 2,
+          "source": "declared"
+        },
+        "head-192-0-2-3 gemma3:4b": {
+          "limit": 2,
+          "source": "slots"
+        },
+        "head-192-0-2-3 qwen3.5:4b": {
+          "limit": 2,
+          "source": "declared"
+        },
+        "head-192-0-2-4 gemma3:4b": {
+          "limit": 1,
+          "source": "slots"
+        },
+        "head-192-0-2-4 qwen3.5:4b": {
+          "limit": 1,
+          "source": "serial_family"
+        },
+        "head-192-0-2-5 gemma3:4b": {
+          "limit": 4,
+          "source": "slots"
+        },
+        "head-192-0-2-5 qwen3.5:4b": {
+          "limit": 2,
+          "source": "declared"
+        },
+        "head-192-0-2-6 gemma3:4b": {
+          "limit": 1,
+          "source": "slots"
+        },
+        "head-192-0-2-6 qwen3.5:4b": {
+          "limit": 1,
+          "source": "serial_family"
+        },
+        "head-192-0-2-7 gemma3:4b": {
+          "limit": 2,
+          "source": "slots"
+        },
+        "head-192-0-2-7 qwen3.5:4b": {
+          "limit": 2,
+          "source": "declared"
+        }
+      },
+      "peak_concurrency": {
+        "head-192-0-2-2 gemma3:4b": 2,
+        "head-192-0-2-2 qwen3.5:4b": 2,
+        "head-192-0-2-3 gemma3:4b": 1,
+        "head-192-0-2-3 qwen3.5:4b": 2,
+        "head-192-0-2-4 gemma3:4b": 1,
+        "head-192-0-2-5 gemma3:4b": 2,
+        "head-192-0-2-5 qwen3.5:4b": 2,
+        "head-192-0-2-6 qwen3.5:4b": 1,
+        "head-192-0-2-7 gemma3:4b": 2,
+        "head-192-0-2-7 qwen3.5:4b": 2
+      }
+    },
+    {
+      "workflows": 16,
+      "calls_per_workflow": 8,
+      "calls_total": 128,
+      "wall_seconds": 11.1,
+      "throughput_calls_per_second": 11.21,
+      "statuses": {
+        "completed": 125,
+        "cancelled": 3
+      },
+      "latency_ms": {
+        "p50": 1187.0,
+        "p95": 2204.4,
+        "max": 2942.7
+      },
+      "queue_ms": {
+        "p50": 163.4,
+        "p95": 566.7,
+        "max": 763.6
+      },
+      "errors": [],
+      "duplicate_dispatch": [],
+      "lost_results": [],
+      "over_model_limit": {},
+      "lease_expired": 0,
+      "resource_held": 0,
+      "lease_extended_late": 0,
+      "replies_from_heads": 125,
+      "cancelled_by_client": 3,
+      "injected_external_locks": 6,
+      "ledger_busy_retries": 0,
+      "database_locked_logged": 0,
+      "renewal_failures": 0,
+      "ledger_wait_timeouts": 0,
+      "ledger": {
+        "labels": {
+          "authorize_resource": {
+            "count": 6,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 2,
+            "hold_ms_max": 9
+          },
+          "cancel": {
+            "count": 6,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 75,
+            "hold_ms_max": 3
+          },
+          "complete": {
+            "count": 125,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1233,
+            "hold_ms_max": 30
+          },
+          "executing": {
+            "count": 127,
+            "timeouts": 0,
+            "external_busy": 5,
+            "wait_ms_max": 1261,
+            "hold_ms_max": 32
+          },
+          "expire": {
+            "count": 26,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 165,
+            "hold_ms_max": 5
+          },
+          "health": {
+            "count": 42,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1239,
+            "hold_ms_max": 20
+          },
+          "invocation": {
+            "count": 128,
+            "timeouts": 0,
+            "external_busy": 1,
+            "wait_ms_max": 527,
+            "hold_ms_max": 34
+          },
+          "mark_loaded": {
+            "count": 57,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 918,
+            "hold_ms_max": 22
+          },
+          "nodes": {
+            "count": 128,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 541,
+            "hold_ms_max": 30
+          },
+          "place": {
+            "count": 75,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1232,
+            "hold_ms_max": 26
+          },
+          "publish_counters": {
+            "count": 6,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 384,
+            "hold_ms_max": 8
+          },
+          "qualify_lease": {
+            "count": 12,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 2,
+            "hold_ms_max": 9
+          },
+          "qualify_record": {
+            "count": 12,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 2,
+            "hold_ms_max": 11
+          },
+          "record_inventory": {
+            "count": 54,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 96,
+            "hold_ms_max": 29
+          },
+          "record_runtime": {
+            "count": 42,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 102,
+            "hold_ms_max": 29
+          },
+          "register_client": {
+            "count": 1,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1,
+            "hold_ms_max": 5
+          },
+          "renew": {
+            "count": 53,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1217,
+            "hold_ms_max": 19
+          },
+          "settle": {
+            "count": 3,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 46,
+            "hold_ms_max": 2
+          },
+          "settle_record": {
+            "count": 3,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 62,
+            "hold_ms_max": 2
+          },
+          "started": {
+            "count": 125,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1215,
+            "hold_ms_max": 32
+          },
+          "startup": {
+            "count": 1,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1,
+            "hold_ms_max": 1
+          },
+          "status_settle": {
+            "count": 1,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 78,
+            "hold_ms_max": 1
+          },
+          "submit": {
+            "count": 128,
+            "timeouts": 0,
+            "external_busy": 2,
+            "wait_ms_max": 1253,
+            "hold_ms_max": 22
+          }
+        }
+      },
+      "model_limits": {
+        "head-192-0-2-2 gemma3:4b": {
+          "limit": 4,
+          "source": "slots"
+        },
+        "head-192-0-2-2 qwen3.5:4b": {
+          "limit": 2,
+          "source": "declared"
+        },
+        "head-192-0-2-3 gemma3:4b": {
+          "limit": 2,
+          "source": "slots"
+        },
+        "head-192-0-2-3 qwen3.5:4b": {
+          "limit": 2,
+          "source": "declared"
+        },
+        "head-192-0-2-4 gemma3:4b": {
+          "limit": 1,
+          "source": "slots"
+        },
+        "head-192-0-2-4 qwen3.5:4b": {
+          "limit": 1,
+          "source": "serial_family"
+        },
+        "head-192-0-2-5 gemma3:4b": {
+          "limit": 4,
+          "source": "slots"
+        },
+        "head-192-0-2-5 qwen3.5:4b": {
+          "limit": 2,
+          "source": "declared"
+        },
+        "head-192-0-2-6 gemma3:4b": {
+          "limit": 1,
+          "source": "slots"
+        },
+        "head-192-0-2-6 qwen3.5:4b": {
+          "limit": 1,
+          "source": "serial_family"
+        },
+        "head-192-0-2-7 gemma3:4b": {
+          "limit": 2,
+          "source": "slots"
+        },
+        "head-192-0-2-7 qwen3.5:4b": {
+          "limit": 2,
+          "source": "declared"
+        }
+      },
+      "peak_concurrency": {
+        "head-192-0-2-2 gemma3:4b": 3,
+        "head-192-0-2-2 qwen3.5:4b": 2,
+        "head-192-0-2-3 gemma3:4b": 1,
+        "head-192-0-2-3 qwen3.5:4b": 2,
+        "head-192-0-2-4 gemma3:4b": 1,
+        "head-192-0-2-4 qwen3.5:4b": 1,
+        "head-192-0-2-5 gemma3:4b": 2,
+        "head-192-0-2-5 qwen3.5:4b": 2,
+        "head-192-0-2-6 gemma3:4b": 1,
+        "head-192-0-2-6 qwen3.5:4b": 1,
+        "head-192-0-2-7 gemma3:4b": 2,
+        "head-192-0-2-7 qwen3.5:4b": 2
+      }
+    },
+    {
+      "workflows": 20,
+      "calls_per_workflow": 8,
+      "calls_total": 160,
+      "wall_seconds": 15.1,
+      "throughput_calls_per_second": 10.05,
+      "statuses": {
+        "completed": 152,
+        "cancelled": 8
+      },
+      "latency_ms": {
+        "p50": 1539.6,
+        "p95": 2747.9,
+        "max": 3894.1
+      },
+      "queue_ms": {
+        "p50": 280.6,
+        "p95": 1421.8,
+        "max": 1551.5
+      },
+      "errors": [],
+      "duplicate_dispatch": [],
+      "lost_results": [],
+      "over_model_limit": {},
+      "lease_expired": 0,
+      "resource_held": 0,
+      "lease_extended_late": 0,
+      "replies_from_heads": 157,
+      "cancelled_by_client": 9,
+      "injected_external_locks": 8,
+      "ledger_busy_retries": 0,
+      "database_locked_logged": 0,
+      "renewal_failures": 0,
+      "ledger_wait_timeouts": 0,
+      "ledger": {
+        "labels": {
+          "authorize_resource": {
+            "count": 6,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1,
+            "hold_ms_max": 5
+          },
+          "cancel": {
+            "count": 17,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1184,
+            "hold_ms_max": 15
+          },
+          "complete": {
+            "count": 153,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1221,
+            "hold_ms_max": 39
+          },
+          "executing": {
+            "count": 159,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1294,
+            "hold_ms_max": 35
+          },
+          "expire": {
+            "count": 24,
+            "timeouts": 0,
+            "external_busy": 3,
+            "wait_ms_max": 1216,
+            "hold_ms_max": 33
+          },
+          "health": {
+            "count": 36,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1129,
+            "hold_ms_max": 25
+          },
+          "invocation": {
+            "count": 160,
+            "timeouts": 0,
+            "external_busy": 2,
+            "wait_ms_max": 1278,
+            "hold_ms_max": 32
+          },
+          "mark_loaded": {
+            "count": 53,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1266,
+            "hold_ms_max": 33
+          },
+          "nodes": {
+            "count": 164,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1128,
+            "hold_ms_max": 33
+          },
+          "place": {
+            "count": 78,
+            "timeouts": 0,
+            "external_busy": 3,
+            "wait_ms_max": 1285,
+            "hold_ms_max": 39
+          },
+          "publish_counters": {
+            "count": 5,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 40,
+            "hold_ms_max": 10
+          },
+          "qualify_lease": {
+            "count": 12,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1,
+            "hold_ms_max": 5
+          },
+          "qualify_record": {
+            "count": 12,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 2,
+            "hold_ms_max": 6
+          },
+          "record_inventory": {
+            "count": 48,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 247,
+            "hold_ms_max": 26
+          },
+          "record_runtime": {
+            "count": 36,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1267,
+            "hold_ms_max": 35
+          },
+          "register_client": {
+            "count": 1,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1,
+            "hold_ms_max": 4
+          },
+          "renew": {
+            "count": 92,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1253,
+            "hold_ms_max": 33
+          },
+          "settle": {
+            "count": 8,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1277,
+            "hold_ms_max": 23
+          },
+          "settle_record": {
+            "count": 8,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 158,
+            "hold_ms_max": 5
+          },
+          "started": {
+            "count": 157,
+            "timeouts": 0,
+            "external_busy": 3,
+            "wait_ms_max": 1292,
+            "hold_ms_max": 32
+          },
+          "startup": {
+            "count": 1,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 1,
+            "hold_ms_max": 1
+          },
+          "status_settle": {
+            "count": 2,
+            "timeouts": 0,
+            "external_busy": 0,
+            "wait_ms_max": 92,
+            "hold_ms_max": 32
+          },
+          "submit": {
+            "count": 160,
+            "timeouts": 0,
+            "external_busy": 2,
+            "wait_ms_max": 1290,
+            "hold_ms_max": 37
+          }
+        }
+      },
+      "model_limits": {
+        "head-192-0-2-2 gemma3:4b": {
+          "limit": 4,
+          "source": "slots"
+        },
+        "head-192-0-2-2 qwen3.5:4b": {
+          "limit": 2,
+          "source": "declared"
+        },
+        "head-192-0-2-3 gemma3:4b": {
+          "limit": 2,
+          "source": "slots"
+        },
+        "head-192-0-2-3 qwen3.5:4b": {
+          "limit": 2,
+          "source": "declared"
+        },
+        "head-192-0-2-4 gemma3:4b": {
+          "limit": 1,
+          "source": "slots"
+        },
+        "head-192-0-2-4 qwen3.5:4b": {
+          "limit": 1,
+          "source": "serial_family"
+        },
+        "head-192-0-2-5 gemma3:4b": {
+          "limit": 4,
+          "source": "slots"
+        },
+        "head-192-0-2-5 qwen3.5:4b": {
+          "limit": 2,
+          "source": "declared"
+        },
+        "head-192-0-2-6 gemma3:4b": {
+          "limit": 1,
+          "source": "slots"
+        },
+        "head-192-0-2-6 qwen3.5:4b": {
+          "limit": 1,
+          "source": "serial_family"
+        },
+        "head-192-0-2-7 gemma3:4b": {
+          "limit": 2,
+          "source": "slots"
+        },
+        "head-192-0-2-7 qwen3.5:4b": {
+          "limit": 2,
+          "source": "declared"
+        }
+      },
+      "peak_concurrency": {
+        "head-192-0-2-2 gemma3:4b": 3,
+        "head-192-0-2-2 qwen3.5:4b": 2,
+        "head-192-0-2-3 gemma3:4b": 2,
+        "head-192-0-2-3 qwen3.5:4b": 2,
+        "head-192-0-2-4 gemma3:4b": 1,
+        "head-192-0-2-4 qwen3.5:4b": 1,
+        "head-192-0-2-5 gemma3:4b": 3,
+        "head-192-0-2-5 qwen3.5:4b": 1,
+        "head-192-0-2-6 gemma3:4b": 1,
+        "head-192-0-2-6 qwen3.5:4b": 1,
+        "head-192-0-2-7 gemma3:4b": 2,
+        "head-192-0-2-7 qwen3.5:4b": 2
+      }
+    }
+  ]
+}

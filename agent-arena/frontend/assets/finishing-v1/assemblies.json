@@ -1,0 +1,209 @@
+{
+  "assemblies": [
+    {
+      "id": "left-assembly-1",
+      "side": "left",
+      "surface": "left/cargo-table",
+      "prop": "left/crt-terminal",
+      "prop_origin_px": [
+        79.59692307692308,
+        6.163076923076915
+      ],
+      "prop_scale": 0.44846153846153847,
+      "support_anchor_px": [
+        137,
+        112
+      ],
+      "preview": "assemblies/left-1.png",
+      "scope": "staging composition, no arena navigation placement"
+    },
+    {
+      "id": "left-assembly-2",
+      "side": "left",
+      "surface": "left/copper-bench",
+      "prop": "left/reel-recorder",
+      "prop_origin_px": [
+        79.59692307692308,
+        1.1630769230769147
+      ],
+      "prop_scale": 0.44846153846153847,
+      "support_anchor_px": [
+        137,
+        107
+      ],
+      "preview": "assemblies/left-2.png",
+      "scope": "staging composition, no arena navigation placement"
+    },
+    {
+      "id": "left-assembly-3",
+      "side": "left",
+      "surface": "left/lab-desk",
+      "prop": "left/field-laptop",
+      "prop_origin_px": [
+        79.59692307692308,
+        14.163076923076915
+      ],
+      "prop_scale": 0.44846153846153847,
+      "support_anchor_px": [
+        137,
+        120
+      ],
+      "preview": "assemblies/left-3.png",
+      "scope": "staging composition, no arena navigation placement"
+    },
+    {
+      "id": "left-assembly-4",
+      "side": "left",
+      "surface": "left/tool-cabinet",
+      "prop": "left/tool-caddy",
+      "prop_origin_px": [
+        79.59692307692308,
+        -2.8369230769230853
+      ],
+      "prop_scale": 0.44846153846153847,
+      "support_anchor_px": [
+        137,
+        103
+      ],
+      "preview": "assemblies/left-4.png",
+      "scope": "staging composition, no arena navigation placement"
+    },
+    {
+      "id": "left-assembly-5",
+      "side": "left",
+      "surface": "left/tool-trolley",
+      "prop": "left/articulated-lamp",
+      "prop_origin_px": [
+        75.45443298969073,
+        1.5253608247422648
+      ],
+      "prop_scale": 0.4808247422680412,
+      "support_anchor_px": [
+        137,
+        115
+      ],
+      "preview": "assemblies/left-5.png",
+      "scope": "staging composition, no arena navigation placement"
+    },
+    {
+      "id": "left-assembly-6",
+      "side": "left",
+      "surface": "left/instrument-pedestal",
+      "prop": "left/ticker-stand",
+      "prop_origin_px": [
+        91.21846153846154,
+        -29.878461538461536
+      ],
+      "prop_scale": 0.3342307692307692,
+      "support_anchor_px": [
+        134,
+        49
+      ],
+      "preview": "assemblies/left-6.png",
+      "scope": "staging composition, no arena navigation placement"
+    },
+    {
+      "id": "right-assembly-1",
+      "side": "right",
+      "surface": "right/ochre-table",
+      "prop": "right/dual-monitor",
+      "prop_origin_px": [
+        57.84615384615385,
+        22.15384615384616
+      ],
+      "prop_scale": 0.4230769230769231,
+      "support_anchor_px": [
+        112,
+        122
+      ],
+      "preview": "assemblies/right-1.png",
+      "scope": "staging composition, no arena navigation placement"
+    },
+    {
+      "id": "right-assembly-2",
+      "side": "right",
+      "surface": "right/precision-bench",
+      "prop": "right/centrifuge",
+      "prop_origin_px": [
+        50.10989010989011,
+        9.890109890109883
+      ],
+      "prop_scale": 0.4835164835164835,
+      "support_anchor_px": [
+        112,
+        124
+      ],
+      "preview": "assemblies/right-2.png",
+      "scope": "staging composition, no arena navigation placement"
+    },
+    {
+      "id": "right-assembly-3",
+      "side": "right",
+      "surface": "right/teal-lab-table",
+      "prop": "right/radar-console",
+      "prop_origin_px": [
+        53.637305699481864,
+        14.39378238341969
+      ],
+      "prop_scale": 0.45595854922279794,
+      "support_anchor_px": [
+        112,
+        122
+      ],
+      "preview": "assemblies/right-3.png",
+      "scope": "staging composition, no arena navigation placement"
+    },
+    {
+      "id": "right-assembly-4",
+      "side": "right",
+      "surface": "right/equipment-sideboard",
+      "prop": "right/instrument-tray",
+      "prop_origin_px": [
+        57.84615384615385,
+        22.15384615384616
+      ],
+      "prop_scale": 0.4230769230769231,
+      "support_anchor_px": [
+        112,
+        122
+      ],
+      "preview": "assemblies/right-4.png",
+      "scope": "staging composition, no arena navigation placement"
+    },
+    {
+      "id": "right-assembly-5",
+      "side": "right",
+      "surface": "right/service-cart",
+      "prop": "right/inspection-lamp",
+      "prop_origin_px": [
+        57.320388349514566,
+        -8.815533980582515
+      ],
+      "prop_scale": 0.42718446601941745,
+      "support_anchor_px": [
+        112,
+        92
+      ],
+      "preview": "assemblies/right-5.png",
+      "scope": "staging composition, no arena navigation placement"
+    },
+    {
+      "id": "right-assembly-6",
+      "side": "right",
+      "surface": "right/bronze-stand",
+      "prop": "right/marquee-stand",
+      "prop_origin_px": [
+        59.46446043165468,
+        -56.08115107913669
+      ],
+      "prop_scale": 0.4494964028776978,
+      "support_anchor_px": [
+        117,
+        50
+      ],
+      "preview": "assemblies/right-6.png",
+      "scope": "staging composition, no arena navigation placement"
+    }
+  ],
+  "navigation": "No room placements supplied. Furniture requires explicitly cleared service space; do not occupy standing/work zones or existing staff routes."
+}

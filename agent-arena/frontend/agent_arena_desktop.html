@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'">
+  <title>Agent Arena</title>
+  <link rel="stylesheet" href="css/agent_arena.css">
+  <link rel="stylesheet" href="css/agent_arena_motion.css">
+  <link rel="stylesheet" href="css/agent_arena_arcade.css">
+  <link rel="stylesheet" href="css/agent_arena_rooms.css">
+</head>
+<body>
+  <header class="mast">
+    <div class="brand">Phothera <span>/ AGENT ARENA</span></div>
+    <div class="node"><strong id="location-label">CONNECTING…</strong><small id="mode-label">LIVE · SHARED EVENT SERVICE</small></div>
+    <div class="controls">
+      <span id="connection" class="offline">Starting</span>
+      <button id="connect">Reconnect</button><button id="fullscreen">Full screen</button>
+    </div>
+  </header>
+
+  <section class="toolbar" aria-label="Arena controls">
+    <label>Mode <select id="mode"><option value="live">Live</option><option value="demo">Demo / visual acceptance</option></select></label>
+    <label>View <select id="scope"><option value="here">This location</option><option value="location">Another location</option><option value="cluster">Whole cluster</option><option value="app">Application</option><option value="role">Agent role</option></select></label>
+    <label id="value-wrap" hidden>Selection <select id="scope-value"></select></label>
+    <label>Find agent <input id="agent-search" type="search" placeholder="Name, role, or ID"></label>
+    <span id="demo-badge" class="demo-badge" hidden>SYNTHETIC DEMO · NOT LIVE</span>
+  </section>
+
+  <main class="layout">
+    <section class="arena panel" aria-label="Active work floor">
+      <div class="panel-title"><span>ARENA · STANDING AREA / WORK FLOOR</span><small id="floor-count"></small></div>
+      <div id="floor" class="floor">
+        <iframe id="scene-frame" class="scene-frame" title="Room view" hidden></iframe>
+        <aside class="roster" aria-label="Agent standing area">
+          <p class="hint" id="roster-hint">Idle and waiting agents stay beside the work floor.</p>
+          <div id="roster-list" class="roster-list"></div>
+        </aside>
+        <div class="gridfloor"></div><div id="agent-layer" class="agent-layer"></div><div id="handoff-layer" aria-hidden="true"></div>
+        <div id="door-threshold" class="door-threshold" aria-hidden="true"></div>
+        <div id="journey-note" class="journey-note" role="status" hidden></div>
+        <div id="empty-floor" class="empty-floor">No active work at this location</div>
+        <div id="link-banner" class="link-banner" role="status" hidden></div>
+      </div>
+      <section id="agent-details" class="agent-details" aria-label="Selected agent details" hidden><button id="close-details" aria-label="Close agent details">×</button><strong id="detail-name"></strong><span id="detail-state"></span><dl id="detail-fields"></dl></section>
+      <div class="zones"><div class="room-controls"><button id="room-prev" aria-label="Previous room (left arrow)">◀</button><span id="room-title">Room</span><button id="room-next" aria-label="Next room (right arrow)">▶</button><button id="room-shuffle" title="Rearrange this room's furniture">⟳ New layout</button><button id="room-lights" title="Flip the room's lights (L)">💡 Lights</button><span id="room-pinned"></span><span id="scene-overflow"></span></div><div class="holding-controls"><button id="holding-prev" aria-label="Previous standing group">←</button><span id="holding-page">Group 1 of 1</span><button id="holding-next" aria-label="Next standing group">→</button><span id="holding-overflow"></span></div><button id="zone-prev" aria-label="Previous active floor zone">←</button><span id="zone-label">Zone 1 of 1</span><button id="zone-next" aria-label="Next active floor zone">→</button><span id="offscreen-count">0 active in other zones</span></div>
+    </section>
+
+    <aside class="feed panel" aria-label="Activity feed">
+      <div class="panel-title">ACTIVITY FEED <small id="feed-note">RECEIVED</small></div>
+      <div id="feed" class="feed-list"></div>
+      <div class="legend">Arrival ≠ execution · stale ≠ failed · identifiers and short labels only</div>
+    </aside>
+  </main>
+
+  <footer class="health panel" aria-label="System health">
+    <div class="health-title">SYSTEM HEALTH <span class="live-dot" id="live-dot"></span></div>
+    <div id="resources" class="resources"></div>
+    <div class="health-stat"><span>AGENTS HERE</span><b id="registered-count">0</b></div>
+    <div class="health-stat"><span>IDLE</span><b id="idle-count">0</b></div>
+    <div class="health-stat"><span>WORKING</span><b id="active-count">0</b></div>
+    <div class="health-stat"><span>WAIT / QUEUE</span><b id="waiting-count">0</b></div>
+    <div class="health-stat"><span>FAILED</span><b id="failed-count">0</b></div>
+    <div class="health-stat"><span>STATUS UNKNOWN</span><b id="stale-count">0</b></div>
+    <div class="health-stat"><span>PRODUCERS ONLINE</span><b id="head-count">0</b></div>
+    <div class="health-stat results"><span>PASS ✓ / FAIL ✗ · 1H · 8H · 24H</span><b id="result-counts">—</b></div>
+    <div class="models"><span>MODELS IN USE HERE</span><div id="models"></div></div>
+  </footer>
+  <div id="transit-layer" class="transit-layer" aria-hidden="true"></div>
+
+  <template id="roster-template"><article class="roster-agent" tabindex="0" role="button"><div class="mini-robot"></div><div class="roster-text"><strong></strong><span class="roster-state"></span><small></small></div></article></template>
+  <template id="actor-template"><article class="actor idle" tabindex="0" role="button"><div class="speech"></div><svg xmlns="http://www.w3.org/2000/svg" class="avatar" data-rig="classic-refined-v1" viewBox="0 0 64 80" shape-rendering="crispEdges" aria-hidden="true">
+  <ellipse class="ground" cx="32" cy="76" rx="24" ry="3" fill="#06131f" opacity=".5"/>
+  <g class="feet">
+    <g class="leg left-leg"><path class="ink" fill="#071421" d="M18 54h13v20h-4v4H13v-8h5z"/><path class="shell shade" fill="#147f8c" d="M21 57h7v14h-5v3h-7v-3h5z"/><path class="boot" fill="#a5d4da" d="M16 71h10v4H16z"/></g>
+    <g class="leg right-leg"><path class="ink" fill="#071421" d="M33 54h13v16h5v8H37v-4h-4z"/><path class="shell shade" fill="#147f8c" d="M36 57h7v14h5v3h-8v-3h-4z"/><path class="boot" fill="#a5d4da" d="M39 71h9v4h-9z"/></g>
+  </g>
+  <g class="seated-feet">
+    <path class="ink" fill="#071421" d="M18 54h13v11H21v9H11V62h7zM33 54h13v8h7v12H43v-9H33z"/>
+    <path class="shell shade" fill="#147f8c" d="M21 57h7v5H18v9h-4v-6h7zM36 57h7v8h7v6h-4v-9H36z"/>
+    <path class="boot" fill="#a5d4da" d="M13 68h8v4h-8zM43 68h8v4h-8z"/>
+  </g>
+  <g class="torso">
+    <path class="ink" fill="#071421" d="M17 34h30v5h4v20h-5v4H18v-4h-5V39h4z"/>
+    <path class="shell" fill="#20c9cd" d="M20 37h24v5h4v13h-5v5H21v-5h-5V42h4z"/>
+    <path class="shine" fill="#90eee0" d="M20 37h24v3H23v11h-3z"/>
+    <path class="shell shade" fill="#147f8c" d="M43 41h5v14h-5v5H21v-3h19v-6h3z"/>
+    <path class="ink" fill="#071421" d="M25 42h15v11H25z"/><path class="screen" fill="#143744" d="M28 44h9v6h-9z"/>
+    <path class="screen-light shine" fill="#90eee0" d="M28 45h7v2h-7z"/>
+    <g class="arm left-arm"><path class="ink" fill="#071421" d="M12 37h9v9h-3v16H7V44h5z"/><path class="shell" fill="#20c9cd" d="M12 41h6v6h-3v10H10V47h2z"/><path class="shine" fill="#90eee0" d="M12 41h6v3h-6z"/><path class="glove" fill="#264d5c" d="M10 55h5v5h-5z"/></g>
+    <g class="arm right-arm"><path class="ink" fill="#071421" d="M43 37h9v7h5v18H46V46h-3z"/><path class="shell" fill="#20c9cd" d="M46 41h6v6h2v10h-5V47h-3z"/><path class="shine" fill="#90eee0" d="M46 41h6v3h-6z"/><path class="glove" fill="#264d5c" d="M49 55h5v5h-5z"/></g>
+  </g>
+  <g class="head">
+    <path class="ink" fill="#071421" d="M21 2h22v4h7v6h5v22h-5v5H14v-5H9V12h5V6h7z"/>
+    <path class="shell" fill="#20c9cd" d="M22 5h20v4h6v6h4v17h-5v4H17v-4h-5V15h5V9h5z"/>
+    <path class="shine" fill="#90eee0" d="M22 5h20v3H25v4h-7v16h-3V15h3V9h4z"/>
+    <path class="shell shade" fill="#147f8c" d="M48 15h4v17h-5v4H17v-3h27v-4h4z"/>
+    <path class="visor-edge" fill="#276677" d="M17 14h30v18H17z"/>
+    <path class="face" fill="#071c2b" d="M19 16h26v15H19z"/>
+    <path class="face-glint" fill="#153d4c" d="M20 17h24v2H20z"/>
+    <g class="gaze"><path class="eye shine" fill="#90eee0" d="M23 21h5v7h-5zM36 21h5v7h-5z"/></g>
+  </g>
+</svg><div class="work-prop" aria-hidden="true"><i></i><i></i><i></i></div><div class="actor-name"></div><div class="actor-state"></div><div class="actor-host"></div></article></template>
+  <script type="module" src="js/agent_arena_live.js"></script>
+</body>
+</html>

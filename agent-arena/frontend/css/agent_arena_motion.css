@@ -1,0 +1,78 @@
+/* Agent Arena v2 motion: articulated, activity-specific actions layered on the approved
+   robot. Loaded after agent_arena.css. Robot geometry, colours and the steps() cadence are
+   unchanged; the rejected whole-torso bob is not used by any v2 state. */
+.actor.executing .torso,.actor.executing .head{animation:none}
+.actor .arm,.actor .leg{transform-box:fill-box;transform-origin:top center}
+.actor .head{transform-origin:24px 30px}
+
+/* activity-specific limb work while executing */
+.actor.act-triage .head{animation:scan 1.4s steps(4,end) infinite}.actor.act-triage .right-arm{animation:sort .8s steps(2,end) infinite}
+.actor.act-retrieval .left-arm,.actor.act-retrieval .right-arm{animation:reach 1.1s steps(3,end) infinite}
+.actor.act-evaluation .head{animation:tilt 1.8s steps(2,end) infinite}.actor.act-evaluation .right-arm{animation:chin 1.8s steps(2,end) infinite}
+.actor.act-validation .left-arm{transform:rotate(-70deg)}.actor.act-validation .right-arm{animation:tap .5s steps(2,end) infinite}
+.actor.act-review .left-arm{animation:page-left 1.2s steps(2,end) infinite}.actor.act-review .right-arm{animation:page-right 1.2s steps(2,end) infinite}
+.actor.act-code_generation .left-arm{animation:type-left .36s steps(2,end) infinite}.actor.act-code_generation .right-arm{animation:type-right .36s steps(2,end) infinite}
+.actor.act-testing .right-arm{animation:press .9s steps(2,end) infinite}.actor.act-testing .head{animation:glance .9s steps(2,end) infinite}
+.actor.act-tool_use .right-arm{animation:wrench .7s steps(3,end) infinite}
+.actor.act-inference .left-arm{transform:rotate(-55deg)}.actor.act-inference .right-arm{transform:rotate(55deg)}.actor.act-inference .screen-light{animation:pulse .6s steps(2,end) infinite}
+.actor.act-error_handling .left-arm{animation:shrug-left 1.6s steps(2,end) infinite}.actor.act-error_handling .right-arm{animation:shrug-right 1.6s steps(2,end) infinite}.actor.act-error_handling .head{transform:rotate(8deg) translateY(2px)}
+.actor.executing:not([class*=" act-"]) .left-arm{animation:type-left .5s steps(2,end) infinite}.actor.executing:not([class*=" act-"]) .right-arm{animation:type-right .5s steps(2,end) infinite}
+
+/* waiting reasons (bleacher-side states keep the approved foot tap) */
+.actor.waiting.wait-human .head{transform:rotate(-12deg)}
+.actor.arrived .right-leg{animation:foot-tap .64s steps(2,end) infinite}
+.actor.completed .arm{animation:celebrate .5s steps(2,end) 3}
+.actor.failed .head{animation:none;transform:rotate(10deg) translateY(3px)}.actor.failed .arm{transform:rotate(12deg)}
+.actor.canceled,.actor.expired{opacity:.6}
+
+/* rendering states: status unknown is never drawn as failure */
+.actor.render-stale,.actor.render-producer_offline{opacity:.55;filter:saturate(.25)}
+.actor.render-stale .arm,.actor.render-stale .head,.actor.render-stale .leg,.actor.render-producer_offline .arm,.actor.render-producer_offline .head,.actor.render-producer_offline .leg{animation:none!important}
+.actor .unknown{display:none;font:9px Consolas,monospace;color:#071722;background:var(--gold);border-radius:3px;padding:2px 5px;margin-top:2px}
+.actor.render-stale .unknown,.actor.render-producer_offline .unknown{display:block}
+.roster-agent.render-stale,.roster-agent.render-producer_offline{opacity:.6;border-style:dashed}
+.roster-agent.away{opacity:.72}.away-badge{display:inline-block;margin-top:3px;font:9px Consolas,monospace;color:#071722;background:var(--sky);border-radius:3px;padding:1px 5px}
+.roster-agent .where{font:9px Consolas,monospace;color:var(--gold)}
+
+/* movement between bleachers, floor and other machines */
+.transit-layer{position:fixed;inset:0;pointer-events:none;z-index:20}
+.walker{position:fixed;width:120px;height:120px;transform:translate(-50%,-62%);transition:left 1.1s linear,top 1.1s linear,opacity .35s;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+.walker svg{width:44px;height:62px;overflow:visible}
+.walker.fading{opacity:0}
+.actor.awaiting-walker{visibility:hidden}
+.actor .actor-host{max-width:150px}
+
+/* connection state */
+.link-banner{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:5;background:#3a1620;color:#ffd5d9;border:1px solid #ff8790;border-radius:5px;padding:8px 14px;font:12px Consolas,monospace;max-width:80%;text-align:center}
+.link-banner.reconnecting{background:#33280f;color:#ffe3b0;border-color:var(--gold)}
+body.disconnected .agent-layer{opacity:.5;filter:saturate(.3)}
+body.disconnected .live-dot{background:#ff8790;box-shadow:none}
+.event.not-applied{opacity:.55}.event .route{color:var(--gold)}
+
+@keyframes scan{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(10deg)}}
+@keyframes sort{50%{transform:rotate(-40deg)}}
+@keyframes reach{0%,100%{transform:rotate(0)}50%{transform:rotate(-80deg)}}
+@keyframes tilt{50%{transform:rotate(-9deg)}}
+@keyframes chin{0%,100%{transform:rotate(-110deg)}50%{transform:rotate(-120deg)}}
+@keyframes tap{50%{transform:rotate(-55deg)}}
+@keyframes page-left{50%{transform:rotate(-45deg)}}
+@keyframes page-right{0%,100%{transform:rotate(-45deg)}50%{transform:rotate(0)}}
+@keyframes type-left{0%,100%{transform:rotate(-60deg)}50%{transform:rotate(-48deg)}}
+@keyframes type-right{0%,100%{transform:rotate(48deg)}50%{transform:rotate(60deg)}}
+@keyframes press{50%{transform:rotate(-70deg)}}
+@keyframes glance{50%{transform:rotate(7deg)}}
+@keyframes wrench{0%{transform:rotate(-30deg)}50%{transform:rotate(-75deg)}100%{transform:rotate(-30deg)}}
+@keyframes pulse{50%{opacity:.25}}
+@keyframes shrug-left{50%{transform:rotate(35deg)}}
+@keyframes shrug-right{50%{transform:rotate(-35deg)}}
+@media(prefers-reduced-motion:reduce){.walker{transition-duration:.001ms!important}}
+
+/* Compact chrome for small effective screens (e.g. 1920x1080 at 150% = 1280x720 of page space).
+   Only the header, toolbar, gaps and footer shrink; panels, robots and colours are unchanged. */
+@media (max-height:820px){
+  .mast{height:58px;padding:6px 18px;gap:20px}.brand{font-size:23px}.node{padding-left:16px;gap:2px}.node strong{font-size:16px}
+  .toolbar{height:40px;padding:4px 12px}.layout{gap:8px;padding:8px}.panel-title{height:36px;padding:9px 13px}
+  .health{min-height:62px;padding:7px 12px;margin:0 8px 8px;gap:10px}.resource,.health-stat{padding:5px;min-width:60px}
+  .zones{height:38px}.hint{margin:4px 0}.roster-agent{min-height:50px;padding:5px 7px}
+}
+@media (max-height:820px) and (max-width:1450px){.layout{grid-template-columns:210px minmax(420px,1fr) 260px}}

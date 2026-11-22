@@ -1,0 +1,901 @@
+{
+    "schema":  "agent-arena.lab-report/1",
+    "provisioner":  "Agent Arena Lab Provisioner 1.4.6",
+    "run":  "20261107-180529-DESKTOP-REDACT11-capstone",
+    "role":  "capstone",
+    "computer":  "DESKTOP-REDACT11",
+    "started":  "2026-11-07T18:05:29.5088410-05:00",
+    "finished":  "2026-11-07T18:09:43.0828934-05:00",
+    "final_status":  "failed",
+    "identity":  {
+                     "detected":  {
+                                      "Role":  "capstone",
+                                      "Address":  "192.0.2.201",
+                                      "Reason":  "holds the Capstone laptop address"
+                                  },
+                     "os":  {
+                                "Caption":  "Microsoft Windows 11 Pro",
+                                "Edition":  "Professional",
+                                "Version":  "10.0.26200",
+                                "Build":  "26200",
+                                "Arch":  "64-bit",
+                                "LastBoot":  "2026-11-07T18:04:46.5000000-05:00",
+                                "TimeZone":  "Eastern Standard Time",
+                                "Domain":  "WORKGROUP",
+                                "PartOfDomain":  false
+                            },
+                     "user":  "Desktop-Redact11\\LabOperator2",
+                     "elevated":  true
+                 },
+    "inventory":  [
+                      {
+                          "area":  "identity",
+                          "name":  "computer",
+                          "value":  "DESKTOP-REDACT11",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "signed-in user",
+                          "value":  "Desktop-Redact11\\LabOperator2",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "running as administrator",
+                          "value":  "True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "os",
+                          "name":  "Windows",
+                          "value":  "Microsoft Windows 11 Pro (Professional) 10.0.26200 build 26200 64-bit",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "os",
+                          "name":  "last boot",
+                          "value":  "2026-11-07T18:04:46.5000000-05:00",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "os",
+                          "name":  "domain or workgroup",
+                          "value":  "WORKGROUP (domain joined: False)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "CPU",
+                          "value":  "Intel(R) Core(TM) i5-10310U CPU @ 1.70GHz (4 cores, 8 threads)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "RAM",
+                          "value":  "23.7 GB",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "GPU",
+                          "value":  "Intel(R) UHD Graphics",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "hardware",
+                          "name":  "NVIDIA VRAM",
+                          "value":  "no NVIDIA GPU",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "storage",
+                          "name":  "volume C:",
+                          "value":  "424.63 GB free of 475.60 GB",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Wi-Fi",
+                          "value":  "Intel(R) Wi-Fi 6 AX201 160MHz; Disconnected; MAC 02-00-00-00-00-06; IPv4 169.254.124.16/16; gateway ; DHCP Enabled; profile none",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Ethernet",
+                          "value":  "Intel(R) Ethernet Connection (10) I219-LM; Up; MAC 02-00-00-00-00-07; IPv4 192.0.2.201/24; gateway ; DHCP Enabled; profile Public",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "adapter Bluetooth Network Connection",
+                          "value":  "Bluetooth Device (Personal Area Network); Disconnected; MAC 02-00-00-00-00-08; IPv4 169.254.246.77/16; gateway ; DHCP Enabled; profile none",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "network",
+                          "name":  "lab address",
+                          "value":  "192.0.2.201/24 on Ethernet",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "installed",
+                          "value":  "ollama.exe not found",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "API http://127.0.0.1:11434",
+                          "value":  "no answer",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "API http://192.0.2.201:11434",
+                          "value":  "no answer",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "listeners on 11434",
+                          "value":  "none",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "models",
+                          "name":  "installed models",
+                          "value":  "no Ollama API answers, so the inventory cannot be read",
+                          "status":  "inaccessible",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "OLLAMA_HOST",
+                          "value":  "machine \"\", user \"\"",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "OLLAMA_MODELS",
+                          "value":  "machine \"\", user \"\"",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "ollama",
+                          "name":  "boot task",
+                          "value":  "\"Capstone Ollama Server\" not present",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "profile Domain",
+                          "value":  "enabled True; default inbound Block; local rules allowed True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "profile Private",
+                          "value":  "enabled True; default inbound Block; local rules allowed True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "profile Public",
+                          "value":  "enabled True; default inbound Block; local rules allowed True",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "active profile on the lab adapter",
+                          "value":  "Public",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.254",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.1",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.201",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.202",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "firewall",
+                          "name":  "Ollama 11434 from 192.0.2.50",
+                          "value":  "DENIED: no allow rule matches; the profile blocks inbound connections by default",
+                          "status":  "inferred",
+                          "source":  "rule analysis"
+                      },
+                      {
+                          "area":  "time",
+                          "name":  "time zone",
+                          "value":  "Eastern Standard Time",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "time",
+                          "name":  "Windows Time",
+                          "value":  "Running, start Auto, source \"192.0.2.254,0x8\" (NTP)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "power",
+                          "name":  "sleep on AC",
+                          "value":  "standby 0 s, hibernate 0 s",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "power",
+                          "name":  "adapter Ethernet",
+                          "value":  "may be turned off: Unsupported; EEE Energy Efficient Ethernet=On",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "security",
+                          "name":  "Smart App Control",
+                          "value":  "off",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "tasks",
+                          "name":  "relevant scheduled tasks",
+                          "value":  "Capstone Application (Running, LOCAL SERVICE)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "services",
+                          "name":  "relevant Windows services",
+                          "value":  "none",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "event service",
+                          "value":  "http://192.0.2.254:8790: ok aes-a1e79a8b3902 2.3.1",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "head viewer",
+                          "value":  "not installed for LabOperator2",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "arena",
+                          "name":  "Python 3.12+ for the Arena installers",
+                          "value":  "no Python 3.12+ found for Desktop-Redact11\\LabOperator2 (elevated True): py -3 -\u003e not on PATH for this window; python [C:\\Users\\LabOperator2\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe] -\u003e version check failed (exit 9009): Python was not found; run without arguments to install from the Microsoft Store, or disable this shortcut from Settings \u003e Apps \u003e Advanced app settings \u003e App execution aliases.",
+                          "status":  "missing",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "capstone",
+                          "name":  "installed",
+                          "value":  "version 6.0.0-rc.3",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "capstone",
+                          "name":  "inference mode",
+                          "value":  "gateway (appsettings.json inference_mode)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "capstone",
+                          "name":  "Gateway client bootstrap (capstone)",
+                          "value":  "url https://192.0.2.254:8443; application capstone; CA present; token file present (C:\\ProgramData\\Capstone\\gateway\\capstone.token)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "capstone",
+                          "name":  "Gateway client bootstrap (capstone-research)",
+                          "value":  "url https://192.0.2.254:8443; application capstone-research; CA present; token file present (C:\\ProgramData\\Capstone\\gateway\\capstone-research.token)",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "capstone",
+                          "name":  "Arena adapter registration (Capstone\u0027s record)",
+                          "value":  "external_registration_required",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "capstone",
+                          "name":  "startup task",
+                          "value":  "Running as LOCAL SERVICE",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "capstone",
+                          "name":  "health",
+                          "value":  "no answer",
+                          "status":  "inaccessible",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "backups",
+                          "name":  "lab provisioner runs with changes",
+                          "value":  "20261107-134936-DESKTOP-REDACT11-capstone; 20261107-135744-DESKTOP-REDACT11-capstone; 20261107-145652-DESKTOP-REDACT11-capstone",
+                          "status":  "observed",
+                          "source":  ""
+                      },
+                      {
+                          "area":  "identity",
+                          "name":  "appears to be",
+                          "value":  "capstone (holds the Capstone laptop address)",
+                          "status":  "inferred",
+                          "source":  ""
+                      }
+                  ],
+    "plan":  {
+                 "address":  "192.0.2.201",
+                 "address_verdict":  {
+                                         "Allowed":  true,
+                                         "Reasons":  [
+
+                                                     ],
+                                         "Warnings":  [
+
+                                                      ],
+                                         "HeldHere":  true
+                                     },
+                 "conflict":  null,
+                 "hardware":  null,
+                 "profile":  null,
+                 "models":  [
+
+                            ],
+                 "client_mode":  "cutover",
+                 "clients":  [
+                                 "192.0.2.254",
+                                 "192.0.2.1"
+                             ],
+                 "denied":  [
+                                "192.0.2.201",
+                                "192.0.2.202",
+                                "192.0.2.50"
+                            ],
+                 "steps":  [
+                               {
+                                   "id":  "network",
+                                   "stage":  "C",
+                                   "title":  "Keep 192.0.2.201/24 (already set)",
+                                   "kind":  "read",
+                                   "detail":  "the same adapter choice, conflict probe, backup and verified apply as for heads; Wi-Fi is not touched",
+                                   "rollback":  "network backup JSON; undo restores DHCP or the earlier static address",
+                                   "preserves":  "",
+                                   "approval":  false,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "time",
+                                   "stage":  "C",
+                                   "title":  "Time zone Eastern Standard Time; Windows Time from the hub 192.0.2.254",
+                                   "kind":  "privileged",
+                                   "detail":  "as on heads: Arena refuses clocks more than 120 s off",
+                                   "rollback":  "earlier time zone and Windows Time source restored",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "appcontrol",
+                                   "stage":  "C",
+                                   "title":  "Smart App Control off, if it is on or in evaluation (asked separately: TURN-OFF)",
+                                   "kind":  "read",
+                                   "detail":  "it can block unsigned parts of Capstone\u0027s Python packages and of the Ticketing adapter, as it blocked the viewer on head 10",
+                                   "rollback":  "Windows Security \u003e App \u0026 browser control \u003e Smart App Control",
+                                   "preserves":  "",
+                                   "approval":  false,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "capstone-install",
+                                   "stage":  "C",
+                                   "title":  "Keep Capstone 6.0.0-rc.3 (installed)",
+                                   "kind":  "read",
+                                   "detail":  "archive SHA-256 checked against the approved release, then every file against its own manifest",
+                                   "rollback":  "Capstone\u0027s Rollback-Capstone.ps1 -Version \u003cprevious\u003e (its project)",
+                                   "preserves":  "ProgramData\\Capstone (operations.db, ai_configuration.db, Testing Lab history, Candidate A, QMS, experiments)",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "gateway-client",
+                                   "stage":  "C",
+                                   "title":  "Gateway client folder C:\\ProgramData\\Capstone\\gateway (SYSTEM/Administrators full, LOCAL SERVICE read) and the Gateway CA from the provisioner stick",
+                                   "kind":  "change",
+                                   "detail":  "paths and ACL from the Gateway manifest; Capstone supplies its own two client bootstraps; the capstone and capstone-research token files are carried from the hub by the operator and only checked (presence, ACL), never read",
+                                   "rollback":  "files restored or removed",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "capstone-configure",
+                                   "stage":  "C",
+                                   "title":  "Configure Capstone as a Gateway client with two identities (its own Configure-Capstone.ps1 -OperationalGatewayBootstrap -ResearchGatewayBootstrap; gateway mode)",
+                                   "kind":  "privileged",
+                                   "detail":  "Capstone\u0027s own bootstrap templates, validated against the Gateway manifest; needs both token files, the CA and the developer token file; refused by Capstone if any is missing",
+                                   "rollback":  "appsettings.json is rewritten by Capstone; earlier copy kept in the run folder",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "capstone-task",
+                                   "stage":  "C",
+                                   "title":  "Register Capstone\u0027s startup task as LOCAL SERVICE (its own Register-CapstoneTask.ps1)",
+                                   "kind":  "privileged",
+                                   "detail":  "Capstone refuses while either identity\u0027s endpoint, token or trust material is incomplete",
+                                   "rollback":  "Unregister-ScheduledTask \"Capstone Application\"",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "arena-claim",
+                                   "stage":  "D",
+                                   "title":  "Claim 192.0.2.201 in Agent Arena for capstone/main (one-time claim code)",
+                                   "kind":  "change",
+                                   "detail":  "POST /v2/claim from this address",
+                                   "rollback":  "release in the admin console",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               },
+                               {
+                                   "id":  "ticketing",
+                                   "stage":  "D",
+                                   "title":  "Install the Arena Ticketing adapter (existing AGENT-ARENA-TICKETING installer, one-time app code)",
+                                   "kind":  "change",
+                                   "detail":  "reads Capstone\u0027s database read-only at C:\\ProgramData\\Capstone\\data\\operations.db",
+                                   "rollback":  "remove %LOCALAPPDATA%\\Programs\\AgentArenaAdapter and its sign-in entry",
+                                   "preserves":  "",
+                                   "approval":  true,
+                                   "state":  "planned"
+                               }
+                           ],
+                 "external":  [
+                                  "capstone.token and capstone-research.token, issued separately on the hub (Gateway credentials step), carried on a second stick; the Gateway CA comes from the provisioner stick\u0027s gateway-ca folder (whatever drive letter it has)",
+                                  "Capstone developer token file (Capstone owner)",
+                                  "Arena claim code and app code (admin console on the hub)"
+                              ],
+                 "warnings":  [
+
+                              ],
+                 "blocked":  [
+
+                             ],
+                 "preserves":  [
+                                   "Capstone application data, Testing Lab, QMS and experiment records"
+                               ],
+                 "hub_mode":  null
+             },
+    "approvals":  [
+                      {
+                          "at":  "2026-11-07T18:05:59.7550090-05:00",
+                          "kind":  "privileged",
+                          "word":  "APPROVE",
+                          "prompt":  "Carry out this plan on DESKTOP-REDACT11? 7 step(s) change this machine; each change is recorded with its undo.",
+                          "result":  "approved"
+                      },
+                      {
+                          "at":  "2026-11-07T18:06:43.4969885-05:00",
+                          "kind":  "change",
+                          "word":  "APPROVE",
+                          "prompt":  "The Arena Ticketing adapter needs Python 3.12.10 for LabOperator2. Install it for LabOperator2 only, from the provisioner stick (the official python.org installer, its signature checked)? Capstone\u0027s own Python is not touched.",
+                          "result":  "approved"
+                      },
+                      {
+                          "at":  "2026-11-07T18:07:21.0436493-05:00",
+                          "kind":  "change",
+                          "word":  "APPROVE",
+                          "prompt":  "Run INSTALL-TICKETING-ADAPTER as the signed-in user? Its window asks for the one-time APP CODE: get it at the admin hub (ArenaSvcUser\u0027s screen): Machines \u003e Machines and codes... \u003e Applications, the Ticketing (capstone) row \u003e App code.",
+                          "result":  "approved"
+                      },
+                      {
+                          "at":  "2026-11-07T18:08:19.9063956-05:00",
+                          "kind":  "change",
+                          "word":  "APPROVE",
+                          "prompt":  "Run Capstone\u0027s Configure-Capstone.ps1 with its capstone and capstone-research bootstraps (gateway mode, -VerifyLocalAddress, -[REDACTED-CODE]d)? It applies its LOCAL SERVICE ACLs to both token files, the CA and the developer token.",
+                          "result":  "approved"
+                      }
+                  ],
+    "actual":  [
+                   {
+                       "id":  "network",
+                       "title":  "Lab address",
+                       "status":  "UNCHANGED",
+                       "started":  "2026-11-07T18:05:59.7707908-05:00",
+                       "finished":  "2026-11-07T18:05:59.7982802-05:00",
+                       "detail":  "192.0.2.201/24 already set"
+                   },
+                   {
+                       "id":  "time",
+                       "title":  "Time zone and time source",
+                       "status":  "UNCHANGED",
+                       "started":  "2026-11-07T18:05:59.8339568-05:00",
+                       "finished":  "2026-11-07T18:06:00.1297280-05:00",
+                       "detail":  "Eastern Standard Time, Windows Time syncing from 192.0.2.254"
+                   },
+                   {
+                       "id":  "appcontrol",
+                       "title":  "Smart App Control",
+                       "status":  "UNCHANGED",
+                       "started":  "2026-11-07T18:06:00.1297280-05:00",
+                       "finished":  "2026-11-07T18:06:00.1846503-05:00",
+                       "detail":  "Smart App Control: off"
+                   },
+                   {
+                       "id":  "capstone-install",
+                       "title":  "Capstone release (its own installer or updater)",
+                       "status":  "UNCHANGED",
+                       "started":  "2026-11-07T18:06:00.2725256-05:00",
+                       "finished":  "2026-11-07T18:06:00.3039188-05:00",
+                       "detail":  "Capstone 6.0.0-rc.3 installed (the approved release)"
+                   },
+                   {
+                       "id":  "gateway-client",
+                       "title":  "Gateway client folder and CA (no token, no client configuration)",
+                       "status":  "UNCHANGED",
+                       "started":  "2026-11-07T18:06:00.3039188-05:00",
+                       "finished":  "2026-11-07T18:06:00.3890955-05:00",
+                       "detail":  "C:\\ProgramData\\Capstone\\gateway: CA identical to the provisioner stick\u0027s, NT AUTHORITY\\LOCAL SERVICE read, nobody broad"
+                   },
+                   {
+                       "id":  "capstone-configure",
+                       "title":  "Capstone Gateway clients capstone and capstone-research (its own Configure-Capstone.ps1)",
+                       "status":  "UNCHANGED",
+                       "started":  "2026-11-07T18:06:00.3890955-05:00",
+                       "finished":  "2026-11-07T18:06:03.2247642-05:00",
+                       "detail":  "gateway mode; capstone and capstone-research complete; Arena registration external_registration_required"
+                   },
+                   {
+                       "id":  "capstone-task",
+                       "title":  "Capstone startup task as LOCAL SERVICE (its own script)",
+                       "status":  "UNCHANGED",
+                       "started":  "2026-11-07T18:06:03.2247642-05:00",
+                       "finished":  "2026-11-07T18:06:05.8764116-05:00",
+                       "detail":  "task Ready as LOCAL SERVICE"
+                   },
+                   {
+                       "id":  "arena-claim",
+                       "title":  "Arena address claim",
+                       "status":  "DONE",
+                       "started":  "2026-11-07T18:06:05.8764116-05:00",
+                       "finished":  "2026-11-07T18:06:35.6958739-05:00",
+                       "detail":  "claimed as capstone/main"
+                   },
+                   {
+                       "id":  "ticketing",
+                       "title":  "Arena Ticketing adapter (existing installer)",
+                       "status":  "DONE",
+                       "started":  "2026-11-07T18:06:35.6958739-05:00",
+                       "finished":  "2026-11-07T18:08:07.0621638-05:00",
+                       "detail":  "installed True, credential True"
+                   },
+                   {
+                       "id":  "capstone-arena-record",
+                       "title":  "Capstone\u0027s record of the Arena adapter registration (its own Configure-Capstone.ps1)",
+                       "status":  "DONE",
+                       "started":  "2026-11-07T18:08:07.0621638-05:00",
+                       "finished":  "2026-11-07T18:08:20.9072266-05:00",
+                       "detail":  "Capstone configured by its own script: capstone and capstone-research, Arena registration complete"
+                   }
+               ],
+    "software":  {
+                     "ollama":  "not installed",
+                     "arena_viewer":  "not installed",
+                     "capstone":  "6.0.0-rc.3"
+                 },
+    "models":  null,
+    "registration":  [
+                         {
+                             "item":  "Arena address claim 192.0.2.201",
+                             "status":  "REGISTERED",
+                             "detail":  "claimed as capstone/main (app)"
+                         },
+                         {
+                             "item":  "Ticketing adapter producer credential",
+                             "status":  "REGISTERED",
+                             "detail":  "installed True; credential True; running 1"
+                         }
+                     ],
+    "verification":  [
+                         {
+                             "check":  "no direct Ollama access to head 192.0.2.2 from this laptop",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "no route or no answer"
+                         },
+                         {
+                             "check":  "no direct Ollama access to head 192.0.2.3 from this laptop",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "no route or no answer"
+                         },
+                         {
+                             "check":  "no direct Ollama access to head 192.0.2.4 from this laptop",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "no route or no answer"
+                         },
+                         {
+                             "check":  "no direct Ollama access to head 192.0.2.5 from this laptop",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "no route or no answer"
+                         },
+                         {
+                             "check":  "no direct Ollama access to head 192.0.2.6 from this laptop",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "no route or no answer"
+                         },
+                         {
+                             "check":  "no direct Ollama access to head 192.0.2.7 from this laptop",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "no route or no answer"
+                         },
+                         {
+                             "check":  "no direct Ollama access to head 192.0.2.8 from this laptop",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "no route or no answer"
+                         },
+                         {
+                             "check":  "no direct Ollama access to head 192.0.2.9 from this laptop",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "no route or no answer"
+                         },
+                         {
+                             "check":  "no direct Ollama access to head 192.0.2.10 from this laptop",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "no route or no answer"
+                         },
+                         {
+                             "check":  "Arena event service reachable and genuine",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "ok aes-a1e79a8b3902"
+                         },
+                         {
+                             "check":  "Capstone installed (approved release 6.0.0-rc.3)",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "active 6.0.0-rc.3"
+                         },
+                         {
+                             "check":  "Capstone runs in gateway mode (not direct-head development mode)",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "inference_mode \"gateway\" (appsettings.json inference_mode)"
+                         },
+                         {
+                             "check":  "Capstone Gateway identities capstone and capstone-research: own bootstrap, own token file (LOCAL SERVICE read, nobody broad), CA, token_file only",
+                             "status":  "PASS",
+                             "scope":  "external",
+                             "required":  true,
+                             "detail":  "C:\\ProgramData\\Capstone\\gateway\\capstone.token; C:\\ProgramData\\Capstone\\gateway\\capstone-research.token"
+                         },
+                         {
+                             "check":  "Gateway CA installed (and identical to the hub\u0027s, via the provisioner stick)",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "C:\\ProgramData\\Capstone\\gateway\\inference-gateway-ca.pem"
+                         },
+                         {
+                             "check":  "TLS to the Gateway with its CA; service identity shared-inference",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "/health 200 service shared-inference; /ready 200; certificate CN=192.0.2.254 until 2027-12-07T20:38:28"
+                         },
+                         {
+                             "check":  "Capstone health (its Test-CapstoneHealth.ps1: /api/health)",
+                             "status":  "FAIL",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "no healthy answer after waiting up to 3 minutes; startup task last result 0x1; Capstone\u0027s error log ends with: not be found. Error loading \"C:\\\\Program; logs: C:\\ProgramData\\AgentArenaLab\\runs\\20261107-180529-DESKTOP-REDACT11-capstone\\capstone-diagnostics.txt (copied to D:\\reports\\DESKTOP-REDACT11\\20261107-180529-DESKTOP-REDACT11-capstone-capstone-diagnostics.txt)"
+                         },
+                         {
+                             "check":  "both Gateway identities authenticate (Capstone\u0027s Test-CapstoneGateway.ps1)",
+                             "status":  "PASS",
+                             "scope":  "lan",
+                             "required":  true,
+                             "detail":  "verified"
+                         },
+                         {
+                             "check":  "Capstone reports no outstanding external steps",
+                             "status":  "PASS",
+                             "scope":  "external",
+                             "required":  false,
+                             "detail":  "none"
+                         },
+                         {
+                             "check":  "Capstone records the Arena Ticketing adapter as registered",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  false,
+                             "detail":  "complete"
+                         },
+                         {
+                             "check":  "Arena Ticketing adapter installed, enrolled and running",
+                             "status":  "PASS",
+                             "scope":  "local",
+                             "required":  true,
+                             "detail":  "installed True; credential True; running 1 (starts at sign-in of LabOperator2)"
+                         }
+                     ],
+    "security":  {
+                     "HeadIp":  "192.0.2.201",
+                     "ActiveProfile":  "Public",
+                     "ProfileEnabled":  true,
+                     "DefaultInbound":  "Block",
+                     "PolicyNote":  "",
+                     "Sources":  [
+                                     {
+                                         "Source":  "192.0.2.254",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.1",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.201",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.202",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     },
+                                     {
+                                         "Source":  "192.0.2.50",
+                                         "Verdict":  "DENIED",
+                                         "Reason":  "no allow rule matches; the profile blocks inbound connections by default",
+                                         "AllowedBy":  [
+
+                                                       ],
+                                         "BlockedBy":  [
+
+                                                       ]
+                                     }
+                                 ],
+                     "RelevantRules":  [
+
+                                       ],
+                     "Analysis":  "rule analysis (inferred); a real connection from each address is the field proof"
+                 },
+    "changes":  [
+                    {
+                        "at":  "2026-11-07T18:07:10.1088000-05:00",
+                        "kind":  "app",
+                        "description":  "Python 3.12.10 installed for LabOperator2 (per user, exit 0)",
+                        "backup":  "",
+                        "undo":  {
+                                     "type":  "manual",
+                                     "instructions":  "Settings \u003e Apps \u003e Python 3.12.10 \u003e Uninstall (as LabOperator2)"
+                                 },
+                        "undone":  false
+                    }
+                ],
+    "rollback":  {
+                     "change_record":  "C:\\ProgramData\\AgentArenaLab\\runs\\20261107-180529-DESKTOP-REDACT11-capstone\\changes.json",
+                     "backups":  "C:\\ProgramData\\AgentArenaLab\\runs\\20261107-180529-DESKTOP-REDACT11-capstone\\backups",
+                     "how":  "START-LAB-PROVISIONER.cmd \u003e Existing machine \u003e Roll back a previous run"
+                 },
+    "warnings":  [
+
+                 ],
+    "pending":  [
+
+                ],
+    "stop_reason":  "",
+    "extra":  null,
+    "scope_note":  "Checks marked scope=lan used real connections over the LAN; scope=local are on this machine only; scope=external need another project or machine."
+}

@@ -1,0 +1,67 @@
+__pycache__/
+*.py[cod]
+.venv/
+.venv-py312/
+build/
+.test_deps/
+.phase4_2_node/
+venv/
+.idea/
+.pytest_cache/
+
+# Machine-local gateway bootstrap and credential material
+config/inference-gateway.client.json
+config/*.token
+config/*.pem
+config/*.key
+
+# Runtime artifacts - regenerate themselves
+data/index/
+data/ticket_log.jsonl
+data/escalations.jsonl
+data/rma_requests.jsonl
+data/memory/
+
+# Scratch stores written by the demo and evaluation runners
+data/_demo_run/
+data/_eval_run/
+data/_agent_internal/
+
+# Operational databases and generated artifacts
+data/operations.db
+data/operations.db-wal
+data/operations.db-shm
+data/demo_operations.db
+data/demo_operations.db-wal
+data/demo_operations.db-shm
+data/labels/
+
+# Windows deployment output and machine-local provisioning
+deploy/windows/dist/
+deploy/windows/work/
+deploy/services/dist/
+deploy/services/work/
+deploy/dist/
+deploy/build/
+config/capstone.machine.json
+config/*.secret
+
+# Dependency caches and scratch folders left by earlier phases (not source)
+.phase*/
+.test*/
+.run/
+.gateway-extraction/
+phase1_deps/
+phase4_deps/
+tmp/
+output/
+docs/*.zip
+
+# Experiment campaigns and scratch databases (regenerated; multi-GB)
+data/experiments/
+data/_*
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/*.agent/
+data/*.labels/

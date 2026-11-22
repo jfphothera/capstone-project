@@ -1,0 +1,965 @@
+{
+  "schema": "arena.wall-panels.profiles.v1",
+  "profiles": [
+    {
+      "scene": "loading-dock",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "freight-routing/main",
+          "slot": "main",
+          "origin_px": [
+            458,
+            22
+          ],
+          "draw_size_px": [
+            183,
+            122
+          ],
+          "phase_seed": 11
+        },
+        {
+          "item": "freight-routing/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            912,
+            41
+          ],
+          "draw_size_px": [
+            148,
+            94
+          ],
+          "phase_seed": 23
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "copper-foundry",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "thermal-regulator/main",
+          "slot": "main",
+          "origin_px": [
+            504,
+            22
+          ],
+          "draw_size_px": [
+            92,
+            122
+          ],
+          "phase_seed": 48
+        },
+        {
+          "item": "thermal-regulator/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            936,
+            38
+          ],
+          "draw_size_px": [
+            100,
+            100
+          ],
+          "phase_seed": 60
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "relay-workshop",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "relay-matrix/main",
+          "slot": "main",
+          "origin_px": [
+            480,
+            22
+          ],
+          "draw_size_px": [
+            139,
+            122
+          ],
+          "phase_seed": 85
+        },
+        {
+          "item": "relay-matrix/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            912,
+            54
+          ],
+          "draw_size_px": [
+            148,
+            68
+          ],
+          "phase_seed": 97
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "cooling-bay",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "cryo-manifold/main",
+          "slot": "main",
+          "origin_px": [
+            428,
+            22
+          ],
+          "draw_size_px": [
+            244,
+            122
+          ],
+          "phase_seed": 122
+        },
+        {
+          "item": "cryo-manifold/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            954,
+            38
+          ],
+          "draw_size_px": [
+            64,
+            100
+          ],
+          "phase_seed": 134
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "botanical-lab",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "bioculture-monitor/main",
+          "slot": "main",
+          "origin_px": [
+            458,
+            22
+          ],
+          "draw_size_px": [
+            183,
+            122
+          ],
+          "phase_seed": 159
+        },
+        {
+          "item": "bioculture-monitor/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            912,
+            41
+          ],
+          "draw_size_px": [
+            148,
+            94
+          ],
+          "phase_seed": 171
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "analysis-lab",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "analysis-instrument/main",
+          "slot": "main",
+          "origin_px": [
+            504,
+            22
+          ],
+          "draw_size_px": [
+            92,
+            122
+          ],
+          "phase_seed": 196
+        },
+        {
+          "item": "analysis-instrument/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            936,
+            38
+          ],
+          "draw_size_px": [
+            100,
+            100
+          ],
+          "phase_seed": 208
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "turbine-hall",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "turbine-governor/main",
+          "slot": "main",
+          "origin_px": [
+            480,
+            22
+          ],
+          "draw_size_px": [
+            139,
+            122
+          ],
+          "phase_seed": 233
+        },
+        {
+          "item": "turbine-governor/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            912,
+            54
+          ],
+          "draw_size_px": [
+            148,
+            68
+          ],
+          "phase_seed": 245
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "ceramic-works",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "kiln-controller/main",
+          "slot": "main",
+          "origin_px": [
+            428,
+            22
+          ],
+          "draw_size_px": [
+            244,
+            122
+          ],
+          "phase_seed": 270
+        },
+        {
+          "item": "kiln-controller/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            954,
+            38
+          ],
+          "draw_size_px": [
+            64,
+            100
+          ],
+          "phase_seed": 282
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "orbital-hangar",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "hangar-interlock/main",
+          "slot": "main",
+          "origin_px": [
+            458,
+            22
+          ],
+          "draw_size_px": [
+            183,
+            122
+          ],
+          "phase_seed": 307
+        },
+        {
+          "item": "hangar-interlock/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            912,
+            41
+          ],
+          "draw_size_px": [
+            148,
+            94
+          ],
+          "phase_seed": 319
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "subsea-station",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "pressure-manifold/main",
+          "slot": "main",
+          "origin_px": [
+            504,
+            22
+          ],
+          "draw_size_px": [
+            92,
+            122
+          ],
+          "phase_seed": 344
+        },
+        {
+          "item": "pressure-manifold/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            936,
+            38
+          ],
+          "draw_size_px": [
+            100,
+            100
+          ],
+          "phase_seed": 356
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "solar-workshop",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "solar-distribution/main",
+          "slot": "main",
+          "origin_px": [
+            480,
+            22
+          ],
+          "draw_size_px": [
+            139,
+            122
+          ],
+          "phase_seed": 381
+        },
+        {
+          "item": "solar-distribution/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            912,
+            54
+          ],
+          "draw_size_px": [
+            148,
+            68
+          ],
+          "phase_seed": 393
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "rail-depot",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "rail-switchboard/main",
+          "slot": "main",
+          "origin_px": [
+            428,
+            22
+          ],
+          "draw_size_px": [
+            244,
+            122
+          ],
+          "phase_seed": 418
+        },
+        {
+          "item": "rail-switchboard/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            954,
+            38
+          ],
+          "draw_size_px": [
+            64,
+            100
+          ],
+          "phase_seed": 430
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "signal-room",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "signal-router/main",
+          "slot": "main",
+          "origin_px": [
+            458,
+            22
+          ],
+          "draw_size_px": [
+            183,
+            122
+          ],
+          "phase_seed": 455
+        },
+        {
+          "item": "signal-router/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            912,
+            41
+          ],
+          "draw_size_px": [
+            148,
+            94
+          ],
+          "phase_seed": 467
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "polar-outpost",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "polar-life-support/main",
+          "slot": "main",
+          "origin_px": [
+            504,
+            22
+          ],
+          "draw_size_px": [
+            92,
+            122
+          ],
+          "phase_seed": 492
+        },
+        {
+          "item": "polar-life-support/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            936,
+            38
+          ],
+          "draw_size_px": [
+            100,
+            100
+          ],
+          "phase_seed": 504
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "basalt-forge",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "forge-regulator/main",
+          "slot": "main",
+          "origin_px": [
+            480,
+            22
+          ],
+          "draw_size_px": [
+            139,
+            122
+          ],
+          "phase_seed": 529
+        },
+        {
+          "item": "forge-regulator/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            912,
+            54
+          ],
+          "draw_size_px": [
+            148,
+            68
+          ],
+          "phase_seed": 541
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "salvage-workshop",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "salvage-patchbay/main",
+          "slot": "main",
+          "origin_px": [
+            428,
+            22
+          ],
+          "draw_size_px": [
+            244,
+            122
+          ],
+          "phase_seed": 566
+        },
+        {
+          "item": "salvage-patchbay/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            954,
+            38
+          ],
+          "draw_size_px": [
+            64,
+            100
+          ],
+          "phase_seed": 578
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "astronomy-lab",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "telescope-tracker/main",
+          "slot": "main",
+          "origin_px": [
+            458,
+            22
+          ],
+          "draw_size_px": [
+            183,
+            122
+          ],
+          "phase_seed": 603
+        },
+        {
+          "item": "telescope-tracker/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            912,
+            41
+          ],
+          "draw_size_px": [
+            148,
+            94
+          ],
+          "phase_seed": 615
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "crystal-lab",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "crystal-resonance/main",
+          "slot": "main",
+          "origin_px": [
+            504,
+            22
+          ],
+          "draw_size_px": [
+            92,
+            122
+          ],
+          "phase_seed": 640
+        },
+        {
+          "item": "crystal-resonance/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            936,
+            38
+          ],
+          "draw_size_px": [
+            100,
+            100
+          ],
+          "phase_seed": 652
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "oceanography-lab",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "ocean-sampler/main",
+          "slot": "main",
+          "origin_px": [
+            480,
+            22
+          ],
+          "draw_size_px": [
+            139,
+            122
+          ],
+          "phase_seed": 677
+        },
+        {
+          "item": "ocean-sampler/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            912,
+            54
+          ],
+          "draw_size_px": [
+            148,
+            68
+          ],
+          "phase_seed": 689
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    },
+    {
+      "scene": "materials-lab",
+      "geometry_id": "arena-shared-floor-v1",
+      "placements": [
+        {
+          "item": "materials-testbench/main",
+          "slot": "main",
+          "origin_px": [
+            428,
+            22
+          ],
+          "draw_size_px": [
+            244,
+            122
+          ],
+          "phase_seed": 714
+        },
+        {
+          "item": "materials-testbench/auxiliary",
+          "slot": "auxiliary",
+          "origin_px": [
+            954,
+            38
+          ],
+          "draw_size_px": [
+            64,
+            100
+          ],
+          "phase_seed": 726
+        }
+      ],
+      "replace_decoration_slots": [
+        "light-left",
+        "light-right",
+        "terminal",
+        "utility"
+      ],
+      "preserve": [
+        "doors",
+        "plants",
+        "whiteboard",
+        "room-status-sign",
+        "lab-screens",
+        "foreground-panel",
+        "all agent and staff routes"
+      ],
+      "placement_note": "Alternative back-wall equipment composition. Do not stack replaced decoration slots underneath."
+    }
+  ]
+}

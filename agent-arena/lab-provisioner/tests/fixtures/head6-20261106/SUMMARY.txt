@@ -1,0 +1,32 @@
+﻿
+Result Check                                Detail                                                                                                                                                                          
+------ -----                                ------                                                                                                                                                                          
+PASS   One version on this USB              folder 2.1.2, toolset 2.1.2, package 2.1.2, manifest 2.1.2, program 2.1.2                                                                                                       
+PASS   Package integrity                    all files match SHA256SUMS.txt                                                                                                                                                  
+INFO                                        Existing install 2.1.1 will be upgraded or repaired in place to 2.1.2                                                                                                           
+PASS   Display identity                     head-192-0-2-6 (head, 192.0.2.6) from the registry                                                                                                                              
+PASS   Event service reachable              http://192.0.2.254:8790 verdict=ok service_id=aes-a1e79a8b3902 attempts=1                                                                                                       
+PASS   WebView2 Runtime                     156.0.4314.50                                                                                                                                                                   
+PASS   .NET Framework 4.8                   release 534296                                                                                                                                                                  
+PASS   Enrollment                           existing credential will be reused (no code needed)                                                                                                                             
+PASS   Setup finished                       result ok=True, version 2.1.2, enrolled=True                                                                                                                                    
+PASS   Installed                            version 2.1.2 at C:\Users\LabOperator1\AppData\Local\Programs\AgentArena\2.1.2\AgentArena.exe                                                                                        
+PASS   Program and Arena files verified     self-test exit 0                                                                                                                                                                
+FAIL   Authenticated with the event service [WARN] Authentication            not checked: The operation has timed out  â€” service unreachable                                                                              
+FAIL   Live subscription for this head                                                                                                                                                                                      
+INFO                                        [INFO] Display                   \\.\DISPLAY1 1920x1080 primary Â· scaling 100%  â€” Arena zoom: Ctrl+ / Ctrl- / Ctrl+0 or the tray icon menu [PASS] Display engine             
+                                            WebView2 Runtime 156.0.4314.50                                                                                                                                                  
+PASS   Enrollment                           existing credential reused; no new code was needed                                                                                                                              
+PASS   Sign-in startup (one entry)          "C:\Users\LabOperator1\AppData\Local\Programs\AgentArena\2.1.2\AgentArena.exe" --background                                                                                          
+PASS   Desktop and Start menu shortcuts     desktop=True start_menu=True                                                                                                                                                    
+PASS   No original-viewer leftovers         owned files 0, shortcut False, task False, processes 0                                                                                                                          
+PASS   Arena window open for this display   Agent Arena — head-192-0-2-6                                                                                                                                                    
+PASS   Exactly one Arena window             1 viewer process(es); the installer window may also be open                                                                                                                     
+PASS   Ollama untouched                     pids 7372 -> 7372, version 0.40.13 -> 0.40.13                                                                                                                                   
+PASS   Power plan unchanged                 Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)                                                                                                             
+
+
+
+
+FINISHED WITH 2 FAIL(S): bring this folder back to the coordinator.
+Toolset 2.1.2 ran from C:\Users\LabOperator1\AppData\Local\AgentArenaLab\head-viewer\AGENT-ARENA-2.1.2 (package Agent-Arena-2.1.2) on DESKTOP-REDACT6 as LabOperator1

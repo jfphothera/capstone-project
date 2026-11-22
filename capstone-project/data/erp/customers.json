@@ -1,0 +1,23 @@
+[
+  {
+    "account_id": "ACC-00010",
+    "customer_name": "Ivan Nowak",
+    "customer_kind": "patient",
+    "source_identity_id": 10,
+    "source_system": "salesforce (synthetic sandbox)"
+  },
+  {
+    "account_id": "ACC-00022",
+    "customer_name": "Mary Cohen",
+    "customer_kind": "patient",
+    "source_identity_id": 22,
+    "source_system": "salesforce (synthetic sandbox)"
+  },
+  {
+    "account_id": "ACC-00026",
+    "customer_name": "Peter Thomas",
+    "customer_kind": "patient",
+    "source_identity_id": 26,
+    "source_system": "salesforce (synthetic sandbox)"
+  }
+]

@@ -1,0 +1,19 @@
+GATEWAY ROUTING CHECK - why does the Inference Gateway send every request to one head (head 3)?
+READ-ONLY: it changes, restarts, reconfigures and re-qualifies nothing, and changes no permission.
+
+Where: the admin hub, DESKTOP-REDACT10 (192.0.2.254), signed in as LabOperator1.
+Takes: about 6 minutes. It must run WHILE Capstone is sending work, so start that first.
+
+1. On the Capstone laptop: start the Capstone work you saw going only to head 3, and leave it running.
+2. On DESKTOP-REDACT10: ArenaSvcUser stays signed in. Use Switch user (not Sign out) to LabOperator1.
+3. Plug in the provisioner stick. In File Explorer open the stick, then:
+      reports > DESKTOP-REDACT10 > GATEWAY-ROUTING-CHECK
+4. Double-click  GATEWAY-ROUTING-CHECK.cmd
+   Windows asks "Do you want to allow this app to make changes to your device?" (Windows Command Processor): Yes.
+   (No = Part A still runs, Part B, the ledger, is skipped and the report says so.)
+5. A black window titled "Agent Arena Lab - hub: Gateway routing check" prints Part A1, then
+      ">>> Sampling for 300 seconds now. Capstone should be sending work during this time. <<<"
+   and one line every 5 seconds. Keep Capstone working until the window prints Part B and
+      "Finished ... Bring back the folder: ..."   then "Press any key to close this window."
+6. Press a key, eject the stick, bring it back. The results are in this folder:
+      gateway-routing-DESKTOP-REDACT10-<date>\report.txt   (plus samples.jsonl and observation-A1.json)

@@ -1,0 +1,51 @@
+{
+  "schema": "arena.admin-traffic-board.v1",
+  "installed_from": "assets/deliveries/2026-11-03-admin-traffic-board",
+  "canvas": [
+    768,
+    1024
+  ],
+  "housing": "housing.png",
+  "glass": "glass-overlay.png",
+  "faces": {
+    "departures": [
+      56,
+      120,
+      656,
+      404
+    ],
+    "arrivals": [
+      56,
+      564,
+      656,
+      404
+    ]
+  },
+  "face_color": "#05080B",
+  "lamps": {
+    "size": [
+      48,
+      48
+    ],
+    "top_left": [
+      [
+        275,
+        40
+      ],
+      [
+        360,
+        40
+      ],
+      [
+        445,
+        40
+      ]
+    ],
+    "states": {
+      "red": "lamps/lamp-red.png",
+      "green": "lamps/lamp-green.png",
+      "unlit": "lamps/lamp-unlit.png",
+      "amber": "lamps/lamp-amber.png"
+    }
+  }
+}

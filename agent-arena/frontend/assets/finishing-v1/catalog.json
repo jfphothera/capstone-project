@@ -1,0 +1,1302 @@
+{
+  "schema": "arena.finishing.v1",
+  "items": [
+    {
+      "id": "bulbs/ring-pilot",
+      "name": "Ring Pilot",
+      "category": "bulb",
+      "side": "universal",
+      "body": "bulbs/ring-pilot/body.png",
+      "emission_mask": "bulbs/ring-pilot/emission-mask.png",
+      "glow_mask": "bulbs/ring-pilot/glow-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        60,
+        232,
+        236
+      ],
+      "description": "round glass pilot lamp in dark steel ring",
+      "fixture_housing": true,
+      "fixture_revision": 1,
+      "lighting": {
+        "neutral_housing": true,
+        "color": "runtime RGB, never baked into trim",
+        "mask_encoding": "white RGBA, coverage in alpha",
+        "draw_order": [
+          "body",
+          "runtime-tinted emission",
+          "runtime-tinted glow"
+        ],
+        "maximum_glow_opacity": 0.5
+      }
+    },
+    {
+      "id": "bulbs/pear-filament",
+      "name": "Pear Fixture",
+      "category": "bulb",
+      "side": "universal",
+      "body": "bulbs/pear-filament/body.png",
+      "emission_mask": "bulbs/pear-filament/emission-mask.png",
+      "glow_mask": "bulbs/pear-filament/glow-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        62,
+        24,
+        194,
+        236
+      ],
+      "description": "Pear incandescent installed inside a bolted steel bulkhead housing with side guards and a mounting backplate.",
+      "fixture_housing": true,
+      "fixture_revision": 2,
+      "lighting": {
+        "neutral_housing": true,
+        "color": "runtime RGB, never baked into trim",
+        "mask_encoding": "white RGBA, coverage in alpha",
+        "draw_order": [
+          "body",
+          "runtime-tinted emission",
+          "runtime-tinted glow"
+        ],
+        "maximum_glow_opacity": 0.5
+      }
+    },
+    {
+      "id": "bulbs/golf-ball",
+      "name": "Globe Fixture",
+      "category": "bulb",
+      "side": "universal",
+      "body": "bulbs/golf-ball/body.png",
+      "emission_mask": "bulbs/golf-ball/emission-mask.png",
+      "glow_mask": "bulbs/golf-ball/glow-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        39,
+        24,
+        217,
+        236
+      ],
+      "description": "Round globe installed in a porcelain cup and protective steel arch on a wide bolted mounting base.",
+      "fixture_housing": true,
+      "fixture_revision": 2,
+      "lighting": {
+        "neutral_housing": true,
+        "color": "runtime RGB, never baked into trim",
+        "mask_encoding": "white RGBA, coverage in alpha",
+        "draw_order": [
+          "body",
+          "runtime-tinted emission",
+          "runtime-tinted glow"
+        ],
+        "maximum_glow_opacity": 0.5
+      }
+    },
+    {
+      "id": "bulbs/tubular-filament",
+      "name": "Tubular Worklight",
+      "category": "bulb",
+      "side": "universal",
+      "body": "bulbs/tubular-filament/body.png",
+      "emission_mask": "bulbs/tubular-filament/emission-mask.png",
+      "glow_mask": "bulbs/tubular-filament/glow-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        74,
+        24,
+        181,
+        236
+      ],
+      "description": "Tubular work light in a rigid guard frame with endcaps, backplate and a bolted mounting flange.",
+      "fixture_housing": true,
+      "fixture_revision": 2,
+      "lighting": {
+        "neutral_housing": true,
+        "color": "runtime RGB, never baked into trim",
+        "mask_encoding": "white RGBA, coverage in alpha",
+        "draw_order": [
+          "body",
+          "runtime-tinted emission",
+          "runtime-tinted glow"
+        ],
+        "maximum_glow_opacity": 0.5
+      }
+    },
+    {
+      "id": "bulbs/edison",
+      "name": "Edison Lantern",
+      "category": "bulb",
+      "side": "universal",
+      "body": "bulbs/edison/body.png",
+      "emission_mask": "bulbs/edison/emission-mask.png",
+      "glow_mask": "bulbs/edison/glow-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        81,
+        24,
+        175,
+        236
+      ],
+      "description": "Edison glass installed inside a protective lantern cage with a fixed mounting backplate and bottom cap.",
+      "fixture_housing": true,
+      "fixture_revision": 2,
+      "lighting": {
+        "neutral_housing": true,
+        "color": "runtime RGB, never baked into trim",
+        "mask_encoding": "white RGBA, coverage in alpha",
+        "draw_order": [
+          "body",
+          "runtime-tinted emission",
+          "runtime-tinted glow"
+        ],
+        "maximum_glow_opacity": 0.5
+      }
+    },
+    {
+      "id": "bulbs/caged-beacon",
+      "name": "Caged Beacon",
+      "category": "bulb",
+      "side": "universal",
+      "body": "bulbs/caged-beacon/body.png",
+      "emission_mask": "bulbs/caged-beacon/emission-mask.png",
+      "glow_mask": "bulbs/caged-beacon/glow-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        45,
+        24,
+        210,
+        236
+      ],
+      "description": "small caged industrial beacon",
+      "fixture_housing": true,
+      "fixture_revision": 1,
+      "lighting": {
+        "neutral_housing": true,
+        "color": "runtime RGB, never baked into trim",
+        "mask_encoding": "white RGBA, coverage in alpha",
+        "draw_order": [
+          "body",
+          "runtime-tinted emission",
+          "runtime-tinted glow"
+        ],
+        "maximum_glow_opacity": 0.5
+      }
+    },
+    {
+      "id": "bulbs/dome-beacon",
+      "name": "Dome Beacon",
+      "category": "bulb",
+      "side": "universal",
+      "body": "bulbs/dome-beacon/body.png",
+      "emission_mask": "bulbs/dome-beacon/emission-mask.png",
+      "glow_mask": "bulbs/dome-beacon/glow-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        65,
+        232,
+        236
+      ],
+      "description": "low dome beacon on short mounting foot",
+      "fixture_housing": true,
+      "fixture_revision": 1,
+      "lighting": {
+        "neutral_housing": true,
+        "color": "runtime RGB, never baked into trim",
+        "mask_encoding": "white RGBA, coverage in alpha",
+        "draw_order": [
+          "body",
+          "runtime-tinted emission",
+          "runtime-tinted glow"
+        ],
+        "maximum_glow_opacity": 0.5
+      }
+    },
+    {
+      "id": "bulbs/prismatic-beacon",
+      "name": "Prismatic Beacon",
+      "category": "bulb",
+      "side": "universal",
+      "body": "bulbs/prismatic-beacon/body.png",
+      "emission_mask": "bulbs/prismatic-beacon/emission-mask.png",
+      "glow_mask": "bulbs/prismatic-beacon/glow-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        25,
+        24,
+        230,
+        236
+      ],
+      "description": "short prismatic glass warning beacon",
+      "fixture_housing": true,
+      "fixture_revision": 1,
+      "lighting": {
+        "neutral_housing": true,
+        "color": "runtime RGB, never baked into trim",
+        "mask_encoding": "white RGBA, coverage in alpha",
+        "draw_order": [
+          "body",
+          "runtime-tinted emission",
+          "runtime-tinted glow"
+        ],
+        "maximum_glow_opacity": 0.5
+      }
+    },
+    {
+      "id": "bulbs/ribbed-pilot",
+      "name": "Ribbed Pilot",
+      "category": "bulb",
+      "side": "universal",
+      "body": "bulbs/ribbed-pilot/body.png",
+      "emission_mask": "bulbs/ribbed-pilot/emission-mask.png",
+      "glow_mask": "bulbs/ribbed-pilot/glow-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        36,
+        24,
+        220,
+        236
+      ],
+      "description": "ribbed cylindrical indicator lamp",
+      "fixture_housing": true,
+      "fixture_revision": 1,
+      "lighting": {
+        "neutral_housing": true,
+        "color": "runtime RGB, never baked into trim",
+        "mask_encoding": "white RGBA, coverage in alpha",
+        "draw_order": [
+          "body",
+          "runtime-tinted emission",
+          "runtime-tinted glow"
+        ],
+        "maximum_glow_opacity": 0.5
+      }
+    },
+    {
+      "id": "bulbs/porthole",
+      "name": "Porthole",
+      "category": "bulb",
+      "side": "universal",
+      "body": "bulbs/porthole/body.png",
+      "emission_mask": "bulbs/porthole/emission-mask.png",
+      "glow_mask": "bulbs/porthole/glow-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        41,
+        232,
+        236
+      ],
+      "description": "round porthole glass lens in riveted metal bezel",
+      "fixture_housing": true,
+      "fixture_revision": 1,
+      "lighting": {
+        "neutral_housing": true,
+        "color": "runtime RGB, never baked into trim",
+        "mask_encoding": "white RGBA, coverage in alpha",
+        "draw_order": [
+          "body",
+          "runtime-tinted emission",
+          "runtime-tinted glow"
+        ],
+        "maximum_glow_opacity": 0.5
+      }
+    },
+    {
+      "id": "bulbs/recessed-spot",
+      "name": "Recessed Spot",
+      "category": "bulb",
+      "side": "universal",
+      "body": "bulbs/recessed-spot/body.png",
+      "emission_mask": "bulbs/recessed-spot/emission-mask.png",
+      "glow_mask": "bulbs/recessed-spot/glow-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        61,
+        232,
+        236
+      ],
+      "description": "compact recessed spot lamp in dark gray surround",
+      "fixture_housing": true,
+      "fixture_revision": 1,
+      "lighting": {
+        "neutral_housing": true,
+        "color": "runtime RGB, never baked into trim",
+        "mask_encoding": "white RGBA, coverage in alpha",
+        "draw_order": [
+          "body",
+          "runtime-tinted emission",
+          "runtime-tinted glow"
+        ],
+        "maximum_glow_opacity": 0.5
+      }
+    },
+    {
+      "id": "bulbs/square-indicator",
+      "name": "Square Indicator",
+      "category": "bulb",
+      "side": "universal",
+      "body": "bulbs/square-indicator/body.png",
+      "emission_mask": "bulbs/square-indicator/emission-mask.png",
+      "glow_mask": "bulbs/square-indicator/glow-mask.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        74,
+        232,
+        236
+      ],
+      "description": "single square glass indicator with thin gray mount",
+      "fixture_housing": true,
+      "fixture_revision": 1,
+      "lighting": {
+        "neutral_housing": true,
+        "color": "runtime RGB, never baked into trim",
+        "mask_encoding": "white RGBA, coverage in alpha",
+        "draw_order": [
+          "body",
+          "runtime-tinted emission",
+          "runtime-tinted glow"
+        ],
+        "maximum_glow_opacity": 0.5
+      }
+    },
+    {
+      "id": "left/cargo-table",
+      "name": "Cargo Table",
+      "category": "surface",
+      "side": "left",
+      "body": "left/cargo-table/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        85,
+        232,
+        236
+      ],
+      "description": "empty navy cargo work table with four legs",
+      "view": "front/top/right-face",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          84,
+          105
+        ],
+        [
+          165,
+          103
+        ],
+        [
+          190,
+          118
+        ],
+        [
+          109,
+          121
+        ]
+      ],
+      "support_anchor_px": [
+        137,
+        112
+      ],
+      "support_note": "Conservative staging patch, not a collision plane. Confirm fit for any different prop."
+    },
+    {
+      "id": "left/copper-bench",
+      "name": "Copper Bench",
+      "category": "surface",
+      "side": "left",
+      "body": "left/copper-bench/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        79,
+        232,
+        236
+      ],
+      "description": "empty copper workshop bench with lower shelf",
+      "view": "front/top/right-face",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          84,
+          99
+        ],
+        [
+          165,
+          98
+        ],
+        [
+          190,
+          114
+        ],
+        [
+          109,
+          117
+        ]
+      ],
+      "support_anchor_px": [
+        137,
+        107
+      ],
+      "support_note": "Conservative staging patch, not a collision plane. Confirm fit for any different prop."
+    },
+    {
+      "id": "left/lab-desk",
+      "name": "Lab Desk",
+      "category": "surface",
+      "side": "left",
+      "body": "left/lab-desk/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        95,
+        232,
+        236
+      ],
+      "description": "empty cream laboratory desk with shallow drawers",
+      "view": "front/top/right-face",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          84,
+          113
+        ],
+        [
+          165,
+          112
+        ],
+        [
+          190,
+          126
+        ],
+        [
+          109,
+          129
+        ]
+      ],
+      "support_anchor_px": [
+        137,
+        120
+      ],
+      "support_note": "Conservative staging patch, not a collision plane. Confirm fit for any different prop."
+    },
+    {
+      "id": "left/tool-cabinet",
+      "name": "Tool Cabinet",
+      "category": "surface",
+      "side": "left",
+      "body": "left/tool-cabinet/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        74,
+        232,
+        236
+      ],
+      "description": "empty olive tool cabinet workbench",
+      "view": "front/top/right-face",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          84,
+          95
+        ],
+        [
+          165,
+          93
+        ],
+        [
+          190,
+          110
+        ],
+        [
+          109,
+          113
+        ]
+      ],
+      "support_anchor_px": [
+        137,
+        103
+      ],
+      "support_note": "Conservative staging patch, not a collision plane. Confirm fit for any different prop."
+    },
+    {
+      "id": "left/tool-trolley",
+      "name": "Tool Trolley",
+      "category": "surface",
+      "side": "left",
+      "body": "left/tool-trolley/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        66,
+        232,
+        236
+      ],
+      "description": "empty low wheeled tool trolley with clear top",
+      "view": "front/top/right-face",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          84,
+          107
+        ],
+        [
+          165,
+          105
+        ],
+        [
+          190,
+          122
+        ],
+        [
+          109,
+          126
+        ]
+      ],
+      "support_anchor_px": [
+        137,
+        115
+      ],
+      "support_note": "Conservative staging patch, not a collision plane. Confirm fit for any different prop."
+    },
+    {
+      "id": "left/instrument-pedestal",
+      "name": "Instrument Pedestal",
+      "category": "surface",
+      "side": "left",
+      "body": "left/instrument-pedestal/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        50,
+        24,
+        205,
+        236
+      ],
+      "description": "empty small slate instrument pedestal",
+      "view": "front/top/right-face",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          95,
+          39
+        ],
+        [
+          155,
+          37
+        ],
+        [
+          174,
+          58
+        ],
+        [
+          114,
+          62
+        ]
+      ],
+      "support_anchor_px": [
+        134,
+        49
+      ],
+      "support_note": "Conservative staging patch, not a collision plane. Confirm fit for any different prop."
+    },
+    {
+      "id": "left/crt-terminal",
+      "name": "Crt Terminal",
+      "category": "terminal",
+      "side": "left",
+      "body": "left/crt-terminal/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        70,
+        232,
+        236
+      ],
+      "description": "compact CRT terminal with keyboard, no stand or table",
+      "view": "front/top/right-face",
+      "mirrored_at_runtime": false
+    },
+    {
+      "id": "left/field-laptop",
+      "name": "Field Laptop",
+      "category": "terminal",
+      "side": "left",
+      "body": "left/field-laptop/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        48,
+        232,
+        236
+      ],
+      "description": "rugged field laptop, no table",
+      "view": "front/top/right-face",
+      "mirrored_at_runtime": false
+    },
+    {
+      "id": "left/articulated-lamp",
+      "name": "Articulated Lamp",
+      "category": "lamp",
+      "side": "left",
+      "body": "left/articulated-lamp/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        31,
+        24,
+        225,
+        236
+      ],
+      "description": "articulated desk task lamp with compact foot",
+      "view": "front/top/right-face",
+      "mirrored_at_runtime": false
+    },
+    {
+      "id": "left/reel-recorder",
+      "name": "Reel Recorder",
+      "category": "machine",
+      "side": "left",
+      "body": "left/reel-recorder/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        48,
+        232,
+        236
+      ],
+      "description": "reel-to-reel recorder, no table",
+      "view": "front/top/right-face",
+      "mirrored_at_runtime": false
+    },
+    {
+      "id": "left/tool-caddy",
+      "name": "Tool Caddy",
+      "category": "tools",
+      "side": "left",
+      "body": "left/tool-caddy/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        71,
+        232,
+        236
+      ],
+      "description": "small open tool caddy with pliers and spanners",
+      "view": "front/top/right-face",
+      "mirrored_at_runtime": false
+    },
+    {
+      "id": "left/ticker-stand",
+      "name": "Ticker Stand",
+      "category": "sign",
+      "side": "left",
+      "body": "left/ticker-stand/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        51,
+        232,
+        236
+      ],
+      "description": "small freestanding blank ticker sign on short two-foot stand",
+      "view": "front/top/right-face",
+      "mirrored_at_runtime": false
+    },
+    {
+      "id": "right/ochre-table",
+      "name": "Ochre Table",
+      "category": "surface",
+      "side": "right",
+      "body": "right/ochre-table/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        97,
+        232,
+        236
+      ],
+      "description": "empty ochre industrial work table with tubular legs",
+      "view": "front/top/left-face",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          76,
+          115
+        ],
+        [
+          161,
+          115
+        ],
+        [
+          149,
+          130
+        ],
+        [
+          61,
+          128
+        ]
+      ],
+      "support_anchor_px": [
+        112,
+        122
+      ],
+      "support_note": "Conservative staging patch, not a collision plane. Confirm fit for any different prop."
+    },
+    {
+      "id": "right/precision-bench",
+      "name": "Precision Bench",
+      "category": "surface",
+      "side": "right",
+      "body": "right/precision-bench/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        99,
+        232,
+        236
+      ],
+      "description": "empty graphite precision workbench with drawers",
+      "view": "front/top/left-face",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          76,
+          117
+        ],
+        [
+          161,
+          117
+        ],
+        [
+          149,
+          132
+        ],
+        [
+          61,
+          129
+        ]
+      ],
+      "support_anchor_px": [
+        112,
+        124
+      ],
+      "support_note": "Conservative staging patch, not a collision plane. Confirm fit for any different prop."
+    },
+    {
+      "id": "right/teal-lab-table",
+      "name": "Teal Lab Table",
+      "category": "surface",
+      "side": "right",
+      "body": "right/teal-lab-table/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        97,
+        232,
+        236
+      ],
+      "description": "empty pale teal laboratory table with lower shelf",
+      "view": "front/top/left-face",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          76,
+          115
+        ],
+        [
+          161,
+          115
+        ],
+        [
+          149,
+          130
+        ],
+        [
+          61,
+          128
+        ]
+      ],
+      "support_anchor_px": [
+        112,
+        122
+      ],
+      "support_note": "Conservative staging patch, not a collision plane. Confirm fit for any different prop."
+    },
+    {
+      "id": "right/equipment-sideboard",
+      "name": "Equipment Sideboard",
+      "category": "surface",
+      "side": "right",
+      "body": "right/equipment-sideboard/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        97,
+        232,
+        236
+      ],
+      "description": "empty burgundy equipment sideboard",
+      "view": "front/top/left-face",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          76,
+          115
+        ],
+        [
+          161,
+          115
+        ],
+        [
+          149,
+          130
+        ],
+        [
+          61,
+          128
+        ]
+      ],
+      "support_anchor_px": [
+        112,
+        122
+      ],
+      "support_note": "Conservative staging patch, not a collision plane. Confirm fit for any different prop."
+    },
+    {
+      "id": "right/service-cart",
+      "name": "Service Cart",
+      "category": "surface",
+      "side": "right",
+      "body": "right/service-cart/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        44,
+        232,
+        236
+      ],
+      "description": "empty white and gray wheeled service cart",
+      "view": "front/top/left-face",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          76,
+          82
+        ],
+        [
+          161,
+          82
+        ],
+        [
+          149,
+          104
+        ],
+        [
+          61,
+          100
+        ]
+      ],
+      "support_anchor_px": [
+        112,
+        92
+      ],
+      "support_note": "Conservative staging patch, not a collision plane. Confirm fit for any different prop."
+    },
+    {
+      "id": "right/bronze-stand",
+      "name": "Bronze Stand",
+      "category": "surface",
+      "side": "right",
+      "body": "right/bronze-stand/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        54,
+        24,
+        202,
+        236
+      ],
+      "description": "empty small bronze instrument stand",
+      "view": "front/top/left-face",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          91,
+          39
+        ],
+        [
+          152,
+          39
+        ],
+        [
+          143,
+          62
+        ],
+        [
+          81,
+          58
+        ]
+      ],
+      "support_anchor_px": [
+        117,
+        50
+      ],
+      "support_note": "Conservative staging patch, not a collision plane. Confirm fit for any different prop."
+    },
+    {
+      "id": "right/dual-monitor",
+      "name": "Dual Monitor",
+      "category": "terminal",
+      "side": "right",
+      "body": "right/dual-monitor/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        49,
+        232,
+        236
+      ],
+      "description": "compact dual LCD terminal with keyboard, no table",
+      "view": "front/top/left-face",
+      "mirrored_at_runtime": false
+    },
+    {
+      "id": "right/radar-console",
+      "name": "Radar Console",
+      "category": "terminal",
+      "side": "right",
+      "body": "right/radar-console/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        31,
+        24,
+        224,
+        236
+      ],
+      "description": "small round radar console with keypad, no table",
+      "view": "front/top/left-face",
+      "mirrored_at_runtime": false
+    },
+    {
+      "id": "right/inspection-lamp",
+      "name": "Inspection Lamp",
+      "category": "lamp",
+      "side": "right",
+      "body": "right/inspection-lamp/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        25,
+        24,
+        231,
+        236
+      ],
+      "description": "gooseneck inspection lamp on compact base",
+      "view": "front/top/left-face",
+      "mirrored_at_runtime": false
+    },
+    {
+      "id": "right/centrifuge",
+      "name": "Centrifuge",
+      "category": "machine",
+      "side": "right",
+      "body": "right/centrifuge/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        37,
+        24,
+        219,
+        236
+      ],
+      "description": "small cream laboratory centrifuge, no table",
+      "view": "front/top/left-face",
+      "mirrored_at_runtime": false
+    },
+    {
+      "id": "right/instrument-tray",
+      "name": "Instrument Tray",
+      "category": "tools",
+      "side": "right",
+      "body": "right/instrument-tray/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        24,
+        106,
+        232,
+        236
+      ],
+      "description": "compact instrument tool tray with calipers and screwdrivers",
+      "view": "front/top/left-face",
+      "mirrored_at_runtime": false
+    },
+    {
+      "id": "right/marquee-stand",
+      "name": "Marquee Stand",
+      "category": "sign",
+      "side": "right",
+      "body": "right/marquee-stand/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        58,
+        24,
+        197,
+        236
+      ],
+      "description": "small freestanding blank rounded marquee sign on short two-foot stand",
+      "view": "front/top/left-face",
+      "mirrored_at_runtime": false
+    }
+  ],
+  "perspective_contract": "Left assets show their inward right face; right assets show their inward left face. Choose once at spawn; do not flip or rescale during travel."
+}

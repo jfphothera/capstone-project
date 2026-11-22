@@ -1,0 +1,79 @@
+{
+    "schema_version":  1,
+    "generated_at":  "2026-10-30T07:12:01.6272249-04:00",
+    "result":  "FAILED",
+    "ready_for_phase4":  false,
+    "run":  {
+                "Version":  "1.0.0",
+                "Mode":  "Provision",
+                "ComputerName":  "CAPSTONE-HEAD-04",
+                "LogFile":  "C:\\ProgramData\\CapstoneProvisioner\\logs\\run-20261030-091500.log",
+                "PreflightPath":  "C:\\ProgramData\\CapstoneProvisioner\\diagnostics\\preflight-20261030-091500.json",
+                "BackupPath":  "C:\\ProgramData\\CapstoneProvisioner\\backups\\network-backup-6-20261030-091500.json",
+                "RegistrationPath":  "C:\\ProgramData\\CapstoneProvisioner\\inventory\\head-4.json",
+                "OsCaption":  "Microsoft Windows 11 Pro",
+                "OsBuild":  "26200",
+                "Cpu":  "Intel(R) Core(TM) i5-14400 CPU @ 2.50GHz",
+                "RamGB":  15.7,
+                "Gpu":  "Intel(R) UHD Graphics 730",
+                "NvidiaVramMB":  0,
+                "ModelDirectory":  "C:\\Users\\REDACTED\\.ollama\\models",
+                "FreeDisk":  "412.60 GB",
+                "NodeNumber":  4,
+                "NodeIp":  "192.0.2.4",
+                "AdapterSummary":  "Ethernet (index 6, Intel(R) Ethernet Controller I226-V)",
+                "NetworkVerified":  true,
+                "NetworkSummary":  "Address=pass DhcpDisabled=pass NoDefaultGateway=pass NoIpv4Dns=pass OnLinkRoute=pass",
+                "CoordinatorNote":  "No response of any kind from the coordinator.",
+                "OllamaInstalled":  true,
+                "OllamaVersion":  "0.40.12",
+                "OllamaExecutable":  "C:\\Users\\REDACTED\\AppData\\Local\\Programs\\Ollama\\ollama.exe",
+                "LocalApiHealthy":  true,
+                "LocalApiEndpoint":  "http://127.0.0.1:11434",
+                "OllamaInstalledThisRun":  true,
+                "ProfileName":  "CPU16",
+                "ModelsRequested":  21,
+                "ModelsInstalled":  0,
+                "ModelsAlreadyPresent":  0,
+                "ModelsDownloaded":  0,
+                "ModelsFailed":  21,
+                "ModelsVerified":  0,
+                "FailedTags":  [
+                                   "qwen3:0.6b",
+                                   "qwen3:1.7b",
+                                   "qwen3:4b"
+                               ],
+                "InferenceVerified":  false,
+                "RemoteConfigured":  false,
+                "RemoteBinding":  "(not configured)",
+                "PrivateListenerHealthy":  false,
+                "FirewallSummary":  "(not configured)",
+                "CoordinatorVerified":  false,
+                "RemoteStatus":  "REMOTE_NOT_CONFIGURED",
+                "RemoteEndpoint":  "http://192.0.2.4:11434",
+                "MachineState":  "FAILED_RECOVERABLE",
+                "Outcome":  {
+                                "Outcome":  "FAILED",
+                                "Blockers":  [
+                                                 "21 model tag(s) failed: qwen3:0.6b, qwen3:1.7b, qwen3:4b",
+                                                 "Only 0 of 21 requested models are installed.",
+                                                 "No installed model passed a local inference check."
+                                             ],
+                                "Notes":  [
+                                              "Remote serving was not configured."
+                                          ],
+                                "PendingActions":  [
+                                                       "NO_INTERNET_CONNECTION: DNS lookup for registry.ollama.ai failed. Confirm the Wi-Fi internet connection, then re-run; completed models are preserved."
+                                                   ],
+                                "ReadyForPhase4":  false,
+                                "ReadyNote":  "This head is NOT yet ready for Phase 4 integration. The items listed under WHAT STILL NEEDS ATTENTION explain why."
+                            }
+            },
+    "attention":  [
+                      "21 model tag(s) failed: qwen3:0.6b, qwen3:1.7b, qwen3:4b",
+                      "Only 0 of 21 requested models are installed.",
+                      "No installed model passed a local inference check.",
+                      "Remote serving was not configured.",
+                      "NO_INTERNET_CONNECTION: DNS lookup for registry.ollama.ai failed. Confirm the Wi-Fi internet connection, then re-run; completed models are preserved."
+                  ]
+}

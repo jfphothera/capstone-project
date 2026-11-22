@@ -1,0 +1,456 @@
+{
+  "schema": "inference-gateway.windows-deployment/1",
+  "release": "0.4.6",
+  "contract": "deploy/windows/DEPLOYMENT-CONTRACT.md",
+  "wire_contracts": [
+    "shared.inference/1",
+    "shared.inference.observation/1"
+  ],
+  "host": "192.0.2.254",
+  "files": {
+    "bin/gateway-deploy.py": "24661af1091987c4d1507b3c5a01bac093febb2af61a7fa7a2e2718e34e0ef99",
+    "client/shared_inference_client.py": "53dcf88bdbd084bec9688608913e2a91b2fcd9720abcc10c8123755a07d7f9f5",
+    "config/client.template.json": "dec1c1164d339a52b29009d1b3e742bcb044205d23e68bb553da181eadcc3843",
+    "config/deployment-settings.template.json": "d7142a2f78dd5fa020e023a2bced927876ca57cb60727ac69a4e693135785d3b",
+    "config/policy.lab-example.json": "01db9e9fd2aa304bdff2edeaaeace2635238f3180fc84e9444ccb513b6a3e659",
+    "config/policy.template.json": "3748f45f873a6a32fc6f1097a9df9f3fe6c2f89fc3864105f501d2fef146b786",
+    "docs/ACCEPTANCE_PLAN.md": "e15bd1f50b0679a44a96b075b4fcdbcaa974c18a4a9c6531e49c5d2793d44ac7",
+    "docs/ARENA_INTEGRATION.md": "ff54a75ac529e0430fa26833738496c50718c5d6d9311bfc6b7f9ca3c727bc6b",
+    "docs/CLIENT_CONTRACT.md": "6fcbe79c491d656b2899ff8967251285d14bdc210795e8f8e004c6ca95846906",
+    "docs/CONTRACT.md": "b454dba57ebb929f8cb0e4be1e7cf6b81c0b297458b2ed92d239e682dd886028",
+    "docs/DEPLOYMENT-CONTRACT.md": "d7335d922cd6f65f81f02e226f0f85da93f7e9bdf1237b0ecd4bb4ae99bf7bc0",
+    "docs/DEPLOYMENT.md": "27d6463afddc0015d7ea082c0034fafb597d220a7848e36fed8074bb178e19d2",
+    "docs/examples/observation-0.4.0.json": "5490b094f4e26423ac90fc7259c0e856b12033530a483dd485da7fb478ea6213",
+    "docs/examples/operator-commands-0.4.0.json": "beab27a60f98ff096518b51d6775824e152cc0a1ab61e8f504a44dcd18fea345",
+    "docs/examples/upgrade-report-0.4.0.json": "46e9421b0a1fbf19bff6c959e85612137a751141a52f9b92fa821dfc5939c3be",
+    "docs/F-1.1.0-COMPATIBILITY.md": "0bb2cd940b62e74152829eea91cbf71603d87ed1c4bcda460875421b57bdadb6",
+    "docs/FAILURES-AND-PLACEMENT.md": "247b76ea9a14739bfdc192279a4c52eb411d9f30dd0cc3ef875a0d65c9054838",
+    "docs/GATEWAY-0.4.6-CLIENT-CONTRACT.md": "e38da1d851d6a51fe34e6f8ca99557fa41d361b6383d062b04f7c8b1654ae978",
+    "docs/OPERATOR-CHECKLIST.md": "89d5e52bae3a126ee3a2a604c27c5f521b10d86477bf8a98aba6d33216296f21",
+    "docs/RELEASE-NOTES-0.4.1.md": "857a353b6d0dca07aa94dd6dafaa10be798e0427bd8719c03aa349b0c6d5cc7f",
+    "docs/RELEASE-NOTES-0.4.2.md": "a2b61e31c8107737dc53636203407a3781d81123b2b92220316d51661d9959eb",
+    "docs/RELEASE-NOTES-0.4.3.md": "afca6693f6678e88332df4494922de0990709e5f440723a8c178dc4e1e360f94",
+    "docs/RELEASE-NOTES-0.4.4.md": "b49f87bf18b94bb7bceb28e84eedd16ef458264069c176fe69885e9363225bd3",
+    "docs/RELEASE-NOTES-0.4.5.md": "185ec5493632f452d6253333c0c45d8b12c056db79efc04975e6ad832278530f",
+    "docs/RELEASE-NOTES-0.4.6.md": "e3454ef2c14fc69bb11e03d9d95a466e9661f052513a08671678853910f7946e",
+    "lab-tools/g4-gemma500-repro/G4-GEMMA500-REPRO.cmd": "41090306cbc80f4617acaa8b39fba1055c3e1a1d5e2ed6d3d3c8945907aed4cb",
+    "lab-tools/g4-gemma500-repro/g4_gemma500_repro.py": "b32c5c31aefbb96093188e3abc9120720dd79ae16d2a801afcc9cea8236b6f1c",
+    "lab-tools/g6-capacity-check/G6-CAPACITY-CHECK.cmd": "2ba1342ba0059d83784f8c489d1af292beaf5513eb9c04dea08d003cde719654",
+    "lab-tools/g6-capacity-check/g6_capacity_check.py": "2eb34c957830eafd5bc4a2a115ad2bee44804c8abc7b48979f27a377ced1c590",
+    "lab-tools/launch-storm/LAUNCH-STORM.cmd": "7032bab853580b96317ab130bb0f330711410c5d6523437218f6e00e1cc66c3a",
+    "lab-tools/launch-storm/launch_storm.py": "844c2f04dbf3c70a13d8036b6b9b7fa1d0cc22c6bb2dfbaef3a3001e298fc6d0",
+    "lab-tools/README.md": "862d5a835382f1217191ccd4aaa3d45eb354dffa63118827f55baaa2a04cc4f5",
+    "scripts/concurrency_load.py": "96762b21cb1ff3bacb66850a6172e36282bd685b5f5b6f149e9d1aab9d9afae3",
+    "scripts/control_plane_load.py": "f811b3b25a8f54f0b95e4be4c7e5a0cc0fe5411246900f531a3121dc1e02850d",
+    "scripts/ledger_contention.py": "8384304dce53b9326bfdad42f446b27ae0bbebd29784961f7c1c78882bcfe923",
+    "scripts/lifecycle_load.py": "c3c2d63ce1243762d295793a2faf874b4e988b487cf8b3dfa1b66b96e58cc5ce",
+    "scripts/New-GatewayCertificate.ps1": "cf6ebb7f875500ac17e3cb97b2284502333851638147fa79023d772e491d7ff4",
+    "scripts/Register-ObservationPublisherTask.ps1": "159b870c200e21a1dbcdb38b3a82dc6146b7ed885682c77f2c71847ef6a4d535",
+    "scripts/Set-ObservationPublicationAcl.ps1": "4a2224d0eac40bdaaf5ccf2675462a214d5b4b871eaf23794eab6b63fedfa172",
+    "verification/concurrency-0.4.1.json": "0e40aa5cdd87990d3dfbbdd80e39fd57f69569aaea6cef88fdfd4ba98de9979d",
+    "verification/concurrency-0.4.4.json": "14e0faba4d3954abb00fe6e0acc9e14e24ce1fa7fb0d5123a79bd301c4379023",
+    "verification/control-plane-0.4.5.json": "1125e04b9568f83cd3e0481a48f49128d1a03c04de67d919b6b640a926eaa071",
+    "verification/control-plane-0.4.6.json": "97e8c10d5398382c5db54cd8b1204ce7b46907793bab1931e255deab7c808227",
+    "verification/control-plane-repeats-0.4.6.json": "27304d0bc1161f4a6d6cffa00d6ac8d283437bef7eba05f3cd60b6592a7ce2d8",
+    "verification/ledger-0.4.3.json": "a3150ef4744fe786dd4a8e46f2cb9916143142e60532c5f42a4d951bc78d5919",
+    "verification/ledger-0.4.4.json": "f1c36fd13e92ac44f136a7e55d516eb1d788bc5e3e0dea44fc203890e24f2ff5",
+    "verification/lifecycle-0.4.4.json": "03800c3ff4e5f1ffd6fc845143a8bc6bde5bbdf5c7753ff56a148a507dae5e96",
+    "verification/live-ollama-0.4.2-reasoning.json": "8adb74c68fc1b14c77939bf6b215ade868324d6116d23cb87025ef3027a65cc8",
+    "verification/pilot-log-analysis-0.4.4.json": "6bd454e9cbac4767cf35fef3f86528c49386803e3d2695f9a1f77c09f765b1ce",
+    "verification/test-report.json": "6aca4615cf24c0e0267fe06bf3ce3d37f534d4e6f99ae81f03068e6b8b5a9bc8",
+    "wheel/inference_gateway-0.4.6-py3-none-any.whl": "5d756505881b0154da241a72107a5a24c0ff6b55f199e03d680335817f0faac5"
+  },
+  "listener": {
+    "bind": "192.0.2.254",
+    "port": 8443,
+    "protocol": "https",
+    "tls_minimum": "1.2",
+    "allowed_clients": [
+      "192.0.2.201",
+      "192.0.2.202"
+    ],
+    "cutover_clients": [
+      "192.0.2.1"
+    ],
+    "cutover_note": "192.0.2.1 only while an approved Capstone migration is open; never in the default rule",
+    "firewall_rule": {
+      "name": "InferenceGateway-HTTPS-8443",
+      "direction": "inbound",
+      "protocol": "TCP",
+      "local_address": "192.0.2.254",
+      "local_port": 8443,
+      "remote_addresses": "allowed_clients",
+      "profile": "Private",
+      "action": "allow",
+      "never": "Any"
+    },
+    "local_loopback": "not bound; health checks on the hub use https://192.0.2.254:8443 with the CA"
+  },
+  "outbound": [
+    {
+      "protocol": "TCP",
+      "remote": "192.0.2.2-192.0.2.199 (enrolled heads only)",
+      "port": 11434,
+      "purpose": "Ollama on approved heads, plain HTTP on the isolated lab LAN"
+    }
+  ],
+  "outbound_note": "No other outbound connection: no internet, DNS, NTP client role beyond the hub's own Windows time service, or package download",
+  "tls": {
+    "issuer": "Gateway lab CA created by scripts/New-GatewayCertificate.ps1 (ECDSA P-384, 5 years); no public CA",
+    "server_certificate": "C:\\ProgramData\\InferenceGateway\\tls\\server.pem",
+    "server_key": "C:\\ProgramData\\InferenceGateway\\tls\\server.key",
+    "ca_file_for_clients": "C:\\ProgramData\\InferenceGateway\\tls\\inference-gateway-ca.pem",
+    "ca_private_key": "C:\\ProgramData\\InferenceGateway\\ca\\ca.key (SYSTEM and Administrators only; move offline after issuance)",
+    "san": [
+      "IP:192.0.2.254"
+    ],
+    "server_validity_days": 397,
+    "renewal": "deploy certificate --renew, then restart the service; clients keep the same CA",
+    "ca_distribution": "inference-gateway-ca.pem is public and may travel on F:; clients name it in ca_file",
+    "key_acl": "SYSTEM and Administrators full, service account read; Arena and Users none"
+  },
+  "service": {
+    "name": "InferenceGateway",
+    "supervisor": "Windows Service Control Manager (native host, ctypes; no wrapper)",
+    "start": "delayed-auto",
+    "depends_on": [
+      "Tcpip"
+    ],
+    "recovery": {
+      "actions": [
+        "restart after 30 s",
+        "restart after 60 s",
+        "restart every 300 s"
+      ],
+      "reset_after_seconds": 86400,
+      "on_error_exit": true
+    },
+    "pre_stop": "admission drain (persistent, reopened only at the service's own next start), up to 90 s for active allocations",
+    "preshutdown_timeout_ms": 180000,
+    "command": "\"<python>\" -I \"C:\\Program Files\\InferenceGateway\\releases\\<release>\\inference_gateway\\service_launcher.py\" service --config \"C:\\ProgramData\\InferenceGateway\\config\\gateway-service.json\" --name InferenceGateway",
+    "logs": "C:\\ProgramData\\InferenceGateway\\logs\\gateway-service.log (10 MiB x 10, JSON lines, no prompts/outputs/tokens)",
+    "observation_publisher": "in-service thread, 5 s; Task Scheduler alternative retained but not used by default"
+  },
+  "service_account": {
+    "name": "svc-inference-gw",
+    "qualified": ".\\svc-inference-gw",
+    "type": "local",
+    "groups": "Users only; never Administrators or Backup Operators",
+    "rights": [
+      "SeServiceLogonRight"
+    ],
+    "deny": [
+      "SeInteractiveLogonRight",
+      "SeRemoteInteractiveLogonRight"
+    ],
+    "password": "operator-typed when F: creates the account and again at install (stdin); never stored, logged or put on a command line",
+    "created_by": "Agent Arena F: (machine prerequisite)"
+  },
+  "arena_accounts": {
+    "rule": "every Windows account that owns an Arena process reading the observation (admin window, admin console, event service)",
+    "requirements": [
+      "a standard local account",
+      "not a transitive member of Administrators or Backup Operators",
+      "different from svc-inference-gw"
+    ],
+    "access": "read on files in C:\\ProgramData\\InferenceGateway\\observation only"
+  },
+  "runtime": {
+    "python": "3.12.10",
+    "series": "3.12",
+    "machine_wide": true,
+    "path": "C:\\Program Files\\Python312\\python.exe",
+    "install": "official python-3.12.10-amd64.exe /quiet InstallAllUsers=1 TargetDir=\"C:\\Program Files\\Python312\" PrependPath=0 Include_launcher=0 Include_test=0",
+    "offline_installer": null,
+    "offline_installer_note": "Not shipped: F: supplies the official installer and verifies python.org's published hash",
+    "virtual_environment": false,
+    "virtual_environment_note": "A venv python.exe is a redirector whose child cannot connect to the SCM; the base interpreter runs an isolated release folder",
+    "powershell": "PowerShell 7.4 or later, machine-wide (certificate issuance and ACL scripts)",
+    "third_party_packages": []
+  },
+  "folders": [
+    {
+      "path": "C:\\Program Files\\InferenceGateway",
+      "acl": [
+        "SYSTEM:F",
+        "Administrators:F",
+        "Users:RX"
+      ],
+      "content": "releases\\<release> (pip --target)"
+    },
+    {
+      "path": "C:\\ProgramData\\InferenceGateway",
+      "acl": [
+        "SYSTEM:F",
+        "Administrators:F"
+      ],
+      "content": "data root, inheritance removed"
+    },
+    {
+      "path": "C:\\ProgramData\\InferenceGateway\\config",
+      "acl": [
+        "SYSTEM:F",
+        "Administrators:F",
+        "svc-inference-gw:RX"
+      ]
+    },
+    {
+      "path": "C:\\ProgramData\\InferenceGateway\\state",
+      "acl": [
+        "SYSTEM:F",
+        "Administrators:F",
+        "svc-inference-gw:M"
+      ],
+      "content": "capacity-ledger.db"
+    },
+    {
+      "path": "C:\\ProgramData\\InferenceGateway\\tls",
+      "acl": [
+        "SYSTEM:F",
+        "Administrators:F",
+        "svc-inference-gw:RX"
+      ]
+    },
+    {
+      "path": "C:\\ProgramData\\InferenceGateway\\ca",
+      "acl": [
+        "SYSTEM:F",
+        "Administrators:F"
+      ]
+    },
+    {
+      "path": "C:\\ProgramData\\InferenceGateway\\observation",
+      "acl": [
+        "SYSTEM:F",
+        "Administrators:F",
+        "svc-inference-gw:M",
+        "<arena accounts>:(OI)(IO)R"
+      ],
+      "content": "shared-inference-observation.json"
+    },
+    {
+      "path": "C:\\ProgramData\\InferenceGateway\\observation-state",
+      "acl": [
+        "SYSTEM:F",
+        "Administrators:F",
+        "svc-inference-gw:M"
+      ]
+    },
+    {
+      "path": "C:\\ProgramData\\InferenceGateway\\logs",
+      "acl": [
+        "SYSTEM:F",
+        "Administrators:F",
+        "svc-inference-gw:M"
+      ]
+    },
+    {
+      "path": "C:\\ProgramData\\InferenceGateway\\backups",
+      "acl": [
+        "SYSTEM:F",
+        "Administrators:F"
+      ]
+    },
+    {
+      "path": "C:\\ProgramData\\InferenceGateway\\deployment",
+      "acl": [
+        "SYSTEM:F",
+        "Administrators:F"
+      ],
+      "content": "deployment-state.json"
+    }
+  ],
+  "commands": {
+    "_form": "\"<python>\" -I \"<package>\\bin\\gateway-deploy.py\" <verb> --settings \"<deployment-settings.json>\"",
+    "plan": "plan --settings <settings>",
+    "certificate": "certificate --settings <settings> [--renew]",
+    "install": "install --settings <settings> --password-stdin (--new-ledger | --restore-backup <backup>) [--no-start]",
+    "verify": "verify --settings <settings>",
+    "update": "update --settings <settings>   (run from the NEW package)",
+    "rollback": "rollback --settings <settings>",
+    "repair": "repair --settings <settings> [--password-stdin]",
+    "uninstall": "uninstall --settings <settings> [--remove-releases]",
+    "publication_acl": "pwsh -File <package>\\scripts\\Set-ObservationPublicationAcl.ps1 -PublishDirectory ...\\observation -StateDirectory ...\\observation-state -LogDirectory ...\\logs -LedgerDirectory ...\\state -GatewayAccount .\\svc-inference-gw -ArenaAccount <arena accounts> [-PlanOnly]",
+    "accept_ledger": "\"<python>\" -I \"C:\\Program Files\\InferenceGateway\\releases\\<release>\\inference_gateway\\service_launcher.py\" publisher accept-ledger --database ...\\state\\capacity-ledger.db --state ...\\observation-state\\publisher-state.json --operator <id>",
+    "status": "\"<python>\" -I \"...\\service_launcher.py\" status --config ...\\config\\gateway-service.json --observation-file ...\\observation\\shared-inference-observation.json --publisher-state ...\\observation-state\\publisher-state.json",
+    "suspensions": "\"<python>\" -I \"C:\\Program Files\\InferenceGateway\\releases\\<release>\\inference_gateway\\service_launcher.py\" lifecycle suspensions --database C:\\ProgramData\\InferenceGateway\\state\\capacity-ledger.db [--all]",
+    "probe_now": "\"<python>\" -I \"C:\\Program Files\\InferenceGateway\\releases\\<release>\\inference_gateway\\service_launcher.py\" lifecycle probe --database C:\\ProgramData\\InferenceGateway\\state\\capacity-ledger.db --suspension <SUSP-id> --operator <id> [--wait-seconds 120]",
+    "release_suspension": "\"<python>\" -I \"C:\\Program Files\\InferenceGateway\\releases\\<release>\\inference_gateway\\service_launcher.py\" lifecycle release --database C:\\ProgramData\\InferenceGateway\\state\\capacity-ledger.db --suspension <SUSP-id> --operator <id> --confirmed",
+    "reconcile_resource": "\"<python>\" -I \"C:\\Program Files\\InferenceGateway\\releases\\<release>\\inference_gateway\\service_launcher.py\" lifecycle reconcile-resource --database C:\\ProgramData\\InferenceGateway\\state\\capacity-ledger.db --resource <head-192-0-2-N> --operator <id> --confirmed-idle",
+    "credentials_temporary": "service_launcher.py credentials reissue --database <ledger> --app-id <app> --policy <clients-only policy> --output <token file> | credentials grant-heads --database <ledger> --app-id <app> --like <template app> | credentials withdraw-heads --database <ledger> --app-id <app>"
+  },
+  "results": "every command prints one JSON object with ok; exit 0 success, 1 a failed check or refused step, 2 bad input",
+  "order": [
+    "F: machine prerequisites",
+    "plan",
+    "certificate (first installation)",
+    "install",
+    "bootstrap policy and heads",
+    "issue credentials",
+    "qualify heads",
+    "tell the Arena operator",
+    "accept_ledger",
+    "publication_acl",
+    "verify",
+    "F: inbound firewall rule from listener.firewall_rule"
+  ],
+  "head_inventory_input": {
+    "schema": "agent-arena.verified-head-inventory/1",
+    "accepted": "heads[]: resource_id == arena_node_id == head-192-0-2-N, address 192.0.2.N (2-199, never .254), endpoint http://192.0.2.N:11434, verified.ollama_version present",
+    "command": "service_launcher.py heads --inventory <file> --policy <approved-policy.json> --applications capstone,coder --output <review.json>",
+    "effect": "writes a reviewable policy; nothing is enrolled until bootstrap, nothing is usable until qualification"
+  },
+  "tokens": {
+    "issue": "service_launcher.py credentials issue --database <ledger> --policy <policy> --app-id <app> --output <file> [--reader <account>]",
+    "capstone": {
+      "client_config": "C:\\ProgramData\\Capstone\\gateway\\gateway-client.json",
+      "token_file": "C:\\ProgramData\\Capstone\\gateway\\capstone.token",
+      "ca_file": "C:\\ProgramData\\Capstone\\gateway\\inference-gateway-ca.pem",
+      "reader": "NT AUTHORITY\\LOCAL SERVICE",
+      "acl": "SYSTEM and Administrators full, LOCAL SERVICE read"
+    },
+    "environment_variables": "none: CAPSTONE_INFERENCE_TOKEN, CAPSTONE_INFRASTRUCTURE_TOKEN and APPLICATION_INFERENCE_TOKEN are not used in gateway deployments; token_file wins in the SDK"
+  },
+  "head_transport": {
+    "decision": "plain HTTP to http://192.0.2.N:11434 from 192.0.2.254 only, enforced by each head's firewall",
+    "mtls_proxy": "not adopted in 0.4.x; supported later without code change (https endpoint plus upstream_tls), with requalification"
+  },
+  "health_checks": {
+    "unauthenticated": [
+      "GET https://192.0.2.254:8443/health",
+      "GET https://192.0.2.254:8443/ready"
+    ],
+    "trust": "ca_file_for_clients",
+    "from": [
+      "192.0.2.254",
+      "192.0.2.201",
+      "192.0.2.202"
+    ],
+    "ready_semantics": "200 when the ledger is usable and admission is open; 503 when drained or stopping"
+  },
+  "observation": {
+    "file": "C:\\ProgramData\\InferenceGateway\\observation\\shared-inference-observation.json",
+    "contract": "shared.inference.observation/1",
+    "cadence_seconds": 5,
+    "stale_after_seconds": 30,
+    "writer": "svc-inference-gw (in-service)",
+    "gateway_id_for_arena": "gateway-254",
+    "service_id": "shared-inference"
+  },
+  "preserved_by_all_verbs": [
+    "ledger",
+    "config",
+    "tls",
+    "ca",
+    "observation",
+    "observation-state",
+    "logs",
+    "backups"
+  ],
+  "open_items": [
+    {
+      "id": "O1",
+      "item": "Approve the lab LAN for the data classes sent over plain HTTP to heads, or require the mTLS head proxy",
+      "owner": "lab/security operator"
+    },
+    {
+      "id": "O2",
+      "item": "Whether 192.0.2.1 is allowed during cutover, and its end date",
+      "owner": "operator, Capstone"
+    },
+    {
+      "id": "O3",
+      "item": "Arena standard account name(s) on the hub; Arena moves off the administrative account",
+      "owner": "Agent Arena"
+    },
+    {
+      "id": "O4",
+      "item": "Capstone reads gateway-client.json with token_file; retire the three token variable names",
+      "owner": "Capstone"
+    },
+    {
+      "id": "O5",
+      "item": "Coder client adoption and its approved models",
+      "owner": "Coder"
+    },
+    {
+      "id": "O6",
+      "item": "Physical acceptance per docs/ACCEPTANCE_PLAN.md",
+      "owner": "operator"
+    },
+    {
+      "id": "O7",
+      "item": "Each head's slots (= its OLLAMA_NUM_PARALLEL) and memory_gb (GiB models may occupy) in the policy",
+      "owner": "Agent Arena"
+    },
+    {
+      "id": "O8",
+      "item": "Verify on Ollama 0.40.13 heads: HTTP codes per failure, and that /api/ps lists a busy runner past its expires_at (measured here on 0.40.16)",
+      "owner": "Agent Arena",
+      "status": "closed 2026-11-12",
+      "resolution": "row 20 PASSED on head 192.0.2.5, Ollama 0.40.13"
+    },
+    {
+      "id": "O9",
+      "item": "The gemma3:270m error text of 2026-11-11 (capacity_invocations.error): 4xx or 5xx decides request fault or model-on-head",
+      "owner": "Agent Arena",
+      "status": "closed",
+      "resolution": "HTTP 400 (request fault): fails the request only since 0.4.0"
+    }
+  ],
+  "failure_recovery": {
+    "design": "docs/FAILURES-AND-PLACEMENT.md",
+    "classes": {
+      "request_fault": "HTTP 4xx or ClientPolicyError: the request fails; head and model untouched",
+      "model_on_head": "HTTP 5xx or an invalid reply: that model suspended on that head for that operation; request re-placed once",
+      "head_unreachable": "no connection before the request was sent: head offline until its heartbeat returns; request re-placed once",
+      "uncertain_execution": "timeout/reset/truncation after sending, or an executing lease expiring: whole head held; never replayed"
+    },
+    "probe_backoff_seconds": [
+      60,
+      300,
+      900
+    ],
+    "cascade": "same model+digest+operation on 2 heads within 600 s: suspended on every head",
+    "safe_to_probe": "held head: deadline passed, /api/version answers, two /api/ps reads 2 s apart list no loaded model",
+    "configured_in": "operator policy blocks failure_policy and placement_policy (bootstrap); per-head slots, memory_gb and (0.4.4) model_capacity in resources[]"
+  },
+  "placement": {
+    "order": [
+      "model loaded (fresh /api/ps) or in use: fewest leases, least recently assigned",
+      "fits in free memory without unloading: most free memory, least recently assigned",
+      "may unload idle models only: fewest leases, least recently assigned"
+    ],
+    "never": [
+      "a head with no free slot",
+      "a load that would unload a model an active lease uses"
+    ],
+    "loaded_fresh_seconds": 30,
+    "stale": "loaded unknown: only a head whose active leases all use the same model (or none)"
+  },
+  "upgrade": {
+    "from": "0.4.5",
+    "verb": "update (run from the 0.4.6 package); ledger kept, same ledger_id; the service restarts once as part of update",
+    "ledger": "additive only: index capacity_qualification_evidence_resource and table capacity_upstream_errors (0.4.6, created at first start); 0.4.4 indexes and capacity_model_capacity; 0.4.3 capacity_inventory_runtime.families; older releases ignore them",
+    "configuration": "no new or changed keys: gateway-service.json, deployment settings, the bootstrap policy (model_capacity, placement_policy.unmeasured_model_limit, failure_policy) and credentials are kept as they are; do not re-run bootstrap or credentials for the update",
+    "heads": "no head state changes. After a head's Ollama upgrade: requalify, then declare (Arena model_capacity) or measure (qualify --parallel N) per model before it runs more than one call of a serial-family model. Optional (0.4.6): qualify --purpose structured_chat for models whose roles send chat with a JSON schema",
+    "from_0_4_4": "as 0.4.5: placement_policy.unmeasured_model_limit defaults to 0 until the bootstrap sets it",
+    "from_0_4_1_or_0_4_2": "as 0.4.3: column capacity_inventory_runtime.families; requalify completion for reasoning models that failed under 0.4.1 (deepseek-r1)",
+    "from_0_4_0": "as 0.4.1: table capacity_request_times, WAL journal; requalify pairs 0.4.0 removed",
+    "from_0_3_0": "as 0.4.0: quarantined heads become held heads; listed in held_at_upgrade",
+    "rollback": "supported to 0.4.5, 0.4.4, 0.4.3, 0.4.2, 0.4.1, 0.4.0 and 0.3.0 (0.4.6 upstream error rows and structured_chat evidence are then ignored; declared and measured model capacity is ignored before 0.4.4)"
+  },
+  "client_library": {
+    "file": "client/shared_inference_client.py",
+    "version": "0.4.2",
+    "shipped_by": "Capstone (and Coder)",
+    "note": "0.4.2 (with Gateway 0.4.6) adds gateway_info(), policy(availability=False), fleet() and fleet_cached(); every 0.4.1 call and its retry behaviour is unchanged; works with Gateway 0.2.0 and later (new calls fall back or raise GatewayFeatureUnavailable on older Gateways)"
+  },
+  "lab_tools": {
+    "folder": "lab-tools (g6-capacity-check, g4-gemma500-repro, launch-storm)",
+    "run_on": "the hub, by the operator, while the Gateway is idle (the .cmd asks for administrator rights)",
+    "python": "C:\\Program Files\\Python312\\python.exe -I",
+    "identity": "G6 and the launch storm issue a temporary lab-capacity-check identity with credentials reissue / grant-heads (qwen3.5:4b and qwen3:4b, max 24, queue 24, priority 0 and no priority aging, the heads of capstone-research, expiring after the planned run plus a margin) and revoke it (credentials revoke, withdraw-heads) when they end; the temporary verbs act only on lab- identities the Gateway issued as temporary; token in C:\\ProgramData\\AgentArenaLab\\lab-capacity-check (owner and ACL verified), deleted afterwards; --cleanup removes an interrupted run; needs Gateway 0.4.6",
+    "changes": "no capacity, model_capacity, placement or failure policy, qualification, installed model or other client; one disabled lab-capacity-check client row stays as history; results beside each tool"
+  }
+}

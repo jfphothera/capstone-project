@@ -1,0 +1,589 @@
+{
+  "schema": "arena.wall-depth.assets.v1",
+  "items": [
+    {
+      "id": "left/copper-wall-bench",
+      "name": "Copper Wall Bench",
+      "side": "left",
+      "category": "surface",
+      "description": "EMPTY long copper-orange workshop bench, dark steel top, lower shelf, riveted end frame.",
+      "body": "left/copper-wall-bench/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        71,
+        24,
+        185,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/left-copper-wall-bench.png",
+      "orientation": "steep wall-depth axis, inward right",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          113,
+          85
+        ],
+        [
+          159,
+          92
+        ],
+        [
+          142,
+          126
+        ],
+        [
+          97,
+          119
+        ]
+      ],
+      "support_anchor_px": [
+        128,
+        106
+      ]
+    },
+    {
+      "id": "left/ivory-wall-cabinet",
+      "name": "Ivory Wall Cabinet",
+      "side": "left",
+      "category": "surface",
+      "description": "EMPTY long ivory laboratory cabinet counter, navy metal top, inward-facing drawers, recessed handles and vents, sturdy short feet.",
+      "body": "left/ivory-wall-cabinet/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        71,
+        24,
+        184,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/left-ivory-wall-cabinet.png",
+      "orientation": "steep wall-depth axis, inward right",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          113,
+          85
+        ],
+        [
+          158,
+          92
+        ],
+        [
+          141,
+          126
+        ],
+        [
+          97,
+          119
+        ]
+      ],
+      "support_anchor_px": [
+        127,
+        106
+      ]
+    },
+    {
+      "id": "left/wall-table-fit-v2",
+      "name": "Wall Table",
+      "side": "left",
+      "category": "surface",
+      "description": "Empty wall-run table with a steep depth axis.",
+      "body": "left/wall-table-fit-v2/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        74,
+        24,
+        181,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/left-wall-table-fit-v2.png",
+      "orientation": "steep wall-depth axis, inward right",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          114,
+          85
+        ],
+        [
+          156,
+          92
+        ],
+        [
+          140,
+          126
+        ],
+        [
+          99,
+          119
+        ]
+      ],
+      "support_anchor_px": [
+        127,
+        106
+      ]
+    },
+    {
+      "id": "left/crt-fit-v2",
+      "name": "CRT Computer",
+      "side": "left",
+      "category": "terminal",
+      "description": "Near-side-profile CRT facing inward.",
+      "body": "left/crt-fit-v2/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        47,
+        24,
+        209,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/left-crt-fit-v2.png",
+      "orientation": "steep wall-depth axis, inward right",
+      "mirrored_at_runtime": false,
+      "staging_scale": 0.29,
+      "contact_anchor_px": [
+        128,
+        224
+      ]
+    },
+    {
+      "id": "left/wall-flip-clock",
+      "name": "Ivory Flip Clock",
+      "side": "left",
+      "category": "clock",
+      "description": "One small ivory mechanical flip-clock housing on an integrated tabletop foot, four BLANK charcoal split-flap cards with hinges on the SAME inward-facing panel, bronze control knob. No numbers or letters.",
+      "body": "left/wall-flip-clock/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        57,
+        24,
+        198,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/left-wall-flip-clock.png",
+      "orientation": "steep wall-depth axis, inward right",
+      "mirrored_at_runtime": false,
+      "staging_scale": 0.17,
+      "contact_anchor_px": [
+        128,
+        224
+      ]
+    },
+    {
+      "id": "left/wall-laptop",
+      "name": "Rugged Laptop",
+      "side": "left",
+      "category": "terminal",
+      "description": "One open olive rugged laptop, blank dark screen, navy keyboard, small ochre corner guards.",
+      "body": "left/wall-laptop/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        42,
+        24,
+        214,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/left-wall-laptop-refined.png",
+      "orientation": "steep wall-depth axis, inward right",
+      "mirrored_at_runtime": false,
+      "staging_scale": 0.29,
+      "contact_anchor_px": [
+        128,
+        224
+      ]
+    },
+    {
+      "id": "left/wall-reel-recorder",
+      "name": "Reel Recorder",
+      "side": "left",
+      "category": "machine",
+      "description": "One compact reel-to-reel tape recorder, navy housing, two ivory reels on the SAME inward-facing control panel, small amber buttons and a complete foot base.",
+      "body": "left/wall-reel-recorder/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        70,
+        24,
+        186,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/left-wall-reel-recorder.png",
+      "orientation": "steep wall-depth axis, inward right",
+      "mirrored_at_runtime": false,
+      "staging_scale": 0.29,
+      "contact_anchor_px": [
+        128,
+        224
+      ]
+    },
+    {
+      "id": "left/wall-task-lamp",
+      "name": "Articulated Lamp",
+      "side": "left",
+      "category": "lamp",
+      "description": "One complete navy articulated desk task lamp, ochre pivot joints, large solid mounting foot, bent arm, broad metal shade illuminating inward.",
+      "body": "left/wall-task-lamp/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        58,
+        24,
+        198,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/left-wall-task-lamp-refined.png",
+      "orientation": "steep wall-depth axis, inward right",
+      "mirrored_at_runtime": false,
+      "staging_scale": 0.31,
+      "contact_anchor_px": [
+        128,
+        224
+      ]
+    },
+    {
+      "id": "right/burgundy-wall-cabinet",
+      "name": "Burgundy Wall Cabinet",
+      "side": "right",
+      "category": "surface",
+      "description": "EMPTY long burgundy industrial cabinet counter, bronze corner brackets, graphite top, inward-facing cupboard doors and ventilation louvers.",
+      "body": "right/burgundy-wall-cabinet/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        69,
+        24,
+        187,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/right-burgundy-wall-cabinet.png",
+      "orientation": "steep wall-depth axis, inward left",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          96,
+          92
+        ],
+        [
+          143,
+          85
+        ],
+        [
+          160,
+          119
+        ],
+        [
+          114,
+          126
+        ]
+      ],
+      "support_anchor_px": [
+        128,
+        106
+      ]
+    },
+    {
+      "id": "right/teal-wall-bench",
+      "name": "Teal Wall Bench",
+      "side": "right",
+      "category": "surface",
+      "description": "EMPTY long teal laboratory workbench, pale ivory stainless top, lower shelf, steel frame and bronze feet.",
+      "body": "right/teal-wall-bench/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        69,
+        24,
+        186,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/right-teal-wall-bench.png",
+      "orientation": "steep wall-depth axis, inward left",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          96,
+          92
+        ],
+        [
+          143,
+          85
+        ],
+        [
+          159,
+          119
+        ],
+        [
+          113,
+          126
+        ]
+      ],
+      "support_anchor_px": [
+        128,
+        106
+      ]
+    },
+    {
+      "id": "right/wall-table-fit-v2",
+      "name": "Wall Table",
+      "side": "right",
+      "category": "surface",
+      "description": "Empty wall-run table with a steep depth axis.",
+      "body": "right/wall-table-fit-v2/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        73,
+        24,
+        182,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/right-wall-table-fit-v2.png",
+      "orientation": "steep wall-depth axis, inward left",
+      "mirrored_at_runtime": false,
+      "support_polygon_px": [
+        [
+          98,
+          92
+        ],
+        [
+          142,
+          85
+        ],
+        [
+          157,
+          119
+        ],
+        [
+          114,
+          126
+        ]
+      ],
+      "support_anchor_px": [
+        128,
+        106
+      ]
+    },
+    {
+      "id": "right/crt-fit-v2",
+      "name": "CRT Computer",
+      "side": "right",
+      "category": "terminal",
+      "description": "Near-side-profile CRT facing inward.",
+      "body": "right/crt-fit-v2/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        47,
+        24,
+        209,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/right-crt-fit-v2.png",
+      "orientation": "steep wall-depth axis, inward left",
+      "mirrored_at_runtime": false,
+      "staging_scale": 0.29,
+      "contact_anchor_px": [
+        128,
+        224
+      ]
+    },
+    {
+      "id": "right/wall-cassette-deck",
+      "name": "Cassette Deck",
+      "side": "right",
+      "category": "machine",
+      "description": "One compact copper and charcoal tabletop cassette tape deck, two recessed cassette windows on the SAME inward-facing panel, small ivory playback keys, small amber meter lenses, complete foot base.",
+      "body": "right/wall-cassette-deck/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        56,
+        24,
+        199,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/right-wall-cassette-deck.png",
+      "orientation": "steep wall-depth axis, inward left",
+      "mirrored_at_runtime": false,
+      "staging_scale": 0.29,
+      "contact_anchor_px": [
+        128,
+        224
+      ]
+    },
+    {
+      "id": "right/wall-flip-clock",
+      "name": "Copper Flip Clock",
+      "side": "right",
+      "category": "clock",
+      "description": "One small copper mechanical flip-clock housing on an integrated tabletop foot, four BLANK charcoal split-flap cards with hinges on the SAME inward-facing panel, ivory side knob. No numbers or letters.",
+      "body": "right/wall-flip-clock/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        66,
+        24,
+        190,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/right-wall-flip-clock.png",
+      "orientation": "steep wall-depth axis, inward left",
+      "mirrored_at_runtime": false,
+      "staging_scale": 0.17,
+      "contact_anchor_px": [
+        128,
+        224
+      ]
+    },
+    {
+      "id": "right/wall-inspection-lamp",
+      "name": "Inspection Lamp",
+      "side": "right",
+      "category": "lamp",
+      "description": "One complete ivory laboratory inspection desk lamp, flexible navy gooseneck, small broad rectangular lamp shade, solid bronze foot base, faint warm white lens facing inward.",
+      "body": "right/wall-inspection-lamp/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        32,
+        24,
+        223,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/right-wall-inspection-lamp-refined.png",
+      "orientation": "steep wall-depth axis, inward left",
+      "mirrored_at_runtime": false,
+      "staging_scale": 0.31,
+      "contact_anchor_px": [
+        128,
+        224
+      ]
+    },
+    {
+      "id": "right/wall-radar",
+      "name": "Radar Terminal",
+      "side": "right",
+      "category": "terminal",
+      "description": "One compact bronze and navy tabletop radar terminal, blank dark circular screen recessed into its inward control face, short attached key console and complete base.",
+      "body": "right/wall-radar/body.png",
+      "size": [
+        256,
+        256
+      ],
+      "anchor_px": [
+        128,
+        236
+      ],
+      "alpha_bounds_px": [
+        55,
+        24,
+        200,
+        236
+      ],
+      "source_project_path": "assets/sidewall-kit-sources/2026-11-01/right-wall-radar.png",
+      "orientation": "steep wall-depth axis, inward left",
+      "mirrored_at_runtime": false,
+      "staging_scale": 0.29,
+      "contact_anchor_px": [
+        128,
+        224
+      ]
+    }
+  ],
+  "scope": "offline art delivery; no application wiring",
+  "installed_from": "assets/deliveries/2026-11-01-wall-depth-and-tickers/wall-furniture"
+}

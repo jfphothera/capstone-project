@@ -1,0 +1,195 @@
+AGENT ARENA LAB - INSTALLATION REPORT
+============================================================
+Final status : FAILED
+Role         : hub
+Computer     : DESKTOP-REDACT10
+Run          : 20261105-110826-DESKTOP-REDACT10-hub
+Provisioner  : Agent Arena Lab Provisioner 1.3.0
+Started      : 2026-11-05T11:08:26.8165484-05:00
+Finished     : 2026-11-05T11:10:34.5213005-05:00
+Appears to be: hub (holds the hub address 192.0.2.254)
+
+INVENTORY (observed / inferred / missing / inaccessible)
+------------------------------------------------------------
+[identity]
+  observed     computer: DESKTOP-REDACT10
+  observed     signed-in user: Desktop-Redact10\LabOperator1
+  observed     running as administrator: True
+[os]
+  observed     Windows: Microsoft Windows 11 Pro (Professional) 10.0.26200 build 26200 64-bit
+  observed     last boot: 2026-11-05T07:03:00.5000000-05:00
+  observed     domain or workgroup: WORKGROUP (domain joined: False)
+[hardware]
+  observed     CPU: Intel(R) Core(TM) i5-10310U CPU @ 1.70GHz (4 cores, 8 threads)
+  observed     RAM: 23.8 GB
+  observed     GPU: Intel(R) UHD Graphics
+  missing      NVIDIA VRAM: no NVIDIA GPU
+[storage]
+  observed     volume C:: 423.04 GB free of 475.61 GB
+[network]
+  observed     adapter Wi-Fi: Intel(R) Wi-Fi 6 AX201 160MHz; Disconnected; MAC 02-00-00-00-00-03; IPv4 169.254.132.206/16; gateway ; DHCP Enabled; profile none
+  observed     adapter Ethernet: Intel(R) Ethernet Connection (10) I219-LM; Up; MAC 02-00-00-00-00-04; IPv4 192.0.2.254/24; gateway ; DHCP Disabled; profile Public
+  observed     adapter Bluetooth Network Connection: Bluetooth Device (Personal Area Network); Disconnected; MAC 02-00-00-00-00-05; IPv4 169.254.2.181/16; gateway ; DHCP Enabled; profile none
+  observed     lab address: 192.0.2.254/24 on Ethernet
+[ollama]
+  missing      installed: ollama.exe not found
+  missing      API http://127.0.0.1:11434: no answer
+  missing      API http://192.0.2.254:11434: no answer
+  observed     listeners on 11434: none
+[models]
+  inaccessible installed models: no Ollama API answers, so the inventory cannot be read
+[ollama]
+  observed     OLLAMA_HOST: machine "", user ""
+  observed     OLLAMA_MODELS: machine "", user ""
+  missing      boot task: "Capstone Ollama Server" not present
+[firewall]
+  observed     profile Domain: enabled True; default inbound Block; local rules allowed True
+  observed     profile Private: enabled True; default inbound Block; local rules allowed True
+  observed     profile Public: enabled True; default inbound Block; local rules allowed True
+  observed     active profile on the lab adapter: Public
+  inferred     Ollama 11434 from 192.0.2.254: ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store
+  inferred     Ollama 11434 from 192.0.2.1: ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store
+  inferred     Ollama 11434 from 192.0.2.201: ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store
+  inferred     Ollama 11434 from 192.0.2.202: ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store
+  inferred     Ollama 11434 from 192.0.2.50: ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store
+  observed     rule Desktop App Web Viewer: BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local
+  observed     rule Windows Feature Experience Pack: BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local
+  observed     rule Windows Feature Experience Pack: BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local
+  observed     rule Microsoft 365 Copilot: BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local
+  observed     rule Mail and Calendar: BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local
+  observed     rule Microsoft Teams: BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local
+  observed     rule Game Bar: BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local
+  observed     rule Microsoft Store: BROAD, Allow, profiles Domain,Private,Public, program Any, ports Any, remote Any, source Local
+[time]
+  observed     time zone: Eastern Standard Time
+  observed     Windows Time: Running, start Auto, source "time.windows.com,0x8" (NTP)
+[power]
+  observed     sleep on AC: standby 0 s, hibernate 0 s
+  observed     adapter Ethernet: may be turned off: Unsupported; EEE Energy Efficient Ethernet=Off
+[tasks]
+  missing      relevant scheduled tasks: none
+[services]
+  missing      relevant Windows services: none
+[arena]
+  observed     event service: http://192.0.2.254:8790: ok aes-a1e79a8b3902 2.2.0
+  missing      head viewer: not installed for LabOperator1
+  observed     admin hub: program True; data True; local health unreachable ; firewall rule True
+  missing      Python 3.12+ for the Arena installers: not found on PATH
+[gateway]
+  missing      observation file: not published on this machine
+  missing      publisher task: not registered
+  inferred     service port: port 8443
+[outbound]
+  observed     default outbound action: Public profile: Allow
+  inferred     TCP 11434 to 192.0.2.2: UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams
+  inferred     TCP 11434 to 192.0.2.3: UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams
+  inferred     TCP 11434 to 192.0.2.4: UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams
+  inferred     TCP 11434 to 192.0.2.5: UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams
+  inferred     TCP 11434 to 192.0.2.6: UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams
+  inferred     TCP 11434 to 192.0.2.7: UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams
+  inferred     TCP 11434 to 192.0.2.8: UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams
+  inferred     TCP 11434 to 192.0.2.9: UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams
+  inferred     TCP 11434 to 192.0.2.10: UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams
+[reach]
+  missing      Ollama on 192.0.2.2: no connection from this host
+  observed     Ollama on 192.0.2.3: answers, version 0.40.13, 21 model(s)
+  observed     Ollama on 192.0.2.4: answers, version 0.40.13, 21 model(s)
+  observed     Ollama on 192.0.2.5: answers, version 0.40.13, 21 model(s)
+  missing      Ollama on 192.0.2.6: no connection from this host
+  missing      Ollama on 192.0.2.7: no connection from this host
+  missing      Ollama on 192.0.2.8: no connection from this host
+  missing      Ollama on 192.0.2.9: no connection from this host
+  missing      Ollama on 192.0.2.10: no connection from this host
+[identity]
+  observed     Arena hub installed for: Desktop-Redact10\LabOperator1
+  observed     Arena running as: event service: Desktop-Redact10\LabOperator1; event service: Desktop-Redact10\LabOperator1
+  observed     Administrators (direct members): Desktop-Redact10\Administrator; Desktop-Redact10\LabOperator1
+[gateway]
+  inferred     Gateway account prerequisites: BLOCKED: the Arena account Desktop-Redact10\LabOperator1 is a member of Administrators (directly or through a nested group): the Gateway refuses this, since no ACL protects the ledger from it
+  missing      ledger folder: not present: C:\ProgramData\InferenceGateway\state
+  missing      state folder: not present: C:\ProgramData\InferenceGateway\observation-state
+  missing      logs folder: not present: C:\ProgramData\InferenceGateway\logs
+  missing      publication folder: not present: C:\ProgramData\InferenceGateway\observation
+  inferred     observation: PENDING GATEWAY INSTALLATION: nothing is published yet (Arena is not configured yet) (configured False, file False, access publication folder not present, fresh False, service False)
+  missing      InferenceGateway service: not installed
+  missing      account svc-inference-gw: does not exist yet
+[identity]
+  inferred     Arena account Desktop-Redact10\LabOperator1: privileged: Administrators (transitive)
+[gateway]
+  missing      machine-wide Python: missing: C:\Program Files\Python312\python.exe
+  missing      machine-wide PowerShell 7: missing: C:\Program Files\PowerShell\7\pwsh.exe
+[backups]
+  missing      lab provisioner runs with changes: none
+[identity]
+  inferred     appears to be: hub (holds the hub address 192.0.2.254)
+
+PLAN
+------------------------------------------------------------
+Address: 192.0.2.254
+  [read] Keep 192.0.2.254/24 (already set)
+  [privileged] Lab adapter network profile: Private
+  [privileged] Stay awake: no sleep or hibernate on AC, screen on, lid does nothing, Ethernet power saving and EEE off
+  [privileged] Time zone Eastern Standard Time; this computer serves time to the lab (syncs from time.windows.com when it has internet)
+  [privileged] Inbound from 192.0.2.0/24: time (UDP 123) and ping; Remote Desktop from 192.0.2.1 only
+  [change] Python 3.12+ for the Arena installer (winget for this user, if missing)
+  [change] Update the Arena event service and admin window in place (data kept)
+  [change] Arena reads the Gateway observation file (C:\ProgramData\InferenceGateway\observation\shared-inference-observation.json, gateway_id gateway-254)
+  [read] Inference Gateway installation and registration (PENDING)
+  needs: Inference Gateway release with its installer, port, TLS certificate and client tokens (Gateway project)
+
+WHAT WAS DONE (planned versus actual)
+------------------------------------------------------------
+  nothing was changed
+
+SOFTWARE
+------------------------------------------------------------
+  ollama: not installed
+  arena_viewer: not installed
+  arena_hub: installed (service )
+
+REGISTRATION
+------------------------------------------------------------
+  none attempted
+
+VERIFICATION
+------------------------------------------------------------
+  FAIL    [local] Arena event service answers locally with the fleet identity: unreachable  
+  PASS    [local] Arena event service answers on 192.0.2.254:8790: ok 
+  PASS    [local] event service firewall rule (TCP 8790 from the lab): 
+  PASS    [local] this computer serves time to the lab: Eastern Standard Time; source time.windows.com,0x8; announce 5; server provider 1; service Running
+  FAIL    [local] outbound policy lets this host open TCP 11434 to the heads (rule analysis): 192.0.2.2 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.3 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.4 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.5 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.6 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.7 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.8 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.9 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams; 192.0.2.10 UNCERTAIN: program-specific block rules may apply: Wi-Fi Direct Spooler Use (Out); Connected Devices Platform - Wi-Fi Direct Transport (TCP-Out); Windows Device Management Enrollment Service (TCP out); Windows Device Management Certificate Installer (TCP out); Wireless Display (TCP-Out); Proximity sharing over TCP (TCP sharing-Out); Wi-Fi Direct Network Discovery (Out); WFD Driver-only (TCP-Out); Wi-Fi Direct Scan Service Use (Out); Windows Device Management Sync Client (TCP out); ms-resource:ProductPkgDisplayName; ms-resource:ProductPkgDisplayName; Microsoft 365 Copilot; Microsoft Teams; Microsoft Teams
+  PENDING [lan] Gateway host reaches head 192.0.2.2 Ollama: no answer (head off or not on this LAN)
+  PASS    [lan] Gateway host reaches head 192.0.2.3 Ollama: Ollama 0.40.13, 21 model(s)
+  PASS    [lan] Gateway host reaches head 192.0.2.4 Ollama: Ollama 0.40.13, 21 model(s)
+  PASS    [lan] Gateway host reaches head 192.0.2.5 Ollama: Ollama 0.40.13, 21 model(s)
+  PENDING [lan] Gateway host reaches head 192.0.2.6 Ollama: no answer (head off or not on this LAN)
+  PENDING [lan] Gateway host reaches head 192.0.2.7 Ollama: no answer (head off or not on this LAN)
+  PENDING [lan] Gateway host reaches head 192.0.2.8 Ollama: no answer (head off or not on this LAN)
+  PENDING [lan] Gateway host reaches head 192.0.2.9 Ollama: no answer (head off or not on this LAN)
+  PENDING [lan] Gateway host reaches head 192.0.2.10 Ollama: no answer (head off or not on this LAN)
+  PASS    [local] verified head inventory exported for the Gateway operator: 3 verified, 6 excluded: C:\ProgramData\AgentArenaLab\reports\verified-head-inventory-20261105-111029.json (provisional format; nothing enrolled)
+  FAIL    [local] Arena configured to read the Gateway observation: C:\ProgramData\InferenceGateway\observation\shared-inference-observation.json (restart the admin console after a change)
+  PENDING [external] Gateway observation: file present: pending Gateway installation
+  PENDING [external] Gateway observation: Arena can read it and nothing private (ACL analysis): publication folder not present
+  PENDING [external] Gateway observation: fresh, right contract, publisher running: PENDING GATEWAY INSTALLATION: nothing is published yet (Arena is not configured yet)
+  FAIL    [local] Gateway account prerequisites (separate accounts; Arena not in Administrators or Backup Operators, transitively; no Arena access to ledger/state/logs): the Arena account Desktop-Redact10\LabOperator1 is a member of Administrators (directly or through a nested group): the Gateway refuses this, since no ACL protects the ledger from it; the Gateway service account does not exist yet; ledger folder not present yet; state folder not present yet; logs folder not present yet
+  PENDING [local] machine-wide Python 3.12.10 and PowerShell 7.4+ for the Gateway: python missing (base False); pwsh missing
+  PENDING [local] InferenceGateway service runs (delayed automatic, as the service account): not installed
+  PENDING [local] Gateway listener rule: not created yet (it is created after the Gateway verify)
+  PENDING [external] Arena observation (separate from the Gateway's own health): PENDING GATEWAY INSTALLATION: nothing is published yet (Arena is not configured yet) (configured False, file False, access publication folder not present, fresh False, service False, ledger unknown)
+  FAIL    [local] Arena accounts meet the Gateway account rule (transitive): the Arena account Desktop-Redact10\LabOperator1 is a member of Administrators (directly or through a nested group): the Gateway refuses this, since no ACL protects the ledger from it
+
+SECURITY: Ollama port exposure (rule analysis (inferred); a real connection from each address is the field proof)
+------------------------------------------------------------
+  from 192.0.2.254   ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store
+  from 192.0.2.1     ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store
+  from 192.0.2.201   ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store
+  from 192.0.2.202   ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store
+  from 192.0.2.50    ADMITTED: allowed by Desktop App Web Viewer; Windows Feature Experience Pack; Windows Feature Experience Pack; Microsoft 365 Copilot; Mail and Calendar; Microsoft Teams; Game Bar; Microsoft Store
+
+Rollback: START-LAB-PROVISIONER.cmd > Existing machine > Roll back a previous run
+  record  C:\ProgramData\AgentArenaLab\runs\20261105-110826-DESKTOP-REDACT10-hub\changes.json
+  backups C:\ProgramData\AgentArenaLab\runs\20261105-110826-DESKTOP-REDACT10-hub\backups
+
+Checks marked scope=lan used real connections over the LAN; scope=local are on this machine only; scope=external need another project or machine.
+Credentials, codes and tokens are redacted; none are written to this report.
